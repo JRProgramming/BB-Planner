@@ -11,10 +11,17 @@ firebase.initializeApp(config);
 function logClasses()
 {
  document.getElementById("heading").innerHTML = "Sup Johnny" 
- var playersRef = firebase.database().ref("Classes/");
- playersRef.push({
-   Message: { 
-      classes: "Joe"
+ var playersRef = firebase.database().ref("players/");
+
+playersRef.set({
+   John: {
+      number: 1,
+      age: 30
+   },
+	
+   Amanda: {
+      number: 2,
+      age: 20
    }
 });
 }
