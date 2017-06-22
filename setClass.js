@@ -18,7 +18,7 @@ function logClasses()
  var playersRef = firebase.database().ref("Classes/");
  playersRef.push({
    Message: { 
-      classes: alg
+      classes: "Joe"
    },
 });
 }
