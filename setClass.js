@@ -8,6 +8,7 @@ function logClasses()
     var spa = document.getElementById("SpanishH")
  if(algC1.checked)
   {
+   alert("Algebra")
     class.push(alg1)
   }
  if(ss.checked)
