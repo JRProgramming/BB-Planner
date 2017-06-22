@@ -8,7 +8,7 @@ var config = {
     messagingSenderId: "984402365769"
   };
 firebase.initializeApp(config);
-function logClasses(
+function logClasses()
 {
  if(document.getElementById("AlgebraC").checked)
  {
