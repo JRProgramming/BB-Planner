@@ -1,1 +1,60 @@
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Material NoteS</title>
+        <meta name="description" content="A simple note-taking app.">
+        <link rel="shortcut icon" href="icon.png">
+        <link rel="icon" href="icon.png">
+        <meta name="application-name" content="Material NoteS">
+        
+        <!-- Microsoft Pinned Site Metadata -->
+        <meta name="msapplication-tooltip" content="A simple note-taking app." />
+        <meta name="msapplication-starturl" content="./app.htm" />
+        <meta name="msapplication-window" content="width=1024;height=768" />
+        <meta name="msapplication-navbutton-color" content="#FFA000" /> <!-- 700 color -->
+        <meta name="msapplication-square70x70logo" content="icon.png">
+        <meta name="msapplication-TileColor" content="#FFC107"> <!-- 500 Color -->
+        
+        <!-- Progressive Web Apps -->
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#FFC107"> <!-- 500 color -->
+        
+        <!-- Apple Web App Config -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" href="icon.png">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-light_green.min.css" />
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no,maximum-scale=1.0,minimum-scale=1.0">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Planner</span>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">
+                        Material Notes</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#" onclick="addAndSaveNote()">View other planners</a>
+                    <a class="mdl-navigation__link" href="#" onclick="addList()">Add List</a>
+                    <a class="mdl-navigation__link" href="https://github.com/Allen-B1/simple-material-notes/issues/new?title=[BUG]">Report Problem</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content" style="padding:8px">
+                <button id="btn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="position:fixed;bottom:16px;right:16px;z-index:8;">
+                    <i class="material-icons">&#xe145;</i>
+                </button>
+            </main>
+        </div>
+    </body>
+</html>
