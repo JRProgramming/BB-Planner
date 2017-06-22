@@ -10,10 +10,6 @@ var config = {
 firebase.initializeApp(config);
 function logClasses()
 {
- if(document.getElementById("AlgebraC").checked)
- {
- var alg = document.getElementById("AlgebraC").innerHTML
-}
  document.getElementById("heading").innerHTML = "Sup Johnny" 
  var playersRef = firebase.database().ref("Classes/");
  playersRef.push({
