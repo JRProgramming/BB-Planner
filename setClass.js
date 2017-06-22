@@ -15,6 +15,6 @@ function logClasses()
  playersRef.push({
    Message: { 
       classes: "Joe"
-   },
+   }
 });
 }
