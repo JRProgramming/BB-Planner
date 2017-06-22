@@ -9,7 +9,6 @@ function logClasses()
  if(algC1.checked)
   {
    alert("Algebra")
-    class.push(alg1)
   }
  if(ss.checked)
  {
