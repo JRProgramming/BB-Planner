@@ -24,9 +24,9 @@ function addNote(title, text) {
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
    alert("name: " + newPlayer.classes);
-
-    title = title || newPlayer.classes
 });
+    title = title || "Guacamole"
+
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
