@@ -18,6 +18,18 @@ function logClasses()
  {
   classes.push(SocialS.value)
  }
+  if (spanish.checked == true)
+ {
+  classes.push(spanish.value)
+ }
+ if (science.checked == true)
+ {
+  classes.push(science.value)
+ }
+ if (english.checked == true)
+ {
+  classes.push(english.value)
+ }
 
 
  classers.push({
