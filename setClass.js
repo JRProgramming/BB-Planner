@@ -6,10 +6,7 @@ function logClasses()
     var algC1 = document.getElementById("AlgebraC")
     var ss = document.getElementById("SSG")
     var spa = document.getElementById("SpanishH")
- if(document.getElementById("AlgebraC").checked)
-  {
-   alert("Algebra")
-  }
+
  if(ss.checked)
  {
  }
