@@ -7,9 +7,7 @@ function logClasses()
     var ss = document.getElementById("SSG")
     var spa = document.getElementById("SpanishH")
 
- if(ss.checked)
- {
- }
+ 
 
  var playersRef = firebase.database().ref("Classes/");
  playersRef.push({
