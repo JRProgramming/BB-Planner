@@ -9,6 +9,7 @@ function logClasses()
  var spanish = document.getElementById("SpanishH");
  var science = document.getElementById("ScienceH");
  var english = document.getElementById("EnglishT");
+ var englishd = document.getElementById("EnglishD");
 
  if(algC4.checked == true)
  {
@@ -30,7 +31,11 @@ function logClasses()
  {
   classes.push(english.value)
  }
-
+if (englishd.checked == true)
+{
+ classes.push(englishd.value)
+}
+classes.push("Specials")
 
  classers.push({
       classes: classes
