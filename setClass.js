@@ -57,10 +57,14 @@ function UnCheck()
  var science = document.getElementById("ScienceH");
  var english = document.getElementById("EnglishT");
  var englishd = document.getElementById("EnglishD");
- if (english.checked == false && englishd.checked == false)
+ var status = ""
+ if (english.checked == true)
  {
-  alert("HOORAY")
+  englishd.checked = false
  }
-
+ else if (englishd.checked == true){
+  english.checked = false
+ }
+ 
 }
 
