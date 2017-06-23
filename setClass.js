@@ -1,3 +1,5 @@
+function logClasses()
+{
  var classers = firebase.database().ref("Classes/");
  var classes = []
  var algC4 = document.getElementById("AlgebraC");
@@ -10,15 +12,11 @@
  {
   englishd.checked = false
  }
-if (englishd.checked == true)
-{
+ if (englishd.checked == true)
+ {
  english.checked =  false
-}
-function logClasses()
-{
+ }
  document.getElementById("heading").innerHTML = "Sup Johnny" 
-
-
 
  if(algC4.checked == true)
  {
