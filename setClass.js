@@ -51,3 +51,21 @@ classes.push("Specials")
    
 });
 }
+function UnCheck()
+{
+  var algC4 = document.getElementById("AlgebraC");
+ var SocialS = document.getElementById("SSG");
+ var spanish = document.getElementById("SpanishH");
+ var science = document.getElementById("ScienceH");
+ var english = document.getElementById("EnglishT");
+ var englishd = document.getElementById("EnglishD");
+ if (english.checked == true)
+ {
+englishd.checked = false
+ }
+ if (englishd.checked == true)
+ {
+ english.checked = false
+ }
+}
+
