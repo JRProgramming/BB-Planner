@@ -3,7 +3,8 @@ function logClasses()
 {
  document.getElementById("heading").innerHTML = "Sup Johnny" 
  var playersRef = firebase.database().ref("Classes/");
- if(document.getElementById("AlgebraC").checked == true)
+ var algC4 = document.getElementById("AlgebraC")
+ if(algC4.checked == true)
  {
   alert("selected")
  }
