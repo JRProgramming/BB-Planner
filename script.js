@@ -56,7 +56,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
         "class": "mdl-card__menu" 
     });
     menu.appendTo(div);
-    
+     var btn = $("<button/>", {
+         "class":"mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+     });
+     btn.css("color", "white");
+     btn.appendTo(menu);
+     btn.html('<i class="material-icons">&#xe872;</i>');
     
     return {card: div, title: title, text: text};
 }
