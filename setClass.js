@@ -5,7 +5,7 @@ function logClasses()
  var classers = firebase.database().ref("Classes/");
  var classes = []
  var algC4 = document.getElementById("AlgebraC");
- var SS = document.getElementById("SSG");
+ var SocialS = document.getElementById("SSG");
  var spanish = document.getElementById("SpanishH");
  var science = document.getElementById("ScienceH");
  var english = document.getElementById("English");
@@ -13,9 +13,9 @@ function logClasses()
  {
   classes.push(algC4.value)
  }
- if (SS.checked == true)
+ if (SocialS.checked == true)
  {
-  classes.push(SS.value)
+  classes.push(SocialS.value)
  }
  if (spanish.checked == true)
  {
