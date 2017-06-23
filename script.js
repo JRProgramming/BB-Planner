@@ -22,13 +22,13 @@ function askRemoveNote(index, div){
 /* Add a note w/o saving it */
 function addNote(title, text) {
 var len, i;
-for (i = 0, len = newPlayer.classes, len > i, i++)
+for (i = 0, len = newPlayer.classes.length, len > i, i++)
 {
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-    title = title || newPlayer.classes[0]
+    title = title || newPlayer.classes[i]
 });
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
