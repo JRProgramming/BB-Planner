@@ -16,22 +16,18 @@ function askRemoveNote(index, div){
     if(confirm("Are you sure you want to remove '" + (all_notes[index].title) + "'?"))
         removeNote(index, div);
 }
-function alerting()
-{
- var playersRef = firebase.database().ref("Classes/");
 
-playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val();
-   alert( newPlayer.classes);
-});
-}
 
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
-          
-    title = title || "Guacamole"
+var playersRef = firebase.database().ref("Classes/");
 
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+
+    title = title || newPlayer.classes
+});
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
