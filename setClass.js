@@ -5,15 +5,11 @@ function logClasses()
  var classers = firebase.database().ref("Classes/");
  var classes = []
  var algC4 = document.getElementById("AlgebraC");
- var SocialS = document.getElementById("SSG");
- var spanish = document.getElementById("SpanishH");
- var science = document.getElementById("ScienceH");
- var english = document.getElementById("EnglishT");
  if(algC4.checked == true)
  {
   classes.push(algC4.value)
  }
- 
+
  classers.push({
       classes: classes
    
