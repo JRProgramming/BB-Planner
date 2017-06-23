@@ -16,15 +16,16 @@ function askRemoveNote(index, div){
     if(confirm("Are you sure you want to remove '" + (all_notes[index].title) + "'?"))
         removeNote(index, div);
 }
-
-/* Add a note w/o saving it */
-function addNote(title, text) {
-             var playersRef = firebase.database().ref("Classes/");
+var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
    alert("name: " + newPlayer.classes);
 });
+
+/* Add a note w/o saving it */
+function addNote(title, text) {
+          
     title = title || "Guacamole"
 
     text = text || "Lorem ispum dolor sit amet...";
