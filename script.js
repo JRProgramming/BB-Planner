@@ -112,7 +112,7 @@ function loadNotes() {
         console.error(err);
     }
 }
-
+<button onclick="alerting()"></button>
 
 $(document).ready(function() {
     loadNotes();
@@ -120,7 +120,6 @@ $(document).ready(function() {
     $("#btn").click(function() {
 
         addAndSaveNote();
-        alerting()
        
     })
 })
