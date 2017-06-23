@@ -8,6 +8,7 @@ function logClasses()
  if(algC4.checked == true)
  {
   classes.push(algC4.value)
+  alert(classes)
  }
  playersRef.push({
    Classes: { 
