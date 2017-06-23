@@ -61,7 +61,7 @@ function UnCheck()
  {
 englishd.checked = false
  }
- if (englishd.checked == true)
+ else if (englishd.checked == true)
  {
  english.checked = false
  }
