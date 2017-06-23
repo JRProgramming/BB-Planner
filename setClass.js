@@ -8,7 +8,7 @@ function logClasses()
  var SocialS = document.getElementById("SSG");
  var spanish = document.getElementById("SpanishH");
  var science = document.getElementById("ScienceH");
- var english = document.getElementById("English");
+ var english = document.getElementById("EnglishT");
  if(algC4.checked == true)
  {
   classes.push(algC4.value)
