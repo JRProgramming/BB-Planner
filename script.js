@@ -27,6 +27,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
 
     title = title || newPlayer.classes
+    alert(newPlayer.classes.length)
 });
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
