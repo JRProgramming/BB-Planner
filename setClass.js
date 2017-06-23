@@ -49,22 +49,11 @@ classes.push("Specials")
    
 });
 }
-function UnCheck()
-{
-  var algC4 = document.getElementById("AlgebraC");
- var SocialS = document.getElementById("SSG");
- var spanish = document.getElementById("SpanishH");
- var science = document.getElementById("ScienceH");
- var english = document.getElementById("EnglishT");
- var englishd = document.getElementById("EnglishD");
- var status = ""
- if (english.checked == true)
- {
-  englishd.checked = false
- }
- if (englishd.checked == true){
-  english.checked = false
- }
- 
+function UnCheck(obj) {
+    var eng = document.getElementsByClassName("english");
+    for (var i = 0; i < eng.length; i++) {
+        eng[i].checked = false;
+    }
+    obj.checked = true;
 }
 
