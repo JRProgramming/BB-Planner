@@ -7,7 +7,7 @@ function logClasses()
     var ss = document.getElementById("SSG")
     var spa = document.getElementById("SpanishH")
 
-if(document.getElementById("AlgebraC").checked == true)
+if(document.getElementById("AlgebraC").value == "Algebra")
 {
  alert("selected")
  
