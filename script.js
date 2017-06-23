@@ -22,7 +22,7 @@ function askRemoveNote(index, div){
 /* Add a note w/o saving it */
 function addNote(title, text) {
 var len, i;
-for (i = 0, len = newPlayer.classses, len > i, i++)
+for (i = 0, len = newPlayer.classes, len > i, i++)
 {
 var playersRef = firebase.database().ref("Classes/");
 
