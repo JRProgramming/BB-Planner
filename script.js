@@ -19,6 +19,7 @@ function askRemoveNote(index, div){
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
+    
     title = title || "Lorem Ispum";
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
@@ -106,12 +107,7 @@ $(document).ready(function() {
     loadNotes();
     
     $("#btn").click(function() {
-         var playersRef = firebase.database().ref("Classes/");
 
-playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val();
-   alert("name: " + newPlayer.classes);
-});
         addAndSaveNote();
        
     })
