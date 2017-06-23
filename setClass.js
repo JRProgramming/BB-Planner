@@ -6,7 +6,7 @@ function logClasses()
  var classes = []
  var algC4 = document.getElementById("AlgebraC");
  var SS = document.getElementById("SSG");
- var spanish = document.getElementById("SpanishH:);
+ var spanish = document.getElementById("SpanishH");
  var science = document.getElementById("ScienceH");
  var english = document.getElementById("English");
  if(algC4.checked == true)
