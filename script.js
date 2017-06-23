@@ -106,12 +106,13 @@ $(document).ready(function() {
     loadNotes();
     
     $("#btn").click(function() {
-        addAndSaveNote();
-        var playersRef = firebase.database().ref("Classes/");
+         var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
    alert("name: " + newPlayer.classes);
 });
+        addAndSaveNote();
+       
     })
 })
