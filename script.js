@@ -18,7 +18,12 @@ function askRemoveNote(index, div){
 }
 function alerting()
 {
-alert("HEY")
+ var playersRef = firebase.database().ref("Classes/");
+
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+   alert( newPlayer.classes);
+});
 }
 
 
