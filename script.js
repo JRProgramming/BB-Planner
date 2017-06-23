@@ -49,12 +49,6 @@ function addNote(title, text) {
     });
     menu.appendTo(div);
     
-    var btn = $("<button/>", {
-        "class":"mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
-    });
-    btn.css("color", "white");
-    btn.appendTo(menu);
-    btn.html('<i class="material-icons">&#xe872;</i>');
     
     return {card: div, title: title, text: text};
 }
@@ -107,24 +101,17 @@ function loadNotes() {
     }
 }
 
-function addList() {
-    var note = addAndSaveNote("To Do", "<ul contenteditable><li>Finish Work</li><li>Make Shopping List</li></ul>");
-    
-    var ul = $("<ul/>", {
-        contenteditable: ""
-    });
-    ul.appendTo(note.card);
-    ul.on("input", note.onUp);
-    ul.css("outline", "none");
-    ul.css("border", "none");
-    
-    note.card.find(".mdl-card__supporting-text").removeAttr("contenteditable");
-}
 
 $(document).ready(function() {
     loadNotes();
     
     $("#btn").click(function() {
         addAndSaveNote();
+        var playersRef = firebase.database().ref("Classes/");
+
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+   alert("name: " + newPlayer.classes);
+});
     })
 })
