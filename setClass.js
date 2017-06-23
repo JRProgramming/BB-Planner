@@ -1,15 +1,24 @@
-
-function logClasses()
-{
- document.getElementById("heading").innerHTML = "Sup Johnny" 
  var classers = firebase.database().ref("Classes/");
  var classes = []
  var algC4 = document.getElementById("AlgebraC");
-  var SocialS = document.getElementById("SSG");
+ var SocialS = document.getElementById("SSG");
  var spanish = document.getElementById("SpanishH");
  var science = document.getElementById("ScienceH");
  var english = document.getElementById("EnglishT");
  var englishd = document.getElementById("EnglishD");
+ if (english.checked == true)
+ {
+  englishd.checked = false
+ }
+if (englishd.checked == true)
+{
+ english.checked =  false
+}
+function logClasses()
+{
+ document.getElementById("heading").innerHTML = "Sup Johnny" 
+
+
 
  if(algC4.checked == true)
  {
@@ -30,10 +39,12 @@ function logClasses()
  if (english.checked == true)
  {
   classes.push(english.value)
+  englishd.checked = false
  }
 if (englishd.checked == true)
 {
  classes.push(englishd.value)
+ english.checked =  false
 }
 classes.push("Specials")
 
