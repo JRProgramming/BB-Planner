@@ -14,6 +14,11 @@ function logClasses()
  {
   classes.push(algC4.value)
  }
+   if (SocialS.checked == true)
+ {
+  classes.push(SocialS.value)
+ }
+
 
  classers.push({
       classes: classes
