@@ -112,7 +112,6 @@ function loadNotes() {
         console.error(err);
     }
 }
-<button onclick="alerting()"></button>
 
 $(document).ready(function() {
     loadNotes();
