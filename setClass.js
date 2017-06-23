@@ -37,12 +37,10 @@ function logClasses()
  if (english.checked == true)
  {
   classes.push(english.value)
-  englishd.checked = false
  }
 if (englishd.checked == true)
 {
  classes.push(englishd.value)
- english.checked =  false
 }
 classes.push("Specials")
 
