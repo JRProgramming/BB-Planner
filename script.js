@@ -21,13 +21,13 @@ function askRemoveNote(index, div){
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
-
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
- 
+
     title = title || newPlayer.classes
+    alert(newPlayer.classes.length)
 });
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
@@ -65,7 +65,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.html('<i class="material-icons">&#xe872;</i>');
     
     return {card: div, title: title, text: text};
-}
 }
 
 /* Add a note and save it (aka create a note) */
