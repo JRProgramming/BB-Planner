@@ -17,19 +17,18 @@ function askRemoveNote(index, div){
         removeNote(index, div);
 }
 
-var j = -1;
-window.j = -1
+var j = 0;
+window.j = 0
 /* Add a note w/o saving it */
 function addNote(title, text) {
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-    window.j += 1;
+   
     title = title || newPlayer.classes[window.j]
-    
-    
-});
+ });
+     window.j += 1;
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
