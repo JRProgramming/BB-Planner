@@ -68,6 +68,7 @@ alert(window.j)
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
+while(window.j < 7){
     var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -97,6 +98,7 @@ function addAndSaveNote(title, text, index) {
     
     note.onUp = onUp;
     return note;
+}
 }
 
 /* Load notes from localStorage */
