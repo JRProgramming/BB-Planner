@@ -24,6 +24,7 @@ function addNote(title, text) {
 var len, i;
    for (i = 0, len = 6; len > i; i++)
 {
+    alert(i)
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
