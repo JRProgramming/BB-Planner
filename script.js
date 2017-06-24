@@ -77,6 +77,7 @@ while(window.j < 7){
         title: note.title,
         text: note.text
     };
+    alert(note.title)
     if(typeof index === "number") {
         all_notes[index] = obj;
     } else {
