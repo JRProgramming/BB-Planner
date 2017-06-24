@@ -17,7 +17,7 @@ function askRemoveNote(index, div){
         removeNote(index, div);
 }
 
-var j;
+var j = 0;
 window.j = 0
 /* Add a note w/o saving it */
 function addNote(title, text) {
