@@ -71,17 +71,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
 var playersRef = firebase.database().ref("Classes/");
-var j, len;
-playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val();
-for (j = 0, len = newPlayer.classes.length; len > j; j++)
-{
+
 
     var note = addNote(title, text);
     var obj = {
-        title: newPlayer.classes[j]
+        title: note.title
         text: note.text
     };
+
     if(typeof index === "number") {
         all_notes[index] = obj;
     } else {
@@ -106,8 +103,8 @@ for (j = 0, len = newPlayer.classes.length; len > j; j++)
     
     note.onUp = onUp;
     return note;
-}
-});
+
+
 }
 
 /* Load notes from localStorage */
