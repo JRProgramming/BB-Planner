@@ -17,7 +17,7 @@ function askRemoveNote(index, div){
         removeNote(index, div);
 }
 
-
+var j = 0
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
@@ -25,9 +25,8 @@ var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-
-    title = title || newPlayer.classes
-    alert(newPlayer.classes.length)
+alert(window.j)
+    title = title || newPlayer.classes[window.j]
 });
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
