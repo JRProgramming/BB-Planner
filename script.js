@@ -25,6 +25,7 @@ var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
+    alert(newPlayer.classes[0])
     title = title || newPlayer.classes[j]
     
 });
