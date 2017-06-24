@@ -26,7 +26,7 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
    
-    title = title || newPlayer.classes[window.j]
+    title = title || newPlayer.classes[0]
  });
      window.j += 1;
     text = text || "Lorem ispum dolor sit amet...";
