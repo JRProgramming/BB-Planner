@@ -18,9 +18,9 @@ function askRemoveNote(index, div){
 }
 
 
-var i = 0
 /* Add a note w/o saving it */
 function addNote(title, text) {
+
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -70,12 +70,16 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-    var len, j;
-    for (j = 0, len = 6; len > j; j++)
+var playersRef = firebase.database().ref("Classes/");
+var j, len;
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+for (j = 0, len = newPlayer.classes.length; len > j; j++)
 {
+
     var note = addNote(title, text);
     var obj = {
-        title: note.title,
+        title: newPlayer.classes[j]
         text: note.text
     };
     if(typeof index === "number") {
@@ -103,6 +107,7 @@ function addAndSaveNote(title, text, index) {
     note.onUp = onUp;
     return note;
 }
+});
 }
 
 /* Load notes from localStorage */
