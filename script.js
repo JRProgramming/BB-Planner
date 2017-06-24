@@ -70,8 +70,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-    var len;
-    for (len = 6; len > i; i++)
+    var len, j;
+    for (j = 0, len = 6; len > j; j++)
 {
     var note = addNote(title, text);
     var obj = {
