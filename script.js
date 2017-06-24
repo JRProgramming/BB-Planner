@@ -18,10 +18,9 @@ function askRemoveNote(index, div){
 }
 
 
-
+var i = 0
 /* Add a note w/o saving it */
 function addNote(title, text) {
-var i = 0
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
