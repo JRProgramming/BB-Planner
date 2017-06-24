@@ -24,7 +24,6 @@ var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-alert(window.j)
     title = title || newPlayer.classes[window.j]
     
 });
@@ -68,6 +67,7 @@ alert(window.j)
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
+    alert(window.j)
 while(window.j < 7){
     var note = addNote(title, text);
     var obj = {
