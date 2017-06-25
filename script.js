@@ -62,7 +62,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
-     window.j ++   
     
     
     return {card: div, title: title, text: text};
@@ -70,7 +69,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-for (i=0; i<2; i++)
+for (i=0; i<6; i++)
 {
     var note = addNote(title, text);
     var obj = {
