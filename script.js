@@ -21,15 +21,8 @@ var j = 0;
 window.j = 0
 /* Add a note w/o saving it */
 function addNote(title, text) {
-var playersRef = firebase.database().ref("Classes/");
 
-playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val();
-    alert(newPlayer.classes[0])
-   
-    title = title || newPlayer.classes[0]
- });
-     window.j += 1;
+
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
@@ -70,8 +63,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
+    var playersRef = firebase.database().ref("Classes/");
+
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+    alert(newPlayer.classes[0])
+    });
     var note = addNote(title, text);
     var obj = {
+        
         title: note.title,
         text: note.text
     };
