@@ -62,6 +62,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
+    if(window.j != 0)
+    {
+     window.j ++   
+    }
     
     return {card: div, title: title, text: text};
 }
