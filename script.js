@@ -26,7 +26,6 @@ var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-alert(newPlayer.classes)
     title = title || newPlayer.classes[window.j]
 });
     text = text || "Lorem ispum dolor sit amet...";
@@ -63,7 +62,6 @@ alert(newPlayer.classes)
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
-    window.j += 1
     
     return {card: div, title: title, text: text};
 }
