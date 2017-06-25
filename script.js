@@ -17,18 +17,16 @@ function askRemoveNote(index, div){
         removeNote(index, div);
 }
 
-var j = 0;
-window.j = 0;
+var j = 0
+
 /* Add a note w/o saving it */
 function addNote(title, text) {
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-    alert(window.j)
+alert(window.j)
     title = title || newPlayer.classes[window.j]
-    
-    
 });
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
@@ -64,6 +62,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
+    
     return {card: div, title: title, text: text};
 }
 
@@ -95,10 +94,9 @@ function addAndSaveNote(title, text, index) {
         askRemoveNote(index, note.card); 
     });
     updateSave();
-    window.j += 1;
+    
     note.onUp = onUp;
     return note;
-
 }
 
 /* Load notes from localStorage */
