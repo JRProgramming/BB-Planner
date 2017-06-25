@@ -17,8 +17,8 @@ function askRemoveNote(index, div){
         removeNote(index, div);
 }
 
-var j = 0
-window.j = 0
+var j = -1
+window.j = -1
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
@@ -62,10 +62,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
-    if(title != "")
-    {
      window.j ++   
-    }
+    
     
     return {card: div, title: title, text: text};
 }
