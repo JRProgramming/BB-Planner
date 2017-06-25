@@ -27,6 +27,7 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
     title = title || newPlayer.classes[window.j]
+    alert(title)
 });
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
@@ -70,7 +71,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-if(note.title != ""){
+
     var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -100,7 +101,6 @@ if(note.title != ""){
     
     note.onUp = onUp;
     return note;
-}
 }
 
 /* Load notes from localStorage */
