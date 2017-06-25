@@ -17,12 +17,18 @@ function askRemoveNote(index, div){
         removeNote(index, div);
 }
 
-var j = 0;
+var j;
 window.j = 0
 /* Add a note w/o saving it */
 function addNote(title, text) {
+var playersRef = firebase.database().ref("Classes/");
 
-
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+    alert(newPlayer.classes[0])
+    title = title || newPlayer.classes[window.j]
+    
+});
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
@@ -57,25 +63,17 @@ function addNote(title, text) {
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
-    
+    window.j += 1;
     return {card: div, title: title, text: text};
 }
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-    var playersRef = firebase.database().ref("Classes/");
-
-playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val();
-    alert(newPlayer.classes[0])
-    });
     var note = addNote(title, text);
     var obj = {
-        
         title: note.title,
         text: note.text
     };
-    alert(note.title)
     if(typeof index === "number") {
         all_notes[index] = obj;
     } else {
