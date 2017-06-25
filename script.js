@@ -70,6 +70,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
+if(note.title != ""){
     var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -99,6 +100,7 @@ function addAndSaveNote(title, text, index) {
     
     note.onUp = onUp;
     return note;
+}
 }
 
 /* Load notes from localStorage */
