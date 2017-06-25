@@ -101,8 +101,9 @@ for (i=0; i<5; i++)
     updateSave();
     
     note.onUp = onUp;
-    return note;
 }
+    return note;
+
 }
 
 /* Load notes from localStorage */
