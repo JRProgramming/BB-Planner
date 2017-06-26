@@ -26,14 +26,14 @@ var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-    title = title || newPlayer.classes[j]
- }); 
+    title = title || newPlayer.classes[window.j]
+});
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
     });
     div.appendTo(".mdl-layout__content");
-         
+        
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
     });
@@ -44,14 +44,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
     });
     title_text.val(title);
     title_text.appendTo(title_e);
-       
+        
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
     });
     sup_text.html(text);
     sup_text.appendTo(div);
-  
+    
     var menu = $("<div/>", {
         "class": "mdl-card__menu" 
     });
@@ -59,14 +59,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
      var btn = $("<button/>", {
          "class":"mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
      });
-       
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
-    window.j += 1
+    
     
     return {card: div, title: title, text: text};
-     
 }
 
 /* Add a note and save it (aka create a note) */
