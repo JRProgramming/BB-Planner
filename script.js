@@ -44,7 +44,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     });
     title_text.val(title);
     title_text.appendTo(title_e);
-        
+            });
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
@@ -63,7 +63,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
     
-    });
+
     return {card: div, title: title, text: text};
 }
 
