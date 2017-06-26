@@ -28,8 +28,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
     title = title || newPlayer.classes[window.j]
 
-    text = text || "Lorem ispum dolor sit amet...";
-     });
+   
+    
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
     });
@@ -45,7 +45,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
     });
     title_text.val(title);
     title_text.appendTo(title_e);
-       
+     });
+       text = text || "Lorem ispum dolor sit amet..."; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
