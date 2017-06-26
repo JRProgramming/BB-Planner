@@ -27,7 +27,7 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
     title = title || newPlayer.classes[window.j]
-});
+
     text = text || "Lorem ispum dolor sit amet...";
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
@@ -63,7 +63,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
     
-    
+    });
     return {card: div, title: title, text: text};
 }
 
