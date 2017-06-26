@@ -70,7 +70,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.html('<i class="material-icons">&#xe872;</i>');
     });    
     
-    return {card: div, title: title, text: text};
+    return {card: window.div, title: title, text: text};
          
 }
 
