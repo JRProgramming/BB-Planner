@@ -45,6 +45,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     });
     title_text.val(title);
     title_text.appendTo(title_e);
+    window.j += 1
      });
        text = text || "Lorem ispum dolor sit amet..."; 
     var sup_text = $("<div/>", {
@@ -64,7 +65,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
-    window.j += 1
+    
     return {card: div, title: title, text: text};
         
 }
