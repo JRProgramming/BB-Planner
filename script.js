@@ -26,7 +26,6 @@ var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
-    alert(newPlayer.classes[j])
     title = title || newPlayer.classes[j]
 
     text = text || "Lorem ispum dolor sit amet...";
@@ -52,7 +51,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     });
     sup_text.html(text);
     sup_text.appendTo(div);
-    });
+  
     var menu = $("<div/>", {
         "class": "mdl-card__menu" 
     });
@@ -65,7 +64,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
     window.j += 1
-     
+       });
     return {card: div, title: title, text: text};
 }
 
