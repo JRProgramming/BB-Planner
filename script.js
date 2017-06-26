@@ -29,9 +29,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
     title = title || newPlayer.classes[window.j]
 
     text = text || "Lorem ispum dolor sit amet...";
-     });
+   
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
+    });
     });
     div.appendTo(".mdl-layout__content");
         
