@@ -52,7 +52,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     });
     sup_text.html(text);
     sup_text.appendTo(div);
-    
+    });
     var menu = $("<div/>", {
         "class": "mdl-card__menu" 
     });
@@ -60,12 +60,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
      var btn = $("<button/>", {
          "class":"mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
      });
-      });  
+       
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
     window.j += 1
-    
+     
     return {card: div, title: title, text: text};
 }
 
