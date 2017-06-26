@@ -33,9 +33,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
     var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
     });
-    window.div = $("<div/>", {
-        "class": "mdl-card mdl-shadow--2dp note"            
-    });
     div.appendTo(".mdl-layout__content");
         
     var title_e = $("<div/>", {
@@ -49,7 +46,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     title_text.val(title);
     title_text.appendTo(title_e);
     window.j += 1
- });  
+
        text = text || "Lorem ispum dolor sit amet..."; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
@@ -70,8 +67,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
      btn.html('<i class="material-icons">&#xe872;</i>');
      
     
-    return {card: window.div, title: title, text: text};
-         
+    return {card: div, title: title, text: text};
+       });     
 }
 
 /* Add a note and save it (aka create a note) */
