@@ -27,16 +27,7 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
     title = title || newPlayer.classes[window.j]
-
-   }); 
-    text = text || "Lorem ispum dolor sit amet...";
-   
-    var div = $("<div/>", {
-        "class": "mdl-card mdl-shadow--2dp note"            
-    });
-    
-    div.appendTo(".mdl-layout__content");    
-    var title_e = $("<div/>", {
+var title_e = $("<div/>", {
         "class": "mdl-card__title" 
     });
     title_e.appendTo(div);
@@ -46,6 +37,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
     });
     title_text.val(title);
     title_text.appendTo(title_e);
+   }); 
+    text = text || "Lorem ispum dolor sit amet...";
+   
+    var div = $("<div/>", {
+        "class": "mdl-card mdl-shadow--2dp note"            
+    });
+    
+    div.appendTo(".mdl-layout__content");    
+    
        
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
