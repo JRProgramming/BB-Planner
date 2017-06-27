@@ -27,7 +27,7 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes[window.j]
-    alert(window.j);
+   window.johnny = newPlayer.classes[window.j];
     });
 
    var div = $("<div/>", {
@@ -35,7 +35,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    });
     div.appendTo(".mdl-layout__content");
        
-    title = title || "JOE KAMINKSY"
+    title = title || window.johnny
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -76,8 +76,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-for (i=0; i<6; i++)
-{
+
     var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -106,7 +105,7 @@ for (i=0; i<6; i++)
     updateSave();
     
     note.onUp = onUp;
-}
+
     return note;
 
 }
