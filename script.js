@@ -19,15 +19,14 @@ function askRemoveNote(index, div){
 
 var j = 0
 window.j = 0
-var johnny = ""
-window.johnny = ""
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
 var playersRef = firebase.database().ref("Classes/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val();
+   var newPlayer = data.val()
+   var johnny = newPlayer.classes[window.j]
      window.johnny = newPlayer.classes[window.j]
   });
    var div = $("<div/>", {
