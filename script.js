@@ -34,7 +34,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    });
     div.appendTo(".mdl-layout__content");
         
-    alert(window.johnny)
+    title = title || window.johnny
     
     
     var title_e = $("<div/>", {
