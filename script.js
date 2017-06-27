@@ -30,7 +30,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   });
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
-  
+   });
     div.appendTo(".mdl-layout__content");
         
     var title_e = $("<div/>", {
