@@ -33,8 +33,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content");
-        
-    title = title || window.johnny
+        alert(window.johnny);
+    title = title || "JOE KAMINKSY"
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
