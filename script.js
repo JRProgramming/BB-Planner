@@ -27,13 +27,14 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes[window.j]
+    alert(window.johnny);
     });
 
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content");
-        alert(window.johnny);
+       
     title = title || "JOE KAMINKSY"
     
     var title_e = $("<div/>", {
