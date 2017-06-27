@@ -28,7 +28,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes[window.j]
    window.johnny = newPlayer.classes[window.j];
-    });
+   
 
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
@@ -71,7 +71,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
      
     
     return {card: div, title: title, text: text};
-  
+   });
 }
 
 /* Add a note and save it (aka create a note) */
