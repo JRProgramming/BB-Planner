@@ -33,7 +33,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content");
-    alert(newPlayer.classes(window.j))
+    alert(newPlayer.classes[window.j])
     title = title || window.johnny
     
     var title_e = $("<div/>", {
