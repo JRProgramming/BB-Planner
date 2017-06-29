@@ -76,7 +76,9 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-for(i=0; i<window.lengths; i+=1){
+    
+//for(i=0; i<window.lengths; i+=1){
+    
     var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -105,7 +107,7 @@ for(i=0; i<window.lengths; i+=1){
     updateSave();
     
     note.onUp = onUp;
-}
+//}
     return note;
 }
 function loser()
