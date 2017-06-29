@@ -111,7 +111,7 @@ for(i=0; i<window.lengths; i+=1){
 
 function loadNotes() {
     alert("YAH");
-    addAndSaveNote();
+    addAndSaveNote(title, text, index);
 }
 
 $(document).ready(function() {
