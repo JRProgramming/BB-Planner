@@ -75,7 +75,7 @@ function addNote(title, text) {
 }
 
 /* Add a note and save it (aka create a note) */
-function addAndSaveNote(title, text, index) {
+function addAndSaveNote() {
     
 for(i=0; i<window.lengths; i+=1){
 alert("HEY!");    
