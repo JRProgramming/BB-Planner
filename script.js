@@ -23,7 +23,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes
    window.johnny = newPlayer.classes
-  }); 
+   var lengths = newPlayer.classes.length
+   window.lengths = newPlayer.classes.length
+  });
+
+//for(i=0; i<window.lengths.length; i++){
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
