@@ -33,7 +33,6 @@ function addNote(title, text) {
    });
     div.appendTo(".mdl-layout__content")
     title = title || window.johnny[window.j]
-    alert(window.j)
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
