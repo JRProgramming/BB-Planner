@@ -24,6 +24,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes[window.j]
    window.johnny = newPlayer.classes[window.j];
+     window.j += 1
   }); 
 
 /* Add a note w/o saving it */
@@ -32,7 +33,6 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    alert(window.johnny)
     title = title || window.johnny
     
     var title_e = $("<div/>", {
@@ -46,7 +46,7 @@ function addNote(title, text) {
     
     title_text.val(title);
     title_text.appendTo(title_e);
-    window.j += 1
+   
 
        text = text || "Lorem ispum dolor sit amet..."; 
     var sup_text = $("<div/>", {
