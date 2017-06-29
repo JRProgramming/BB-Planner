@@ -109,13 +109,16 @@ for(i=0; i<window.lengths; i+=1){
     return note;
 }
 
-
-
-/* Load notes from localStorage */
 function loadNotes() {
-    addAndSaveNote();
+
 }
 
 $(document).ready(function() {
     loadNotes();
+    
+    $("#btn").click(function() {
+
+        addAndSaveNote();
+       
+    })
 })
