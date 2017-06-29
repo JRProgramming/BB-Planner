@@ -109,17 +109,3 @@ function addAndSaveNote(title, text, index) {
     return note;
 }
 
-function loadNotes() {
-    alert("YAH");
-    addAndSaveNote();
-
-}
-$(document).ready(function() {
-    loadNotes();
-    
-    $("#btn").click(function() {
-
-        addAndSaveNote();
-       
-    })
-})
