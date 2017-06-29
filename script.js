@@ -110,6 +110,7 @@ for(i=0; i<window.lengths; i+=1){
 }
 
 function loadNotes() {
+    alert("YAH");
     addAndSaveNote();
 }
 
