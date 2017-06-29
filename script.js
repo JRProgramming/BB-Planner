@@ -108,10 +108,14 @@ for(i=0; i<window.lengths; i+=1){
 }
     return note;
 }
+funtion loser()
+{
+ alert("LOSER");   
+}
 
 function loadNotes() {
     alert("YAH");
-    addAndSaveNote(title, text, index);
+   loser();
 }
 
 $(document).ready(function() {
