@@ -108,7 +108,7 @@ for(i=0; i<window.lengths; i+=1){
 }
     return note;
 }
-funtion loser()
+function loser()
 {
  alert("LOSER");   
 }
