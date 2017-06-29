@@ -113,15 +113,9 @@ for(i=0; i<window.lengths; i+=1){
 
 /* Load notes from localStorage */
 function loadNotes() {
-
+    addAndSaveNote();
 }
 
 $(document).ready(function() {
     loadNotes();
-    
-    $(document).ready(function() {
-
-        addAndSaveNote();
-       
-    })
 })
