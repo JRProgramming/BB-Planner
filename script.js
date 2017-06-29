@@ -79,7 +79,7 @@ function addAndSaveNote(title, text, index) {
 for(i=0; i<window.lengths; i+=1){
     var note = addNote(title, text);
     var obj = {
-        title: window.johnny,
+        title: note.title,
         text: note.text
     };
     if(typeof index === "number") {
