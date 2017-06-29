@@ -29,6 +29,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
+  alert(window.johnny)
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
@@ -75,7 +76,7 @@ function addNote(title, text) {
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
   window.j += 1
-    alert(window.j)
+    
     var note = addNote(title, text);
     var obj = {
         title: window.johnny,
