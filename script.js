@@ -23,7 +23,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes
    window.johnny = newPlayer.classes
-    alert(newPlayer.classes[window.j])
   }); 
 
 /* Add a note w/o saving it */
