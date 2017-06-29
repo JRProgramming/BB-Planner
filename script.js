@@ -27,7 +27,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    window.lengths = newPlayer.classes.length
   });
 
-//for(i=0; i<window.lengths.length; i++){
+
 
 /* Add a note w/o saving it */
 function addNote(title, text) {
@@ -76,7 +76,7 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-    
+alert(window.lengths.length
     var note = addNote(title, text);
     var obj = {
         title: window.johnny,
