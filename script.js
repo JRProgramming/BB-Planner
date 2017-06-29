@@ -10,6 +10,10 @@ function removeNote(index, div) {
     $(div).remove();
     updateSave();
 }
+function joey()
+{
+alert("This is working you stupid dumb idiot.");
+}
 
 function askRemoveNote(index, div){
     console.log(index + " is Index ");
