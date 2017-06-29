@@ -16,14 +16,24 @@ function askRemoveNote(index, div){
     if(confirm("Are you sure you want to remove '" + (all_notes[index].title) + "'?"))
         removeNote(index, div);
 }
+var j = 0
+window.j = 0
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val()
+   var johnny = newPlayer.classes
+   window.johnny = newPlayer.classes
+    alert(newPlayer.classes[window.j])
+  }); 
+
 /* Add a note w/o saving it */
 function addNote(title, text) {
-    window.j = 1
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    title = title || window.johnny
+    title = title || window.johnny[window.j]
+    alert(window.johnny[window.j])
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -96,18 +106,7 @@ function addAndSaveNote(title, text, index) {
 
     return note;
 }
-var j = 0
-window.j = 0
-if (window.j == 1){
-var playersRef = firebase.database().ref("Classes/");
-playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val()
-   var johnny = newPlayer.classes[window.j]
-   window.johnny = newPlayer.classes[window.j];
-    alert(newPlayer.classes[window.j])
-    window.j = 0
-  }); 
-}
+
 
 
 /* Load notes from localStorage */
