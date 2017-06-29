@@ -25,13 +25,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var johnny = newPlayer.classes[window.j]
    window.johnny = newPlayer.classes[window.j];
   }); 
-alert(window.johnny)
+
 /* Add a note w/o saving it */
 function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
+    alert(window.johnny)
     title = title || window.johnny
     
     var title_e = $("<div/>", {
