@@ -19,6 +19,7 @@ function askRemoveNote(index, div){
 
 var j = 0
 window.j = 0
+var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes[window.j]
@@ -28,7 +29,6 @@ var titlej = window.johnny
 window.titlej = window.johnny
 /* Add a note w/o saving it */
 function addNote(title, text) {
-var playersRef = firebase.database().ref("Classes/");
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
