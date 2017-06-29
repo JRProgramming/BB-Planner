@@ -76,17 +76,44 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-    
-  var note = addNote(title, text);
+for(i=0; i<window.lengths; i+=1){
+    var note = addNote(title, text);
     var obj = {
         title: note.title,
         text: note.text
     };
-  alert("HELLO");
-
+    if(typeof index === "number") {
+        all_notes[index] = obj;
+    } else {
+        index = all_notes.length;
+        all_notes.push(obj);
+    }
+    
+    note.card.find(".mdl-card__title-text").on("input", function() {
+        obj.title = $(this).val();
+        updateSave();
+    });
+    
+    var onUp = function() {
+        obj.text = $(this).html();
+        updateSave();
+    };
+    note.card.find(".mdl-card__supporting-text").on("input", onUp);
+    note.card.find("button").click(function() {
+        askRemoveNote(index, note.card); 
+    });
+    updateSave();
+    
+    note.onUp = onUp;
 }
+    return note;
+}
+
 function loadNotes() {
-   addAndSaveNote();
+    alert("YAH");
+    addAndSaveNote();
 }
 
-window.onload = loadNotes();
+$(document).ready(function() {
+    loadNotes();
+})
