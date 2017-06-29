@@ -31,7 +31,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 /* Add a note w/o saving it */
 function addNote(title, text) {
- 
+    window.j = 1
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
@@ -69,7 +69,7 @@ function addNote(title, text) {
      btn.css("color", "white");
      btn.appendTo(menu);
      btn.html('<i class="material-icons">&#xe872;</i>');
-       window.j = 1
+    
      
     return {card: div, title: title, text: text};
   
