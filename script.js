@@ -110,15 +110,9 @@ for(i=0; i<window.lengths; i+=1){
 }
 
 function loadNotes() {
-
+    addAndSaveNote();
 }
 
 $(document).ready(function() {
     loadNotes();
-    
-    $("#btn").click(function() {
-
-        addAndSaveNote();
-       
-    })
 })
