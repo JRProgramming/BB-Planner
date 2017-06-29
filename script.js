@@ -76,7 +76,7 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-alert(window.lengths.length
+alert(window.lengths.length);
     var note = addNote(title, text);
     var obj = {
         title: window.johnny,
