@@ -115,9 +115,7 @@ function loser()
 
 function loadNotes() {
     alert("YAH");
-   loser();
+   addAndSaveNote();
 }
 
-$(document).ready(function() {
-    loadNotes();
-})
+window.onload = loadNotes();
