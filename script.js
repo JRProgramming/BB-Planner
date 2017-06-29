@@ -114,7 +114,12 @@ function loadNotes() {
     addAndSaveNote();
 
 }
-
 $(document).ready(function() {
     loadNotes();
+    
+    $("#btn").click(function() {
+
+        addAndSaveNote();
+       
+    })
 })
