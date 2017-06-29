@@ -24,7 +24,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var johnny = newPlayer.classes[window.j]
    window.johnny = newPlayer.classes[window.j];
   });  
-
+var titlej = window.johnny
+window.titlej = window.johnny
 /* Add a note w/o saving it */
 function addNote(title, text) {
 var playersRef = firebase.database().ref("Classes/");
@@ -32,7 +33,7 @@ var playersRef = firebase.database().ref("Classes/");
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    title = title || window.johnny
+    title = title || window.titlej
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
