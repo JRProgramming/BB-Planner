@@ -24,16 +24,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    var johnny = newPlayer.classes[window.j]
    window.johnny = newPlayer.classes[window.j];
-  });  
-var titlej = window.johnny
-window.titlej = window.johnny
+  }); 
+alert(window.johnny)
 /* Add a note w/o saving it */
 function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    title = title || window.titlej
+    title = title || window.johnny
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
