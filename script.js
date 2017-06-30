@@ -83,7 +83,7 @@ function addAndSaveNote(title, text, index) {
         title: note.title,
         text: note.text
     };
-    alert(window.classers);
+    alert(window.johnny[window.j]);
     if(typeof index === "number") {
         all_notes[index] = obj;
     } else {
@@ -107,7 +107,6 @@ function addAndSaveNote(title, text, index) {
     updateSave();
     note.onUp = onUp;
     
-    alert("HEY Bob");
    
      return note;
     
