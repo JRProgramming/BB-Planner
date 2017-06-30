@@ -76,7 +76,6 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-alert("HEY Bob");
       var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -104,6 +103,7 @@ alert("HEY Bob");
     });
     updateSave();
     note.onUp = onUp;
+    alert("HEY Bob");
     return note;
  
 }
