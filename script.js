@@ -81,7 +81,7 @@ function addAndSaveNote(title, text, index) {
     alert("You have been hacked");
     
    
-     return note;
+
 
  
 }
