@@ -77,12 +77,13 @@ function addNote(title, text) {
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
       alert("HEY Bob");
-for(i=0; i<window.lengths;i+= 1){
     var note = addNote(title, text);
     var obj = {
         title: note.title,
         text: note.text
     };
+for(i=0; i<window.lengths;i+= 1){
+    
     if(typeof index === "number") {
         all_notes[index] = obj;
     } else {
