@@ -105,9 +105,8 @@ for(i=0; i<window.lengths;i+= 1){
     });
     updateSave();
     note.onUp = onUp;
-
-    return note;
 }
+    return note;
 }
 window.onload = addAndSaveNote();
   
