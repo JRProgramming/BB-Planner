@@ -109,8 +109,6 @@ for(i=0; i<window.lengths;i+= 1){
     return note;
 }
 }
-window.onload = function() {
-  for(var i = 0; i < window.lengths; i++) {
-    addAndSaveNote();
-  }
-}
+window.onload = addAndSaveNote();
+  
+
