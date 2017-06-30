@@ -77,6 +77,7 @@ function addNote(title, text) {
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
       alert("HEY Bob");
+for(i=0; i<window.lengths;i+= 1){
     var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -103,8 +104,8 @@ function addAndSaveNote(title, text, index) {
         askRemoveNote(index, note.card); 
     });
     updateSave();
-    
     note.onUp = onUp;
+}
     return note;
 }
 window.onload = function() {
