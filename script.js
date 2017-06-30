@@ -80,9 +80,8 @@ function addAndSaveNote() {
       alert("HEY Bob");
     
 }
-window.onload = function() {
 
-    addAndSaveNote();
+    window.onload = addAndSaveNote();
   
-}
+
 
