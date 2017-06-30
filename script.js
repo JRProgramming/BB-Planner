@@ -78,7 +78,7 @@ function addNote(title, text) {
 function addAndSaveNote(title, text, index) {
       var note = addNote(title, text);
     var obj = {
-        title: window.johnny[window.j],
+        title: window.johnny,
         text: note.text
     };
     if(typeof index === "number") {
