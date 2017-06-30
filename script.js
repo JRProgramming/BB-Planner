@@ -81,30 +81,9 @@ function addAndSaveNote(title, text, index) {
         title: note.title,
         text: note.text
     };
-    if(typeof index === "number") {
-        all_notes[index] = obj;
-    } else {
-        index = all_notes.length;
-        all_notes.push(obj);
-    }
     
-    note.card.find(".mdl-card__title-text").on("input", function() {
-        obj.title = $(this).val();
-        updateSave();
-    });
-    
-    var onUp = function() {
-        obj.text = $(this).html();
-        updateSave();
-    };
-    note.card.find(".mdl-card__supporting-text").on("input", onUp);
-    note.card.find("button").click(function() {
-        askRemoveNote(index, note.card); 
-    });
-    updateSave();
-    note.onUp = onUp;
     alert("HEY Bob");
-    return note;
+   
  
 }
 window.onload = addAndSaveNote();
