@@ -89,23 +89,7 @@ function addAndSaveNote(title, text, index) {
         all_notes.push(obj);
     }
     
-    note.card.find(".mdl-card__title-text").on("input", function() {
-        obj.title = $(this).val();
-        updateSave();
-    });
-    
-    var onUp = function() {
-        obj.text = $(this).html();
-        updateSave();
-    };
-    note.card.find(".mdl-card__supporting-text").on("input", onUp);
-    note.card.find("button").click(function() {
-        askRemoveNote(index, note.card); 
-    });
-    updateSave();
-    
-    note.onUp = onUp;
-    return note;
+
 }
 window.onload = function() {
   for(var i = 0; i < window.lengths; i++) {
