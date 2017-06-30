@@ -16,7 +16,7 @@ function askRemoveNote(index, div){
     if(confirm("Are you sure you want to remove '" + (all_notes[index].title) + "'?"))
         removeNote(index, div);
 }
-function loadNetwork(){
+
 var j = 0
 window.j = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -29,7 +29,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var classers = window.johnny[window.j];
    window.classers = window.johnny[window.j];
   });
-}
+
 
 
 /* Add a note w/o saving it */
@@ -112,6 +112,6 @@ function addAndSaveNote(title, text, index) {
     
  
 }
-window.onload = loadNetwork();
+window.onload = addAndSaveNote();
   
 
