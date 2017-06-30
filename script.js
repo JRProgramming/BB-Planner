@@ -107,6 +107,6 @@ alert("HEY Bob");
     return note;
  
 }
-window.onload = addAndSaveNote(title, text, index);
+window.onload = addAndSaveNote();
   
 
