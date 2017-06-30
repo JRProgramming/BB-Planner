@@ -38,7 +38,7 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    title = title || window.classers;
+    title = title || "Loser";
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -84,7 +84,6 @@ function addAndSaveNote(title, text, index) {
         title: note.title,
         text: note.text
     };
-    alert(window.johnny[window.j]);
     if(typeof index === "number") {
         all_notes[index] = obj;
     } else {
@@ -114,6 +113,5 @@ function addAndSaveNote(title, text, index) {
  
 }
 window.onload = loadNetwork();
-window.onload = addAndSaveNote();
   
 
