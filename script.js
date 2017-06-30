@@ -82,7 +82,7 @@ for(i=0; i<window.lengths; i += 1){
 }
 
 
- window.onload = addAndSaveNote();
+ window.onload = "addAndSaveNote()";
 
 
 
