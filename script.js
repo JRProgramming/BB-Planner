@@ -77,8 +77,12 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-      
-    alert("Peter");
+      var note = addNote(title, text);
+    alert("You have been hacked");
+    
+   
+     return note;
+
  
 }
 window.onload = addAndSaveNote();
