@@ -79,26 +79,7 @@ function addAndSaveNote(title, text, index) {
       
    for(i=0; i<window.lengths;i+= 1){
        alert("HEY Bob");
-      var note = addNote(title, text);
-    var obj = {
-        title: note.title,
-        text: note.text
-    };
-    if(typeof index === "number") {
-        all_notes[index] = obj;
-    } else {
-        index = all_notes.length;
-        all_notes.push(obj);
-    }
-    note.card.find(".mdl-card__title-text").on("input", function() {
-        obj.title = $(this).val();
-        updateSave();
-    });
-    
-    var onUp = function() {
-        obj.text = $(this).html();
-        updateSave();
-    };
+ 
     
 }    
 
