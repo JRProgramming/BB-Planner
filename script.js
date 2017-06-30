@@ -25,6 +25,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
    window.johnny = newPlayer.classes
    var lengths = newPlayer.classes.length
    window.lengths = newPlayer.classes.length
+   var classers = window.johnny[window.j];
+   window.classers = window.johnny[window.j];
   });
 
 
@@ -35,7 +37,7 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    title = title || "";
+    title = title || window.classers;
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -78,7 +80,7 @@ function addNote(title, text) {
 function addAndSaveNote(title, text, index) {
       var note = addNote(title, text);
     var obj = {
-        title: "Loser",
+        title: note.title,
         text: note.text
     };
     if(typeof index === "number") {
