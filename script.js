@@ -77,9 +77,11 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
+  
+    
     alert("You have been hacked");
     
-   
+   return note;
 
 
  
