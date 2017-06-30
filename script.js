@@ -81,7 +81,9 @@ function addAndSaveNote() {
     
 }
 
+for(i=0; i<window.lengths; i += 1)
+{
     window.onload = addAndSaveNote();
-  
+}
 
 
