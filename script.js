@@ -111,7 +111,7 @@ function addAndSaveNote(title, text, index) {
 }
 function loadNotes() {
     try {
-        var note = JSON.parse(localStorage.getItem("note"));
+        var note = addNote();
         if(note)
             note.forEach(function(item, index) {
                 if(item)
