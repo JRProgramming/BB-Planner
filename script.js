@@ -36,7 +36,7 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    title = title || johnny[j];
+    title = title || window.johnny[window.j];
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -108,17 +108,13 @@ function addAndSaveNote(title, text, index) {
     return note;
 }
 function loadNotes() {
-    try {
        var note = addAndSaveNote();
         if(note)
             function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
-    } catch(err) {
-        alert("An error occured while loading notes.\n\nWe are sorry for this incident. If you would like to report this, go to the link below.\n\nhttps://github.com/Allen-B1/free-simple-note/issues/new?title=Notes%20Loading%20Error&body=" + encodeURI("I got an error about loading notes.\n\n**Stats**\nError: `" + err + "`"));
-        console.error(err);
-    }
+    
 }
 
 window.onload = function(){
