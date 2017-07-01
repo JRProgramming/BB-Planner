@@ -110,10 +110,10 @@ function addAndSaveNote(title, text, index) {
 function loadNotes() {
        var note = addAndSaveNote();
         if(note)
-            window.johnny.forEach(function load(item, index)) {
+            window.johnny.forEach(function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
-            };
+            });
 }
 
 window.onload = function(){
