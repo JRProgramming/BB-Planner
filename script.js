@@ -38,7 +38,7 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    title = title || window.classers;
+    title = title || "Classes";
     
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -111,7 +111,7 @@ function addAndSaveNote(title, text, index) {
 }
 function loadNotes() {
     try {
-       var note = addNote();
+       var note = addAndSaveNote();
         if(note)
             function load(item, index) {
                 if(item)
