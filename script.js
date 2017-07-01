@@ -123,6 +123,6 @@ function loadNotes() {
     }
 }
 
-window.onload = loadNotes();
+window.onload = function(){loadNotes()};
   
 
