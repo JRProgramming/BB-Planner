@@ -113,7 +113,7 @@ function loadNotes() {
     try {
        var note = addAndSaveNote();
         if(note)
-            function(item, index) {
+            function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
