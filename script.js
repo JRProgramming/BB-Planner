@@ -111,12 +111,15 @@ function addAndSaveNote(title, text, index) {
 }
 function loadNotes() {
     try {
+        for(i=0; i<window.lengths; i += 1)
+        {
         var note = addNote();
         if(note)
             note.forEach(function(item, index) {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             });
+        }
     } catch(err) {
         alert("An error occured while loading notes.\n\nWe are sorry for this incident. If you would like to report this, go to the link below.\n\nhttps://github.com/Allen-B1/free-simple-note/issues/new?title=Notes%20Loading%20Error&body=" + encodeURI("I got an error about loading notes.\n\n**Stats**\nError: `" + err + "`"));
         console.error(err);
