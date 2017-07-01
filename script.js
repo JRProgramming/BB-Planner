@@ -86,6 +86,6 @@ function addAndSaveNote(title, text, index) {
 
  
 }
-window.onload = addAndSaveNote();
+window.onload = addNote();
   
 
