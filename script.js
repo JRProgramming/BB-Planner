@@ -113,7 +113,7 @@ function loadNotes() {
     try {
        var note = addAndSaveNote();
         if(note)
-            window.lengths.forEach(function(item, index) {
+            window.johnny.forEach(function(item, index) {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             });
