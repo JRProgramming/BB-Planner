@@ -77,15 +77,50 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
-  var note = addNote(title, text);
+    var note = addNote(title, text);
+    var obj = {
+        title: note.title,
+        text: note.text
+    };
+    if(typeof index === "number") {
+        all_notes[index] = obj;
+    } else {
+        index = all_notes.length;
+        all_notes.push(obj);
+    }
     
-    alert("You have been hacked");
+    note.card.find(".mdl-card__title-text").on("input", function() {
+        obj.title = $(this).val();
+        updateSave();
+    });
     
-   return note;
-
-
- 
+    var onUp = function() {
+        obj.text = $(this).html();
+        updateSave();
+    };
+    note.card.find(".mdl-card__supporting-text").on("input", onUp);
+    note.card.find("button").click(function() {
+        askRemoveNote(index, note.card); 
+    });
+    updateSave();
+    
+    note.onUp = onUp;
+    return note;
 }
-window.onload = addNote();
+function loadNotes() {
+    try {
+        var note = JSON.parse(localStorage.getItem("note"));
+        if(note)
+            note.forEach(function(item, index) {
+                if(item)
+                    addAndSaveNote(item.title, item.text, index); 
+            });
+    } catch(err) {
+        alert("An error occured while loading notes.\n\nWe are sorry for this incident. If you would like to report this, go to the link below.\n\nhttps://github.com/Allen-B1/free-simple-note/issues/new?title=Notes%20Loading%20Error&body=" + encodeURI("I got an error about loading notes.\n\n**Stats**\nError: `" + err + "`"));
+        console.error(err);
+    }
+}
+
+window.onload = loadNotes();
   
 
