@@ -111,7 +111,7 @@ function addAndSaveNote(title, text, index) {
 }
 function loadNotes() {
     try {
-       var note = addAndSaveNote();
+       var note = addNote();
         if(note)
             function load(item, index) {
                 if(item)
