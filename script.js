@@ -77,12 +77,6 @@ function addAndSaveNote(title, text, index) {
         title: note.title,
         text: note.text
     };
-    if(typeof index === "number") {
-        all_notes[index] = obj;
-    } else {
-        index = all_notes.length;
-        all_notes.push(obj);
-    }
     
     note.card.find(".mdl-card__title-text").on("input", function() {
         obj.title = $(this).val();
