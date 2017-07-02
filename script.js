@@ -1,3 +1,21 @@
+var all_notes = JSON.parse(localStorage.getItem("note"));
+all_notes = all_notes instanceof Array ? all_notes : [];
+
+function updateSave() { 
+    localStorage.setItem("note", JSON.stringify(all_notes));
+}
+
+function removeNote(index, div) {
+    all_notes[index] = null;
+    $(div).remove();
+    updateSave();
+}
+
+function askRemoveNote(index, div){
+    console.log(index + " is Index ");
+    if(confirm("Are you sure you want to remove '" + (all_notes[index].title) + "'?"))
+        removeNote(index, div);
+}
 
 var j = 0
 window.j = 0
@@ -47,7 +65,12 @@ function addNote(title, text) {
         "class": "mdl-card__menu" 
     });
     menu.appendTo(div);
-  
+     var btn = $("<button/>", {
+         "class":"mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+     });
+     btn.css("color", "white");
+     btn.appendTo(menu);
+     btn.html('<i class="material-icons">&#xe872;</i>');
     window.j += 1
      
     return {card: div, title: title, text: text};
@@ -71,14 +94,18 @@ function addAndSaveNote(title, text, index) {
     
     note.card.find(".mdl-card__title-text").on("input", function() {
         obj.title = $(this).val();
-     
+        updateSave();
     });
     
     var onUp = function() {
         obj.text = $(this).html();
-     
+        updateSave();
     };
     note.card.find(".mdl-card__supporting-text").on("input", onUp);
+    note.card.find("button").click(function() {
+        askRemoveNote(index, note.card); 
+    });
+    updateSave();
     
     note.onUp = onUp;
     }
@@ -95,6 +122,3 @@ function loadNotes() {
             };
     
 }
-
-  
-
