@@ -106,8 +106,9 @@ function addAndSaveNote(title, text, index) {
     updateSave();
     
     note.onUp = onUp;
-    return note;
     }
+    return note;
+    
 }
 function loadNotes() {
     
