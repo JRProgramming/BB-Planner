@@ -77,6 +77,7 @@ function addNote(title, text) {
 
 /* Add a note and save it (aka create a note) */
 function addAndSaveNote(title, text, index) {
+    for(i=0;i<6;i++){
     var note = addNote(title, text);
     var obj = {
         title: note.title,
@@ -106,16 +107,17 @@ function addAndSaveNote(title, text, index) {
     
     note.onUp = onUp;
     return note;
+    }
 }
 function loadNotes() {
-    for(i=0;i<6;i++){
+    
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
-    }
+    
 }
 
 window.onload = function(){
