@@ -52,7 +52,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    if (newPlayer.classes != "")
    {
     if (j == 0){
-    window.location = "jrprogramming.github.io/BB-Planner"
+    window.location = "jrprogramming.github.io/johnny"
      alert(j);
      j = 1
     }
