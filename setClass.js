@@ -47,11 +47,7 @@ classes.push("Specials")
  classers.push({
       classes: classes
 });
- logOut()
-}
-function logOut()
-{
- location.href = "https://jrprogramming.github.io/BB-Planner"
+ 
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
