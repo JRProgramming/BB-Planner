@@ -26,6 +26,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    window.johnny = newPlayer.classes
    var lengths = newPlayer.classes.length
    window.lengths = newPlayer.classes.length
+   loadNotes();
   });
 
 
@@ -122,9 +123,5 @@ function loadNotes() {
     
 }
 
-window.onload = function(){
-    alert("Hey there");
-    loadNotes()
-};
   
 
