@@ -108,12 +108,14 @@ function addAndSaveNote(title, text, index) {
     return note;
 }
 function loadNotes() {
+    for(i=0;i<6;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
+    }
 }
 
 window.onload = function(){
