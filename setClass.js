@@ -48,6 +48,7 @@ classes.push("Specials")
       classes: classes
    
 });
+ href = "https://jrprogramming.github.io/BB-Planner/#"
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
