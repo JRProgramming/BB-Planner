@@ -59,7 +59,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     
    }
    })
-    onclick = "jrprogramming.github.io/johnny"
+   
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
