@@ -52,7 +52,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    if (newPlayer.classes != "")
    {
     if (j == 0){
-
+    location.href = "jrprogramming.github.io/BB-Planner"
      alert(j);
      j = 1
     }
