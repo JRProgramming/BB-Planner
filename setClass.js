@@ -48,15 +48,9 @@ classes.push("Specials")
  var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
-   var j = 0
    if (newPlayer.classes != "")
    {
-    if (j == 0){
     location.href = "jrprogramming.github.io/BB-Planner"
-     alert(j);
-     j = 1
-    }
-    
    }
    })
    
