@@ -123,8 +123,5 @@ function loadNotes() {
     
 }
 
-window.onload = function(){
-    alert("Hey there");
-};
   
 
