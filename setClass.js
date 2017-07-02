@@ -44,7 +44,7 @@ if (englishd.checked == true)
 }
 classes.push("Specials")
 var j = 0
-window.j= 0
+window.j = 0
  classers.push({
       classes: classes
   window.j = 1
