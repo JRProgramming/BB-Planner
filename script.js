@@ -36,14 +36,9 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-    if (window.johnny[window.j] == undefined)
-        {
-            function addNote();
-        };
-    else
-        {
-            title = title || window.johnny[0];
-        }
+        
+  title = title || window.johnny[window.j];
+        
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
     });
