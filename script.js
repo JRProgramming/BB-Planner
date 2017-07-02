@@ -38,8 +38,8 @@ function addNote(title, text) {
     div.appendTo(".mdl-layout__content")
     if (window.johnny[window.j] == undefined)
         {
-            function addNote(title, text)
-        }
+            function addNote();
+        };
     else
         {
             title = title || window.johnny[0];
