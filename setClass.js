@@ -16,7 +16,6 @@ function logClasses()
  {
  english.checked =  false
  }
- document.getElementById("heading").innerHTML = "Sup Johnny" 
 
  if(algC4.checked == true)
  {
@@ -43,16 +42,10 @@ if (englishd.checked == true)
  classes.push(englishd.value)
 }
 classes.push("Specials")
-var j = 0
-window.j = 0
  classers.push({
       classes: classes
-  window.j = 1
 });
- if (window.j == 1)
- {
- window.location = "jrprogramming.github.io/BB-Planner"
- }
+
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
