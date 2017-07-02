@@ -52,14 +52,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
    if (newPlayer.classes != "")
    {
     if (j == 0){
-    window.location = "jrprogramming.github.io/johnny"
+
      alert(j);
      j = 1
     }
     
    }
    })
-
+    window.location = "jrprogramming.github.io/johnny"
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
