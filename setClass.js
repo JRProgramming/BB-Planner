@@ -49,7 +49,10 @@ window.j = 0
       classes: classes
   window.j = 1
 });
- alert(window.j)
+ if (window.j == 1)
+ {
+ window.location = "jrprogramming.github.io/BB-Planner"
+ }
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
