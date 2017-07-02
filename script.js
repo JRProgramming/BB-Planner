@@ -1,18 +1,5 @@
-function updateSave() { 
-    localStorage.setItem("note", JSON.stringify(all_notes));
-}
 
-function removeNote(index, div) {
-    all_notes[index] = null;
-    $(div).remove();
-    updateSave();
-}
 
-function askRemoveNote(index, div){
-    console.log(index + " is Index ");
-    if(confirm("Are you sure you want to remove '" + (all_notes[index].title) + "'?"))
-        removeNote(index, div);
-}
 
 var j = 0
 window.j = 0
