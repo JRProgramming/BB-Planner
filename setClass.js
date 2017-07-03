@@ -53,7 +53,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    alert(newPlayer.classes)
   }
   
-   
+})
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
