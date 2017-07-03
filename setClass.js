@@ -53,10 +53,7 @@ window.joe = newPlayer.classes
   
 })
  alert(window.joe)
- if(window.joe != "" || window.joe != undefined)
- {
-  location.href = "index.html"
- }
+document.getElementById("heading").innerHTML = window.joe
 }
 
 function UnCheck(obj) {
