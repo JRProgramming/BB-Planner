@@ -45,12 +45,11 @@ classes.push("Specials")
  classers.push({
       classes: classes
 });
-
-
+done()
+} 
 function done(){  
  location.href = "index.html"
 }
-} 
 
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
