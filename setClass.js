@@ -46,7 +46,6 @@ classes.push("Specials")
       classes: classes
 });
 document.getElementById("joe").innerHTML = "<button onclick=\"done()\">Go Back to the Planner</button>"
- alert(window.email);
 } 
 function done(){  
  location.href = "index.html"
