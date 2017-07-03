@@ -48,8 +48,11 @@ classes.push("Specials")
  classers.push({
       classes: classes
 });
+  reDirect()
  }
+ function reDirect(){
 location.href = "index.html"
+ }
 }
 
 function UnCheck(obj) {
