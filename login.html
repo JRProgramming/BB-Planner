@@ -32,6 +32,10 @@
           return;
         }
        window.location.href = "https://jrprogramming.github.io/johnny/HTML%20Code.html#"
+        var classers = firebase.database().ref("Classes/");
+          classers.push({
+                classes: classes
+          });
         // Sign in with email and pass.
         // [START authwithemail]
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
@@ -148,10 +152,6 @@ return;
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
-             var classers = firebase.database().ref("Classes/");
-          classers.push({
-                classes: classes
-          });
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
