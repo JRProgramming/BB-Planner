@@ -46,7 +46,7 @@ classes.push("Specials")
       classes: classes
 });
 
-setTimeout(function(){location.href = "index.html"}, 500)
+setTimeout(function(){location.href = "index.html"}, 250)
  
 }
 
