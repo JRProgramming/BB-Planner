@@ -52,12 +52,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
 window.joe = newPlayer.classes
   
 })
- alert(window.joe)
-document.getElementById("heading").innerHTML = window.joe
-if(document.getElementById("heading").innerHTML == window.joe)
-{
- window.location = "index.html"
-}
 }
 
 function UnCheck(obj) {
