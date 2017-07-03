@@ -45,13 +45,7 @@ classes.push("Specials")
  classers.push({
       classes: classes
 });
-var playersRef = firebase.database().ref("Classes/");
-playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val()
-
-window.joe = newPlayer.classes
-  
-})
+setTimeout(function(){location.href = "index.html"}, 3000)
 }
 
 function UnCheck(obj) {
