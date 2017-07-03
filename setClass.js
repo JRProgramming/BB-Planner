@@ -45,8 +45,10 @@ classes.push("Specials")
  classers.push({
       classes: classes
 });
-
-setTimeout(function(){location.href = "index.html"}, 175)
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val()
+   alert(newPlayer.classes);
  
 }
 
