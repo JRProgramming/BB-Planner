@@ -56,7 +56,7 @@ window.joe = newPlayer.classes
 document.getElementById("heading").innerHTML = window.joe
 if(document.getElementById("heading").innerHTML == window.joe)
 {
- location.href = "index.html"
+ window.location = "index.html"
 }
 }
 
