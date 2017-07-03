@@ -49,12 +49,11 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    alert(newPlayer.classes)
- if(newPlayer.classes != ""){
-   location.href = "index.html"
- }
+window.joe = newPlayer.classes
   
 })
 }
+alert(window.joe)
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
     for (var i = 0; i < eng.length; i++) {
