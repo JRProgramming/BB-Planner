@@ -45,7 +45,7 @@ classes.push("Specials")
  classers.push({
       classes: classes
 });
-setTimeout(function(){location.href = "index.html"}, 1)
+setTimeout(function(){location.href = "index.html"}, 1000)
 }
 
 function UnCheck(obj) {
