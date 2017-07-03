@@ -48,11 +48,9 @@ classes.push("Specials")
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
-  if (newPlayer.classes != "")
-  {
    alert(newPlayer.classes)
-   location.href = "index.html"
-  }
+ 
+  
   
 })
 }
