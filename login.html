@@ -23,6 +23,7 @@
       } else {
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
+        var name = document.getElementById("nameText").value;
         if (email.length < 4) {
           alert('Please enter an email address.');
           return;
@@ -33,7 +34,7 @@
         }
         var classers = firebase.database().ref("Classes/");
           classers.push({
-                classes: email
+                Name: name
           });
         // Sign in with email and pass.
         // [START authwithemail]
@@ -207,8 +208,10 @@ return;
           <p>Enter an email and password below and either sign in to an existing account or sign up</p>
 
           <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
-          &nbsp;&nbsp;&nbsp;
+          <p></p>
           <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+          <p></p>
+          <input type="text" id="nameText"></br>
           <br/><br/>
           <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
           &nbsp;&nbsp;&nbsp;
