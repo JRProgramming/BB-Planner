@@ -49,7 +49,6 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    alert(newPlayer.classes)
-   location.href = "index.html"
   
   
 })
