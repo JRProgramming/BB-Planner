@@ -48,12 +48,13 @@ classes.push("Specials")
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
-   alert(newPlayer.classes)
+
 window.joe = newPlayer.classes
   
 })
+ alert(window.joe)
 }
-alert(window.joe)
+
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
     for (var i = 0; i < eng.length; i++) {
