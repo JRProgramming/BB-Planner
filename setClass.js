@@ -50,7 +50,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
   if (newPlayer.classes != "")
   {
-   location.href = "index.html"
+   alert(newPlayer.classes)
   }
   
 })
