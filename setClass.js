@@ -50,7 +50,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val()
    if (newPlayer.classes != "")
    {
-    location.href = "jrprogramming.github.io/BB-Planner/index.html"
+    location.href = ""
    }
    })
    
