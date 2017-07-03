@@ -41,18 +41,13 @@ if (englishd.checked == true)
 {
  classes.push(englishd.value)
 }
- logToServer()
-function logToServer()
- {
 classes.push("Specials")
  classers.push({
       classes: classes
 });
-  reDirect()
- }
- function reDirect(){
-location.href = "index.html"
- }
+
+setTimeout(function(){location.href = "index.html"}, 1000)
+ 
 }
 
 function UnCheck(obj) {
