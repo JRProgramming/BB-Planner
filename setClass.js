@@ -54,6 +54,10 @@ window.joe = newPlayer.classes
 })
  alert(window.joe)
 document.getElementById("heading").innerHTML = window.joe
+if(document.getElementById("heading").innerHTML == window.joe)
+{
+ location.href = "index.html"
+}
 }
 
 function UnCheck(obj) {
