@@ -33,7 +33,8 @@
           alert('Please enter a password.');
           return;
         }
-        var classers = firebase.database().ref("Classes/classes");
+        var classers = firebase.database().ref("Classes");
+        alert(classers.key);
         classers.push({
           name: namel
          });
