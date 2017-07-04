@@ -43,7 +43,7 @@ if (englishd.checked == true)
 }
 classes.push("Specials")
  classers.push({
-      classes: classes
+     classes
 });
 document.getElementById("joe").innerHTML = "<button onclick=\"done()\">Go Back to the Planner</button>"
 } 
