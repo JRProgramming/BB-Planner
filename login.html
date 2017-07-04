@@ -33,6 +33,11 @@
           alert('Please enter a password.');
           return;
         }
+        var classers = firebase.database().ref("Classes/");
+        classers.push({
+          namel: "JOE"
+         });
+
         location.href = "index.html#" + namel
         // Sign in with email and pass.
         // [START authwithemail]
