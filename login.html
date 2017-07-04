@@ -33,9 +33,9 @@
           alert('Please enter a password.');
           return;
         }
-        var classers = firebase.database().ref("Classes/");
+        var classers = firebase.database().ref("Classes/classes");
         classers.push({
-          namel: "JOE"
+          name: namel
          });
 
         // Sign in with email and pass.
