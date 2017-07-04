@@ -25,7 +25,6 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         var namel = document.getElementById("nameText").value;
-        window.namel = document.getElementById("nameText").value;
         if (email.length < 4) {
           alert('Please enter an email address.');
           return;
@@ -34,9 +33,9 @@
           alert('Please enter a password.');
           return;
         }
-        var classers = firebase.database().ref("Classes/");
+        var classers = firebase.database().ref("classes/");
           classers.push({
-                classes: namel
+               namel
           });
         // Sign in with email and pass.
         // [START authwithemail]
