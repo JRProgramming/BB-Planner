@@ -33,10 +33,7 @@
           alert('Please enter a password.');
           return;
         }
-        var classers = firebase.database().ref("Classes/classes");
-          classers.update({
-              "3": "WOW"
-          });
+        location.href = "index.html#johnny"
         // Sign in with email and pass.
         // [START authwithemail]
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
