@@ -11,7 +11,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var lengths = newPlayer.classes.length
    window.lengths = newPlayer.classes.length
    loadNotes();
-   alert(namel);
+   alert(window.namel);
   });
 
 
