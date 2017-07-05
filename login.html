@@ -34,7 +34,8 @@
           return;
         }
         var classers = firebase.database().ref("Classes");
-        alert(classers.key);
+        var keyer = firebase.database().ref("Classes").push().key()
+        alert(keyer);
         classers.push({
           name: namel
          });
