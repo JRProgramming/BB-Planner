@@ -12,20 +12,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  var identification = joey.ID
  window.identification = joey.ID  
- var classesj = joey.classes
- alert(classesj);
+ var johnny = joey.classes
+ window.johnny = joey.classes
+ var lengths = joey.classes.length
+ window.lengths = joey.classes.length
+ loadNotes()
    }
   });
-var playersRef = firebase.database().ref("Classes/KoNpYBjGS9ssdEHR7Ep");
-playersRef.on("child_added", function(data, prevChildKey) {
-     var newPlayer = data.val()
-   var johnny = newPlayer.classes
-   alert(johnny);
-   window.johnny = newPlayer.classes
-   var lengths = newPlayer.classes.length
-   window.lengths = newPlayer.classes.length
-   loadNotes();
-});
 
 
 
