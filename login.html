@@ -43,21 +43,11 @@
        hopperRef.update({
            "ID": id
        });
-        hopperRef.set(id, function(error) {
+        hopperRef.update(id, function(error) {
           if (error) {
             alert("Data could not be saved." + error);
           } else {
-         classers.set(namel, function(error){
-          if (error)
-          {
-            alert("Data could not be saved." + error);
-          }
-           else
-           {
             alert("Data saved successfully.");
-         }
-          });
-          }
         });
        sessionStorage.setItem("name", namel);
         alert(sessionStorage.getItem("name"));
