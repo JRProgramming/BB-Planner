@@ -15,7 +15,7 @@ if(data == names)
 });
 function logClasses()
 {
- var classers = firebase.database().ref("Classes/" + window.identification + "/name");
+ var classers = firebase.database().ref("Classes/" + window.identification);
  var classes = []
  var algC4 = document.getElementById("AlgebraC");
  var SocialS = document.getElementById("SSG");
