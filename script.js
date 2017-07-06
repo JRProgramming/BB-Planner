@@ -5,15 +5,24 @@ var j = 0
 window.j = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
-   var newPlayer = data.val()
+  var joey = data.val()
+  var names= sessionStorage.getItem("name")
+   var data = newPlayer.name
+   if(names == data)
+   {
+ var identification = newPlayer.ID
+ window.identification = newPlayer.ID  
+   }
+  });
+var playersRef = firebase.database().ref("Classes/" + window.identification);
+playersRef.on("child_added", function(data, prevChildKey) {
+     var newPlayer = data.val()
    var johnny = newPlayer.classes
    window.johnny = newPlayer.classes
    var lengths = newPlayer.classes.length
    window.lengths = newPlayer.classes.length
    loadNotes();
-   alert(window.namel);
-  });
-
+});
 
 
 
