@@ -3,12 +3,16 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val();
  var data = sessionStorage.getItem("name")
  var names = joey.name
- alert(names);
+if(data == names)
+{
+ var identification = joey.ID
+ window.identification = joey.ID
+}
  
 });
 function logClasses()
 {
- var classers = firebase.database().ref("Classes");
+ var classers = firebase.database().ref("Classes/" + window.identification + "/name");
  var classes = []
  var algC4 = document.getElementById("AlgebraC");
  var SocialS = document.getElementById("SSG");
