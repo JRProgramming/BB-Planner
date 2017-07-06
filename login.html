@@ -39,8 +39,9 @@
          });
         var id = clas.key;
         alert(id);
-        classers.update{{
-          id + "/id": id
+        var refer = classers.child(id)
+        refer.update{{
+          id: id
         });
         
         
