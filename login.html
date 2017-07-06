@@ -43,7 +43,7 @@
        hopperRef.update({
            "ID": id
        });
-       var bob = firebsae.databse().ref("Completion/")
+       var bob = firebase.databse().ref("Completion/")
        bob.set("I'm writing data", function(error) {
   if (error) {
     alert("Data could not be saved." + error);
