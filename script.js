@@ -20,7 +20,7 @@ ref.once("value")
     var b = snapshot.child("classes").exists(); // true
     window.b = snapshot.child("classes").exists();
   });
-       alert(window.b)
+       alert(window.a)
  loadNotes()
 
    }
