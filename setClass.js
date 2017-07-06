@@ -1,3 +1,11 @@
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+ var joey = data.val();
+ var data = sessionStorage.getItem("name")
+ var names = joey.name
+ alert(names);
+ 
+});
 function logClasses()
 {
  var classers = firebase.database().ref("Classes");
