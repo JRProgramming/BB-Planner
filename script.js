@@ -21,16 +21,11 @@ ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
     var b = snapshot.child("classes").exists(); // true
-  alert(b)
+    window.b = snapshot.child("classes").exists();
   });
- if(lengths == 0 || lengths == undefined)
- {
-  location.href = "setClass" 
- }
- else
- {
+       alert(window.b)
  loadNotes()
- }
+
    }
   });
 
