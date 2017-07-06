@@ -45,8 +45,8 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="script.js"></script>
         <script>
-           var datar = sessionStorage.getItem("name");
-           alert(datar);
+           var data = sessionStorage.getItem("name");
+           document.getElementById("namerers").innerHTML = data + "'s Planner"
         </script>
     </head>
     <body>
@@ -54,7 +54,7 @@
             <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
-                    <span class="mdl-layout-title" id="namerers">Planner</span>
+                    <span class="mdl-layout-title" id="namerers"></span>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
