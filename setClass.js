@@ -7,6 +7,7 @@ if(data == names)
 {
  var identification = joey.ID
  window.identification = joey.ID
+ alert(window.identification)
 }
  
 });
