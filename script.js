@@ -7,11 +7,11 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names= sessionStorage.getItem("name")
-   var data = newPlayer.name
+   var data = joey.name
    if(names == data)
    {
- var identification = newPlayer.ID
- window.identification = newPlayer.ID  
+ var identification = joey.ID
+ window.identification = joey.ID  
    }
   });
 var playersRef = firebase.database().ref("Classes/" + window.identification);
