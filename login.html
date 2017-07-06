@@ -34,11 +34,13 @@
           return;
         }
         var classers = firebase.database().ref("Classes/");
-        var clas = classers.push({
-          name: namel
-         });
         var id = clas.key;
         alert(id);
+        var clas = classers.push({
+          name: namel
+          id: id
+         });
+        
         //allow username to pass data into the planner and page and possibly the set class page!!
 
         // Sign in with email and pass.
