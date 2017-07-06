@@ -16,6 +16,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
+ var ref = firebase.database().ref("Classes/identification");
+ref.once("value")
+  .then(function(snapshot) {
+    var a = snapshot.exists();  // true
+    var b = snapshot.child("classes").exists(); // true
+  alert(b)
+  });
  if(lengths == 0 || lengths == undefined)
  {
   location.href = "setClass" 
