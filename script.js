@@ -12,10 +12,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  var identification = joey.ID
  window.identification = joey.ID  
- var johnny = joey.classes
- window.johnny = joey.classes
- var lengths = joey.classes.length
- window.lengths = joey.classes.length
+
  var ref = firebase.database().ref("Classes/identification");
 ref.once("value")
   .then(function(snapshot) {
