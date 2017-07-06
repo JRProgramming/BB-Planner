@@ -34,7 +34,7 @@
           return;
         }
         var classers = firebase.database().ref("Classes/Name");
-        classers.set({
+        classers.child(namel.uid).set({
           name: namel
          });
 
