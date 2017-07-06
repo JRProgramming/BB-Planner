@@ -8,8 +8,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names= sessionStorage.getItem("name")
    var data = joey.name
-   if(names == data)
-   {
+
  var identification = joey.ID
  window.identification = joey.ID  
 ref.child(identification).orderByChild("classes").equalTo("Algebra").once("value", function(snapshot) {
@@ -24,7 +23,7 @@ ref.child(identification).orderByChild("classes").equalTo("Algebra").once("value
 });
  loadNotes()
 
-   }
+   
   });
 
 
