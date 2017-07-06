@@ -16,7 +16,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var ref = firebase.database().ref("Classes/");
 ref.once("value")
   .then(function(snapshot) {
-    var a = snapshot.exists(identification);  // true
+    var a = snapshot.exists(identification); // true
+    window.a = snapshot.exists(identification);
     var b = snapshot.child("classes").exists(); // true
     window.b = snapshot.child("classes").exists();
   });
