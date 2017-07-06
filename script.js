@@ -8,21 +8,23 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names= sessionStorage.getItem("name")
    var data = joey.name
-
+   if(names == data)
+   {
  var identification = joey.ID
  window.identification = joey.ID  
-ref.child(identification).orderByChild("classes").equalTo("Algebra").once("value", function(snapshot) {
-    var userData = snapshot.val();
-    if (userData){
-      alert("exists!");
-    }
-  else
-  {
-   alert("NOPE"); 
-  }
-});
+ var johnny = joey.classes
+ window.johnny = joey.classes
+ var lengths = joey.classes.length
+ window.lengths = joey.classes.length
+ if(lengths == 0 || lengths == undefined)
+ {
+  location.href = "setClass" 
+ }
+ else
+ {
  loadNotes()
-
+ }
+   }
    
   });
 
