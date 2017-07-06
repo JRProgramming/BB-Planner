@@ -14,8 +14,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    alert(window.namel);
   });
 
-var data = sessionStorage.getItem("name")
-document.getElementById("titler").innerHTML = "<span class=\"mdl-layout-title\">data</span>"
+
 
 
 /* Add a note w/o saving it */
@@ -86,6 +85,7 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
+var data = sessionStorage.getItem("name")
 function loadNotes() {
     
        var note = addAndSaveNote();
