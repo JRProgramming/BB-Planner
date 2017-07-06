@@ -10,6 +10,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var data = joey.name
    if(names == data)
    {
+     alert(names)
+     alert(data)
  var identification = joey.ID
  window.identification = joey.ID  
  var johnny = joey.classes
