@@ -39,17 +39,17 @@
          });
         var id = clas.key;
         alert(id);
-         hopperRef.update(id, function(error) {
+       var hopperRef = classers.child(id);
+       hopperRef.update({
+           "ID": id
+       });
+       hopperRef.update(id, function(error) {
           if (error) {
             alert("Data could not be saved." + error);
           } else {
             alert("Data saved successfully.");
           }
         });
-       var hopperRef = classers.child(id);
-       hopperRef.update({
-           "ID": id
-       });
        
        sessionStorage.setItem("name", namel);
         alert(sessionStorage.getItem("name"));
