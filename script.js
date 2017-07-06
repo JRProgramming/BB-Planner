@@ -8,20 +8,19 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names= sessionStorage.getItem("name")
    var data = joey.name
-    var ref = firebase.database().ref("Classes/");
-ref.once("value")
-  .then(function(snapshot) {
-    var a = snapshot.exists("Completion"); // true
-    window.a = snapshot.exists("Completion");
-    var b = snapshot.child("classes").exists(); // true
-    window.b = snapshot.child("classes").exists();
-  });
-       alert(window.a)
    if(names == data)
    {
  var identification = joey.ID
  window.identification = joey.ID  
-
+    var ref = firebase.database().ref("Classes/" + identification);
+ref.once("value")
+  .then(function(snapshot) {
+    var a = snapshot.exists("classes"); // true
+    window.a = snapshot.exists("classes");
+    var b = snapshot.child("classes").exists(); // true
+    window.b = snapshot.child("classes").exists();
+  });
+       alert(window.a)
 
  loadNotes()
 
