@@ -34,11 +34,11 @@
           return;
         }
         var classers = firebase.database().ref("Classes/");
-        var clas = classers.push();
-        var id = clas.key();
         classers.push({
           name: namel
          });
+        var clas = classers.push();
+        var id = clas.key;
         alert(id);
 
         // Sign in with email and pass.
