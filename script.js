@@ -13,7 +13,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var identification = joey.ID
  window.identification = joey.ID  
 
- var ref = firebase.database().ref("Classes/" + identification);
+ var ref = firebase.database().ref("Classes/");
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
