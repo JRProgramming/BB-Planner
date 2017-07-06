@@ -3,6 +3,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val();
  var data = sessionStorage.getItem("name")
  var names = joey.name
+ window.names = joey.name
  alert(data)
  alert(names)
 if(data == names)
@@ -57,6 +58,7 @@ if (englishd.checked == true)
 }
 classes.push("Specials")
  classers.update({
+     name: window.names,
      classes
 });
 document.getElementById("joe").innerHTML = "<button onclick=\"done()\">Go Back to the Planner</button>"
