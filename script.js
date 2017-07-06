@@ -17,14 +17,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
  alert(window.lengths);
- if(lengths == 0 || lengths = undefined)
- {
-  location.href = "setClass" 
- }
- else
- {
- loadNotes()
- }
+
    }
   });
 
