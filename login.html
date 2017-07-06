@@ -34,10 +34,9 @@
           return;
         }
         var classers = firebase.database().ref("Classes/");
-        classers.push({
+        var clas = classers.push({
           name: namel
          });
-        var clas = classers.push();
         var id = clas.key;
         alert(id);
 
