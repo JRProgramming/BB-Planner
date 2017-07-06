@@ -14,7 +14,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.identification = joey.ID  
    }
   });
-var playersRef = firebase.database().ref("Classes/" + window.identification);
+var playersRef = firebase.database().ref("Classes/KoNpYBjGS9ssdEHR7Ep");
 playersRef.on("child_added", function(data, prevChildKey) {
      var newPlayer = data.val()
    var johnny = newPlayer.classes
