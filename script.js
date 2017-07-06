@@ -107,9 +107,6 @@ function loadNotes() {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
-  else
-  {
-   location.href = "setClass" 
-  }
+
     
 }
