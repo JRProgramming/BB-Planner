@@ -4,8 +4,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var data = sessionStorage.getItem("name")
  var names = joey.name
  window.names = joey.name
- alert(data)
- alert(names)
 if(data == names)
 {
  var identification = joey.ID
