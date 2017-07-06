@@ -35,7 +35,24 @@
           return;
         }
 
-       sessionStorage.setItem("name", namel);
+     var classers = firebase.database().ref("Classes/");
+        var clas = classers.push({
+          name: window.namel
+         });
+        var id = clas.key;
+       var hopperRef = classers.child(id);
+       hopperRef.update({
+           "ID": id
+       });
+       var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("Log in failed." + error);
+  } else {
+    location.href = "index.html"
+  }
+});
+        sessionStorage.setItem("name", namel);
         
         //allow username to pass data into the planner and page and possibly the set class page!!
 
@@ -80,6 +97,7 @@ alert(email)
 alert("Not allowed here")
 return;
 }
+      
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -96,24 +114,6 @@ return;
         // [END_EXCLUDE]
       });
       // [END createwithemail]
-      
-              var classers = firebase.database().ref("Classes/");
-        var clas = classers.push({
-          name: window.namel
-         });
-        var id = clas.key;
-       var hopperRef = classers.child(id);
-       hopperRef.update({
-           "ID": id
-       });
-       var bob = firebase.database().ref("Completion/")
-       bob.set("Data is stored", function(error) {
-  if (error) {
-    alert("Log in failed." + error);
-  } else {
-    location.href = "index.html"
-  }
-});
     }
     /**
      * Sends an email verification to the user.
