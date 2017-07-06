@@ -42,8 +42,8 @@
        hopperRef.update({
            "ID": id
        });
-       var bob = firebase.database().ref("Completion/")
-       bob.set("I'm writing data", function(error) {
+       var bob = firebase.database().ref("/")
+       bob.set("", function(error) {
   if (error) {
     alert("Log in failed." + error);
   } else {
