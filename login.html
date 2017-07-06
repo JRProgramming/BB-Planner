@@ -43,7 +43,7 @@
        hopperRef.update({
            "ID": id
        });
-        hopperRef.update(id, function(error) {
+        hopperRef.set(id, function(error) {
           if (error) {
             alert("Data could not be saved." + error);
           } else {
