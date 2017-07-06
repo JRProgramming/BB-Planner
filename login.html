@@ -39,10 +39,10 @@
          });
         var id = clas.key;
         alert(id);
-        var refer = firebase.database().ref("Classes/" + id);
-        refer.push{{
-          id: id
-        });
+       var hopperRef = classers.child(id);
+       hopperRef.update({
+           "nickname": "Amazing Grace"
+       });
         
         
         //allow username to pass data into the planner and page and possibly the set class page!!
