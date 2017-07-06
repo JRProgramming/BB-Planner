@@ -86,6 +86,7 @@ function addAndSaveNote(title, text, index) {
     
 }
 var data = sessionStorage.getItem("name")
+document.getElementById("names").innerHTML = "HEY";
 function loadNotes() {
     
        var note = addAndSaveNote();
