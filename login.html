@@ -1,4 +1,3 @@
-
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -34,7 +33,6 @@
           alert('Please enter a password.');
           return;
         }
-
      var classers = firebase.database().ref("Classes/");
         var clas = classers.push({
           name: window.namel
@@ -55,7 +53,6 @@
         sessionStorage.setItem("name", namel);
         
         //allow username to pass data into the planner and page and possibly the set class page!!
-
         // Sign in with email and pass.
         // [START authwithemail]
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
