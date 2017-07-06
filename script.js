@@ -13,7 +13,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    loadNotes();
    alert(window.namel);
   });
-var data = sessionStorage.getItem("name");
+
 document.getElementById("names").innerHTML = "PLANNER"
 
 
