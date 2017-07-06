@@ -15,7 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   });
 
 var data = sessionStorage.getItem("name")
-document.getElementById("names").innerHTML = "PLANNER"
+document.getElementById("titler").innerHTML = "<span class=\"mdl-layout-title\">data</span>"
 
 
 /* Add a note w/o saving it */
