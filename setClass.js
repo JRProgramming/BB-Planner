@@ -3,6 +3,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val();
  var data = sessionStorage.getItem("name")
  var names = joey.name
+ alert(data)
+ alert(names)
 if(data == names)
 {
  var identification = joey.ID
