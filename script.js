@@ -16,6 +16,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
+ alert(window.lengths);
  if(window.lengths == 0)
  {
   location.href = "setClass" 
