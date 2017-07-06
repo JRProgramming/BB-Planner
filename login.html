@@ -38,7 +38,6 @@
           name: namel
          });
         var id = clas.key;
-        alert(id);
        var hopperRef = classers.child(id);
        hopperRef.update({
            "ID": id
@@ -46,16 +45,12 @@
        var bob = firebase.database().ref("Completion/")
        bob.set("I'm writing data", function(error) {
   if (error) {
-    alert("Data could not be saved." + error);
+    alert("Log in failed." + error);
   } else {
     location.href = "index.html"
   }
 });
-       
-       
        sessionStorage.setItem("name", namel);
-        alert(sessionStorage.getItem("name"));
-        location.href = "index.html"
         
         //allow username to pass data into the planner and page and possibly the set class page!!
 
