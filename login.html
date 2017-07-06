@@ -39,9 +39,8 @@
          });
         var id = clas.key;
         alert(id);
-        classers = firebase.databsae().ref("Classes/" + id);
         classers.update{{
-          id: id
+          "\(id)/id": id
         });
         
         
