@@ -8,12 +8,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names= sessionStorage.getItem("name")
    var data = joey.name
-   if(names == data)
-   {
- var identification = joey.ID
- window.identification = joey.ID  
-
- var ref = firebase.database().ref("Classes/");
+    var ref = firebase.database().ref("Classes/");
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists("Completion"); // true
@@ -22,6 +17,12 @@ ref.once("value")
     window.b = snapshot.child("classes").exists();
   });
        alert(window.a)
+   if(names == data)
+   {
+ var identification = joey.ID
+ window.identification = joey.ID  
+
+
  loadNotes()
 
    }
