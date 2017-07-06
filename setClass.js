@@ -56,7 +56,7 @@ if (englishd.checked == true)
  classes.push(englishd.value)
 }
 classes.push("Specials")
- classers.push({
+ classers.update({
      classes
 });
 document.getElementById("joe").innerHTML = "<button onclick=\"done()\">Go Back to the Planner</button>"
