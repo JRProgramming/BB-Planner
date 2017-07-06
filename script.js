@@ -86,7 +86,8 @@ function addAndSaveNote(title, text, index) {
     
 }
 var data = sessionStorage.getItem("name")
-document.getElementById("names").innerHTML = "HEY";
+var ball = document.createTextNode(data + " Planner");
+document.getElementById("names").appendChild(ball);
 function loadNotes() {
     
        var note = addAndSaveNote();
