@@ -12,16 +12,16 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  var identification = joey.ID
  window.identification = joey.ID  
-    var ref = firebase.database().ref("Classes/" + identification);
-ref.once("value")
-  .then(function(snapshot) {
-    var a = snapshot.exists("classes"); // true
-    window.a = snapshot.exists("classes");
-    var b = snapshot.child("classes").exists(); // true
-    window.b = snapshot.child("classes").exists();
-  });
-       alert(window.a)
-
+ref.child(identification).orderByChild("classes").equalTo("Algebra").once("value", function(snapshot) {
+    var userData = snapshot.val();
+    if (userData){
+      alert("exists!");
+    }
+  else
+  {
+   alert("NOPE"); 
+  }
+});
  loadNotes()
 
    }
