@@ -14,7 +14,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
  count()
    }
   });
-function hat(){
+
+function count(){
+ var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+ref.once("value")
+  .then(function(snapshot) {
+    var a = snapshot.exists();  // true
+  window.a = snapshot.exists();
 alert(window.a)
  if(window.a == false)
  {
@@ -28,14 +34,6 @@ alert(window.a)
  window.lengths = joey.classes.length
    loadNotes()
  }
-}
-function count(){
- var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
-ref.once("value")
-  .then(function(snapshot) {
-    var a = snapshot.exists();  // true
-  window.a = snapshot.exists();
-  hat()
   });
 }
 
