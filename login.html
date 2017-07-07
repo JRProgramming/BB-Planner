@@ -25,7 +25,6 @@ var adentification = [];
 window.adentification = []
 window.adentification.push(window.identification);
 
-  alert(window.adentification);
   });
    
    
@@ -47,7 +46,7 @@ window.adentification.push(window.identification);
           alert('Please enter a password.');
           return;
         }
-     var ref = firebase.database().ref("Classes/");
+     var ref = firebase.database().ref("Classes/" + window.adentification);
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
