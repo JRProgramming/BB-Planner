@@ -29,19 +29,26 @@ for(i=0; i<window.names.length; i++)
   if(window.namel != window.names[num])
     {
       if(exists != "taken"){
-        exists = "unique"
-        num ++ 
-        alert(num);
-        alert(exists);
+        exists = "unique";
+        num ++;
     }
     }
   else
     {
-       exists = "taken"
-      alert(exists);
-      alert(num);
+       exists = "taken";
+      
     }
 }
+num = 0
+if(exists == "unique")
+{
+ location.href = "setClass.html" 
+}
+else
+{
+ location.href = "index.html"
+}
+  exists = ""
   });
    
  }   
