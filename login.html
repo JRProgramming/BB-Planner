@@ -19,9 +19,7 @@
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val();
    var data = joey.name;
- var identification = joey.ID;
  window.identification = joey.ID;  
-var adentification = [];
 window.adentification = []
 window.adentification.push(window.identification);
 
@@ -51,8 +49,13 @@ ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
   window.a = snapshot.exists();
-  alert(window.a);
-
+if(window.a == true)
+{
+ location.href = "index.html" 
+}
+else
+{
+}
     
   });
         
