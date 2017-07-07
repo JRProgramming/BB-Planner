@@ -1,11 +1,12 @@
 
-var ref = firebase.database().ref("Classes/");
+var ref = firebase.database().ref("Classes/" + window.identification);
 ref.once("value")
   .then(function(snapshot) {
-    var a = snapshot.hasChildren(); 
-  window.a = snapshot.hasChildren();
+    var a = snapshot.exists();  // true
+  window.a = snapshot.exists();
+  alert(window.a);
   });
-alert(window.a);
+
 
 var j = 0
 window.j = 0
