@@ -17,11 +17,15 @@
      */
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
-  var joey = data.val()
-   var data = joey.name
- var identification = joey.ID
- window.identification = joey.ID  
-   alert(window.identification);
+  var joey = data.val();
+   var data = joey.name;
+ var identification = joey.ID;
+ window.identification = joey.ID;  
+var adentification = [];
+window.adentification = []
+window.adentification.push(window.identification);
+
+  alert(adentification);
   });
    
    
