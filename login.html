@@ -22,6 +22,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var data = joey.name;
 window.names = [];
 window.names.push(data);
+});
 var num = 0
 var exists = ""
 for(i=0; i<window.names.length; i++)
@@ -52,7 +53,7 @@ else
   alert("HEY");
 }
   exists = ""
-  });
+
  }
    function setter(){
       var classers = firebase.database().ref("Classes/");
