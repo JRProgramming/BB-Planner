@@ -42,7 +42,8 @@ for(i=0; i<window.names.length; i++)
 num = 0
 if(exists == "unique")
 {
- location.href = "setClass.html" 
+ setter()
+  
 }
 else
 {
@@ -50,6 +51,26 @@ else
 }
   exists = ""
   });
+ }
+   function setter(){
+      var classers = firebase.database().ref("Classes/");
+        var clas = classers.push({
+          name: window.namel
+         });
+        var id = clas.key;
+       var hopperRef = classers.child(id);
+       hopperRef.update({
+           "ID": id
+       });
+       var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("Log in failed." + error);
+  } else {
+    location.href = "index.html"
+  }
+});
+        sessionStorage.setItem("name", namel);
    
  }   
     function toggleSignIn() {
