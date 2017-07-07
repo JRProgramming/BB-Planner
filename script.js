@@ -23,8 +23,8 @@ function count(){
  var ref = firebase.database().ref("Classes/" + window.identification);
 ref.once("value")
   .then(function(snapshot) {
-    var a = snapshot.exists();  // true
-  window.a = snapshot.exists();
+    var a = snapshot.exists("name");  // true
+  window.a = snapshot.exists("name");
   alert(window.a);
   alert("Classes/" + window.identification);
   });
