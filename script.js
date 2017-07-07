@@ -6,8 +6,8 @@ ref.once("value")
   window.a = snapshot.exists();
   alert(window.a);
   alert(window.identification);
-  var b = snapshot.exists();
-  window.b = snapshot.exists();
+  var b = snapshot.exists("Classes/");
+  window.b = snapshot.exists("Classes/");
   alert(window.b);
   });
 
