@@ -20,7 +20,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   
    
   });
-var ref = firebase.database().ref("Classes/-KoQ4_7jqg18E_POnl-V");
+var ref = firebase.database().ref("Classes/" + "\(window.identification)");
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
