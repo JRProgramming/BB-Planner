@@ -47,8 +47,8 @@ window.adentification.push(window.identification);
      var ref = firebase.database().ref("Classes/" + window.adentification + "/name");
 ref.once("value")
   .then(function(snapshot) {
-    var a = snapshot.exists("Bob");  // true
-  window.a = snapshot.exists("Bob");
+    var a = snapshot.exists();  // true
+  window.a = snapshot.exists();
   alert(window.a);
 if(window.a == true)
 {
