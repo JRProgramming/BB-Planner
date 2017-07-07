@@ -17,9 +17,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.lengths = joey.classes.length
 
    }
-  
-   
   });
+alert(window.identification);
 var ref = firebase.database().ref("Classes/-KoQ4_7jqg18E_POnl-V");
 ref.once("value")
   .then(function(snapshot) {
