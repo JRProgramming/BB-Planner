@@ -12,6 +12,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var identification = joey.ID
  window.identification = joey.ID  
  count()
+ alert(window.a)
  if(window.a == false)
  {
   location.href = "setClass" 
