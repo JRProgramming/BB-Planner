@@ -15,14 +15,31 @@
     /**
      * Handles the sign in button press.
      */
+ function unique()
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val();
    var data = joey.name;
- window.identification = joey.ID;  
-window.adentification = []
-window.adentification.push(window.identification);
-
+window.names = [];
+window.names.push(data);
+var num = 0
+var exists = ""
+for(i=0; i<window.names.length; i++)
+{
+  if(window.namel != window.names[num];)
+    {
+        exists = "unique"
+        num ++ 
+        alert(num);
+        alert(exists);
+    }
+  else
+    {
+       exists = "taken"
+      alert(exists);
+      alert(num);
+    }
+}
   });
    
    
@@ -44,22 +61,8 @@ window.adentification.push(window.identification);
           alert('Please enter a password.');
           return;
         }
-     var ref = firebase.database().ref("Classes/" + window.adentification + "/name/" + window.namel);
-ref.once("value")
-  .then(function(snapshot) {
-    var a = snapshot.exists();  // true
-  window.a = snapshot.exists();
-  alert(window.a);
-if(window.a == true)
-{
- location.href = "index.html" 
-}
-else
-{
-}
-    
-  });
-        
+
+       
         //allow username to pass data into the planner and page and possibly the set class page!!
         // Sign in with email and pass.
         // [START authwithemail]
@@ -80,7 +83,7 @@ else
         // [END authwithemail]
       }
       document.getElementById('quickstart-sign-in').disabled = false;
-      
+       unique();
     }
     /**
      * Handles the sign up button press.
