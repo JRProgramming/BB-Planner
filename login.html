@@ -49,6 +49,7 @@ ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists("Bob");  // true
   window.a = snapshot.exists("Bob");
+  alert(window.a);
 if(window.a == true)
 {
  location.href = "index.html" 
