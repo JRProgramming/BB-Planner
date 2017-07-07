@@ -26,7 +26,7 @@ ref.once("value")
     var a = snapshot.exists();  // true
   window.a = snapshot.exists();
   alert(window.a);
-  alert(window.identification);
+  alert("Classes/" + window.identification);
   });
 
 
