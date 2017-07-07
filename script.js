@@ -13,6 +13,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.identification = joey.ID  
  count()
  alert(window.a)
+   }
+  });
+function hat(){
  if(window.a == false)
  {
   location.href = "setClass" 
@@ -25,8 +28,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.lengths = joey.classes.length
    loadNotes()
  }
-   }
-  });
+}
 function count(){
  var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
@@ -35,6 +37,7 @@ ref.once("value")
   window.a = snapshot.exists();
   alert(window.a);
   alert("Classes/" + window.identification);
+  hat()
   });
 }
 
