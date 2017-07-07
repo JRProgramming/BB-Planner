@@ -24,14 +24,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
- if(johnny == "")
- {
-  location.href = "setClass" 
- }
- else
- {
- loadNotes()
- }
+
    }
    
   });
