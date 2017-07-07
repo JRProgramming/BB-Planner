@@ -6,8 +6,8 @@ ref.once("value")
   window.a = snapshot.exists();
   alert(window.a);
   alert(window.identification);
-  var b = snapshot.exists("-KoPyd91TF5YVUWcVbL-/name");
-  window.b = snapshot.exists("-KoPyd91TF5YVUWcVbL-/name");
+  var b = snapshot.exists("name");
+  window.b = snapshot.exists("name");
   alert(window.b);
   });
 
