@@ -61,7 +61,7 @@ for(i=0; i<window.names.length; i++)
           alert('Please enter a password.');
           return;
         }
-
+       unique();
        
         //allow username to pass data into the planner and page and possibly the set class page!!
         // Sign in with email and pass.
@@ -83,7 +83,6 @@ for(i=0; i<window.names.length; i++)
         // [END authwithemail]
       }
       document.getElementById('quickstart-sign-in').disabled = false;
-       unique();
     }
     /**
      * Handles the sign up button press.
