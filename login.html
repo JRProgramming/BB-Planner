@@ -41,7 +41,6 @@
        var hopperRef = classers.child(id);
        hopperRef.update({
            "ID": id,
-           "classes": ""
        });
        var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
