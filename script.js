@@ -12,11 +12,18 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var identification = joey.ID
  window.identification = joey.ID  
  count()
+ if(window.a == false)
+ {
+  location.href = "setClass" 
+ }
+ else
+ {
  var johnny = joey.classes
  window.johnny = joey.classes
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
-
+   loadNotes()
+ }
    }
   });
 function count(){
