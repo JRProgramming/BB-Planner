@@ -44,7 +44,7 @@ window.adentification.push(window.identification);
           alert('Please enter a password.');
           return;
         }
-     var ref = firebase.database().ref("Classes/" + window.adentification + "/name");
+     var ref = firebase.database().ref("Classes/" + window.adentification + "/name/" + window.namel);
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
