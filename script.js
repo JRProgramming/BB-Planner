@@ -1,5 +1,5 @@
 
-var ref = firebase.database().ref("Classes/" + window.identification);
+var ref = firebase.database().ref("Classes/");
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
