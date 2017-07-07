@@ -2,8 +2,8 @@
 var ref = firebase.database().ref("Classes/");
 ref.once("value")
   .then(function(snapshot) {
-    var a = snapshot.exists();  // true
-  window.a = snapshot.exists();
+    var a = snapshot.hasChildren(); 
+  window.a = snapshot.hasChildren();
   });
 alert(window.a);
 
