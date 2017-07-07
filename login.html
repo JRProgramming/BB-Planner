@@ -60,6 +60,7 @@ location.href = "index.html"
           name: window.namel
          });
         var id = clas.key;
+       window.id = clas.key;
        var hopperRef = classers.child(id);
        hopperRef.update({
            "ID": id
@@ -77,7 +78,7 @@ sessionStorage.setItem("name", namel);
    
    function setclass()
    {
-      var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+      var ref = firebase.database().ref("Classes/" + window.id + "/classes");
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
@@ -266,6 +267,7 @@ return;
 </script>
 </head>
 <body>
+<title>BB Planner Login</title>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
   <!-- Header section containing title -->
