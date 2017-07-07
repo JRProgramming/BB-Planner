@@ -1,9 +1,9 @@
 
-var ref = firebase.database().ref("Classes/" + window.identification);
+var ref = firebase.database().ref("Classes/");
 ref.once("value")
   .then(function(snapshot) {
-    var a = snapshot.exists("name");  // true
-  window.a = snapshot.exists();
+    var a = snapshot.exists(window.identification);  // true
+  window.a = snapshot.exists(window.identification);
   alert(window.a);
   alert(window.identification);
   });
@@ -26,6 +26,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.lengths = joey.classes.length
 
    }
+  
    
   });
 
