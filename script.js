@@ -16,7 +16,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   });
 
 function count(){
- var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+ var ref = firebase.database().ref("Classes/" + window.identification + "/name");
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
@@ -26,7 +26,7 @@ alert(window.a)
  {
   location.href = "setClass" 
  }
- else
+ else if(window.a == true)
  {
  var johnny = joey.classes
  window.johnny = joey.classes
