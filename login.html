@@ -69,12 +69,32 @@ location.href = "index.html"
   if (error) {
     alert("Log in failed." + error);
   } else {
-    location.href = "index.html"
+   setclass()
   }
 });
-        sessionStorage.setItem("name", namel);
+sessionStorage.setItem("name", namel);
+}
    
- }   
+   function setclass()
+   {
+      var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+ref.once("value")
+  .then(function(snapshot) {
+    var a = snapshot.exists();  // true
+  window.a = snapshot.exists();
+alert(window.a)
+ if(window.a == false)
+ {
+  location.href = "setClass";
+ }
+ else if(window.a == true)
+ {
+ location.href = "index.html";
+ }
+  });
+   }
+   
+   
     function toggleSignIn() {
       if (firebase.auth().currentUser) {
         // [START signout]
