@@ -11,15 +11,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  var identification = joey.ID
  window.identification = joey.ID  
- var johnny = joey.classes
- window.johnny = joey.classes
- var lengths = joey.classes.length
- window.lengths = joey.classes.length
-
-   }
-  });
-alert(window.identification);
-var ref = firebase.database().ref("Classes/-KoQ4_7jqg18E_POnl-V");
+ var ref = firebase.database().ref("Classes/" + window.identification;
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
@@ -27,6 +19,14 @@ ref.once("value")
   alert(window.a);
   alert("Classes/" + window.identification);
   });
+ var johnny = joey.classes
+ window.johnny = joey.classes
+ var lengths = joey.classes.length
+ window.lengths = joey.classes.length
+
+   }
+  });
+
 
 
 
