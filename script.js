@@ -20,11 +20,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
    }
   });
 function count(){
- var ref = firebase.database().ref("Classes/" + window.identification);
+ var ref = firebase.database().ref("Classes/" + window.identification/ + "/name");
 ref.once("value")
   .then(function(snapshot) {
-    var a = snapshot.exists("name");  // true
-  window.a = snapshot.exists("name");
+    var a = snapshot.exists();  // true
+  window.a = snapshot.exists();
   alert(window.a);
   alert("Classes/" + window.identification);
   });
