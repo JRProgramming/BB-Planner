@@ -118,7 +118,7 @@ ref.once("value")
   });
    }
    
-   
+  
     function toggleSignIn() {
       if (firebase.auth().currentUser) {
         // [START signout]
@@ -181,8 +181,6 @@ alert(email)
 alert("Not allowed here")
 return;
 }
- alert(email);
-      
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -195,7 +193,7 @@ return;
         } else {
           alert(errorMessage);
         }
-        console.log(error);
+       alert(error);
         // [END_EXCLUDE]
       });
       // [END createwithemail]
