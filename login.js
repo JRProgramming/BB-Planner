@@ -71,7 +71,7 @@ alert("Name is taken");
    setclass()
   }
 });
-sessionStorage.setItem("name", namel);
+sessionStorage.setItem("name", window.namel);
 }
    
    function setclass()
