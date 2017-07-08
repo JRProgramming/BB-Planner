@@ -49,6 +49,7 @@ for(i=0; i<window.emails.length; i++)
 }
 if(exists == "unique")
 {
+alert("hey");
 handleSignUp();
 }
 else
