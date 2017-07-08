@@ -16,18 +16,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   });
 
 function count(){
- var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
-ref.once("value")
-  .then(function(snapshot) {
-  var atet = snapshot.exists();
-  window.atet = snapshot.exists();
 
- if(window.atet == false)
- {
-  location.href = "setClass" 
- }
- else if(window.atet == true)
- {
  var playersRef = firebase.database().ref("Classes/" + window.identification);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val();
@@ -37,8 +26,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  })
    alert(window.johnny);
  alert(window.lengths);
-  }
- })
+
 }
 
 
