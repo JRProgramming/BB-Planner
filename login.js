@@ -111,7 +111,7 @@ ref.once("value")
           alert('Please enter a password.');
           return;
         }
-       unique();
+     
        
         //allow username to pass data into the planner and page and possibly the set class page!!
         // Sign in with email and pass.
@@ -131,6 +131,7 @@ ref.once("value")
           // [END_EXCLUDE]
         });
         // [END authwithemail]
+          unique();
       }
       document.getElementById('quickstart-sign-in').disabled = false;
     }
