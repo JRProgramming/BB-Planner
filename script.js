@@ -22,7 +22,6 @@ function count(){
 ref.once("value")
   .then(function(snapshot) {
   window.a = snapshot.exists();
-  })
  if(window.a == false)
  {
   location.href = "setClass" 
@@ -38,6 +37,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  alert(window.johnny);
  alert(window.lengths);
   }
+  })
 }
 
 
