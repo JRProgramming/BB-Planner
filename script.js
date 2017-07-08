@@ -11,9 +11,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  var identification = joey.ID
  window.identification = joey.ID  
+ data =  names
  count()
    }
-  document.getElementById("names").innerHTML = names = "'s Planner"
+  document.getElementById("names").innerHTML = data + "'s Planner"
   });
 
 function count(){
