@@ -86,6 +86,7 @@ ref.once("value")
  }
  else if(window.a == true)
  {
+ sessionStorage.setItem("name", window.namel);
  location.href = "index.html";
  }
   });
