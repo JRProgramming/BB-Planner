@@ -21,8 +21,7 @@ ref.once("value")
   .then(function(snapshot) {
   var atet = snapshot.exists();
   window.atet = snapshot.exists();
- })
- alert(window.atet);
+
  if(window.atet == false)
  {
   location.href = "setClass" 
@@ -37,6 +36,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  alert(window.johnny);
  alert(window.lengths);
   }
+ })
 }
 
 
