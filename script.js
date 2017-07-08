@@ -18,8 +18,8 @@ function count(){
    var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) {
-  window.atet = snapshot.exists();
-
+  window.a = snapshot.exists();
+ });
   alert(window.a);
  if(window.a == false)
  {
@@ -29,7 +29,6 @@ ref.once("value")
  {
  loadNotes();
  }
- });
 }
 
 
