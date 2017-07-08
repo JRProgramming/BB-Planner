@@ -3,7 +3,7 @@ window.kool = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  var names= sessionStorage.getItem("name")
+  var names = sessionStorage.getItem("name")
    var data = joey.name
    if(names == data)
    {
