@@ -26,9 +26,9 @@ window.names.push(data);
 });
 var num = 0
 var exists = ""
-for(i=0; i<1; i++)
+for(i=0; i<window.names.length; i++)
 {
-  if(window.namel != "Johnny Ramirez")
+  if(window.namel != window.names[num])
     {
       if(exists != "taken"){
         exists = "unique";
@@ -56,15 +56,19 @@ if(joey.name ==  window.namel)
  window.emailj = joey.email;
 }
 });
-
-setter()
-
+if(window.emailj == window.email)
+{
+setclass()
+}
+else
+{
+alert("Name is taken");
+}
 }
   exists = ""
 
  }
    function setter(){
-     alert("HEY");
       var classers = firebase.database().ref("Classes/");
         var clas = classers.push({
           name: window.namel,
