@@ -20,6 +20,7 @@
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val();
    var data = joey.name;
+window.identification = joey.ID;
 window.names = [];
 window.names.push(data);
 });
@@ -76,11 +77,12 @@ sessionStorage.setItem("name", namel);
    
    function setclass()
    {
-      var ref = firebase.database().ref("Classes/" + window.id + "/classes");
+      var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
   window.a = snapshot.exists();
+  alert(window.identification);
  if(window.a == false)
  {
   location.href = "setClass";
