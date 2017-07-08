@@ -1,4 +1,5 @@
 window.j = 0;
+window.kool = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -11,26 +12,37 @@ playersRef.on("child_added", function(data, prevChildKey) {
  data = names;
  document.getElementById("names").innerHTML = data + "'s Planner"
  count()
+  if(window.kool = 1){
+    var johnny = joey.classes
+ window.johnny = joey.classes
+ var lengths = joey.classes.length
+ window.lengths = joey.classes.length
+  alert(window.johnny);
+   alert(window.lengths);
+   loadNotes() 
+  }
    }
   });
 
 function count(){
-   var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+
+ var ref = firebase.database().ref("Classes/" + window.identification + "/name");
 ref.once("value")
   .then(function(snapshot) {
+    var a = snapshot.exists();  // true
   window.a = snapshot.exists();
-
-   alert(window.a);
+alert(window.a)
  if(window.a == false)
  {
   location.href = "setClass" 
  }
  else if(window.a == true)
  {
-
+window.kool = 1
  }
-});
+  });
 }
+
 
 
 /* Add a note w/o saving it */
