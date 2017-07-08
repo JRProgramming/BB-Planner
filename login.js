@@ -1,10 +1,13 @@
 window.names = [];
+window.emails = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
 var data = joey.name;
+var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
+window.emails.push(emailer);
   });  
  
    function unique(){
@@ -28,7 +31,30 @@ for(i=0; i<window.names.length; i++)
 num = 0
 if(exists == "unique")
 {
- setter();
+ exists = ""
+for(i=0; i<window.emails.length; i++)
+{
+  if(window.email != window.emails[num])
+    {
+      if(exists != "taken"){
+        exists = "unique";
+        num ++;
+    }
+    }
+  else
+    {
+       exists = "taken";
+      
+    }
+}
+if(exists == "unique")
+{
+handleSignUp();
+}
+else
+{
+ setclass(); 
+}
 }
 else
 {
