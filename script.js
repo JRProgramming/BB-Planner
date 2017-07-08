@@ -19,6 +19,7 @@ function count(){
  var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) {
+  var atet = snapshot.exists();
   window.atet = snapshot.exists();
  })
  alert(window.atet);
