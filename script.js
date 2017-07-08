@@ -20,7 +20,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
 function count(){
  var ref = firebase.database().ref("Classes/" + window.identification + "/name");
 ref.once("value")
-  .then(function(snapshot) {// true
+  .then(function(snapshot) {
+  alert(window.identification);
   window.a = snapshot.exists();
  if(window.a == false)
  {
