@@ -19,16 +19,16 @@ function count(){
 ref.once("value")
   .then(function(snapshot) {
   window.a = snapshot.exists();
-  alert(window.a);
+ });
+   alert(window.a);
  if(window.a == false)
  {
   location.href = "setClass" 
  }
  else if(window.a == true)
  {
- loadNotes();
+
  }
- });
 }
 
 
