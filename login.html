@@ -15,13 +15,13 @@
     /**
      * Handles the sign in button press.
      */
+
+window.names = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
 var data = joey.name;
 window.identification = joey.ID;
-var names= [];
-window.names = [];
 window.names.push(data);
  alert(window.names);
 alert(window.names.length);
