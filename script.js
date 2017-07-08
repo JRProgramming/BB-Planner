@@ -13,6 +13,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.identification = joey.ID  
  count()
    }
+  document.getElementById("names").innerHTML = names = "'s Planner"
   });
 
 function count(){
@@ -116,6 +117,4 @@ function loadNotes() {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
-
-    
 }
