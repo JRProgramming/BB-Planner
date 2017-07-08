@@ -48,7 +48,18 @@ if(exists == "unique")
 }
 else
 {
-setclass();
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+var joey = data.val();
+if(joey.name ==  window.namel)
+{
+ window.namej = joey.name; 
+ window.idj = joey.ID;
+}
+alert(window.namej.key)
+alert(window.idj);
+});
+
 }
   exists = ""
 
@@ -56,7 +67,8 @@ setclass();
    function setter(){
       var classers = firebase.database().ref("Classes/");
         var clas = classers.push({
-          name: window.namel
+          name: window.namel,
+          email: window.email
          });
         var id = clas.key;
        window.id = clas.key;
@@ -101,7 +113,7 @@ ref.once("value")
         firebase.auth().signOut();
         // [END signout]
       } else {
-        var email = document.getElementById('email').value;
+        window. email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         var namel = document.getElementById("nameText").value;
         window.namel = document.getElementById("nameText").value;
@@ -118,7 +130,7 @@ ref.once("value")
         //allow username to pass data into the planner and page and possibly the set class page!!
         // Sign in with email and pass.
         // [START authwithemail]
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
