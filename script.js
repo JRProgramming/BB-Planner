@@ -19,7 +19,7 @@ function count(){
 ref.once("value")
   .then(function(snapshot) {
   window.atet = snapshot.exists();
-});
+
   alert(window.a);
  if(window.a == false)
  {
@@ -29,6 +29,7 @@ ref.once("value")
  {
  loadNotes();
  }
+ });
 }
 
 
