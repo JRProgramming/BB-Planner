@@ -49,7 +49,7 @@ for(i=0; i<window.emails.length; i++)
 }
 if(exists == "unique")
 {
-handleSignUp();
+alert("Account not found, please register your account by signing up.");
 }
 else
 {
