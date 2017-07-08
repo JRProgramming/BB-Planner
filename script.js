@@ -9,7 +9,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  var identification = joey.ID
  window.identification = joey.ID  
- data =  names
+ data = names;
  document.getElementById("names").innerHTML = data + "'s Planner"
  count()
    }
@@ -20,14 +20,14 @@ function count(){
 ref.once("value")
   .then(function(snapshot) {
   window.a = snapshot.exists();
- alert(window.a);
+ })
  if(window.a == false)
  {
   location.href = "setClass" 
  }
  else if(window.a == true)
  {
- var playersRef = firebase.database().ref("Classes/" + window.identification + "/classes");
+ var playersRef = firebase.database().ref("Classes/" + window.identification);
 playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes;
  window.lengths = joey.classes.length;
@@ -36,7 +36,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
  alert(window.lengths);
  loadNotes()
   }
-})
 }
 
 
