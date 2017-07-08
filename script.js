@@ -35,7 +35,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
  })
  alert(window.johnny);
  alert(window.lengths);
- loadNotes()
   }
 }
 
