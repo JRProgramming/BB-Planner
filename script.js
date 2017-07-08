@@ -28,7 +28,7 @@ ref.once("value")
  }
  else if(window.a == true)
  {
- var playersRef = firebase.database().ref("Classes/" + window.identification + "/classes");
+ var playersRef = firebase.database().ref("Classes/" + window.identification);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val();
  window.johnny = joey.classes;
