@@ -13,9 +13,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
  count()
    }
   });
-window.a = ""
+
 function count(){
-  alert(window.identification);
+  window.a = ""
    var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) {
