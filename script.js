@@ -19,14 +19,14 @@ function count(){
  var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) {
-  window.a = snapshot.exists();
+  window.atet = snapshot.exists();
  })
- alert(window.a);
- if(window.a == false)
+ alert(window.atet);
+ if(window.atet == false)
  {
   location.href = "setClass" 
  }
- else if(window.a == true)
+ else if(window.atet == true)
  {
  var playersRef = firebase.database().ref("Classes/" + window.identification);
 playersRef.on("child_added", function(data, prevChildKey) {
