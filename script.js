@@ -15,12 +15,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
   });
 
 function count(){
-  window.a = ""
    var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) {
   window.a = snapshot.exists();
- });
+
    alert(window.a);
  if(window.a == false)
  {
@@ -30,6 +29,7 @@ ref.once("value")
  {
 
  }
+});
 }
 
 
