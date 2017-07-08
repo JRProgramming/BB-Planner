@@ -12,9 +12,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var identification = joey.ID
  window.identification = joey.ID  
  data =  names
+ document.getElementById("names").innerHTML = data + "'s Planner"
  count()
    }
-  document.getElementById("names").innerHTML = data + "'s Planner"
   });
 
 function count(){
@@ -28,10 +28,10 @@ ref.once("value")
  }
  else if(window.a == true)
  {
- var johnny = joey.classes
- window.johnny = joey.classes
- var lengths = joey.classes.length
- window.lengths = joey.classes.length
+ window.johnny = joey.classes;
+ window.lengths = joey.classes.length;
+ alert(window.johnny);
+ alert(window.lengths);
    loadNotes()
  }
   });
