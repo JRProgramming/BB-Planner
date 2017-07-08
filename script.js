@@ -1,5 +1,5 @@
 var j = 0
-window.j = 0
+window.j = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -14,19 +14,21 @@ playersRef.on("child_added", function(data, prevChildKey) {
  count()
    }
   });
-
 function count(){
-
- var playersRef = firebase.database().ref("Classes/" + window.identification);
-playersRef.on("child_added", function(data, prevChildKey) {
-  var joey = data.val();
- window.johnny = joey.classes;
- window.lengths = joey.classes.length;
-
- })
-   alert(window.johnny);
- alert(window.lengths);
-
+   var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+ref.once("value")
+  .then(function(snapshot) {
+  window.atet = snapshot.exists();
+});
+  alert(window.a);
+ if(window.a == false)
+ {
+  location.href = "setClass" 
+ }
+ else if(window.a == true)
+ {
+ loadNotes();
+ }
 }
 
 
