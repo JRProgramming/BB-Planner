@@ -32,9 +32,10 @@ ref.once("value")
 playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes;
  window.lengths = joey.classes.length;
- })
- alert(window.johnny);
+   alert(window.johnny);
  alert(window.lengths);
+ })
+
   }
  })
 }
