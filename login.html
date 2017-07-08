@@ -26,7 +26,6 @@ window.names.push(data);
 });
 var num = 0
 var exists = ""
-alert(window.names);
 for(i=0; i<window.names.length; i++)
 {
   if(window.namel != window.names[num])
@@ -96,10 +95,8 @@ sessionStorage.setItem("name", namel);
    {
       var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
-  .then(function(snapshot) {
-    var a = snapshot.exists();  // true
+  .then(function(snapshot) { // true
   window.a = snapshot.exists();
-  alert(window.identification);
  if(window.a == false)
  {
   location.href = "setClass";
