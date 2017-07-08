@@ -49,7 +49,6 @@ for(i=0; i<window.emails.length; i++)
 }
 if(exists == "unique")
 {
-alert("hey");
 handleSignUp();
 }
 else
@@ -182,6 +181,7 @@ alert(email)
 alert("Not allowed here")
 return;
 }
+ alert(email);
       
       // Sign in with email and pass.
       // [START createwithemail]
