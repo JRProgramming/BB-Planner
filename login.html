@@ -53,13 +53,17 @@ playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
 if(joey.name ==  window.namel)
 {
- window.namej = joey.name; 
- window.idj = joey.ID;
+ window.emailj = joey.email;
 }
-alert(window.namej.key)
-alert(window.idj);
 });
-
+if(window.emailj == window.email)
+{
+setclass()
+}
+else
+{
+ alert("Name already taken"); 
+}
 }
   exists = ""
 
@@ -113,7 +117,7 @@ ref.once("value")
         firebase.auth().signOut();
         // [END signout]
       } else {
-        window. email = document.getElementById('email').value;
+        window.email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         var namel = document.getElementById("nameText").value;
         window.namel = document.getElementById("nameText").value;
