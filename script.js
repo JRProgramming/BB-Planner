@@ -29,13 +29,16 @@ ref.once("value")
  }
  else if(window.a == true)
  {
+ var playersRef = firebase.database().ref("Classes/" + window.identification + "/classes");
+playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes;
  window.lengths = joey.classes.length;
  alert(window.johnny);
  alert(window.lengths);
    loadNotes()
- }
+ });
   });
+}
 }
 
 
