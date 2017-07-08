@@ -1,4 +1,3 @@
-var j = 0
 window.j = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -16,6 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   });
 window.a = ""
 function count(){
+  alert(window.identification);
    var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) {
