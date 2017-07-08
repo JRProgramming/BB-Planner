@@ -22,7 +22,6 @@ ref.once("value")
   .then(function(snapshot) {
     var a = snapshot.exists();  // true
   window.a = snapshot.exists();
-alert(window.a)
  if(window.a == false)
  {
   location.href = "setClass" 
