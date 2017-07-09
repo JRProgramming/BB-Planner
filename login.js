@@ -14,7 +14,7 @@ window.emails.push(emailer);
    function unique(){
 var num = 0
 var exists = ""
-for(i=0; i<1; i++)
+for(i=0; i<window.names.length; i++)
 {
   if(window.namel != window.names[num])
     {
@@ -57,7 +57,7 @@ alert("Name is taken");
    function setter(){
      var num = 0;
      var exists = "";
-     for(i=0; i<1; i++)
+     for(i=0; i<window.emails.length; i++)
 {
   if(window.email != window.emails[num])
     {
