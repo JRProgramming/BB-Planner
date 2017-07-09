@@ -29,32 +29,8 @@ for(i=0; i<window.names.length; i++)
     }
 }
 num = 0
-if(exists == "unique")
-{
- exists = ""
-for(i=0; i<window.emails.length; i++)
-{
-  if(window.email != window.emails[num])
-    {
-      if(exists != "taken"){
-        exists = "unique";
-        num ++;
-    }
-    }
-  else
-    {
-       exists = "taken";
-      
-    }
-}
-if(exists == "unique")
-{
-alert("Account not found, please register your account by signing up.");
-}
-else
-{
- setclass(); 
-}
+if(exists == "unique"){
+  setter();
 }
 else
 {
@@ -137,7 +113,29 @@ ref.once("value")
           alert('Please enter a password.');
           return;
         }
-     
+    
+ var exists = ""
+ var num = 0
+for(i=0; i<window.emails.length; i++)
+{
+  if(window.email != window.emails[num])
+    {
+      if(exists != "taken"){
+        exists = "unique";
+        num ++;
+    }
+    }
+  else
+    {
+       exists = "taken";
+      
+    }
+}
+if(exists == "unique")
+{
+alert("Account not found, please register your account by signing up.");
+}
+
        
         //allow username to pass data into the planner and page and possibly the set class page!!
         // Sign in with email and pass.
