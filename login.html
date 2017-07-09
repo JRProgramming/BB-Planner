@@ -146,12 +146,16 @@ window.onclick = function(event) {
 <title>BB Planner Login</title>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
   
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<!-- The Modal -->
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" 
-class="close" title="Close Modal">&times;</span>  
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
 
@@ -161,7 +165,7 @@ class="close" title="Close Modal">&times;</span>
 
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-        
+
       <button type="submit">Login</button>
       <input type="checkbox" checked="checked"> Remember me
     </div>
@@ -171,7 +175,7 @@ class="close" title="Close Modal">&times;</span>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
-</div>  
+</div>
 
   <!-- Header section containing title -->
   <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
