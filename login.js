@@ -136,12 +136,12 @@ if(exists == "unique")
 {
 if(window.signup == "Not In")
 {
-alert(window.signup);
+handleSignUp();  
 window.signup = "In";
 }
 else
 {
- setter(); 
+ unique(); 
 }
 
  return;
