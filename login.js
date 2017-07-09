@@ -185,13 +185,10 @@ else
             alert(errorMessage);
           }
           console.log(error);
-          document.getElementById('quickstart-sign-in').disabled = false;
-          // [END_EXCLUDE]
         });
         // [END authwithemail]
           unique();
       }
-      document.getElementById('quickstart-sign-in').disabled = false;
     }
     /**
      * Handles the sign up button press.
