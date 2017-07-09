@@ -17,8 +17,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
-  alert(window.johnny);
-   alert(window.lengths);
    loadNotes() 
   }
    }
@@ -28,10 +26,8 @@ function count(){
 
  var ref = firebase.database().ref("Classes/" + window.identification + "/name");
 ref.once("value")
-  .then(function(snapshot) {
-    var a = snapshot.exists();  // true
+  .then(function(snapshot) { 
   window.a = snapshot.exists();
-alert(window.a)
  if(window.a == false)
  {
   location.href = "setClass" 
