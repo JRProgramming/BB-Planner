@@ -1,5 +1,6 @@
 window.names = [];
 window.emails = [];
+window.signup = "Not In"
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
@@ -133,7 +134,16 @@ for(i=0; i<window.emails.length; i++)
 }
 if(exists == "unique")
 {
-handleSignUp();
+if(window.signup == "Not In")
+{
+handleSignUp();  
+window.signup = "In";
+}
+else
+{
+ setter(); 
+}
+
  return;
 }
 
