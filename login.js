@@ -133,7 +133,7 @@ for(i=0; i<window.emails.length; i++)
 }
 if(exists == "unique")
 {
-alert("Account not found, please register your account by signing up.");
+handleSignUp();
  return;
 }
 
