@@ -157,6 +157,7 @@ for(i=0; i<window.emails.length; i++)
 }
 if(exists == "unique")
 {
+alert(window.singup);
 if(window.signup == "Not In")
 {
 window.signup = "In";
