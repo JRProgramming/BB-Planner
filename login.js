@@ -137,7 +137,7 @@ if(exists == "unique")
 if(window.signup == "Not In")
 {
 window.signup = "In";
-handleSignUp()
+handleSignUp();
 }
 else
 {
@@ -174,6 +174,7 @@ else
      * Handles the sign up button press.
      */
     function handleSignUp() {
+      alert("WOW LOSER");
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
