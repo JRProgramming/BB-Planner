@@ -57,7 +57,7 @@ alert("Name is taken");
    function setter(){
      var num = 0;
      var exists = "";
-     for(i=0; i<window.emails.length; i++)
+     for(i=0; i<1; i++)
 {
   if(window.email != window.emails[num])
     {
