@@ -136,7 +136,7 @@ if(exists == "unique")
 {
 if(window.signup == "Not In")
 {
-handleSignUp();  
+alert(window.signup);
 window.signup = "In";
 }
 else
