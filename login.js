@@ -134,11 +134,10 @@ for(i=0; i<window.emails.length; i++)
 }
 if(exists == "unique")
 {
-alert(window.signup);
 if(window.signup == "Not In")
 {
 window.signup = "In";
-handleSignUp();
+handleSignUp()
 }
 else
 {
