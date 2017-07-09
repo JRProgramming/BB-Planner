@@ -138,7 +138,7 @@ alert(window.signup);
 if(window.signup == "Not In")
 {
 window.signup = "In";
-toggleSignIn()
+handleSignUp();
 }
 else
 {
