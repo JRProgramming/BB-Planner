@@ -52,10 +52,28 @@ else
 alert("Name is taken");
 }
 }
-  exists = ""
+  exists = "";
  }
    function setter(){
-      var classers = firebase.database().ref("Classes/");
+     var num = 0;
+     var exists = "";
+     for(i=0; i<window.emails.length; i++)
+{
+  if(window.email != window.emails[num])
+    {
+      if(exists != "taken"){
+        exists = "unique";
+        num ++;
+    }
+    }
+  else
+    {
+       exists = "taken";
+      
+    }
+}
+     if(exists == "unique"){
+    var classers = firebase.database().ref("Classes/");
         var clas = classers.push({
           name: window.namel,
           email: window.email
@@ -75,6 +93,11 @@ alert("Name is taken");
   }
 });
 sessionStorage.setItem("name", window.namel);
+     }
+     else
+     {
+      alert("Email is already used"); 
+     }
 }
    
    function setclass()
