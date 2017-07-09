@@ -14,7 +14,7 @@ window.emails.push(emailer);
    function unique(){
 var num = 0
 var exists = ""
-for(i=0; i<window.names.length; i++)
+for(i=0; i<1; i++)
 {
   if(window.namel != window.names[num])
     {
