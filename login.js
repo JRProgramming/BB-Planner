@@ -14,6 +14,12 @@ window.emails.push(emailer);
    function unique(){
 var num = 0
 var exists = ""
+if(document.getElementById("namej").innerHTML == "")
+{
+ setclass() 
+}
+else
+{
 for(i=0; i<window.names.length; i++)
 {
   if(window.namel != window.names[num])
@@ -53,6 +59,7 @@ alert("Name is taken");
 }
 }
   exists = "";
+}
  }
    function setter(){
      var num = 0;
