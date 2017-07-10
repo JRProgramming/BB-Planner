@@ -117,7 +117,7 @@ window.onload = function(){
 function setUp()
   {
    document.getElementById("signuplogin").innerHTML = "Sign In";
-   document.getElementById("namer").innerHTML = "";
+   document.getElementById("namer").innerHTML = "Full Name";
    document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" required>"
  
   }
@@ -139,8 +139,8 @@ function setUp()
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" id="password" required>
       
-      <label><b id="namer">Full Name</b></label>
-      <span id="namej"><input type="text" placeholder="Enter your full name" name="nme" id="nameText" required></span>
+      <label><b id="namer"></b></label>
+      <span id="namej"></span>
 
       <p id="button"><button type="button" onclick="toggleSignIn()">Login</button></p>
       <input type="checkbox" checked="checked"> Remember me
