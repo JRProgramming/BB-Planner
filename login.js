@@ -14,6 +14,7 @@ window.emails.push(emailer);
    function unique(){
 var num = 0
 var exists = ""
+alert("in unique");
 if(document.getElementById("namej").innerHTML == "")
 {
  alert("WOW");
