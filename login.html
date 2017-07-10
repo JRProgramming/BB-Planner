@@ -117,7 +117,7 @@ window.onload = function(){
 function setUp()
   {
    document.getElementById("signuplogin").innerHTML = "Sign In";
-   document.getElementById("namer").innerHTML = "<b>Full Name</b>"
+   document.getElementById("namer").innerHTML = "Full Name"
    document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" required>";
   }
 </script>
@@ -138,7 +138,7 @@ function setUp()
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" id="password" required>
       
-      <label id="namer"><b>Full Name</b></label>
+      <label><b id="namer">Full Name</b></label>
       <p id="namej"><input type="text" class = "namer" placeholder="Enter your full name" name="nme" required></p>
 
       <p id="button"><button type="button" onclick="toggleSignIn()">Login</button></p>
