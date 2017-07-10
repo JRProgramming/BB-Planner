@@ -127,10 +127,9 @@ var joey = data.val();
 if(joey.email ==  window.email)
 {
   window.nme = joey.name
-  alert(window.nme);
 }
 });  
- sessionStorage.setItem("name", );
+ sessionStorage.setItem("name", window.nme);
  location.href = "index.html";
  }
   });
