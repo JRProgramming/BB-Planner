@@ -118,7 +118,9 @@ function setUp()
   {
    document.getElementById("signuplogin").innerHTML = "Sign In";
    document.getElementById("namer").style.visibility = "hidden";
-   document.getElementById("nameText").style.visibility = "hidden";
+  if(document.getElementById("nameText").value == ""){
+    
+  }
   }
 </script>
 <body>
@@ -139,7 +141,7 @@ function setUp()
       <input type="password" placeholder="Enter Password" name="psw" id="password" required>
       
       <label><b id="namer">Full Name</b></label>
-      <input type="text" placeholder="Enter your full name" name="nme" id="nameText"required>
+      <input type="text" placeholder="Enter your full name" name="nme" id="nameText" value=""required>
 
       <p id="button"><button type="button" onclick="toggleSignIn()">Login</button></p>
       <input type="checkbox" checked="checked"> Remember me
