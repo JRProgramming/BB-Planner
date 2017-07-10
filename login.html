@@ -111,7 +111,6 @@ span.psw {
 <script>
 window.onload = function(){
   document.getElementById('id01').style.display='block'
-  document.getElementById("nameText").innerHTML = ""
   document.getElementById("namer").innerHTML = ""
 }
 </script>
@@ -133,7 +132,7 @@ window.onload = function(){
       <input type="password" placeholder="Enter Password" name="psw" id="password" required>
       
       <label id="namer"><b>Full Name</b></label>
-      <input type="text" class = "namer" placeholder="Enter your full name" name="nme" id="nameText" required><br>
+      <p id="namer"><input type="text" class = "namer" placeholder="Enter your full name" name="nme" required></p>
 
       <button type="button" onclick="toggleSignIn()">Login</button>
       <input type="checkbox" checked="checked"> Remember me
