@@ -113,12 +113,15 @@ sessionStorage.setItem("name", window.namel);
 ref.once("value")
   .then(function(snapshot) { // true
   window.a = snapshot.exists();
+  alert(window.a);
  if(window.a == false)
  {
+  alert("Isn't that good");
   location.href = "setClass";
  }
  else if(window.a == true)
  {
+ alert("Is good");
  sessionStorage.setItem("name", window.namel);
  location.href = "index.html";
  }
