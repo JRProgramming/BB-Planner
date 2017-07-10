@@ -1,6 +1,7 @@
 window.names = [];
 window.emails = [];
 window.signup = "Not In"
+window.house = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
@@ -9,6 +10,7 @@ var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
 window.emails.push(emailer);
+
   });  
  
    function unique(){
@@ -113,16 +115,22 @@ sessionStorage.setItem("name", window.namel);
 ref.once("value")
   .then(function(snapshot) { // true
   window.a = snapshot.exists();
-  alert(window.a);
  if(window.a == false)
  {
-  alert("Isn't that good");
   location.href = "setClass";
  }
  else if(window.a == true)
  {
- alert("Is good");
- sessionStorage.setItem("name", window.namel);
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+var joey = data.val();
+if(joey.email ==  window.email)
+{
+  window.nme = joey.name
+  alert(window.nme);
+}
+});  
+ sessionStorage.setItem("name", );
  location.href = "index.html";
  }
   });
