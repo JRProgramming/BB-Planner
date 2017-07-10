@@ -14,7 +14,6 @@ window.emails.push(emailer);
    function unique(){
 var num = 0
 var exists = ""
-alert("in unique");
 if(document.getElementById("namej").innerHTML == "")
 {
  alert("WOW");
@@ -135,8 +134,11 @@ ref.once("value")
       } else {
         window.email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
+        if(document.getElementById("namej").innerHTML != "")
+        {
         var namel = document.getElementById("nameText").value;
         window.namel = document.getElementById("nameText").value;
+        }
         if (email.length < 4) {
           alert('Please enter an email address.');
           return;
