@@ -16,7 +16,7 @@ var num = 0
 var exists = ""
 if(document.getElementById("namej").innerHTML == "")
 {
- alert("WOW");
+ setclass()
 }
 else
 {
