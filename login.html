@@ -120,11 +120,12 @@ function setUp()
      
    document.getElementById("signuplogin").innerHTML = "Log In";
    document.getElementById("namer").innerHTML = "Full Name";
-   document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" required>"
+   document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" value = fname required>"
    
    }
     else
     {
+      var fname = document.getElementById("namej").value;
       document.getElementById("signuplogin").innerHTML = "Sign Up"
       document.getElementById("namer").innerHTML = "";
       document.getElementById("namej").innerHTML = ""
