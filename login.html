@@ -114,6 +114,12 @@ window.onload = function(){
   document.getElementById("namer").innerHTML = ""
   document.getElementById("namej").innerHTML = ""
 }
+function setUp()
+  {
+   document.getElementById("signuplogin").innerHTML = "Sign In";
+   document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" required>";
+   document.getElementById("namer").innerHTML = "<b>Full Name</b>"
+  }
 </script>
 <body>
 <title>BB Planner Login</title>
@@ -140,7 +146,7 @@ window.onload = function(){
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="" class="signup">Sign Up</button>
+      <button type="button" onclick="setUp()" class="signup" id="signuplogin">Sign Up</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
