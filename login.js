@@ -200,11 +200,8 @@ if(window.signup == "Not In")
 window.signup = "In";
 handleSignUp();
 }
-else
-{
- unique(); 
-}
 
+ unique(); 
  
 }
       }
