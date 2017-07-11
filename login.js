@@ -209,8 +209,9 @@ else
         });
         // [END authwithemail]
           unique();
+          return;
       }
-        return;
+        
 }
       }
     }
