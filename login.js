@@ -202,6 +202,7 @@ handleSignUp();
 }
 
  unique(); 
+  return;
  
 }
       }
