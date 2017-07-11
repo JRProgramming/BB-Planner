@@ -157,8 +157,25 @@ if(joey.email ==  window.email)
           alert('Please enter a password.');
           return;
         }
-    
- var exists = ""
+
+       
+        //allow username to pass data into the planner and page and possibly the set class page!!
+        // Sign in with email and pass.
+        // [START authwithemail]
+        firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+        });
+        // [END authwithemail]
+      var exists = ""
  var num = 0
 for(i=0; i<window.emails.length; i++)
 {
@@ -190,25 +207,6 @@ else
 
  
 }
-
-       
-        //allow username to pass data into the planner and page and possibly the set class page!!
-        // Sign in with email and pass.
-        // [START authwithemail]
-        firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // [START_EXCLUDE]
-          if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } else {
-            alert(errorMessage);
-          }
-          console.log(error);
-        });
-        // [END authwithemail]
-          unique();
       }
     }
     /**
