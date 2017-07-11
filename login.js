@@ -185,11 +185,11 @@ handleSignUp();
 }
 else
 {
+ unique(); 
+}
 
-
-
-
-
+ 
+}
 
        
         //allow username to pass data into the planner and page and possibly the set class page!!
@@ -209,10 +209,6 @@ else
         });
         // [END authwithemail]
           unique();
-}
-      
-        
-}
       }
     }
     /**
@@ -289,4 +285,3 @@ return;
       });
       // [END sendpasswordemail];
     }
-
