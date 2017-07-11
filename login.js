@@ -210,7 +210,7 @@ else
         // [END authwithemail]
           unique();
           return;
-      }
+      
         
 }
       }
