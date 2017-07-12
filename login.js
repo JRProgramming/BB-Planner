@@ -174,7 +174,7 @@ if(joey.email ==  window.email)
           }
           console.log(error);
         });
-      
+      alert("BUE");
       var exists = ""
  var num = 0
 for(i=0; i<window.emails.length; i++)
