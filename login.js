@@ -163,12 +163,14 @@ if(joey.email ==  window.email)
         // Sign in with email and pass.
         // [START authwithemail]
      signIn()
-        
+        if(window.errors == "")
+        {
         alert("HEY");
-      
+        }
      
       }
     }
+window.errors == ""
 function signIn()
 {
  window.load = ""
@@ -179,8 +181,10 @@ function signIn()
           // [START_EXCLUDE]
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
+            window.errors = "Wrong password."
           } else {
             alert(errorMessage);
+            window.errors = "Error"
           }
           console.log(error);
         });
