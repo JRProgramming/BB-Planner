@@ -135,6 +135,25 @@ if(joey.email ==  window.email)
   });
    }
    
+function setUp()
+  {
+   if(document.getElementById("signuplogin").innerHTML == "Sign Up"){
+     
+   document.getElementById("signuplogin").innerHTML = "Log In";
+   document.getElementById("namer").innerHTML = "Full Name";
+   document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" required>"
+   document.getElementById("namej").value = window.fname;
+   
+   }
+    else
+    {
+      window.fname = document.getElementById("namej").value;
+      document.getElementById("signuplogin").innerHTML = "Sign Up"
+      document.getElementById("namer").innerHTML = "";
+      document.getElementById("namej").innerHTML = ""
+
+    }
+  }
   
     function toggleSignIn() {
       if (firebase.auth().currentUser) {
@@ -174,7 +193,6 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
-console.log(exists);
 if(exists == "unique")
 {
 if(document.getElementById("namej").innerHTML != "")
@@ -193,13 +211,11 @@ else
 {
 alert("Email is not found");
 setUp();
-console.log("AQUI");
 }
 }
 
 else
 {
-    console.log("BYE");
   firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -215,13 +231,8 @@ else
         });
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    console.log("WORKING");
     unique();
   } 
-  else
-  {
-    console.log("IT AiNT WORKING");
-  }
 });
    
 }
@@ -244,7 +255,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       }
  if (email != "jramirez@blindbrook.org" && email != "harondwald@blindbrook.org" && email != "jkaminsky@blindbrook.org" && email != "abao@blindbrook.org" && email != "mshaw@blindbrook.org" && email != "jmayer@blindbrook.org")
 {
-alert(email)
 alert("Not allowed here")
 return;
 }
@@ -260,7 +270,6 @@ return;
         } else {
           alert(errorMessage);
         }
-       alert(error);
         // [END_EXCLUDE]
       });
       // [END createwithemail]
