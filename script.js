@@ -7,9 +7,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
   console.log(names);
   if(names == null)
   {
-  document.getElementById('id01').style.display='block'
-  document.getElementById("namer").innerHTML = ""
-  document.getElementById("namej").innerHTML = ""
+  window.onload = function(){
+  document.getElementById('id01').style.display='block';
+  document.getElementById("namer").innerHTML = "";
+  document.getElementById("namej").innerHTML = "";
+  }
   }
    var data = joey.name
    if(names == data)
