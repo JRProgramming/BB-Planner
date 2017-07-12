@@ -177,12 +177,11 @@ for(i=0; i<window.emails.length; i++)
 console.log(exists);
 if(exists == "unique")
 {
-alert(window.singup);
 if(window.signup == "Not In")
 {
 window.signup = "In";
 handleSignUp();
-}
+}}
 else
 {
     console.log("BYE");
@@ -198,9 +197,7 @@ else
           }
           console.log(error);
         });
-
-      
-}     
+   
 }
       }
  
