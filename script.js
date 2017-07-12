@@ -4,10 +4,10 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names = sessionStorage.getItem("name")
-  console.log(names);
   if(names == null)
   {
   window.onload = function(){
+  console.log("WOW");
   document.getElementById('id01').style.display='block';
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
