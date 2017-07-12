@@ -185,6 +185,8 @@ function signIn()
             alert(errorMessage);
             window.errors = "Error"
           }
+   
+          alert(window.errors);
           console.log(error);
         });
 }
