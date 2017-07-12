@@ -197,6 +197,9 @@ else
           }
           console.log(error);
         });
+  if (firebase.auth().currentUser) {
+        console.log("WORKING");
+      }
    
 }
       }
