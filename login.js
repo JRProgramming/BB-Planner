@@ -143,17 +143,17 @@ if(joey.email ==  window.email)
         // [END signout]
       } else {
         window.email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        window.password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
         {
         var namel = document.getElementById("nameText").value;
         window.namel = document.getElementById("nameText").value;
         }
-        if (email.length < 4) {
+        if (window.email.length < 4) {
           alert('Please enter an email address.');
           return;
         }
-        if (password.length < 4) {
+        if (window.password.length < 4) {
           alert('Please enter a password.');
           return;
         }
@@ -171,7 +171,7 @@ if(joey.email ==  window.email)
     }
 function signIn()
 {
- firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
+ firebase.auth().signInWithEmailAndPassword(window.email, window.password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
