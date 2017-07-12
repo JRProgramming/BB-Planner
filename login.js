@@ -174,6 +174,8 @@ if(joey.email ==  window.email)
           }
           console.log(error);
         });
+        return;
+        alert("HEY");
      
       }
     }
