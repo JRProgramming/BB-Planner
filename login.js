@@ -174,38 +174,7 @@ if(joey.email ==  window.email)
           }
           console.log(error);
         });
-      alert("BUE");
-      var exists = ""
- var num = 0
-for(i=0; i<window.emails.length; i++)
-{
-  if(window.email != window.emails[num])
-    {
-      if(exists != "taken"){
-        exists = "unique";
-        num ++;
-    }
-    }
-  else
-    {
-       exists = "taken";
-      
-    }
-}
-if(exists == "unique")
-{
-alert(window.singup);
-if(window.signup == "Not In")
-{
-window.signup = "In";
-handleSignUp();
-}
-  
-}
-else
-{
-unique();
-}
+     
       }
     }
     /**
