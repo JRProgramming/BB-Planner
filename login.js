@@ -173,6 +173,7 @@ if(joey.email ==  window.email)
             alert(errorMessage);
           }
           console.log(error);
+          return;
         });
         
       var exists = ""
