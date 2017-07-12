@@ -1,7 +1,7 @@
 window.names = [];
 window.emails = [];
 window.signup = "Not In"
-window.house = 0;
+window.errors = ""
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
@@ -171,10 +171,8 @@ if(joey.email ==  window.email)
      
       }
     }
-window.errors = ""
 function signIn()
 {
- window.load = ""
  firebase.auth().signInWithEmailAndPassword(window.email, window.password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
