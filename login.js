@@ -174,8 +174,7 @@ if(joey.email ==  window.email)
           }
           console.log(error);
         });
-        // [END authwithemail]
-       alert("HI");
+        
       var exists = ""
  var num = 0
 for(i=0; i<window.emails.length; i++)
@@ -201,8 +200,11 @@ if(window.signup == "Not In")
 window.signup = "In";
 handleSignUp();
 }
-
- unique(); 
+  
+}
+else
+{
+unique();
 }
       }
     }
