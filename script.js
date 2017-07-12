@@ -5,7 +5,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names = sessionStorage.getItem("name")
   console.log(names);
-  if(names == "")
+  if(names == null)
   {
   document.getElementById('id01').style.display='block'
   document.getElementById("namer").innerHTML = ""
