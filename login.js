@@ -143,55 +143,68 @@ if(joey.email ==  window.email)
         // [END signout]
       } else {
         window.email = document.getElementById('email').value;
-        window.password = document.getElementById('password').value;
+        var password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
         {
         var namel = document.getElementById("nameText").value;
         window.namel = document.getElementById("nameText").value;
         }
-        if (window.email.length < 4) {
+        if (email.length < 4) {
           alert('Please enter an email address.');
           return;
         }
-        if (window.password.length < 4) {
+        if (password.length < 4) {
           alert('Please enter a password.');
           return;
         }
-
-       
-        //allow username to pass data into the planner and page and possibly the set class page!!
-        // Sign in with email and pass.
-        // [START authwithemail]
-     signIn()
-        alert(window.errors);
-        if(window.errors == "Nothing Wrong")
-        {
-        alert("HEY");
-        }
-     
-      }
-    }
-function signIn()
+    
+ var exists = ""
+ var num = 0
+for(i=0; i<window.emails.length; i++)
 {
- firebase.auth().signInWithEmailAndPassword(window.email, window.password).catch(function(error) {
+  if(window.email != window.emails[num])
+    {
+      if(exists != "taken"){
+        exists = "unique";
+        num ++;
+    }
+    }
+  else
+    {
+       exists = "taken";
+      
+    }
+}
+if(exists == "unique")
+{
+alert(window.singup);
+if(window.signup == "Not In")
+{
+window.signup = "In";
+handleSignUp();
+}
+else
+{
+        firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
           // [START_EXCLUDE]
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
-            window.errors = "Wrong password."
           } else {
             alert(errorMessage);
-            window.errors = "Error"
           }
-          if(window.errors == "")
-          {
-            window.errors = "Nothing Wrong"
-          }
-          alert(window.errors);
           console.log(error);
         });
+  
+       if (firebase.auth().currentUser) {
+       unique();
+      }
+      
+}     
+}
+      }
  
 }
     /**
