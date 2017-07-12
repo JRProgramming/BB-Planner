@@ -157,36 +157,7 @@ if(joey.email ==  window.email)
           alert('Please enter a password.');
           return;
         }
- var exists = ""
- var num = 0
-for(i=0; i<window.emails.length; i++)
-{
-  if(window.email != window.emails[num])
-    {
-      if(exists != "taken"){
-        exists = "unique";
-        num ++;
-    }
-    }
-  else
-    {
-       exists = "taken";
-      
-    }
-}
-console.log(exists);
-if(exists == "unique")
-{
-if(window.signup == "Not In")
-{
-window.signup = "In";
-handleSignUp();
-}
-else
-{
- unique(); 
-}
-}
+
 else
 {
     console.log("BYE");
@@ -197,7 +168,13 @@ else
           // [START_EXCLUDE]
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
-          } else {
+          } 
+    else if (errorCode === "auth/user-not-found")
+    {
+        alert("Email is not found");
+        setUp()
+    }
+    else {
             alert(errorMessage);
           }
           console.log(error);
