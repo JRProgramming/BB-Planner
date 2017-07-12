@@ -164,7 +164,7 @@ if(joey.email ==  window.email)
         // [START authwithemail]
      signIn()
         alert(window.errors);
-        if(window.errors == "")
+        if(window.errors == "Nothing Wrong")
         {
         alert("HEY");
         }
@@ -185,13 +185,17 @@ function signIn()
             alert(errorMessage);
             window.errors = "Error"
           }
-   
+          if(window.errors == "")
+          {
+            window.errors = "Nothing Wrong"
+          }
           alert(window.errors);
           console.log(error);
         });
+ 
 }
     /**
-     * Handles the sign up button press.
+ ow.errors    * Handles the sign up button press.
      */
     function handleSignUp() {
       var email = document.getElementById('email').value;
