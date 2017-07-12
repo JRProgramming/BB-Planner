@@ -197,9 +197,14 @@ else
           }
           console.log(error);
         });
-  if (firebase.auth().currentUser) {
-        console.log("WORKING");
-      }
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log("WORKING");
+  } 
+  else
+  {
+    console.log("IT AiNT WORKING");
+  }
    
 }
       }
