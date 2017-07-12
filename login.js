@@ -171,7 +171,18 @@ if(joey.email ==  window.email)
     }
 function signIn()
 {
-alert("WAWAWAWAWA");
+ firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+        });
 }
     /**
      * Handles the sign up button press.
