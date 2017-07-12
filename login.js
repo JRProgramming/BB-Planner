@@ -205,6 +205,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   {
     console.log("IT AiNT WORKING");
   }
+});
    
 }
       }
