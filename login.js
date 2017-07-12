@@ -175,6 +175,7 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
+alert("OKAY");
 if(exists == "unique")
 {
 alert(window.singup);
