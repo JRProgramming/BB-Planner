@@ -164,13 +164,16 @@ if(joey.email ==  window.email)
         // [START authwithemail]
      signIn()
      
+        if(window.load = "Registered")
+        {
         alert("HEY");
-        
+        }
      
       }
     }
 function signIn()
 {
+ window.load = ""
  firebase.auth().signInWithEmailAndPassword(window.email, window.password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -182,6 +185,7 @@ function signIn()
             alert(errorMessage);
           }
           console.log(error);
+          window.load = "Registered"
         });
 }
     /**
