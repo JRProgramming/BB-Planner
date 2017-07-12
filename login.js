@@ -143,6 +143,7 @@ function setUp()
    document.getElementById("namer").innerHTML = "Full Name";
    document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" required>"
    document.getElementById("namej").value = window.fname;
+   document.getElementById("enter").innerHTML = "Sign Up"
    
    }
     else
@@ -151,6 +152,7 @@ function setUp()
       document.getElementById("signuplogin").innerHTML = "Sign Up"
       document.getElementById("namer").innerHTML = "";
       document.getElementById("namej").innerHTML = ""
+      document.getElementById("enter").innerHTML = "Login"
 
     }
   }
