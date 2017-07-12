@@ -173,9 +173,8 @@ if(joey.email ==  window.email)
             alert(errorMessage);
           }
           console.log(error);
-          return;
         });
-        
+      
       var exists = ""
  var num = 0
 for(i=0; i<window.emails.length; i++)
