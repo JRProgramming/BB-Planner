@@ -162,24 +162,17 @@ if(joey.email ==  window.email)
         //allow username to pass data into the planner and page and possibly the set class page!!
         // Sign in with email and pass.
         // [START authwithemail]
-        firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // [START_EXCLUDE]
-          if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } else {
-            alert(errorMessage);
-          }
-          console.log(error);
-             return;
-        });
+     signIn()
      
         alert("HEY");
+        
      
       }
     }
+function signIn()
+{
+alert("WAWAWAWAWA");
+}
     /**
      * Handles the sign up button press.
      */
