@@ -193,6 +193,7 @@ else
 {
 alert("Email is not found");
 setUp();
+console.log("AQUI");
 }
 }
 
@@ -207,12 +208,7 @@ else
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
           } 
-    else if (errorCode === "auth/user-not-found")
-    {
-        alert("Email is not found");
-        setUp()
-    }
-    else {
+           else {
             alert(errorMessage);
           }
           console.log(error);
