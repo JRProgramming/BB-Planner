@@ -163,11 +163,9 @@ if(joey.email ==  window.email)
         // Sign in with email and pass.
         // [START authwithemail]
      signIn()
-     
-        if(window.load = "Registered")
-        {
+        
         alert("HEY");
-        }
+      
      
       }
     }
@@ -185,7 +183,6 @@ function signIn()
             alert(errorMessage);
           }
           console.log(error);
-          window.load = "Registered"
         });
 }
     /**
