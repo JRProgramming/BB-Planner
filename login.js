@@ -157,7 +157,6 @@ if(joey.email ==  window.email)
           alert('Please enter a password.');
           return;
         }
-    alert("HEY");
  var exists = ""
  var num = 0
 for(i=0; i<window.emails.length; i++)
@@ -175,7 +174,7 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
-alert(exists);
+console.log(exists);
 if(exists == "unique")
 {
 alert(window.singup);
@@ -186,7 +185,7 @@ handleSignUp();
 }
 else
 {
-    alert("BYE");
+    console.log("BYE");
   firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -199,10 +198,7 @@ else
           }
           console.log(error);
         });
-  alert("WAY");
-       if (firebase.auth().currentUser) {
-       unique();
-      }
+
       
 }     
 }
