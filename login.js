@@ -14,7 +14,6 @@ window.emails.push(emailer);
   });  
  
    function unique(){
-     alert("HEY");
 var num = 0
 var exists = ""
 if(document.getElementById("namej").innerHTML == "")
@@ -203,8 +202,7 @@ handleSignUp();
 }
 
  unique(); 
-  return;
- 
+}
 }
       }
     }
