@@ -163,6 +163,7 @@ if(joey.email ==  window.email)
         // Sign in with email and pass.
         // [START authwithemail]
      signIn()
+        alert(window.errors);
         if(window.errors == "")
         {
         alert("HEY");
@@ -170,7 +171,7 @@ if(joey.email ==  window.email)
      
       }
     }
-window.errors == ""
+window.errors = ""
 function signIn()
 {
  window.load = ""
