@@ -181,7 +181,12 @@ if(window.signup == "Not In")
 {
 window.signup = "In";
 handleSignUp();
-}}
+}
+else
+{
+ unique(); 
+}
+}
 else
 {
     console.log("BYE");
