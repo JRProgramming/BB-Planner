@@ -9,7 +9,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById('id01').style.display='block';
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
-  document.getElementById("header").innerHTML = ""
   }
    var data = joey.name
    if(names == data)
