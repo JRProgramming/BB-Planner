@@ -21,14 +21,11 @@ if(document.getElementById("namej").innerHTML == "")
   var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
-if(joey.name ==  window.namel)
-{
- window.emailj = joey.email;
+window.emailj = joey.email;
   if(window.emailj == window.email)
 {
 window.identification = joey.ID;
 setclass()
-}
 }
 });
 }
