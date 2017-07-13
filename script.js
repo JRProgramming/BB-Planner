@@ -7,6 +7,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(names == null)
   {
   window.onload = function(){  
+  console.log("STUPID");
   document.getElementById('id01').style.display='block';
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
