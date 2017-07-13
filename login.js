@@ -132,7 +132,9 @@ if(joey.email ==  window.email)
  sessionStorage.setItem("name", window.nme);
  location.href = "index.html";
  }
+   document.getElementById("header").innerHTML = "<div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">";
   });
+     
    }
    
 function setUp()
