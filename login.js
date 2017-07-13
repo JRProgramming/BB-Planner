@@ -111,6 +111,7 @@ sessionStorage.setItem("name", window.namel);
    
    function setclass()
    {
+     console.log(window.identification);
       var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) { // true
