@@ -6,12 +6,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var names = sessionStorage.getItem("name")
   if(names == null)
   {
-  window.onload = function(){  
   console.log("STUPID");
   document.getElementById('id01').style.display='block';
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
-  }
   }
    var data = joey.name
    if(names == data)
