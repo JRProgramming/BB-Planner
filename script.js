@@ -9,6 +9,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById('id01').style.display='block';
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
+  names = sessionStorage.getItem("name")
   }
    var data = joey.name
    console.log(names);
