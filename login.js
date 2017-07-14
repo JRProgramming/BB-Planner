@@ -301,6 +301,7 @@ return;
    function logOut()
 {
 sessionStorage.removeItem("name");
+location.href = ""
 
 }
     function sendEmailVerification() {
