@@ -245,6 +245,10 @@ else
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
           } 
+           else 
+           {
+             alert(errorMessage);
+           }
            
           console.log(error);
         });
