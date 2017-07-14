@@ -142,7 +142,7 @@ if(joey.email ==  window.email)
  {
 localStorage.setItem("email", window.email);
 localStorage.setItem("password", window.password);
-alert(localStorage.email);
+alert(localStorage.jarlgo);
  }
  location.href = "index.html";
  }
