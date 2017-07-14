@@ -345,7 +345,7 @@ if(document.getElementById("email").value == "" && document.getElementById("pass
 {
 document.getElementById("remember").checked = false
 } 
-else if(localStorage.email != "" && localStorage.password== "" && document.getElementById("remember").checked == true)
+else if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true)
 {
 console.log("YO STUPID WEIRDO");
 toggleSignIn()
