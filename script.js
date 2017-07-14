@@ -3,21 +3,19 @@ window.kool = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  var names = sessionStorage.getItem("name")
-  if(names == null)
+  if(window.names == null)
   {
   document.getElementById('id01').style.display='block';
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
-  names = sessionStorage.getItem("name")
   }
    var data = joey.name
-   console.log(names);
+   console.log(window.names);
    if(names == data)
    {
  var identification = joey.ID
  window.identification = joey.ID  
- data = names;
+ data = window.names;
  document.getElementById("names").innerHTML = data + "'s Planner"
  count()
   if(window.kool = 1){
@@ -129,3 +127,7 @@ function loadNotes() {
                     addAndSaveNote(item.title, item.text, index); 
             };
 }
+sessionStorage.getItem("name").addEventListener("change", function() {
+  // And save the results into the session storage object
+  window.names = sessionStorage.getItem("name");
+});
