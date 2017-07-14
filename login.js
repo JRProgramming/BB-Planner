@@ -13,7 +13,6 @@ window.emails.push(emailer);
   });  
  
    function unique(){
-console.log("Unique()");
 var num = 0
 var exists = ""
 if(document.getElementById("namej").innerHTML == "")
@@ -120,8 +119,7 @@ sessionStorage.setItem("name", window.namel);
    
    function setclass()
    {
-     console.log("Set Class()");
-      var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) { // true
   window.a = snapshot.exists();
@@ -140,6 +138,7 @@ if(joey.email ==  window.email)
 }
 });  
  sessionStorage.setItem("name", window.nme);
+   console.log(sessionStorage.getItem("name"));
  if(document.getElementById("remember").checked)
  {
 localStorage.setItem("email", window.email);
@@ -179,7 +178,6 @@ function setUp()
   }
   
     function toggleSignIn() {
-      console.log("Sign In");
       if (firebase.auth().currentUser) {
         // [START signout]
         firebase.auth().signOut();
