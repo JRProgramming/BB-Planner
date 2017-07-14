@@ -347,6 +347,7 @@ document.getElementById("remember").checked = false
 } 
 else if(localStorage.email != "" && localStorage.password== "" && document.getElementById("rememember").checked == true)
 {
+console.log("YO STUPID WEIRDO");
 toggleSignIn()
 }
 }
