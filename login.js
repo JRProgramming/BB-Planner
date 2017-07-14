@@ -300,8 +300,7 @@ return;
     }
    function logOut()
 {
-sessionStorage.setItem("name", "");
-location.href = "#"
+sessionStorage.removeItem("name");
 
 }
     function sendEmailVerification() {
