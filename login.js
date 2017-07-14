@@ -138,7 +138,6 @@ if(joey.email ==  window.email)
 }
 });  
  sessionStorage.setItem("name", window.nme);
-   console.log(sessionStorage.getItem("name"));
  if(document.getElementById("remember").checked)
  {
 localStorage.setItem("email", window.email);
@@ -150,6 +149,7 @@ localStorage.setItem("password", window.password);
  localStorage.setItem("email", "");
 localStorage.setItem("password", "");  
  }
+ location.href = ""
  }
   });
      
