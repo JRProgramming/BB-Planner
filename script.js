@@ -11,6 +11,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namej").innerHTML = "";
   }
    var data = joey.name
+   console.log(names);
    if(names == data)
    {
  var identification = joey.ID
@@ -40,6 +41,7 @@ ref.once("value")
  }
  else if(window.a == true)
  {
+   console.log("Kool = 1");
 window.kool = 1
  }
   });
