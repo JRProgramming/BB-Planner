@@ -298,9 +298,12 @@ return;
       // [END createwithemail]
       toggleSignIn()
     }
-    /**
-     * Sends an email verification to the user.
-     */
+   function logOut()
+{
+sessionStorage.setItem("name", "");
+authenticate();
+
+}
     function sendEmailVerification() {
       // [START sendemailverification]
       firebase.auth().currentUser.sendEmailVerification().then(function() {
@@ -334,7 +337,7 @@ return;
       });
       // [END sendpasswordemail];
     }
-window.onload =  function()
+window.onload =  function authenticate()
 {
 document.getElementById("email").value = localStorage.email
 document.getElementById("password").value = localStorage.password
