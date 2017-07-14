@@ -41,7 +41,6 @@ ref.once("value")
  }
  else if(window.a == true)
  {
-   console.log("Kool = 1");
 window.kool = 1
  }
   });
