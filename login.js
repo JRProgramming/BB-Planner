@@ -10,8 +10,6 @@ var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
 window.emails.push(emailer);
-var rem = document.getElementById("remember").checked
-alert(rem);
   });  
  
    function unique(){
@@ -140,6 +138,12 @@ if(joey.email ==  window.email)
 }
 });  
  sessionStorage.setItem("name", window.nme);
+ if(document.getElementById("remember").checked)
+ {
+localStorage.setItem("email", window.email);
+localStorage.setItem("password", window.password);
+alert(localStorage.email);
+ }
  location.href = "index.html";
  }
   });
@@ -175,7 +179,7 @@ function setUp()
         // [END signout]
       } else {
         window.email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        window.password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
         {
         var namel = document.getElementById("nameText").value;
@@ -229,7 +233,7 @@ setUp();
 
 else
 {
-  firebase.auth().signInWithEmailAndPassword(window.email, password).catch(function(error) {
+  firebase.auth().signInWithEmailAndPassword(window.email, window.password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
