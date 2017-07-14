@@ -149,7 +149,7 @@ localStorage.setItem("password", window.password);
  localStorage.setItem("email", "");
 localStorage.setItem("password", "");  
  }
-   location.href = ""
+
  }
   });
      
@@ -246,6 +246,10 @@ else
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
           } 
+          else
+          {
+           alert(errorMessage); 
+          }
           
           console.log(error);
         });
