@@ -10,7 +10,8 @@ var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
 window.emails.push(emailer);
-
+var rem = document.getElementById("remember").checked
+alert(rem);
   });  
  
    function unique(){
