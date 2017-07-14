@@ -299,6 +299,7 @@ return;
 function logOut()
 {
 sessionStorage.removeItem("name");
+location.reload();
 }
     /**
      * Sends an email verification to the user.
