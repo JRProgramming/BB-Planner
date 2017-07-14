@@ -178,7 +178,7 @@ function setUp()
   }
   
     function toggleSignIn() {
-      window.reload();
+      location.reload();
       if (firebase.auth().currentUser) {
         // [START signout]
         firebase.auth().signOut();
