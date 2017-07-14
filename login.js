@@ -299,7 +299,7 @@ return;
     }
 function logOut()
 {
-alert("HEY");
+sessionStorage.removeItem("name");
 }
     /**
      * Sends an email verification to the user.
