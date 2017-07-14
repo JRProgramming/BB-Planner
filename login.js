@@ -1,3 +1,4 @@
+
 window.names = [];
 window.emails = [];
 window.signup = "Not In"
@@ -119,7 +120,7 @@ sessionStorage.setItem("name", window.namel);
    
    function setclass()
    {
-var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
+      var ref = firebase.database().ref("Classes/" + window.identification + "/classes");
 ref.once("value")
   .then(function(snapshot) { // true
   window.a = snapshot.exists();
@@ -138,7 +139,6 @@ if(joey.email ==  window.email)
 }
 });  
  sessionStorage.setItem("name", window.nme);
- console.log(sessionStorage.getItem("name"))
  if(document.getElementById("remember").checked)
  {
 localStorage.setItem("email", window.email);
@@ -150,6 +150,7 @@ localStorage.setItem("password", window.password);
  localStorage.setItem("email", "");
 localStorage.setItem("password", "");  
  }
+ location.href = "index.html";
  }
   });
      
@@ -246,11 +247,9 @@ else
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
           } 
-           else 
-           {
-             alert(errorMessage);
-           }
-           
+           else {
+            alert(errorMessage);
+          }
           console.log(error);
         });
 firebase.auth().onAuthStateChanged(function(user) {
@@ -299,12 +298,13 @@ return;
       // [END createwithemail]
       toggleSignIn()
     }
-   function logOut()
+function logOut()
 {
-location.reload();
-sessionStorage.removeItem("name");
-
+alert("HEY");
 }
+    /**
+     * Sends an email verification to the user.
+     */
     function sendEmailVerification() {
       // [START sendemailverification]
       firebase.auth().currentUser.sendEmailVerification().then(function() {
@@ -352,6 +352,7 @@ document.getElementById("remember").checked = false
 } 
 else if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true)
 {
+console.log("YO STUPID WEIRDO");
 toggleSignIn()
 }
 }
