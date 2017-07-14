@@ -1,4 +1,3 @@
-
 window.names = [];
 window.emails = [];
 window.signup = "Not In"
