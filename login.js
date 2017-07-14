@@ -337,6 +337,10 @@ window.onload =  function()
 {
 document.getElementById("email").value = localStorage.email
 document.getElementById("password").value = localStorage.password
+if(localStorage.email == undefined || localStorage.password == undefined){
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+}
 if(document.getElementById("email").value == "" && document.getElementById("password").value == "")
 {
 document.getElementById("remember").checked = false
