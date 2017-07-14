@@ -300,8 +300,8 @@ return;
     }
    function logOut()
 {
+location.reload();
 sessionStorage.removeItem("name");
-location.href = "index.html"
 
 }
     function sendEmailVerification() {
