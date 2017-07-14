@@ -301,7 +301,7 @@ return;
    function logOut()
 {
 sessionStorage.setItem("name", "");
-authenticate();
+location.href = ""
 
 }
     function sendEmailVerification() {
@@ -337,7 +337,7 @@ authenticate();
       });
       // [END sendpasswordemail];
     }
-window.onload =  function authenticate()
+window.onload =  function()
 {
 document.getElementById("email").value = localStorage.email
 document.getElementById("password").value = localStorage.password
