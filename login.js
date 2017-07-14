@@ -142,7 +142,12 @@ if(joey.email ==  window.email)
  {
 localStorage.setItem("email", window.email);
 localStorage.setItem("password", window.password);
-alert(localStorage.jarlgo);
+
+ }
+ else
+ {
+ localStorage.setItem("email", "");
+localStorage.setItem("password", "");  
  }
  location.href = "index.html";
  }
@@ -328,3 +333,8 @@ return;
       });
       // [END sendpasswordemail];
     }
+window.onload =  function()
+{
+document.getElementById("email").value = localStorage.email
+document.getElementById("password").value = localStorage.password
+}
