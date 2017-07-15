@@ -151,7 +151,7 @@ localStorage.setItem("password", "");
  }
 
  }
-  location.href = "index.html";
+  location.href = "#";
   });
      
    }
