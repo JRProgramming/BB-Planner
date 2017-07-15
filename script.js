@@ -15,11 +15,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
   alert(window.namers);
    if(names == window.namers)
    {
- var identification = joey.ID
  window.identification = joey.ID  
- data = names;
- document.getElementById("names").innerHTML = data + "'s Planner"
- alert(data);
+ alert(window.identification);
+ document.getElementById("names").innerHTML = names + "'s Planner"
  count()
   if(window.kool = 1){
     alert("Kool = 1");
