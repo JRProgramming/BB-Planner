@@ -1,5 +1,6 @@
 window.j = 0;
 window.kool = 0;
+window.namers = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -10,9 +11,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
   }
-   var data = joey.name
-   alert(data);
-   if(names == data)
+   window.namers.push(joey.name);
+  alert(window.namers);
+   if(names == window.namers)
    {
  var identification = joey.ID
  window.identification = joey.ID  
