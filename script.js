@@ -6,7 +6,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var names = sessionStorage.getItem("name")
   if(names == null)
   {
-  alert(names)
   document.getElementById('id01').style.display='block';
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
@@ -20,6 +19,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  document.getElementById("names").innerHTML = data + "'s Planner"
  count()
   if(window.kool = 1){
+    alert("Kool = 1");
     var johnny = joey.classes
  window.johnny = joey.classes
  var lengths = joey.classes.length
@@ -116,7 +116,6 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
-var data = sessionStorage.getItem("name")
 
 function loadNotes() {
     
