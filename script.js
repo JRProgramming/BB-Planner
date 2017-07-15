@@ -35,6 +35,7 @@ function count(){
 ref.once("value")
   .then(function(snapshot) { 
   window.a = snapshot.exists();
+  alert(window.identification);
  if(window.a == false)
  {
   location.href = "setClass" 
