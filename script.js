@@ -11,6 +11,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namej").innerHTML = "";
   }
    var data = joey.name
+   alert(data);
    if(names == data)
    {
  var identification = joey.ID
