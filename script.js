@@ -12,15 +12,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namej").innerHTML = "";
   }
    window.namers.push(joey.name);
-  alert(window.namers);
    if(names == window.namers)
    {
  window.identification = joey.ID  
- alert(window.identification);
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
   if(window.kool = 1){
-    alert("Kool = 1");
     var johnny = joey.classes
  window.johnny = joey.classes
  var lengths = joey.classes.length
