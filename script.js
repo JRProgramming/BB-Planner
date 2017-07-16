@@ -5,6 +5,7 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names = sessionStorage.getItem("name")
+  alert(names);
   if(names == null)
   {
   document.getElementById('id01').style.display='block';
