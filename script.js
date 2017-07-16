@@ -4,7 +4,27 @@ window.namers = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
- 
+  var names = sessionStorage.getItem("name")
+  console.log(names);
+  if(names == null)
+  {
+  document.getElementById('id01').style.display='block';
+  document.getElementById("namer").innerHTML = "";
+  document.getElementById("namej").innerHTML = "";
+  }
+   window.namers.push(joey.name);
+   if(names == window.namers)
+   {
+ window.identification = joey.ID  
+ document.getElementById("names").innerHTML = names + "'s Planner"
+ count()
+  if(window.kool = 1){
+    var johnny = joey.classes
+ window.johnny = joey.classes
+ var lengths = joey.classes.length
+ window.lengths = joey.classes.length
+   loadNotes() 
+   }}
   });
 
 function count(){
