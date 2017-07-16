@@ -5,7 +5,6 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names = sessionStorage.getItem("name")
-  console.log(names);
   if(names == null)
   {
   document.getElementById('id01').style.display='block';
@@ -13,14 +12,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namej").innerHTML = "";
   }
    window.namers.push(joey.name);
-  console.log(window.namers);
    if(names == window.namers)
    {
  window.identification = joey.ID  
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
   if(window.kool = 1){
-    console.log(window.kool);
     var johnny = joey.classes
  window.johnny = joey.classes
  var lengths = joey.classes.length
@@ -35,6 +32,7 @@ function count(){
 ref.once("value")
   .then(function(snapshot) { 
   window.a = snapshot.exists();
+  console.log(window.a);
  if(window.a == false)
  {
   location.href = "setClass" 
