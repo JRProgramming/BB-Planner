@@ -138,7 +138,6 @@ if(joey.email ==  window.email)
 }
 });  
  sessionStorage.setItem("name", window.nme);
-location.reload();
     if(document.getElementById("remember").checked)
  {
 localStorage.setItem("email", window.email);
@@ -342,19 +341,5 @@ location.reload();
     }
 window.onload =  function()
 {
-document.getElementById("email").value = localStorage.email
-document.getElementById("password").value = localStorage.password
-if(localStorage.email == undefined || localStorage.password == undefined){
-  document.getElementById("email").value = "";
-  document.getElementById("password").value = "";
-}
-if(document.getElementById("email").value == "" && document.getElementById("password").value == "")
-{
-document.getElementById("remember").checked = false
-} 
-else if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true)
-{
-console.log("Remember");
-toggleSignIn()
-}
+
 }
