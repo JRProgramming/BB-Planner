@@ -127,6 +127,17 @@ sessionStorage.setItem("name", window.namel);
 ref.once("value")
   .then(function(snapshot) { // true
   window.a = snapshot.exists();
+if(document.getElementById("remember").checked)
+ {
+localStorage.setItem("email", window.email);
+localStorage.setItem("password", window.password);
+
+ }
+ else
+ {
+ localStorage.setItem("email", "");
+localStorage.setItem("password", "");  
+ }
  if(window.a == false)
  {
   location.href = "setClass";
@@ -142,18 +153,7 @@ if(joey.email ==  window.email)
 }
 });  
  sessionStorage.setItem("name", window.nme);
-    if(document.getElementById("remember").checked)
- {
-localStorage.setItem("email", window.email);
-localStorage.setItem("password", window.password);
-
- }
- else
- {
- localStorage.setItem("email", "");
-localStorage.setItem("password", "");  
- }
-   location.reload();
+ location.reload();
  }
   });
      
