@@ -12,7 +12,6 @@ window.names.push(data);
 window.emails.push(emailer);
 if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && sessionStorage.getItem("loggedOut") != "Log Out")
 {
-sessionStorage.removeItem("loggedOut");
 toggleSignIn();
 }
   });  
