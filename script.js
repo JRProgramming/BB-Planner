@@ -23,7 +23,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
    loadNotes() 
-   }
+   }}
   });
 
 function count(){
