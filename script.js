@@ -1,6 +1,7 @@
 window.j = 0;
 window.kool = 0;
 window.namers = [];
+window.num = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -14,7 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    window.namers.push(joey.name);
   console.log(window.namers)
   console.log(names);
-   if(names == window.namers)
+   if(names == window.namers[window.num)
    {
  console.log("IN");
  window.identification = joey.ID  
@@ -27,6 +28,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.lengths = joey.classes.length
    loadNotes() 
    }}
+window.num ++
   });
 
 function count(){
