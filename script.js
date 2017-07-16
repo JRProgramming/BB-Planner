@@ -15,7 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    window.namers.push(joey.name);
   console.log(window.namers)
   console.log(names);
-   if(names == window.namers[window.num)
+   if(names == window.namers[window.num])
    {
  console.log("IN");
  window.identification = joey.ID  
