@@ -149,9 +149,8 @@ localStorage.setItem("password", window.password);
  localStorage.setItem("email", "");
 localStorage.setItem("password", "");  
  }
-
+location.href = ""
  }
-  location.href = "#";
   });
      
    }
