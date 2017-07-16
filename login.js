@@ -10,6 +10,10 @@ var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
 window.emails.push(emailer);
+if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true)
+{
+toggleSignIn();
+}
   });  
  
    function unique(){
@@ -353,8 +357,5 @@ if(document.getElementById("email").value == "" && document.getElementById("pass
 {
 document.getElementById("remember").checked = false
 } 
-else if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true)
-{
-setclass();
-}
+
 }
