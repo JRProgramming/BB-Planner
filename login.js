@@ -352,5 +352,5 @@ if(document.getElementById("email").value == "" && document.getElementById("pass
 {
 document.getElementById("remember").checked = false
 } 
-
+alert(sessionStorage.getItem("name"));
 }
