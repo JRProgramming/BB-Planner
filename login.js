@@ -353,4 +353,8 @@ if(document.getElementById("email").value == "" && document.getElementById("pass
 {
 document.getElementById("remember").checked = false
 } 
+else if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true)
+{
+setclass();
+}
 }
