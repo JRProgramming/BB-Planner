@@ -47,7 +47,6 @@ window.kool = 1
 
 
 
-window.text = ""
 function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
@@ -70,12 +69,11 @@ function addNote(title, text) {
    
 
        text = text || "Lorem ispum dolor sit amet..."; 
-      window.text = text;
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
     });
-    sup_text.html(window.text);
+    sup_text.html(text);
     sup_text.appendTo(div);
     
     var menu = $("<div/>", {
@@ -105,7 +103,7 @@ function addAndSaveNote(title, text, index) {
     
     var onUp = function() {
         window.obj.text = $(this).html();
-
+        alert(window.obj.text);
     };
     note.card.find(".mdl-card__supporting-text").on("input", onUp);
    
@@ -116,7 +114,7 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
-setTimeout(function(){ alert(window.text) }, 10000);
+
 
 function loadNotes() {
     
