@@ -108,8 +108,8 @@ function addAndSaveNote(title, text, index) {
     
     var onUp = function() {
       note.card.find(".mdl-card_title-text");
-        window.obj.text = $(this).html();
-       
+        
+       alert(note.title);
       alert(window.obj.title);
       updateSave();
     };
