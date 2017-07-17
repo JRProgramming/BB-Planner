@@ -138,12 +138,6 @@ localStorage.setItem("password", window.password);
  localStorage.setItem("email", "");
 localStorage.setItem("password", "");  
  }
- if(window.a == false)
- {
-  location.href = "setClass";
- }
- else if(window.a == true)
- {
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
@@ -152,7 +146,13 @@ if(joey.email ==  window.email)
   window.nme = joey.name
 }
 });  
- sessionStorage.setItem("name", window.nme);
+sessionStorage.setItem("name", window.nme);
+   if(window.a == false)
+ {
+  location.href = "setClass";
+ }
+   else if(window.a == true)
+ {
  location.reload();
  }
   });
