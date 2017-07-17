@@ -105,12 +105,6 @@ function addAndSaveNote(title, text, index) {
     note.card.find(".mdl-card__title-text").on("input", function() {
         window.obj.title = $(this).val();
     });
-    var classes = [];
-   for(i=0;i<6;i++)
-   {
-    classes.push(note.title);
-     alert(classes);
-   }
     
     var onUp = function() {
         
