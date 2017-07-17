@@ -102,9 +102,13 @@ function addAndSaveNote(title, text, index) {
     };
     window.classes.push(note.title);
     note.card.find(".mdl-card__title-text").on("input", function() {
-        window.obj.title = $(this).val();
+        window.obj.title = $(note.card.find(".mdl-card_title-text").val();
     });
-    
+        var onUp = function() {
+     alert(note.title);
+      updateSave();
+    };
+    note.card.find(".mdl-card__supporting-text").on("input", onUp);
 
    
     
@@ -124,9 +128,5 @@ function loadNotes() {
                     addAndSaveNote(item.title, item.text, index); 
             };
 }
-    var onUp = function() {
-     alert(note.title);
-      updateSave();
-    };
-    note.card.find(".mdl-card__supporting-text").on("input", onUp);
+
    
