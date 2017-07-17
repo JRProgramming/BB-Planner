@@ -44,7 +44,10 @@ window.kool = 1
  }
   });
 }
-
+function updateSave()
+{
+alert(window.obj.text);
+}
 
 
 function addNote(title, text) {
@@ -103,7 +106,7 @@ function addAndSaveNote(title, text, index) {
     
     var onUp = function() {
         window.obj.text = $(this).html();
-        alert(window.obj.text);
+      updateSave();
     };
     note.card.find(".mdl-card__supporting-text").on("input", onUp);
    
