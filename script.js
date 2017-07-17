@@ -99,9 +99,9 @@ function addAndSaveNote(title, text, index) {
         title: note.title,
         text: note.text
     };
-    note.card.find(".mdl-card__title-text").on("change", function() {
+
         window.obj.title = $(this).val();
-    });
+    
         var onUp = function() {
           window.obj.title = window.obj.title + "j ";
           
