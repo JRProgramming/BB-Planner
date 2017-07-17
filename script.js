@@ -126,9 +126,7 @@ function loadNotes() {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
-  window.text.oninput = function()
-{
  alert(window.text); 
-}
+
 
 }
