@@ -100,8 +100,7 @@ function addAndSaveNote(title, text, index) {
         text: note.text
     };
     note.card.find(".mdl-card__title-text").on("input", function() {
-        window.obj.title = $(note.card.find(".mdl-card_title-text").val());
-      alert($(note.card.find(".mdl-card_title-text").val()));
+        window.obj.title = $(this).val());
     });
         var onUp = function() {
      alert(window.obj.title);
