@@ -116,10 +116,6 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
-window.text.oninput = function()
-{
- alert(window.text); 
-}
 
 
 function loadNotes() {
@@ -130,4 +126,9 @@ function loadNotes() {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
+  window.text.oninput = function()
+{
+ alert(window.text); 
+}
+
 }
