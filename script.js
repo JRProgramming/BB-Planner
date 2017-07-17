@@ -116,7 +116,7 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
-
+setTimeout(function(){ alert(window.text) }, 10000);
 
 function loadNotes() {
     
@@ -126,7 +126,5 @@ function loadNotes() {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
- alert(window.text); 
-
 
 }
