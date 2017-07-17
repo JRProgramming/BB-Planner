@@ -106,11 +106,7 @@ function addAndSaveNote(title, text, index) {
         window.obj.title = $(this).val();
     });
     var classes = [];
-    for(i=0; i<window.obj.title; i++)
-    {
-     classes.push(window.obj.title);
-     alert(classes);
-    }
+
     
     var onUp = function() {
         
