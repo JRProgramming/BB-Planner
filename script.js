@@ -106,7 +106,8 @@ function addAndSaveNote(title, text, index) {
     });
     
     var onUp = function() {
-        
+    note.card.find(".mdl-card__title-text")
+      alert($(this).val());
      alert(note.title);
       updateSave();
     };
