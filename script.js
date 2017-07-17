@@ -46,7 +46,7 @@ window.kool = 1
 }
 function updateSave()
 {
- var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.obj.title);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + "Algebra");
  classers.update({
     homework: window.obj.text
 });
@@ -104,13 +104,12 @@ function addAndSaveNote(title, text, index) {
     
     note.card.find(".mdl-card__title-text").on("input", function() {
         window.obj.title = $(this).val();
-
+         alert(window.obj.title);
     });
     
     var onUp = function() {
         window.obj.text = $(this).html();
         window.obj.title = $(this).val();
-      alert(window.obj.title);
       updateSave();
     };
     note.card.find(".mdl-card__supporting-text").on("input", onUp);
