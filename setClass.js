@@ -67,7 +67,7 @@ classes.push("Specials")
    location.href = "index.html";
   }
 }); 
-
+}
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
     for (var i = 0; i < eng.length; i++) {
