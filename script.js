@@ -92,8 +92,7 @@ function addNote(title, text) {
     return {card: div, title: title, text: text};
   
 }
-
-/* Add a note and save it (aka create a note) */
+window.classes = []
 function addAndSaveNote(title, text, index) {
     for(i=0;i<window.lengths;i++){
     var note = addNote(title, text);
@@ -101,7 +100,8 @@ function addAndSaveNote(title, text, index) {
         title: note.title,
         text: note.text
     };
-    
+    window.classes.push(note.title);
+    alert(window.classes);
     note.card.find(".mdl-card__title-text").on("input", function() {
         window.obj.title = $(this).val();
     });
