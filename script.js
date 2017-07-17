@@ -13,11 +13,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namej").innerHTML = "";
   }
    window.namers.push(joey.name);
-  console.log(window.namers)
-  console.log(names);
    if(names == window.namers[window.num])
    {
- console.log("IN");
  window.identification = joey.ID  
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
@@ -37,7 +34,6 @@ function count(){
 ref.once("value")
   .then(function(snapshot) { 
   window.a = snapshot.exists();
-  console.log(window.a);
  if(window.a == false)
  {
   location.href = "setClass" 
@@ -73,12 +69,12 @@ function addNote(title, text) {
     title_text.appendTo(title_e);
    
 
-       text = text || "Lorem ispum dolor sit amet..."; 
+       window.text = text || "Lorem ispum dolor sit amet..."; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
     });
-    sup_text.html(text);
+    sup_text.html(window.text);
     sup_text.appendTo(div);
     
     var menu = $("<div/>", {
@@ -119,6 +115,12 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
+
+window.text.oninput = function()
+{
+alert("JELLO"); 
+}
+
 
 function loadNotes() {
     
