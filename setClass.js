@@ -59,11 +59,14 @@ classes.push("Specials")
      name: window.names,
      classes: classes
 });
-document.getElementById("joe").innerHTML = "<button onclick=\"done()\">Go Back to the Planner</button>"
+     var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("Classes failed to register, please try again.");
+  } else {
+   location.href = "index.html";
+  }
 } 
-function done(){  
- location.href = "index.html"
-}
 
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
