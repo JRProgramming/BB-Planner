@@ -117,7 +117,7 @@ function addAndSaveNote(title, text, index) {
     
 }
 
-alert(window.text);
+
 
 function loadNotes() {
     
@@ -127,4 +127,5 @@ function loadNotes() {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
+  alert(window.text);
 }
