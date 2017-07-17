@@ -66,7 +66,7 @@ classes.push("Specials")
   } else {
    location.href = "index.html";
   }
-} 
+}); 
 
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
