@@ -106,7 +106,7 @@ function addAndSaveNote(title, text, index) {
         window.obj.title = $(this).val();
     });
     var classes = [];
-   for(i=0;i<note.title;i++)
+   for(i=0;i<6;i++)
    {
     classes.push(note.title);
      alert(classes);
