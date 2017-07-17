@@ -116,11 +116,7 @@ function addAndSaveNote(title, text, index) {
     
 }
 
-window.text.oninput = function()
-{
-alert("JELLO"); 
-}
-
+alert(window.text);
 
 function loadNotes() {
     
