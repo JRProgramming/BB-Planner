@@ -6,8 +6,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.names = joey.name
 if(data == names)
 {
- var identification = joey.ID
  window.identification = joey.ID
+ console.log(window.identification);
 }
  
 });
