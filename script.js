@@ -47,7 +47,7 @@ window.kool = 1
 
 
 
-/* Add a note w/o saving it */
+window.text = ""
 function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
@@ -69,7 +69,8 @@ function addNote(title, text) {
     title_text.appendTo(title_e);
    
 
-       window.text = text || "Lorem ispum dolor sit amet..."; 
+       text = text || "Lorem ispum dolor sit amet..."; 
+      window.text = text;
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
