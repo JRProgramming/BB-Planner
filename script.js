@@ -46,7 +46,7 @@ window.kool = 1
 }
 function updateSave()
 {
- var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.obj.title);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + "Algebra");
  classers.update({
     homework: window.obj.text
 });
