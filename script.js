@@ -66,12 +66,12 @@ function addNote(title, text) {
     });
     title_e.appendTo(div);
         
-    window.title_text = $("<input>", {
+    var title_text = $("<input>", {
         "class": "mdl-card__title-text"
     });
     
-    window.title_text.val(title);
-    window.title_text.appendTo(title_e);
+    title_text.val(title);
+    title_text.appendTo(title_e);
    
 
        text = text || "Lorem ispum dolor sit amet..."; 
@@ -104,7 +104,7 @@ function addAndSaveNote(title, text, index) {
         window.obj.title = $(this).val();
     });
         var onUp = function() {
-     alert(window.title_text.val());
+     alert(note.card.find(".mdl-card__title-text").val());
       updateSave();
     };
     note.card.find(".mdl-card__supporting-text").on("input", onUp);
