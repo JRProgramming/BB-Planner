@@ -22,7 +22,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
    loadNotes() 
-   }}
+   }
+  }
 window.num ++
   });
 
@@ -45,9 +46,9 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.hat);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.hot);
  classers.update({
-     window.texter
+     : window.texter
 });
 }
 
