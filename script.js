@@ -19,8 +19,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
   if(window.kool = 1){
- alert(joey.Classes);
- var lengths = joey.classes.length
+ window.johnny = joey.classes;
  window.lengths = joey.classes.length
    loadNotes() 
    }}
@@ -46,9 +45,9 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.classj + "/" + window.hat);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.hat);
  classers.update({
-    homework: window.texter
+     window.texter
 });
 }
 
