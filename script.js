@@ -115,7 +115,7 @@ function addAndSaveNote(title, text, index) {
          alert(window.numj);
          window.classj = window.numj
          window.hat = note.title
-         window.texter = note.text;
+         window.texter = $(this).html
                updateSave();
        }
        else
