@@ -92,6 +92,7 @@ function addNote(title, text) {
     return {card: div, title: title, text: text};
   
 }
+
 function addAndSaveNote(title, text, index) {
     for(i=0;i<window.lengths;i++){
     var note = addNote(title, text);
@@ -99,24 +100,23 @@ function addAndSaveNote(title, text, index) {
         title: note.title,
         text: note.text
     };
-
-      note.card.find(".mdl-card__title-text").on("input", function() {
+    }
+     note.card.find(".mdl-card__title-text").on("input", function() {
         window.obj.title = $(this).val();
     });
         var onUp = function() {
-     alert($(note.card.find(".mdl-card__title-text").val()));
+     
       updateSave();
     };
-    note.card.find(".mdl-card__supporting-text").on("input", onUp);
-
-   
-    
-    note.onUp = onUp;
-    }
+    note.card.find(".mdl-card__supporting-text").on("input", onUp); 
+     note.onUp = onUp;
     return note;
     
 }
-
+function runNotes()
+{
+    
+}
 
 function loadNotes() {
     
