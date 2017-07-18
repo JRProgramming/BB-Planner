@@ -50,7 +50,7 @@ function updateSave()
   alert(window.hat);
  var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.classj + "/" + window.hat);
  classers.update({
-    homework: window.obj.text
+    homework: window.texter
 });
 }
 
@@ -115,6 +115,7 @@ function addAndSaveNote(title, text, index) {
          alert(window.numj);
          window.classj = window.numj
          window.hat = note.title
+         window.texter = note.text;
                updateSave();
        }
        else
