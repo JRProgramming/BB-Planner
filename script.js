@@ -107,8 +107,7 @@ function addAndSaveNote(title, text, index) {
         window.obj.title = $(this).val();
     });
         var onUp = function() {
-        for(i=0; i<window.lengths; i++)
-        {
+ 
        if(window.classes[window.numj] == note.title)
        {
          window.classj = window.numj;
@@ -121,7 +120,6 @@ function addAndSaveNote(title, text, index) {
           {
           window.numj += 1
           }
-        }
           alert(window.numj);
        
      }
