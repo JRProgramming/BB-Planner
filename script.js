@@ -19,8 +19,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
   if(window.kool = 1){
- window.johnny = joey.classes
-  alert(window.johnny);
+    window.num = 0
+ window.johnny = joey. + window.num
+ alert(window.johnny)
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
    loadNotes() 
