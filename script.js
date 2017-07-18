@@ -46,6 +46,8 @@ window.kool = 1
 }
 function updateSave()
 {
+  alert(window.classj);
+  alert(window.hat);
  var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.classj + window.hat);
  classers.update({
     homework: window.obj.text
