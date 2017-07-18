@@ -110,7 +110,7 @@ function addAndSaveNote(title, text, index) {
     });
         var onUp = function() {
         
-       alert(note.title);
+       alert(window.classes);
        if(window.classes[window.numj] == note.title)
        {
          window.classj = window.numj
