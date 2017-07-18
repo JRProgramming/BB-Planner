@@ -122,6 +122,7 @@ function addAndSaveNote(title, text, index) {
           window.numj += 1
           }
         }
+          alert(window.numj);
        
      }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
