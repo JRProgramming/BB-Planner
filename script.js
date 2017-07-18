@@ -104,7 +104,7 @@ function addAndSaveNote(title, text, index) {
         window.obj.title = $(this).val();
     });
         var onUp = function() {
-     alert(note.card.find(".mdl-card__title-text"));
+     alert(note.card.find(".mdl-card__title-text").val());
       updateSave();
     };
     note.card.find(".mdl-card__supporting-text").on("input", onUp);
