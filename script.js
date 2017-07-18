@@ -20,7 +20,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  count()
   if(window.kool = 1){
     window.num = 0
- window.johnny = joey. + window.num
+ window.johnny = joey.window.num;
  alert(window.johnny)
  var lengths = joey.classes.length
  window.lengths = joey.classes.length
