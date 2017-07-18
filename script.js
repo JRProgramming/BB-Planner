@@ -102,7 +102,8 @@ function addAndSaveNote(title, text, index) {
     window.obj = {
         title: note.title,
         text: note.text
-    };
+    }
+    }
     window.classes.push(note.title);
     window.texts.push(note.text);
     window.ftexts = window.texts
@@ -114,10 +115,10 @@ function addAndSaveNote(title, text, index) {
      window.texts.push(note.text);
       alert(window.texts);
       updateSave();
-    };
+      }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
      note.onUp = onUp;
-    }
+    
     return note;
     
 }
