@@ -108,7 +108,8 @@ function addAndSaveNote(title, text, index) {
         window.obj.title = $(this).val();
     });
         var onUp = function() {
-        
+        for(i=0; i<window.lengths;i++)
+        {
        if(window.classes[window.numj] == note.title)
        {
          window.classj = window.numj;
@@ -116,12 +117,9 @@ function addAndSaveNote(title, text, index) {
          window.texter = $(this).html();
                updateSave();
        }
-       else
-       {
-         window.numj += 1
-        onUp
-       }
+          window.numj += 1
       }
+     }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
      note.onUp = onUp;
  
