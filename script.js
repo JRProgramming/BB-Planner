@@ -46,7 +46,7 @@ window.kool = 1
 }
 function updateSave()
 {
- var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.obj.title);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.classj + window.note.title);
  classers.update({
     homework: window.obj.text
 });
@@ -93,26 +93,31 @@ function addNote(title, text) {
   
 }
 
-
+window.classes = [];
+window.numj = 0
 function addAndSaveNote(title, text, index) {
  
     var note = addNote(title, text);
     window.obj = {
-        title: note.title,
+        title: window.note.title,
         text: note.text
     }
-
+    window.classes.push(note.title)
      note.card.find(".mdl-card__title-text").on("input", function() {
         window.obj.title = $(this).val();
     });
         var onUp = function() {
         
        alert(note.title);
+       if(window.classes[window.numj] == window.note.title)
+       {
+         window.classj = window.numj
+       }
       updateSave();
       }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
      note.onUp = onUp;
-    
+    window.numj += 1
     return note;
     
 }
