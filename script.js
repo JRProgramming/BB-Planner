@@ -46,7 +46,7 @@ window.kool = 1
 }
 function updateSave()
 {
- var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.classj + window.note.title);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.classj + window.hat);
  classers.update({
     homework: window.obj.text
 });
@@ -99,7 +99,7 @@ function addAndSaveNote(title, text, index) {
  
     var note = addNote(title, text);
     window.obj = {
-        title: window.note.title,
+        title: note.title,
         text: note.text
     }
     window.classes.push(note.title)
@@ -109,9 +109,10 @@ function addAndSaveNote(title, text, index) {
         var onUp = function() {
         
        alert(note.title);
-       if(window.classes[window.numj] == window.note.title)
+       if(window.classes[window.numj] == note.title)
        {
          window.classj = window.numj
+         window.hat = note.title
        }
       updateSave();
       }
