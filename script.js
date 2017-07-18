@@ -110,17 +110,21 @@ function addAndSaveNote(title, text, index) {
     });
         var onUp = function() {
         
-       if(window.classes[0] == note.title)
+       if(window.classes[window.numj] == note.title)
        {
          alert(window.numj);
          window.classj = window.numj
          window.hat = note.title
+               updateSave();
        }
-      updateSave();
+       else
+       {
+        window.numj += 1 
+       }
       }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
      note.onUp = onUp;
-    window.numj += 1
+ 
     return note;
     
 }
