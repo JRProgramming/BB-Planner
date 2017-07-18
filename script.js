@@ -116,7 +116,10 @@ function addAndSaveNote(title, text, index) {
          window.texter = $(this).html();
                updateSave();
        }
+          else
+          {
           window.numj += 1
+          }
         }
        
      }
