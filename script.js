@@ -32,13 +32,10 @@ window.hw = [];
 function homework()
 {
   for(i=0; i<window.lengths; i++){
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
-if(joey == "")
-{
-alert("NULLIFICATION ACTIVATED");
-}
+alert(joey);
 });
     window.number += 1
   }
