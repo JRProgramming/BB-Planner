@@ -30,7 +30,6 @@ window.num ++
 function homework()
 {
 var database = firebase.database().ref().child("Algebra");
-var codeInput = document.getElementById('mainSearch');
 
 
 database.child(codeInput).on('value', function(snap) {
