@@ -30,11 +30,17 @@ window.num ++
   });
 function homework()
 {
-var playersRef = firebase.database().ref("Classes/");
-playersRef.on("child_added", function(data, prevChildKey) {
-var joey = data.val()
-console.log(joey);
-})
+var query = firebase.database().ref("Classes").orderByKey();
+query.once("value")
+  .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      // key will be "ada" the first time and "alan" the second time
+      var key = childSnapshot.key;
+     console.log(key);
+      var childData = childSnapshot.val();
+      console.log(childData);
+  });
+});
 }
 function count(){
 
