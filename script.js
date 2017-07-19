@@ -30,12 +30,13 @@ window.num ++
   });
 function homework()
 {
-  
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + "Social Studies");
+  for(i=0; i<window.lengths; i++){
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 alert(joey);
 });
+  }
 }
 function count(){
 
