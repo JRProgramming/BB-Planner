@@ -55,6 +55,7 @@ window.how.push(window.joey);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
+  alert(window.a);
  if(window.a == false)
  {
   window.hw.push("No homework");
