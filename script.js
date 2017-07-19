@@ -14,7 +14,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namej").innerHTML = "";
   }
    window.namers.push(joey.name);
-   alert(joey.homework);
    if(names == window.namers[window.num])
    {
  window.identification = joey.ID  
@@ -28,7 +27,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 window.num ++
   });
-
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Algebra/");
+playersRef.on("child_added", function(data, prevChildKey) {
+var joey = data.val()
+alert(joey.homework);
+})
 function count(){
 
  var ref = firebase.database().ref("Classes/" + window.identification + "/name");
