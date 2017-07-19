@@ -42,7 +42,7 @@ ref.once("value")
   .then(function(snapshot) { 
 
   window.a = snapshot.exists();
-       }); 
+      
 alert(window.a);
 if(window.a == true)
 {
@@ -52,7 +52,7 @@ else
 {
 window.hw.push("No homework");
 }
- 
+  }); 
 });
 
     window.number += 1
