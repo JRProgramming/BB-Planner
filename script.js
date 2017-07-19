@@ -30,8 +30,12 @@ window.num ++
   });
 window.hw = [];
 function homework()
-{  for(i=0; i<window.lengths; i++)
-  {
+{
+  
+
+
+ window.number = 0;
+  for(i=0; i<window.lengths; i++){
    var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
@@ -39,10 +43,6 @@ ref.once("value")
   window.a = snapshot.exists();
     alert(window.a);
       });
-    window.number += 1
-  }
- window.number = 0;
-  for(i=0; i<window.lengths; i++){
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
