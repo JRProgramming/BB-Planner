@@ -74,7 +74,10 @@ function addNote(title, text) {
     title_text.val(title);
     title_text.appendTo(title_e);
    
-
+if(window.homework[window.j] == null)
+{
+window.homework[window.j] = "Homework";
+}
        text = text || window.homework[window.j]; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
