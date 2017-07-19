@@ -29,15 +29,7 @@ window.num ++
   });
 function homework()
 {
-var database = firebase.database().ref().child("Algebra");
 
-
-database.child(codeInput).on('value', function(snap) {
-
-          var data = snap.val();
-
-    console.log(data);
-        }); 
 }
 function count(){
 
@@ -58,7 +50,7 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification + "/" + window.hat);
+ var classers = firebase.database().ref("Classes/" + window.identification);
  classers.update({
      homework: window.texter
 });
