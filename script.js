@@ -18,6 +18,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  window.identification = joey.ID  
  document.getElementById("names").innerHTML = names + "'s Planner"
+ homework();
  count()
   if(window.kool = 1){
  window.johnny = joey.classes;
@@ -27,12 +28,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 window.num ++
   });
+function homework()
+{
 alert(window.identification);
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Algebra/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 alert(joey.homework);
 })
+}
 function count(){
 
  var ref = firebase.database().ref("Classes/" + window.identification + "/name");
