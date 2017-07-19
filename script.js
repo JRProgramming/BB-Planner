@@ -30,7 +30,7 @@ window.num ++
   });
 function homework()
 {
-var query = firebase.database().ref("Algebra").orderByKey();
+var query = firebase.database().ref("Classes").orderByKey();
 query.once("value")
   .then(function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
@@ -38,6 +38,10 @@ query.once("value")
       var key = childSnapshot.key;
      console.log(key);
       var childData = childSnapshot.val();
+      if(childData == "Algebra")
+      {
+      console.log(childData);
+      }
       console.log(childData);
   });
 });
