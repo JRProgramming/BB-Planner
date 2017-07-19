@@ -24,7 +24,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.homework = joey.homework;
  if(window.homework == undefined)
 {
-window.homework = "Homework";
+window.homework = "";
 }
    loadNotes() 
    }
