@@ -49,13 +49,12 @@ else
 {
 window.how.push(window.joey);
 }
-
+alert(window.how)
 });
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
-  alert(window.a);
  if(window.a == false)
  {
   window.hw.push("No homework");
@@ -67,7 +66,6 @@ ref.once("value")
 window.hw.push(window.how[window.number]);
  
   }
-  alert(window.hw);
         }); 
     window.number += 1
 
