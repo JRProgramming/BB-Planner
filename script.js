@@ -2,6 +2,7 @@ window.j = 0;
 window.kool = 0;
 window.namers = [];
 window.num = 0
+window.number = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -29,7 +30,7 @@ window.num ++
   });
 function homework()
 {
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[1]);
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 alert(joey);
