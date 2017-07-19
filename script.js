@@ -113,14 +113,13 @@ function addAndSaveNote(title, text, index) {
       }
        if(window.classes[window.numj] == note.title)
        {
+         alert(window.numj)
          window.classj = window.numj;
          window.hat = note.title;
          window.texter = $(this).html();
          window.numj = 0;
                updateSave();
        }
-
-          alert(window.numj);
        
      }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
