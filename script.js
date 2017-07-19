@@ -35,7 +35,10 @@ function homework()
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
-window.hw.push(joey);
+if(joey == null)
+{
+alert("NULLIFICATION ACTIVATED");
+}
 });
     window.number += 1
   }
