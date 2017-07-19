@@ -42,13 +42,13 @@ ref.once("value")
     alert(window.a);
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
-var joey = data.val()
+window.joey = data.val()
 
 
 
 if(window.buddy == true)
 {
-window.hw.push(joey);
+window.hw.push(window.joey);
 }
 else
 {
@@ -56,7 +56,7 @@ window.hw.push("No homework");
 }
 
 });
-
+alert(window.joey)
     window.number += 1
 
   }
