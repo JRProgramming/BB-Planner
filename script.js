@@ -1,4 +1,3 @@
-
 window.j = 0;
 window.kool = 0;
 window.namers = [];
@@ -30,7 +29,16 @@ window.num ++
   });
 function homework()
 {
+var database = firebase.database().ref().child("Algebra");
+var codeInput = document.getElementById('mainSearch');
 
+
+database.child(codeInput).on('value', function(snap) {
+
+          var data = snap.val();
+
+    console.log(data);
+        }); 
 }
 function count(){
 
@@ -51,15 +59,10 @@ window.kool = 1
 function updateSave()
 {
 
-var database = firebase.database().ref().child('Classes');
-var codeInput = document.getElementById('mainSearch');
-
-
-database.child(codeInput).on('value', function(snap) {
-
-var data = snap.val();
-alert(data);
-})
+ var classers = firebase.database().ref("Classes/" + window.identification + "/" + window.hat);
+ classers.update({
+     homework: window.texter
+});
 }
 
 
