@@ -1,3 +1,4 @@
+
 window.j = 0;
 window.kool = 0;
 window.namers = [];
@@ -21,7 +22,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
-
    loadNotes() 
    }
   }
@@ -47,7 +47,7 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification + "/" + window.hat);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/homework/" + window.hat);
  classers.update({
      homework: window.texter
 });
@@ -73,9 +73,9 @@ function addNote(title, text) {
     
     title_text.val(title);
     title_text.appendTo(title_e);
+   
 
-
-       text = text || window.homework[window.j]; 
+       text = text || "Lorem ispum dolor sit amet..."; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
@@ -138,5 +138,3 @@ function loadNotes() {
             };
        }
 }
-
-   
