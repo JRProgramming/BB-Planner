@@ -36,18 +36,16 @@ function homework()
 ref.once("value")
   .then(function(snapshot) { 
 
-  window.a = snapshot.exists();
-  if(window.a == true)
-  {
-window.buddy = true
-  }
+ window.a = snapshot.exists();
+ 
         }); 
+    alert(window.a);
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 
 
-alert(window.buddy);
+
 if(window.buddy == true)
 {
 window.hw.push(joey);
