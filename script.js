@@ -29,7 +29,11 @@ window.num ++
   });
 function homework()
 {
-
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + "Algebra/" + "homework");
+playersRef.on("child_added", function(data, prevChildKey) {
+var joey = data.val()
+alert(joey.homework);
+});
 }
 function count(){
 
@@ -50,7 +54,7 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
 });
