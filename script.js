@@ -46,7 +46,7 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification + "/classes");
+ var classers = firebase.database().ref("Classes/" + window.identification + "/classes/" + window.hat);
  classers.update({
      homework: window.texter
 });
