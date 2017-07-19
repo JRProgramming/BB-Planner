@@ -32,10 +32,10 @@ window.hw = [];
 function homework()
 {
   for(i=0; i<window.lengths; i++){
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/");
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
-alert(joey);
+window.hw.push(joey);
 });
     window.number += 1
   }
