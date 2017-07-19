@@ -51,9 +51,9 @@ else
 window.hw.push("No homework");
 }
 });
-
-    window.number += 1
   });
+    window.number += 1
+
   }
 }
 function count(){
