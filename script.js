@@ -30,7 +30,7 @@ window.num ++
   });
 function homework()
 {
-var playersRef = firebase.database().ref("Classes/" + "/Algebra/");
+var playersRef = firebase.database().ref("Classes/" + "Algebra/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 alert(joey.homework);
