@@ -30,7 +30,7 @@ window.num ++
   });
 window.hw = [];
 function homework()
-{  for(i=0; i<iwindow.lengths; i++)
+{  for(i=0; i<window.lengths; i++)
   {
    var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
