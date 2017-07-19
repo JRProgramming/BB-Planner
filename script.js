@@ -30,17 +30,16 @@ window.num ++
   });
 window.hw = [];
 function homework()
-{
+{  for(i=0; i<iwindow.lengths; i++)
+  {
    var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
-  for(i=0; i<iwindow.lengths; i++)
-  {
+
   window.a = snapshot.exists();
     alert(window.a);
-  }
-
       });
+  }
   for(i=0; i<window.lengths; i++){
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
