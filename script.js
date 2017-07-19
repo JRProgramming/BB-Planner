@@ -45,13 +45,14 @@ window.joey = data.val()
 
 
 
-if(window.buddy == true)
+if(window.joey == undefined)
 {
-window.hw.push(window.joey);
+window.hw.push("No homework");
+
 }
 else
 {
-window.hw.push("No homework");
+window.hw.push(window.joey);
 }
 
 });
