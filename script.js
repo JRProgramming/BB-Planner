@@ -45,7 +45,7 @@ window.joey = data.val()
 
 
 
-if(window.joey == undefined)
+if(window.joey == "undefined")
 {
 window.hw.push("No homework");
 
