@@ -51,7 +51,7 @@ window.kool = 1
 function updateSave()
 {
 
-var database = firebase.database().ref().child('Algebra');
+var database = firebase.database().ref().child('Classes');
 var codeInput = document.getElementById('mainSearch');
 
 
