@@ -39,7 +39,9 @@ ref.once("value")
   window.a = snapshot.exists();
     alert(window.a);
       });
+    window.number += 1
   }
+ window.number = 0;
   for(i=0; i<window.lengths; i++){
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
