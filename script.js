@@ -30,21 +30,7 @@ window.num ++
   });
 function homework()
 {
-var query = firebase.database().ref("Classes").orderByKey();
-query.once("value")
-  .then(function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      // key will be "ada" the first time and "alan" the second time
-      var key = childSnapshot.key;
-     console.log(key);
-      var childData = childSnapshot.val();
-      if(childData == "Algebra")
-      {
-      console.log(childData);
-      }
-      console.log(childData);
-  });
-});
+
 }
 function count(){
 
@@ -65,10 +51,15 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification + "/" + window.hat);
- classers.update({
-     homework: window.texter
-});
+var database = firebase.database().ref().child('Algebra');
+var codeInput = document.getElementById('mainSearch');
+
+
+database.child(codeInput).on('value', function(snap) {
+
+var data = snap.val();
+alert(data);
+})
 }
 
 
