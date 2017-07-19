@@ -54,7 +54,6 @@ window.how.push(window.joey);
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
-alert(window.how[window.num]);;
  window.a = snapshot.exists();
  if(window.a == false)
  {
