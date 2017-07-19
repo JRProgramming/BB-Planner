@@ -22,6 +22,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
  window.homework = joey.homework;
+ alert(joey.homework);
  if(window.homework == undefined)
 {
 window.homework = "";
