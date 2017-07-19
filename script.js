@@ -27,6 +27,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 window.num ++
   });
+alert(window.identification);
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Algebra/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
