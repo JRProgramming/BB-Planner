@@ -28,6 +28,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 window.num ++
   });
+window.how = [];
 window.hw = [];
 function homework()
 {
@@ -41,21 +42,32 @@ window.joey = data.val()
 
 if(window.joey == "undefined")
 {
-window.hw.push("No homework");
+window.how.push("No homework");
 
 }
 else
 {
-window.hw.push(window.joey);
+window.how.push(window.joey);
 }
 
 });
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
-alert(window.hw);
+alert(window.how[window.num]);;
  window.a = snapshot.exists();
+ if(window.a == false)
+ {
+  window.hw.push("No homework");
+   arr.splice(window.number, 0, "No homework");
+ }
+  else
+  {
+
+window.hw.push(window.how[window.number]);
  
+  }
+  alert(window.hw);
         }); 
     window.number += 1
 
