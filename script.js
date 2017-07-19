@@ -30,7 +30,7 @@ window.num ++
 function homework()
 {
 alert(window.identification);
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + "Algebra/" + "homework");
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + "Algebra/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 alert(joey);
