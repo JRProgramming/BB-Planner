@@ -32,17 +32,18 @@ window.hw = [];
 function homework()
 {
   for(i=0; i<window.lengths; i++){
-   var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+playersRef.on("child_added", function(data, prevChildKey) {
+var joey = data.val()
+
+     var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
 
   window.a = snapshot.exists();
  
-    });  
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
-playersRef.on("child_added", function(data, prevChildKey) {
-var joey = data.val()
-alert(window.a);
+
 if(window.a == true)
 {
 window.hw.push(joey);
@@ -51,6 +52,7 @@ else
 {
 window.hw.push("No homework");
 }
+      });  
 });
 
     window.number += 1
