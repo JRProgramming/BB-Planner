@@ -31,8 +31,15 @@ window.num ++
 window.hw = [];
 function homework()
 {
-  for(i=0; i<window.lengths; i++){
-   
+ for(i=0; i<window.lengths; i++){
+     var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+ref.once("value")
+  .then(function(snapshot) { 
+
+ window.a = snapshot.exists();
+ 
+        }); 
+    alert(window.a);
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 window.joey = data.val()
@@ -49,14 +56,8 @@ window.hw.push("No homework");
 }
 
 });
-  var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
-ref.once("value")
-  .then(function(snapshot) { 
-alert(window.joey);
- window.a = snapshot.exists();
- 
-        }); 
- 
+alert(window.joey)
+    window.number += 1
 
   }
 
