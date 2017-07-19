@@ -22,6 +22,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
  window.homework = joey.homework;
+ if(window.homework == undefined)
+{
+window.homework = "Homework";
+}
    loadNotes() 
    }
   }
@@ -74,11 +78,7 @@ function addNote(title, text) {
     title_text.val(title);
     title_text.appendTo(title_e);
 
-if(window.homework[window.j] == undefined)
-{
-window.homework[window.j] = "Homework";
-}
-     alert(window.homework[window.j]);
+
        text = text || window.homework[window.j]; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
