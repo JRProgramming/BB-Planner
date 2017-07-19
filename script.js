@@ -14,6 +14,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   document.getElementById("namej").innerHTML = "";
   }
    window.namers.push(joey.name);
+   alert(joey.homework);
    if(names == window.namers[window.num])
    {
  window.identification = joey.ID  
@@ -22,7 +23,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
- alert(joey.homework);
    loadNotes() 
    }
   }
@@ -48,7 +48,7 @@ window.kool = 1
 function updateSave()
 {
 
- var classers = firebase.database().ref("Classes/" + window.identification);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
 });
