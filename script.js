@@ -73,7 +73,7 @@ function addNote(title, text) {
     
     title_text.val(title);
     title_text.appendTo(title_e);
-   
+   alert(window.homework);
 if(window.homework[window.j] == null)
 {
 window.homework[window.j] = "Homework";
