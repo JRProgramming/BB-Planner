@@ -56,7 +56,7 @@ alert(window.joey);
  window.a = snapshot.exists();
  
         }); 
-    window.number += 1
+ 
 
   }
 
