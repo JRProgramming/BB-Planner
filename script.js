@@ -34,9 +34,12 @@ function homework()
    var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
+  for(i=0; i<iwindow.lengths; i++)
+  {
   window.a = snapshot.exists();
+    alert(window.a);
+  }
 
-alert(window.a);
       });
   for(i=0; i<window.lengths; i++){
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
