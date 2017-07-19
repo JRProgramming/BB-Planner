@@ -21,6 +21,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
+ window.homework = joey.homework;
    loadNotes() 
    }
   }
@@ -74,7 +75,7 @@ function addNote(title, text) {
     title_text.appendTo(title_e);
    
 
-       text = text || "Lorem ispum dolor sit amet..."; 
+       text = text || window.homework[window.j]; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
