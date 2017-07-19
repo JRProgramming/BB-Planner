@@ -17,11 +17,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
    {
  window.identification = joey.ID  
  document.getElementById("names").innerHTML = names + "'s Planner"
- homework();
  count()
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
+     homework();
    loadNotes() 
    }
   }
@@ -29,8 +29,7 @@ window.num ++
   });
 function homework()
 {
-alert(window.identification);
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + "Algebra/");
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[0]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 alert(joey);
