@@ -28,13 +28,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 window.num ++
   });
+window.hw = [];
 function homework()
 {
   for(i=0; i<window.lengths; i++){
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
-alert(joey)
+window.hw.push(joey);
 });
     window.number += 1
   }
@@ -86,7 +87,7 @@ function addNote(title, text) {
     title_text.appendTo(title_e);
    
 
-       text = text || "Lorem ispum dolor sit amet..."; 
+       text = text || window.hw[window.j]; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
