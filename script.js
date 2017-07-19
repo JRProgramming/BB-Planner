@@ -35,8 +35,8 @@ var playersRef = firebase.database().ref("Classes/" + window.identification + "/
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
 alert(joey)
-window.number += 1
 });
+    window.number += 1
   }
 }
 function count(){
