@@ -32,13 +32,28 @@ window.num ++
 window.hw = [];
 function homework()
 {
+   var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+ref.once("value")
+  .then(function(snapshot) { 
+  window.a = snapshot.exists();
+
+
   for(i=0; i<window.lengths; i++){
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val()
+if(window.a == true)
+{
 window.hw.push(joey);
+}
+else
+{
+window.hw.push("No homework");
+}
 });
+
     window.number += 1
+  });
   }
 }
 function count(){
