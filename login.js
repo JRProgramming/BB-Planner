@@ -265,7 +265,14 @@ else
           } 
           else
           {
-           alert(errorMessage); 
+           if (errorMessage == "A network error (such as timeout, interrupted connection or unreachable host) has occurred.")
+           {
+           location.href = ""
+           }
+             else
+             {
+     alert(errorMessage)
+             }
           }
           
           console.log(error);
