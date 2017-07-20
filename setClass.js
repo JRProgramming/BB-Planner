@@ -59,26 +59,15 @@ classes.push("Specials")
      name: window.names,
      classes: classes
 });
- var number = 0
- for(i=0;i<classes;i++)
- {
-  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[number]);
+
+
+  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[0]);
  classers.update({
      homework: "No homework"
 });
-       var bob = firebase.database().ref("Completion/")
-       bob.set("Data is stored", function(error) {
-  if (error) {
-    alert("Classes failed to register, please try again.");
-  } else {
-   number += 1
-  }
-}); 
-  alert(number);
- }
- alert(number)
- if(number == 6)
- {
+ 
+ 
+
      var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
   if (error) {
@@ -87,7 +76,7 @@ classes.push("Specials")
    location.href = "index.html";
   }
 }); 
- }
+ 
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
