@@ -10,7 +10,6 @@ var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
 window.emails.push(emailer);
-  alert(sessionStorage.getItem("loggedOut"))
 if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && sessionStorage.getItem("loggedOut") != "Log Out")
 {
 toggleSignIn();
@@ -51,6 +50,7 @@ for(i=0; i<window.names.length; i++)
     }
 }
 num = 0
+  alert(exists);
 if(exists == "unique"){
   setter();
 }
