@@ -47,10 +47,7 @@ if(window.a == false)
      homework: "No homework"
 });
 }
-  else
-  {
 window.number += 1
-  }
 }); 
 
 
