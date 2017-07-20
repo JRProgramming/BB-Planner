@@ -34,38 +34,22 @@ function homework()
 {
  for(i=0; i<window.lengths; i++){
 
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
-playersRef.on("child_added", function(data, prevChildKey) {
-window.joey = data.val()
-
-
-
-if(window.joey == undefined)
-{
-window.how.push("No homework");
-
-}
-else
-{
-window.how.push(window.joey);
-}
-});
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
-  var number = 0;
+
 if(window.a == false)
 {
   alert(window.number);
- var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[number]);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
  classers.update({
      homework: "No homework"
 });
 }
   else
   {
-number += 1
+window.number += 1
   }
 }); 
     window.number += 1
