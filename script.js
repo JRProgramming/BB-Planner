@@ -32,7 +32,7 @@ window.how = [];
 window.hw = [];
 function homework()
 {
-for(i=0;i<window.length;i++)
+for(i=0;i<window.lengths;i++)
   {
 
    window.number += 1
