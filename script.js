@@ -47,9 +47,9 @@ if(window.a == false)
      homework: "No homework"
 });
 }
-window.number += 1
-}); 
 
+}); 
+window.number += 1
 
   }
 
