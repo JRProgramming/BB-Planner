@@ -10,7 +10,7 @@ var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
 window.emails.push(emailer);
-if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && sessionStorage.getItem("loggedOut") != "Log Out")
+if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
 {
 toggleSignIn();
 }
@@ -147,7 +147,7 @@ if(joey.email ==  window.email)
   window.nme = joey.name
 }
 });  
-sessionStorage.setItem("loggedOut", "");
+localStorage.setItem("loggedOut", "");
 sessionStorage.setItem("name", window.nme);
    if(window.a == false)
  {
@@ -314,7 +314,7 @@ return;
 function logOut()
 {
 sessionStorage.removeItem("name");
-sessionStorage.setItem("loggedOut", "Log Out");
+localStorage.setItem("loggedOut", "Log Out");
 location.reload();
 }
     /**
