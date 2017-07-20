@@ -48,8 +48,6 @@ if(window.a == false)
 }
 }); 
    window.number += 1
-    alert(window.number);
-    
   }
 
 }
