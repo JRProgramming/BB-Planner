@@ -34,6 +34,7 @@ function homework()
 {
 for(i=0;i<window.lengths;i++)
   {
+    alert(window.number);
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
@@ -54,7 +55,7 @@ if(window.a == false)
   } else {
   window.number += 1
   }
-       });
+ });
   }
 
 }
