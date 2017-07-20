@@ -56,7 +56,7 @@ ref.once("value")
  window.a = snapshot.exists();
 if(window.a == false)
 {
-  alert(window.johnny);
+  alert(window.number);
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
  classers.update({
      homework: "No homework"
