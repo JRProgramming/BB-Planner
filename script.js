@@ -50,16 +50,16 @@ else
 window.how.push(window.joey);
 }
 });
-   alert(window.joey);
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
+  alert(window.a);
 if(window.a == false)
 {
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
  classers.update({
-     homework: window.texter
+     homework: "No homework"
 });
 }
 }); 
