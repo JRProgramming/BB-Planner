@@ -49,8 +49,8 @@ else
 {
 window.how.push(window.joey);
 }
-alert(window.how)
 });
+   alert(window.joey);
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
