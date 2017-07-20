@@ -146,6 +146,7 @@ if(joey.email ==  window.email)
   window.nme = joey.name
 }
 });  
+sessionStorage.setItem("loggedOut", "");
 sessionStorage.setItem("name", window.nme);
    if(window.a == false)
  {
