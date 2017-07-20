@@ -32,29 +32,14 @@ window.how = [];
 window.hw = [];
 function homework()
 {
-for(i=-1;i<window.lengths-1;i++)
-  {
-      var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[i]);
-ref.once("value")
-  .then(function(snapshot) { 
- window.a = snapshot.exists();
-alert(i);
-if(window.a == false)
+for(i=0;i<window.lengths;i++)
 {
- var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[i]);
- classers.update({
-     homework: "No homework"
-});
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey =  data.val()
+  alert(joey)
+})
 }
- });
-         var bob = firebase.database().ref("Completion/")
-       bob.set("Data is stored", function(error) {
-  if (error) {
-    alert("Classes failed to register, please try again.");
-  } 
-}); 
-  }
-
 }
 function count(){
 
