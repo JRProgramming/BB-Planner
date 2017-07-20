@@ -54,9 +54,9 @@ window.how.push(window.joey);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
-  alert(window.a);
 if(window.a == false)
 {
+  alert(window.johnny);
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
  classers.update({
      homework: "No homework"
