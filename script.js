@@ -33,12 +33,10 @@ window.hw = [];
 function homework()
 {
  for(i=0; i<window.lengths; i++){
-alert(window.number);
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
-alert(window.a);
 if(window.a == false)
 {
   alert(window.number);
