@@ -34,7 +34,7 @@ function homework()
 {
 for(i=0;i<window.lengths;i++)
   {
-    alert(window.number);
+
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
   .then(function(snapshot) { 
@@ -47,15 +47,8 @@ if(window.a == false)
      homework: "No homework"
 });
 }
-    var bob = firebase.database().ref("Completion/")
-       bob.set("Data is stored", function(error) {
-  if (error) {
-    alert("Homework failed to register, please try again.");
-  } else {
   window.number += 1
-  }
-}); 
-
+  alert(window.number);
  });
   }
 
