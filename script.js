@@ -52,7 +52,7 @@ if(window.a == false)
 window.number += 1
   }
 }); 
-    window.number += 1
+
 
   }
 
