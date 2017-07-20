@@ -54,14 +54,19 @@ window.how.push(window.joey);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
+  var number = 0;
 if(window.a == false)
 {
   alert(window.number);
- var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[number]);
  classers.update({
      homework: "No homework"
 });
 }
+  else
+  {
+number += 1
+  }
 }); 
     window.number += 1
 
