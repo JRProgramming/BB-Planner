@@ -38,7 +38,7 @@ function homework()
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
-alert(window.a);
+alert(window.johnny[window.number]);
 if(window.a == false)
 {
   alert(window.number);
