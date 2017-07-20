@@ -74,7 +74,7 @@ classes.push("Specials")
    number += 1
   }
 }); 
-  
+  alert(number);
  }
      var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
