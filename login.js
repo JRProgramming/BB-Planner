@@ -211,6 +211,7 @@ return;
 }
  var exists = ""
  var num = 0
+ alert(window.emails);
 for(i=0; i<window.emails.length; i++)
 {
   if(window.email != window.emails[num])
@@ -226,7 +227,7 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
-alert(exists)
+
 if(exists == "unique")
 {
 if(document.getElementById("namej").innerHTML != "")
