@@ -9,9 +9,7 @@ var data = joey.name;
 var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
-window.emails.push(emailer);
-   alert(joey.email)
-      if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
+if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
 {
 toggleSignIn();
 }
@@ -213,7 +211,11 @@ return;
 }
  var exists = ""
  var num = 0
- alert(window.emails);
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+   var joey = data.val()
+window.emails.push(joey.email)
+});
 for(i=0; i<window.emails.length; i++)
 {
   if(window.email != window.emails[num])
