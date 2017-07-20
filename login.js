@@ -10,12 +10,12 @@ var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
 window.emails.push(emailer);
-if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
+
+  });  
+ if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
 {
 toggleSignIn();
 }
-  });  
- 
    function unique(){
 var num = 0
 var exists = ""
