@@ -34,15 +34,14 @@ function homework()
 {
 for(i=0;i<window.lengths;i++)
   {
-alert(i)
-      var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+      var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[i]);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
 
 if(window.a == false)
 {
- var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+ var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[i]);
  classers.update({
      homework: "No homework"
 });
