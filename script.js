@@ -55,18 +55,14 @@ window.how.push(window.joey);
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
- if(window.a == false)
- {
-  window.hw.push("No homework");
-   arr.splice(window.number, 0, "No homework");
- }
-  else
-  {
-
-window.hw.push(window.how[window.number]);
- 
-  }
-        }); 
+if(window.a == false)
+{
+ var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
+ classers.update({
+     homework: window.texter
+});
+}
+}); 
     window.number += 1
 
   }
