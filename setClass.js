@@ -59,12 +59,22 @@ classes.push("Specials")
      name: window.names,
      classes: classes
 });
- for(i=-1;i<classes-1;i++)
+ var number = 0
+ for(i=0;i<classes;i++)
  {
-  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[i]);
+  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[number]);
  classers.update({
      homework: "No homework"
 });
+       var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("Classes failed to register, please try again.");
+  } else {
+   number += 1
+  }
+}); 
+  
  }
      var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
