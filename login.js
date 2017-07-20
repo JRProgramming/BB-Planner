@@ -202,6 +202,11 @@ function setUp()
           alert('Please enter a password.');
           return;
         }
+         if (email != "jramirez@blindbrook.org" && email != "harondwald@blindbrook.org" && email != "jkaminsky@blindbrook.org" && email != "abao@blindbrook.org" && email != "mshaw@blindbrook.org" && email != "jmayer@blindbrook.org" && email != "rcampbell@blindbrook.org")
+{
+alert("Not allowed here")
+return;
+}
  var exists = ""
  var num = 0
 for(i=0; i<window.emails.length; i++)
