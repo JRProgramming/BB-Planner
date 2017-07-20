@@ -76,6 +76,8 @@ classes.push("Specials")
 }); 
   alert(number);
  }
+ if(number == 6)
+ {
      var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
   if (error) {
@@ -84,6 +86,7 @@ classes.push("Specials")
    location.href = "index.html";
   }
 }); 
+ }
 }
 function UnCheck(obj) {
     var eng = document.getElementsByClassName("english");
