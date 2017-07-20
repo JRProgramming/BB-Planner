@@ -59,10 +59,13 @@ classes.push("Specials")
      name: window.names,
      classes: classes
 });
-  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes);
+ for(i=-1;i<classes-1;i++)
+ {
+  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[i]);
  classers.update({
      homework: "No homework"
 });
+ }
      var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
   if (error) {
