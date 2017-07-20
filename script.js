@@ -34,19 +34,7 @@ function homework()
 {
 for(i=0;i<window.length;i++)
   {
-      var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
-ref.once("value")
-  .then(function(snapshot) { 
- window.a = snapshot.exists();
 
-if(window.a == false)
-{
- var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
- classers.update({
-     homework: "No homework"
-});
-}
-}); 
    window.number += 1
     alert(window.number);
     
