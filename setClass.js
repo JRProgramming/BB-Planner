@@ -76,6 +76,7 @@ classes.push("Specials")
 }); 
   alert(number);
  }
+ alert(number)
  if(number == 6)
  {
      var bob = firebase.database().ref("Completion/")
