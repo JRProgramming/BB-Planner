@@ -32,7 +32,7 @@ window.how = [];
 window.hw = [];
 function homework()
 {
-for(i=0;i<window.lengths;i++)
+for(i=-1;i<window.lengths-1;i++)
   {
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[i]);
 ref.once("value")
