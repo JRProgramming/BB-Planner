@@ -286,7 +286,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         alert('Please enter a password.');
         return;
       }
-      alert(email)
  if (email != "jramirez@blindbrook.org" && email != "harondwald@blindbrook.org" && email != "jkaminsky@blindbrook.org" && email != "abao@blindbrook.org" && email != "mshaw@blindbrook.org" && email != "jmayer@blindbrook.org" && email != "rcampbell@blindbrook.org")
 {
 alert("Not allowed here")
