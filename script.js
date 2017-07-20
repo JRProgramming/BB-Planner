@@ -47,6 +47,12 @@ if(window.a == false)
 });
 }
  });
+         var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("Classes failed to register, please try again.");
+  } 
+}); 
   }
 
 }
