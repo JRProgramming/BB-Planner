@@ -32,7 +32,7 @@ window.how = [];
 window.hw = [];
 function homework()
 {
-  while(window.number < window.lengths)
+for(i=0;i<window.lengths;i++){
   {
       var ref = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[window.number]);
 ref.once("value")
@@ -48,6 +48,7 @@ if(window.a == false)
 }
 }); 
    window.number += 1
+    alert(window.number);
   }
 
 }
