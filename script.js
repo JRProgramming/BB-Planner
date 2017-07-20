@@ -47,7 +47,14 @@ if(window.a == false)
 });
 }
 }); 
-   window.number += 1
+  var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("Homework failed to register, please try again.");
+  } else {
+  window.number += 1
+  }
+       });
   }
 
 }
