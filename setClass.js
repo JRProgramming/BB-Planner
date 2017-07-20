@@ -60,12 +60,13 @@ classes.push("Specials")
      classes: classes
 });
 
-
-  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[0]);
+for(i=0;i<classes.length;i++)
+{
+  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[i]);
  classers.update({
      homework: "No homework"
 });
- 
+}
  
 
      var bob = firebase.database().ref("Completion/")
