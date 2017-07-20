@@ -38,7 +38,7 @@ for(i=0;i<window.lengths;i++)
 ref.once("value")
   .then(function(snapshot) { 
  window.a = snapshot.exists();
-
+alert(window.a);
 if(window.a == false)
 {
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.johnny[i]);
