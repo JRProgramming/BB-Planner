@@ -311,7 +311,7 @@ return;
         } else {
           alert(errorMessage);
         }
-        // [END_EXCLUDE]
+        console.log(errorMessage);
       });
       // [END createwithemail]
       toggleSignIn()
