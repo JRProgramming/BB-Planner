@@ -22,6 +22,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
+ if(window.lengths == 0)
+ {
+location.href = "setClass"
+ }
      homework();
    loadNotes() 
    }
