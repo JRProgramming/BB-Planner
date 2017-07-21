@@ -3,7 +3,7 @@ window.number = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-window.names.push(joey.name);
+window.names = joey.name
   loadNotes()
   });
 
@@ -62,7 +62,7 @@ function addAndSaveNote(title, index) {
 }
 
 function loadNotes() {
-       for(i=0;i<window.number;i++){
+       for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
