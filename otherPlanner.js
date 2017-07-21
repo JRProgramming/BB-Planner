@@ -17,7 +17,7 @@ function addNote(title) {
    });
     div.appendTo(".mdl-layout__content")
         alert(window.names[window.number])
-  title = title || window.names[window.number];
+  title = title || window.names[1];
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
