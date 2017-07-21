@@ -62,8 +62,7 @@ function addAndSaveNote(title, index) {
 }
 
 function loadNotes() {
-  alert(window.names.length)
-       for(i=0;i<window.names.length;i++){
+       for(i=0;i<window.number;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
