@@ -26,6 +26,7 @@ function addNote(title, text) {
         
     var title_text = $("<input>", {
         "class": "mdl-card__title-text"
+        "contenteditable": "false"
     });
     
     title_text.val(title);
@@ -34,7 +35,7 @@ function addNote(title, text) {
      text = text || "Select"; 
     var sup_text = $("<a/>", {
         "class": "mdl-card__supporting-text",
-        "href": "www.google.com",
+        "href": "index.html",
         "contenteditable": "false"
     });
   
