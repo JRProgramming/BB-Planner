@@ -4,7 +4,7 @@
     -webkit-user-select: none;
     -ms-user-select: none; }
 body, .mdl-layout__content {background: #FAFAFA /* According to material design guidelines */}
-.note {margin:8px; display:inline-block; min-width:50px; min-height:75px; vertical-align: top;}
+.note {margin:8px; display:inline-block; min-width:75px; min-height:112.5px; vertical-align: top;}
 .note .mdl-card__title {background: #263238; color:#FFF}
 .note .mdl-card__title-text {border:0; outline:0; background: transparent;}
 .note .mdl-card__supporting-text, .note .mdl-card__supporting-text ul {border: 0; outline:0; font-size: 100%}
