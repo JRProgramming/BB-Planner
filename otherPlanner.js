@@ -25,7 +25,7 @@ function addNote(title, text) {
     title_e.appendTo(div);
         
     var title_text = $("<input>", {
-        "class": "mdl-card__title-text"
+        "class": "mdl-card__title-text",
         "contenteditable": "false"
     });
     
