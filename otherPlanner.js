@@ -37,7 +37,6 @@ function addNote(title, text) {
         "href": "www.google.com",
         "contenteditable": ""
     });
-    sup_text.html(text);
     sup_text.appendTo(div);
 
 
