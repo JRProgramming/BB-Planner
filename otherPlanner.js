@@ -54,9 +54,14 @@ function addNote(title, text) {
   
 }
 
-function seeNotes()
+function seeNotes(title)
 {
-alert("Sports by the Beach");
+  var note = addNote(title);
+    window.obj = {
+        title: note.title,
+    }
+  alert(note.title);
+sessionStorage.setItem("nameS", note.title)
 }
 
 function addAndSaveNote(title, index) {
