@@ -35,8 +35,10 @@ function addNote(title, text) {
     var sup_text = $("<a/>", {
         "class": "mdl-card__supporting-text",
         "href": "www.google.com",
-        "contenteditable": ""
+        "contenteditable": "false"
     });
+  
+    sup_text.html(text);
     sup_text.appendTo(div);
 
 
