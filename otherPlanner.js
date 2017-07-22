@@ -11,7 +11,7 @@ window.names = [];
 
 
 
-function addNote(title) {
+function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
@@ -31,7 +31,14 @@ function addNote(title) {
     title_text.val(title);
     title_text.appendTo(title_e);
    
-
+     text = text || "Select"; 
+    var sup_text = $("<a/>", {
+        "class": "mdl-card__supporting-text",
+        "href": "www.google.com",
+        "contenteditable": ""
+    });
+    sup_text.html(text);
+    sup_text.appendTo(div);
 
 
     var menu = $("<div/>", {
