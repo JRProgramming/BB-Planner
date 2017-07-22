@@ -56,11 +56,6 @@ function addNote(title, text) {
 
 function seeNotes(title)
 {
-  var note = addNote(title);
-    window.obj = {
-        title: note.title,
-    }
-  alert(note.title);
 sessionStorage.setItem("nameS", note.title)
 }
 
