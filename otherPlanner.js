@@ -70,7 +70,8 @@ function addAndSaveNote(title, index) {
       if(window.b == 0)
       {
        window.tilt = note.title
-        alert(window.titl)
+        alert(window.tilt)
+        window.b += 1
       }
     });
     
