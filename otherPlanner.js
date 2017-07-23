@@ -58,7 +58,7 @@ function seeNotes(title)
 {
 sessionStorage.setItem("nameS", note.title)
 }
-
+window.b = 0
 function addAndSaveNote(title, index) {
  
     var note = addNote(title);
@@ -67,8 +67,11 @@ function addAndSaveNote(title, index) {
     }
 
      $("a").on("click", function() {
-      
+      if(window.b == 0)
+      {
        alert(note.title);
+        window.b += 1
+      }
     });
     
    
