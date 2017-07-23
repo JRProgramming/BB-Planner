@@ -69,8 +69,8 @@ function addAndSaveNote(title, index) {
      $("a").on("click", function() {
       if(window.b == 0)
       {
-       alert(note.title);
-        window.b += 1
+       window.tilt = note.title
+        alert(window.titl)
       }
     });
     
