@@ -36,8 +36,7 @@ function addNote(title, text) {
      text = text || "Select"; 
     var sup_text = $("<a/>", {
         "class": "mdl-button mdl-js-button",
-        "contenteditable": "false",
-        "onclick": "addAndSaveNote()"
+        "contenteditable": "false"
     });
   
     sup_text.html(text);
