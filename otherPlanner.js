@@ -26,7 +26,8 @@ function addNote(title, text) {
         
     var title_text = $("<input>", {
         "class": "mdl-card__title-text",
-        "contenteditable": "false"
+        "contenteditable": "false",
+        "onclick": "addAndSaveNote()"
     });
     
     title_text.val(title);
