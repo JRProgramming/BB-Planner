@@ -66,8 +66,8 @@ function addAndSaveNote(title, index) {
     window.obj = {
         title: note.title,
     }
-  alert("HEY");
-     note.card.find(".mdl-card__supporting-text").on("click", function() {
+
+     $("a").on("click", function() {
       
        alert(window.obj.title);
     });
