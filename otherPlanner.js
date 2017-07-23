@@ -35,7 +35,7 @@ function addNote(title, text) {
      text = text || "Select"; 
     var sup_text = $("<a/>", {
         "class": "mdl-button mdl-js-button",
-        "onclick": "seeNotes()",
+        "onclick": "addAndSaveNote()",
         "contenteditable": "false"
     });
   
@@ -65,8 +65,9 @@ function addAndSaveNote(title, index) {
     window.obj = {
         title: note.title,
     }
-     note.card.find(".mdl-card__title-text").on("input", function() {
+     note.card.find(".mdl-card__supporting-text").on("click", function() {
         window.obj.title = $(this).val();
+       alert(windwo.obj.title);
     });
     
    
