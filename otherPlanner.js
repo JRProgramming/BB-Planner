@@ -69,7 +69,7 @@ function addAndSaveNote(title, index) {
 
      $("a").on("click", function() {
       
-       alert(window.obj.title);
+       alert(note.title);
     });
     
    
