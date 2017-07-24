@@ -28,12 +28,7 @@ for(i=0;i<window.array;i++)
 {
   console.log(window.identification);
   console.log(window.fclass);
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.fclass[i]);
-playersRef.on("child_added", function(data, prevChildKey) {
-  var joey =  data.val()
-  window.hw.push(joey);
 
-})
 }
 }
 function match()
