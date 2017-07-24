@@ -69,7 +69,7 @@ function addAndSaveNote(title, index) {
        window.tilt = note.title
         window.b += 1
         sessionStorage.setItem("nameS", window.tilt)
-        alert(sessionStorage.getItem("nameS");
+        alert(sessionStorage.getItem("nameS"));
       }
     });
     
