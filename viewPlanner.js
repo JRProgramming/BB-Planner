@@ -50,7 +50,7 @@ window.array.push(window.fclass[window.numb])
 window.numb += 1
 }
     window.numb = 0
-    console.log("HEY")
+    console.log(window.array);
     homework()
     for(i=0;i<window.fclass.length;i++)
     {
