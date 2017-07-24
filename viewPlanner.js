@@ -21,7 +21,13 @@ function match()
 
 if(window.lclass != undefined && window.fclass != undefined)
 {
-  console.log(window.lclass)
-  console.log(window.fclass)
+  for(i=0;i<window.fclass.length;i++)
+ {
+if(window.fclass[window.numb] == window.lclass[window.numb] )
+{
+console.log(window.fclass[window.numb])
+}
+window.numb += 1
+}
 }
 }
