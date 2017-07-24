@@ -21,6 +21,6 @@ function match()
   alert(window.lclass[window.numb]);
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
-console.log(window.fclass)
+console.log(window.fclass[window.numb])
 }
 }
