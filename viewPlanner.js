@@ -47,6 +47,7 @@ window.numb += 1
 }
     window.numb = 0
     homework()
+    console.log(window.hw);
     for(i=0;i<window.fclass.length;i++)
     {
 if(window.fclass[window.numb] == window.lclass[window.numb] )
