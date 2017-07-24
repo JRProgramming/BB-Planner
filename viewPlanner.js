@@ -16,6 +16,7 @@ window.fclass = joey.classes
   });
 function match()
 {
+  alert(window.lclass);
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
 console.log(window.fclass)
