@@ -3,8 +3,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names = sessionStorage.getItem("name")
   alert(names)
- var nameS = sessionStorage.getItem("nameS");
-  alert(nameS);
+ var nameh = sessionStorage.getItem("nameS");
+  alert(nameh);
    if(joey.name == names)
    {
 alert(joey.classes);
