@@ -19,12 +19,15 @@ window.fclass = joey.classes
 function match()
 {
   
-  
- 
-if(window.fclass[window.numb] == window.lclass[window.numb] && window.lclass != undefined && window.fclass != undefined)
+if(window.lclass != undefined && window.fclass != undefined)
+{
+ for(i=0;i<window.fclass.length;i++)
+ {
+if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
    console.log(window.fclass[window.numb])
   window.numb += 1
 }
-
+}
+}
 }
