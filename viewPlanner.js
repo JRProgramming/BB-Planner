@@ -24,7 +24,6 @@ function match()
     console.log(window.lclass[window.numb])
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
-console.log(window.fclass[window.numb])
 }
     window.numb += 1
   }
