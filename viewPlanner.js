@@ -23,7 +23,7 @@ function homework()
 {
 for(i=0;i<window.array;i++)
 {
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.flclass[i]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
   window.hw.push(joey);
