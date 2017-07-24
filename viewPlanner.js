@@ -21,7 +21,7 @@ function match()
   
 if(window.lclass != undefined && window.fclass != undefined)
 {
- for(i=0;i<window.fclass.length;i++)
+ for(i=0;i<window.fclass.length + 1;i++)
  {
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
