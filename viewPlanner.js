@@ -18,10 +18,11 @@ window.fclass = joey.classes
   });
 function match()
 {
-  console.log(window.lclass);
+  
   for(i=0;i<window.fclass.length; i++)
   {
-   
+   console.log(window.fclass)
+    console.log(window.lclass)
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
    console.log(window.fclass[window.numb])
