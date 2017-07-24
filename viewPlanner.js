@@ -18,6 +18,7 @@ window.fclass = joey.classes
   });
 function match()
 {
+  console.log(window.fclass);
   for(i=0;i<window.fclass.length; i++)
   {
    
