@@ -1,6 +1,5 @@
 window.numb = 0
-window.lclass = [];
-window.fclass = [];
+
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -20,7 +19,7 @@ function match()
 {
 
 
-if(window.lclass != [] && window.fclass != [])
+if(window.lclass != undefined && window.fclass != undefined)
 {
   console.log(window.lclass)
   console.log(window.fclass)
