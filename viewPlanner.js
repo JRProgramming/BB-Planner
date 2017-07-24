@@ -28,7 +28,6 @@ if(window.lclass != undefined && window.fclass != undefined)
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
 window.array.push(window.fclass[window.numb])
-  console.log(window.array)
 }
 window.numb += 1
 }
@@ -95,7 +94,7 @@ function addAndSaveNote(title, text, index) {
 }
 
 function loadNotes() {
-       for(i=0;i<window.fclass.length;i++){
+       for(i=0;i<window.array.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
