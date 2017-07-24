@@ -79,7 +79,7 @@ function addNote(title, text) {
   title = title || window.johnny[window.j];
         
     var title_e = $("<div/>", {
-        "class": "mdl-card__title" 
+        "class": "mdl-card__title", 
         "contenteditable": "false"
     });
     title_e.appendTo(div);
