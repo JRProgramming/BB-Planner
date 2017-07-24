@@ -26,8 +26,9 @@ if(window.lclass != undefined && window.fclass != undefined)
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
    console.log(window.fclass[window.numb])
-  window.numb += 1
+
 }
+     window.numb += 1
 }
 }
 }
