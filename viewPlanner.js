@@ -28,6 +28,7 @@ var playersRef = firebase.database().ref("Classes/" + window.identification + "/
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
   window.hw.push(joey);
+    console.log(window.hw);
 })
 }
 }
@@ -47,7 +48,6 @@ window.numb += 1
 }
     window.numb = 0
     homework()
-    console.log(window.hw);
     for(i=0;i<window.fclass.length;i++)
     {
 if(window.fclass[window.numb] == window.lclass[window.numb] )
