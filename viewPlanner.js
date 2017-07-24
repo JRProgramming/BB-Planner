@@ -19,7 +19,7 @@ window.fclass = joey.classes
 function match()
 {
   
-if(window.lclass != undefined && window.fclass != undefined)
+if(window.lclass != [] && window.fclass != [])
 {
 
  for(i=0;i<window.fclass.length + 1;i++)
