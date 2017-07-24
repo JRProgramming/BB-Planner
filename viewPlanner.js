@@ -1,6 +1,6 @@
 window.numb = 0
-window.lclass = "";
-window.fclass = "";
+window.lclass = [];
+window.fclass = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -18,7 +18,7 @@ window.fclass = joey.classes
   });
 function match()
 {
-  alert(window.lclass);
+  alert(window.lclass[window.numb]);
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
 console.log(window.fclass)
