@@ -28,10 +28,7 @@ if(window.fclass[window.numb] == window.lclass[window.numb] )
    console.log(window.fclass[window.numb])
    window.numb += 1
 }
-   else
-   {
-     window.numb += 1
-   }
+
 }
 }
 }
