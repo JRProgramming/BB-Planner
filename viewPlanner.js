@@ -24,8 +24,7 @@ if(window.lclass != [] && window.fclass != [])
 
  for(i=0;i<window.fclass.length + 1;i++)
  {
-   console.log(window.fclass[window.numb])
-   console.log(window.lclass[window.numb])
+
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
    console.log(window.fclass[window.numb])
