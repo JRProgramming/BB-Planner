@@ -18,9 +18,12 @@ window.fclass = joey.classes
   });
 function match()
 {
-  alert(window.lclass[window.numb]);
+  for(i=0;i<window.fclass.length; i++)
+  {
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
 console.log(window.fclass[window.numb])
 }
+    window.numb += 1
+  }
 }
