@@ -18,22 +18,11 @@ window.fclass = joey.classes
   });
 function match()
 {
-  console.log(window.lclass)
-  console.log(window.fclass)
-  if(window.fclass == [])
-  {
-console.log("STUPID")
-  }
+
+
 if(window.lclass != [] && window.fclass != [])
 {
-  console.log("YODO")
- for(i=0;i<window.fclass.length;i++)
- {
-if(window.fclass[window.numb] == window.lclass[window.numb] )
-{
-console.log(window.fclass[window.numb])
-}
-window.numb += 1
-}
+  console.log(window.lclass)
+  console.log(window.fclass)
 }
 }
