@@ -53,7 +53,6 @@ window.numb += 1
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
 window.tarray.push(window.hw[window.numb])
-  console.log(window.tarray);
 }
 window.numb += 1
     }
