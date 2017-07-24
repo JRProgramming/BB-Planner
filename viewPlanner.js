@@ -1,6 +1,8 @@
 window.numb = 0
 window.kh = 0
 window.array = [];
+window.tarray = [];
+window.hw = [];
 window.j = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -17,6 +19,17 @@ window.fclass = joey.classes
    }
   match()
   });
+function homework()
+{
+for(i=0;i<window.array;i++)
+{
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey =  data.val()
+  window.hw.push(joey);
+})
+}
+}
 function match()
 {
 if(window.lclass != undefined && window.fclass != undefined)
@@ -31,6 +44,17 @@ window.array.push(window.fclass[window.numb])
 }
 window.numb += 1
 }
+    window.numb = 0
+    homework()
+    for(i=0;i<window.fclass.length;i++)
+    {
+if(window.fclass[window.numb] == window.lclass[window.numb] )
+{
+window.tarray.push(window.hw[window.numb])
+  console.log(window.tarray);
+}
+window.numb += 1
+    }
     window.kh += 1
     loadNotes()
   }
