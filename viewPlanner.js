@@ -24,7 +24,7 @@ function match()
 if(window.fclass[window.numb] == window.lclass[window.numb] && window.lclass != undefined && window.fclass != undefined)
 {
    console.log(window.fclass[window.numb])
+  window.numb += 1
 }
-    window.numb += 1
-  
+
 }
