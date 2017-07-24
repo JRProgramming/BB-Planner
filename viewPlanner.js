@@ -17,7 +17,6 @@ window.lclass = joey.classes
    {
 window.fclass = joey.classes
      window.identification = joey.ID
-     console.log(window.identification)
    }
   match()
   });
