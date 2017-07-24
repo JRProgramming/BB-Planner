@@ -1,5 +1,6 @@
 window.numb = 0
 window.kh = 0
+window.array = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
