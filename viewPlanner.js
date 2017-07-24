@@ -25,7 +25,8 @@ if(window.lclass != undefined && window.fclass != undefined)
  {
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
-console.log(window.fclass[window.numb])
+window.array.push(window.fclass[window.numb])
+  console.log(window.array)
 }
 window.numb += 1
 }
