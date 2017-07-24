@@ -22,6 +22,7 @@ function match()
   console.log(window.fclass)
 if(window.lclass != [] || window.fclass != [])
 {
+  console.log("YODO")
  for(i=0;i<window.fclass.length;i++)
  {
 if(window.fclass[window.numb] == window.lclass[window.numb] )
