@@ -20,7 +20,7 @@ function match()
 {
   console.log(window.lclass)
   console.log(window.fclass)
-if(window.lclass != [] || window.fclass != [])
+if(window.lclass != [] && window.fclass != [])
 {
   console.log("YODO")
  for(i=0;i<window.fclass.length;i++)
