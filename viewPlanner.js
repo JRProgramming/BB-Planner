@@ -33,6 +33,7 @@ window.array.push(window.fclass[window.numb])
 window.numb += 1
 }
     window.kh += 1
+    loadNotes()
   }
 }
 }
