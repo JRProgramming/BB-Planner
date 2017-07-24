@@ -54,11 +54,7 @@ function addNote(title, text) {
   
 }
 
-function seeNotes(title)
-{
-sessionStorage.setItem("nameS", window.tilt)
-  alert(sessionStorage.getItem("nameS"))
-}
+
 window.b = 0
 function addAndSaveNote(title, index) {
  
@@ -72,7 +68,8 @@ function addAndSaveNote(title, index) {
       {
        window.tilt = note.title
         window.b += 1
-        seeNotes()
+        sessionStorage.setItem("nameS", window.tilt)
+        alert(sessionStorage.getItem("nameS");
       }
     });
     
