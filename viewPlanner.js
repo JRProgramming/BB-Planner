@@ -22,6 +22,7 @@ window.fclass = joey.classes
   });
 function homework()
 {
+  console.log("SUP")
 for(i=0;i<window.array;i++)
 {
   console.log(window.identification);
@@ -49,6 +50,7 @@ window.array.push(window.fclass[window.numb])
 window.numb += 1
 }
     window.numb = 0
+    console.log("HEY")
     homework()
     for(i=0;i<window.fclass.length;i++)
     {
