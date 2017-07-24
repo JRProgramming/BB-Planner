@@ -16,6 +16,7 @@ window.lclass = joey.classes
    if(joey.name == nameS)
    {
 window.fclass = joey.classes
+     window.identification = joey.identification
    }
   match()
   });
