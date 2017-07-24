@@ -16,7 +16,7 @@ window.lclass = joey.classes
    if(joey.name == nameS)
    {
 window.fclass = joey.classes
-     window.identification = joey.identification
+     window.identification = joey.ID
      console.log(window.identification)
    }
   match()
@@ -28,7 +28,12 @@ for(i=0;i<window.array;i++)
 {
   console.log(window.identification);
   console.log(window.fclass);
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.fclass[i]);
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey =  data.val()
+  window.hw.push(joey);
 
+})
 }
 }
 function match()
