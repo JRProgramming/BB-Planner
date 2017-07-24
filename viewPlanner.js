@@ -21,7 +21,6 @@ function match()
   for(i=0;i<window.fclass.length; i++)
   {
     console.log(window.fclass[window.numb])
-    console.log(window.lclass[window.numb])
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
 }
