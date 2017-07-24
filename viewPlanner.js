@@ -23,12 +23,10 @@ window.fclass = joey.classes
 function homework()
 {
 
-for(i=0;i<window.array;i++)
-{
   console.log(window.identification);
   console.log(window.fclass);
 
-}
+
 }
 function match()
 {
