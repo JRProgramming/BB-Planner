@@ -20,6 +20,10 @@ function match()
 {
   console.log(window.lclass)
   console.log(window.fclass)
+  if(window.lclass == [])
+  {
+console.log("STUPID")
+  }
 if(window.lclass != [] && window.fclass != [])
 {
   console.log("YODO")
