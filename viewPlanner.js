@@ -1,16 +1,23 @@
+window.numb = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   var names = sessionStorage.getItem("name")
-  alert(names)
  var nameS = sessionStorage.getItem("nameS");
-  alert(nameS);
    if(joey.name == names)
    {
-alert(joey.classes);
+window.lclass = joey.classes
    }
    if(joey.name == nameS)
    {
-    alert(joey.classes)  
+window.fclass = joey.classes
    }
+  match()
   });
+function match()
+{
+if(window.fclass == window.lclass)
+{
+console.log(window.fclass)
+}
+}
