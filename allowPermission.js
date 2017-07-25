@@ -89,11 +89,10 @@ function addAndSaveNote(title, index) {
 }
 function loadData()
 {
-  console.log(window.nameh)
   for(i=0;i<window.nameh.length;i++)
   {
 window.yuko = 1
-   var classers = firebase.databse().ref("Classes/" + window.identification + "/Access")
+   var classers = firebase.database().ref("Classes/" + window.identification + "/Access")
    classers.push({
          access: window.nameh[i]
    })
