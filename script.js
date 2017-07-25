@@ -17,7 +17,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
    if(names == window.namers[window.num])
    {
  window.identification = joey.ID 
- console.log(window.identification)
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
   if(window.kool = 1){
@@ -63,7 +62,7 @@ window.kool = 1
 }
 function updateSave()
 {
-
+console.log(window.identification)
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
