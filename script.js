@@ -133,12 +133,12 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html();
+         console.log(window.id)
          updateSave();
           window.numj = 0;
        }
        
      }
-        console.log(window.identification);
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
      note.onUp = onUp;
  
@@ -147,6 +147,7 @@ function addAndSaveNote(title, text, index) {
 }
 
 function loadNotes() {
+    window.id = window.identification
        for(i=0;i<window.lengths;i++){
        var note = addAndSaveNote();
         if(note)
