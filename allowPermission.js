@@ -74,7 +74,6 @@ function addAndSaveNote(title, index) {
       {
         window.b += 1
        window.nameh.push(note.title);
-        console.log(note.title);
       }
     });
     
@@ -85,10 +84,8 @@ function addAndSaveNote(title, index) {
 }
 function loadData()
 {
-  for(i=0;i<window.names.length;i++)
-  {
+  
 
-console.log(window.nameh[window.gf])
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -100,6 +97,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   
     window.gf += 1
 })
+  for(i=0;i<window.names.length;i++)
+  {
    var classers = firebase.database().ref("Classes/" + window.identification + "/Access")
    classers.update({
          access: window.nameh[i]
