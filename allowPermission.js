@@ -74,7 +74,7 @@ function addAndSaveNote(title, index) {
       if(window.b == 0)
       {
        window.nameh.push(note.title);
-        console.log(window.nameh);
+        console.log(note.title);
         window.b += 1
       }
     });
