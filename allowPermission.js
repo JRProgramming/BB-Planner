@@ -71,7 +71,6 @@ function addAndSaveNote(title, index) {
      $("input[type=\"checkbox\"]").on("click", function() {
       if(window.b == 0)
       {
-        console.log(window.nameh);
        window.nameh.push(note.title);
         console.log(window.obj.title);
       }
