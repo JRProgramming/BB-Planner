@@ -30,7 +30,7 @@ var playersRef = firebase.database().ref("Classes/" + window.identification + "/
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
   window.hw.push(joey);
-console.log(window.hw)
+
 })
 }
 }
@@ -56,6 +56,7 @@ window.numb += 1
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
 window.tarray.push(window.hw[window.numb])
+  console.log(window.tarray)
 }
 window.numb += 1
     }
