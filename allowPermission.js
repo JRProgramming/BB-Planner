@@ -10,7 +10,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
-    console.log("THIS ISN'T SUPPOSED TO WORK");
+    console.log(window.names);
   }
   loadNotes()
   if(window.yuko == 1)
