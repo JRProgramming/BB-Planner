@@ -11,7 +11,6 @@ window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
-    console.log(window.names)
   }
   console.log(window.names)
   loadNotes()
