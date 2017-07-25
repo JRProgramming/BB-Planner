@@ -123,7 +123,7 @@ function addAndSaveNote(title, text, index) {
         window.obj.title = $(this).val();
     });
   
-         console.log(window.identification);
+      
         var onUp = function() {
       while(window.classes[window.numj] != note.title)
       {
@@ -133,6 +133,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html();
+            console.log(window.identification);
          updateSave();
           window.numj = 0;
        }
