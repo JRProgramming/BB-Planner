@@ -113,7 +113,7 @@ function addNote(title, text) {
 window.classes = [];
 window.numj = 0
 function addAndSaveNote(title, text, index) {
- 
+ console.log(window.identification);
     var note = addNote(title, text);
     window.obj = {
         title: note.title,
@@ -145,7 +145,6 @@ function addAndSaveNote(title, text, index) {
 }
 
 function loadNotes() {
-  console.log(window.identification)
        for(i=0;i<window.lengths;i++){
        var note = addAndSaveNote();
         if(note)
