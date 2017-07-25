@@ -89,7 +89,7 @@ function addAndSaveNote(title, index) {
 }
 function loadData()
 {
-  console.log("HALO")
+  console.log(window.name)
   for(i=0;i<window.name.length;i++)
   {
 window.yuko = 1
