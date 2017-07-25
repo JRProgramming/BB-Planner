@@ -35,7 +35,6 @@ window.num ++
 window.hw = [];
 function homework()
 {
-   console.log(window.identification);
 for(i=0;i<window.lengths;i++)
 {
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
@@ -63,6 +62,7 @@ window.kool = 1
 }
 function updateSave()
 {
+   console.log(window.identification);
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
