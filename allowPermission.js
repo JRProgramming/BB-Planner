@@ -11,13 +11,7 @@ window.names = [];
   loadNotes()
   });
 
-if(document.getElementById("select").checked == true)
-{
-window.sup_text = $("<input/>", {
-        "type": "checkbox",
-        "checked": "true"
-    });
-}
+
 
 
 function addNote(title, text) {
@@ -43,10 +37,19 @@ function addNote(title, text) {
     title_text.appendTo(title_e);
    
      text = text || ""; 
+  if(document.getElementById("select").checked == true)
+{
+window.sup_text = $("<input/>", {
+        "type": "checkbox",
+        "checked": "true"
+    });
+}
+  else
+  {
     window.sup_text = $("<input/>", {
         "type": "checkbox"
     });
-  
+  }
     window.sup_text.html(text);
     window.sup_text.appendTo(div);
 
