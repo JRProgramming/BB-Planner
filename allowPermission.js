@@ -15,7 +15,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   loadNotes()
   if(window.yuko == 1)
   {
-
+console.log(window.nameh[window.gf])
+console.log(window.names[window.gf])
   if(window.nameh[window.gf] == window.names[window.gf])
   {
      window.identification = joey.ID
@@ -105,6 +106,7 @@ window.yuko = 1
 }
 
 function loadNotes() {
+  console.log(window.names.length)
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
