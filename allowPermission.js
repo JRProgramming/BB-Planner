@@ -1,5 +1,4 @@
 window.names = [];
-window.nameh = [];
 window.joe = [];
 window.number = 0;
 window.gf = 0;
