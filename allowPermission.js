@@ -69,7 +69,7 @@ function addAndSaveNote(title, index) {
      $("input[type=\"checkbox\"]").on("click", function() {
       if(window.b == 0)
       {
-       window.name.push(note.title);
+       console.log(window.name);
         
       }
     });
