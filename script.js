@@ -62,7 +62,6 @@ window.kool = 1
 }
 function updateSave()
 {
-console.log(window.identification)
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
@@ -146,6 +145,7 @@ function addAndSaveNote(title, text, index) {
 }
 
 function loadNotes() {
+  console.log(window.identification)
        for(i=0;i<window.lengths;i++){
        var note = addAndSaveNote();
         if(note)
