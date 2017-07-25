@@ -3,6 +3,7 @@ window.kh = 0
 window.array = [];
 window.tarray = [];
 window.hw = [];
+window.yu = [];
 window.j = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -25,7 +26,7 @@ function homework()
 for(i=0;i<window.array.length;i++)
 {
 
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.fclass[i]);
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.fclass[window.yu[i]]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
   window.hw.push(joey);
@@ -44,6 +45,7 @@ if(window.lclass != undefined && window.fclass != undefined)
 if(window.fclass[window.numb] == window.lclass[window.numb] )
 {
 window.array.push(window.fclass[window.numb])
+window.yu.push(window.numb)
 }
 window.numb += 1
 }
