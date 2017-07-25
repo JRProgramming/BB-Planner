@@ -15,6 +15,7 @@ window.names = [];
   if(window.yuko == 1)
   {
     console.log(window.nameh[window.gf])
+    console.log(window.names[window.gf])
   if(window.nameh[window.gf] == window.names[window.gf])
   {
      window.identification = joey.ID
