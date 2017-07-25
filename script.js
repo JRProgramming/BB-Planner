@@ -62,7 +62,6 @@ window.kool = 1
 }
 function updateSave()
 {
-   console.log(window.identification);
  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
@@ -139,6 +138,7 @@ function addAndSaveNote(title, text, index) {
        }
        
      }
+        console.log(window.identification);
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
      note.onUp = onUp;
  
