@@ -36,7 +36,7 @@ function addNote(title, text) {
     title_text.val(title);
     title_text.appendTo(title_e);
    
-     text = text || "Select"; 
+     text = text || ""; 
     var sup_text = $("<input/>", {
         "type": "checkbox"
     });
