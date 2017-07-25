@@ -65,13 +65,10 @@ function addAndSaveNote(title, index) {
         title: note.title,
     }
 
-     $("a").on("click", function() {
+     $("input[type=\"checkbox\"]").on("click", function() {
       if(window.b == 0)
       {
-       window.tilt = note.title
-        window.b += 1
-        sessionStorage.setItem("nameS", window.tilt)
-        location.href = "viewPlanner"
+       alert(note.title);
       }
     });
     
