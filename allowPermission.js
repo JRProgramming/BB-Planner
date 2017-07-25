@@ -11,13 +11,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
   window.names.push(joey.name);
   }
-  console.log(window.names)
   loadNotes()
   if(window.yuko == 1)
   {
-    console.log(window.nameh[window.gf])
-    console.log(window.joe[window.gf])
-  if(window.nameh[window.gf] == window.joe[window.gf])
+
+  if(window.nameh[window.gf] == window.names[window.gf])
   {
      window.identification = joey.ID
     console.log(window.identification)
