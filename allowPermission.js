@@ -1,6 +1,7 @@
 window.names = [];
 window.nameh = [];
 window.number = 0;
+window.yuko = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -10,6 +11,13 @@ window.names = [];
   window.names.push(joey.name);
   }
   loadNotes()
+  if(window.yuko == 1)
+  {
+  if(window.name[i] == joey.name)
+  {
+     window.identification = joey.ID
+  }
+  }
   });
 
 
@@ -84,14 +92,7 @@ function loadData()
   console.log("HALO")
   for(i=0;i<window.name.length;i++)
   {
-    var playersRef = firebase.database().ref("Classes/");
-playersRef.on("child_added", function(data, prevChildKey) {
-  var joey = data.val()
-  if(window.name[i] == joey.name)
-  {
-     window.identification = joey.ID
-  }
-})
+window.yuko = 1
    var classers = firebase.databse().ref("Classes/" + window.identification + "/Access")
    classers.push({
          access: window.name[i]
