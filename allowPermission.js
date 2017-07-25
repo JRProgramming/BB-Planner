@@ -9,7 +9,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
-    console.log(window.names);
   }
   loadNotes()
 
@@ -93,7 +92,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.nameh[window.gf] == window.names[window.gf])
   {
      window.identification = joey.ID
-    console.log(window.identification)
   }
   
     window.gf += 1
