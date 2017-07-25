@@ -12,7 +12,7 @@ input[type="checkbox"] {
   
     width:40px; height:40px
 }
-.done {
+button {
 position: absolute;
 right:    0;
 bottom:   0;
