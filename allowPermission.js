@@ -1,6 +1,7 @@
 window.names = [];
 window.nameh = [];
 window.number = 0;
+window.gf = 0;
 window.yuko = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -13,7 +14,7 @@ window.names = [];
   loadNotes()
   if(window.yuko == 1)
   {
-  if(window.name[i] == joey.name)
+  if(window.name[window.gf] == joey.name)
   {
      window.identification = joey.ID
   }
