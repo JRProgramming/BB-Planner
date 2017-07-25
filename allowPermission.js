@@ -2,7 +2,6 @@ window.names = [];
 window.joe = [];
 window.nameh = []
 window.number = 0;
-window.as = 0
 window.gf = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -24,7 +23,7 @@ function addNote(title, text) {
    });
     div.appendTo(".mdl-layout__content")
         
-  title = title || window.names[window.as];
+  title = title || window.names[window.number];
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -55,6 +54,7 @@ function addNote(title, text) {
     menu.appendTo(div);
     
     window.number += 1
+  
      
     return {card: div, title: title};
   
@@ -74,7 +74,7 @@ function addAndSaveNote(title, index) {
       if(window.b == 0)
       {
        window.nameh.push(note.title);
-        console.log(note.title);
+        console.log(window.nameh);
         window.b += 1
       }
     });
