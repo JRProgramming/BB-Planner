@@ -3,7 +3,6 @@ window.nameh = [];
 window.joe = [];
 window.number = 0;
 window.gf = 0;
-window.yuko = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -13,17 +12,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     console.log(window.names);
   }
   loadNotes()
-  if(window.yuko == 1)
-  {
-console.log(window.nameh[window.gf])
-console.log(window.names[window.gf])
-  if(window.nameh[window.gf] == window.names[window.gf])
-  {
-     window.identification = joey.ID
-    console.log(window.identification)
-  }
-    window.gf += 1
-  }
+
   });
 
 
@@ -97,7 +86,18 @@ function loadData()
 {
   for(i=0;i<window.names.length;i++)
   {
-window.yuko = 1
+    console.log(window.nameh[window.gf])
+console.log(window.names[window.gf])
+    var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  if(window.nameh[window.gf] == window.names[window.gf])
+  {
+     window.identification = joey.ID
+    console.log(window.identification)
+  }
+  
+    window.gf += 1
+})
    var classers = firebase.database().ref("Classes/" + window.identification + "/Access")
    classers.update({
          access: window.nameh[i]
@@ -106,7 +106,6 @@ window.yuko = 1
 }
 
 function loadNotes() {
-  console.log(window.names.length)
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
