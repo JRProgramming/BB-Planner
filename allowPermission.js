@@ -81,6 +81,7 @@ function addAndSaveNote(title, index) {
 }
 function loadData()
 {
+  console.log("HALO")
   for(i=0;i<window.name.length;i++)
   {
     var playersRef = firebase.database().ref("Classes/");
