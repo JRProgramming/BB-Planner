@@ -14,10 +14,13 @@ window.names = [];
   loadNotes()
   if(window.yuko == 1)
   {
+    console.log(window.name[window.gf])
   if(window.name[window.gf] == joey.name)
   {
      window.identification = joey.ID
+    console.log(window.identification)
   }
+    window.gf += 1
   }
   });
 
