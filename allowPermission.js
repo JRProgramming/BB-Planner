@@ -37,9 +37,8 @@ function addNote(title, text) {
     title_text.appendTo(title_e);
    
      text = text || "Select"; 
-    var sup_text = $("<a/>", {
-        "class": "mdl-button mdl-js-button",
-        "contenteditable": "false"
+    var sup_text = $("<input/>", {
+        "type": "checkbox"
     });
   
     sup_text.html(text);
