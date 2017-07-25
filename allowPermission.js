@@ -61,7 +61,7 @@ function addNote(title, text) {
 }
 
 
-
+ window.b = 0
 function addAndSaveNote(title, index) {
  
     var note = addNote(title);
@@ -70,12 +70,11 @@ function addAndSaveNote(title, index) {
     }
 
      $("input[type=\"checkbox\"]").on("click", function() {
-       window.b = 0
       if(window.b == 0)
       {
+        window.b += 1
        window.nameh.push(note.title);
         console.log(note.title);
-        window.b += 1
       }
     });
     
