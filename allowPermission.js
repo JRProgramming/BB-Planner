@@ -86,7 +86,7 @@ function loadData()
   for(i=0;i<window.names.length;i++)
   {
 
-console.log(window.names[window.gf])
+console.log(window.nameh[window.gf])
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   if(window.nameh[window.gf] == window.names[window.gf])
