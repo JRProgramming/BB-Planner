@@ -13,7 +13,7 @@ window.names = [];
   window.names.push(joey.name);
     console.log(window.names)
   }
-  window.joe = window.names
+  console.log(window.names)
   loadNotes()
   if(window.yuko == 1)
   {
