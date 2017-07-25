@@ -30,7 +30,6 @@ var playersRef = firebase.database().ref("Classes/" + window.identification + "/
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
   window.hw.push(joey);
-console.log(window.hw);
 })
 }
 }
@@ -49,9 +48,7 @@ window.yu.push(window.numb)
 }
 window.numb += 1
 }
-    window.numb = 0
     homework()
-
     window.kh += 1
     loadNotes()
   }
@@ -79,7 +76,7 @@ function addNote(title, text) {
     title_text.appendTo(title_e);
    
 
-       text = text || ""; 
+       text = text || window.hw[window.j]; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
