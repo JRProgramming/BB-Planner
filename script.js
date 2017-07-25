@@ -113,7 +113,6 @@ function addNote(title, text) {
 window.classes = [];
 window.numj = 0
 function addAndSaveNote(title, text, index) {
- console.log(window.identification);
     var note = addNote(title, text);
     window.obj = {
         title: note.title,
@@ -132,6 +131,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html();
+         console.log(window.identification);
          updateSave();
           window.numj = 0;
        }
