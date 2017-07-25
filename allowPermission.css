@@ -12,6 +12,11 @@ input[type="checkbox"] {
   
     width:40px; height:40px
 }
+.done {
+position: absolute;
+right:    0;
+bottom:   0;
+}
 @media (max-width:480px) {
     .note {display:block;width:auto;}
 }
