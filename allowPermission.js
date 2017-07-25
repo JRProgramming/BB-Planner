@@ -14,7 +14,7 @@ window.names = [];
 if(document.getElementById("select").checked == true)
 {
 window.sup_text = $("<input/>", {
-        "type": "checkbox"
+        "type": "checkbox",
         "checked": "true"
     });
 }
