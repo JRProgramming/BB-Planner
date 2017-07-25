@@ -73,7 +73,7 @@ function addAndSaveNote(title, index) {
       {
         console.log(window.nameh);
        window.nameh.push(note.title);
-        console.log(note.title);
+        console.log(window.obj.title);
       }
     });
     
