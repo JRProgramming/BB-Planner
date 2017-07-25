@@ -1,5 +1,6 @@
 window.names = [];
 window.joe = [];
+window.nameh = []
 window.number = 0;
 window.gf = 0;
 var playersRef = firebase.database().ref("Classes/");
@@ -71,6 +72,7 @@ function addAndSaveNote(title, index) {
       if(window.b == 0)
       {
        window.nameh.push(note.title);
+        console.log(window.nameh);
         
       }
     });
