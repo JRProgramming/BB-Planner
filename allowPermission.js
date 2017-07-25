@@ -1,5 +1,6 @@
 window.names = [];
 window.nameh = [];
+window.joe = [];
 window.number = 0;
 window.gf = 0;
 window.yuko = 0
@@ -11,12 +12,13 @@ window.names = [];
   {
   window.names.push(joey.name);
   }
+  window.joe = window.names
   loadNotes()
   if(window.yuko == 1)
   {
     console.log(window.nameh[window.gf])
-    console.log(window.names[window.gf])
-  if(window.nameh[window.gf] == window.names[window.gf])
+    console.log(window.joe[window.gf])
+  if(window.nameh[window.gf] == window.joe[window.gf])
   {
      window.identification = joey.ID
     console.log(window.identification)
