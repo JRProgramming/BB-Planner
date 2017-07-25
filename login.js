@@ -195,6 +195,11 @@ function setUp()
         {
         var namel = document.getElementById("nameText").value;
         window.namel = document.getElementById("nameText").value;
+           if(namel == "" || namel == " ")
+           {
+            alert("You didn't enter a name")
+             return;  
+           }
         }
         if (email.length < 4) {
           alert('Please enter an email address.');
