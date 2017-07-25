@@ -94,7 +94,7 @@ function loadData()
   {
 window.yuko = 1
    var classers = firebase.database().ref("Classes/" + window.identification + "/Access")
-   classers.push({
+   classers.update({
          access: window.nameh[i]
    })
   }
