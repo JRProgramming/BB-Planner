@@ -34,26 +34,46 @@ function logClasses()
  {
   classes.push(algC4.value)
  }
+ else
+ {
+  classes.push("None");
+ }
    if (SocialS.checked == true)
  {
   classes.push(SocialS.value)
+ }
+ else
+ {
+  classes.push("None");
  }
   if (spanish.checked == true)
  {
   classes.push(spanish.value)
  }
+  else
+ {
+  classes.push("None");
+ }
  if (science.checked == true)
  {
   classes.push(science.value)
+ }
+  else
+ {
+  classes.push("None");
  }
  if (english.checked == true)
  {
   classes.push(english.value)
  }
-if (englishd.checked == true)
+else if (englishd.checked == true)
 {
  classes.push(englishd.value)
 }
+   else
+ {
+  classes.push("None");
+ }
 classes.push("Specials")
  classers.update({
      name: window.names,
