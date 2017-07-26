@@ -41,13 +41,13 @@ if(window.lclass != undefined && window.fclass != undefined)
   {
   for(i=0;i<window.fclass.length;i++)
  {
+   console.log(window.fclass);
 if(window.fclass.indexOf(window.lclass[window.numb]) > -1 )
 {
 window.array.push(window.fclass[window.numb])
 window.yu.push(window.numb)
 }
 window.numb += 1
-   console.log(window.numb);
 }
     homework()
     window.kh += 1
