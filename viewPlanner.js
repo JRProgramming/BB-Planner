@@ -41,9 +41,9 @@ if(window.boy != undefined && window.bo != undefined)
 {
   if(window.kh == 0)
   {
-  for(i=0;i<window.bo.length;i++)
+  for(i=0;i<window.fclass.length;i++)
  {
-
+console.log(window.lclass[window.numb]);
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
 window.array.push(window.fclass[window.numb])
