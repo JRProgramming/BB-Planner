@@ -72,7 +72,6 @@ function addAndSaveNote(title, index) {
     }
 
      $("input[type=\"checkbox\"]").on("click", function() {
-       window.b = 0
     while(window.names[window.numj] != note.title)
       {
     window.numj += 1
