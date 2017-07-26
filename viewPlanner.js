@@ -20,7 +20,6 @@ for(i=0;i<window.lclass.length;i++)
 if(window.lclass[i] != "None")
 {
  window.boy.push(window.lclass[i]);
- console.log(window.boy);
 }
 }
    }
@@ -32,7 +31,6 @@ for(i=0;i<window.fclass.length;i++)
 if(window.fclass[i] != "None")
 {
  window.bo.push(window.fclass[i]);
-  console.log(window.bo);
 }
 }
      window.identification = joey.ID
@@ -63,6 +61,8 @@ if(window.bo[window.numb] == window.boy[window.numb])
 {
 window.array.push(window.bo[window.numb])
 window.yu.push(window.numb)
+  console.log(window.array);
+  console.log(window.yu);
 }
 window.numb += 1
 }
