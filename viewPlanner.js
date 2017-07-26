@@ -48,8 +48,6 @@ if(window.fclass[window.numb] == window.lclass[window.numb])
 {
 window.array.push(window.fclass[window.numb])
 window.yu.push(window.numb)
-  console.log(window.array);
-  console.log(window.yu);
 }
 window.numb += 1
 }
