@@ -15,26 +15,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
    if(joey.name == names)
    {
 window.lclass = joey.classes
-console.log(window.lclass)
-for(i=0;i<window.lclass.length;i++)
-{
-if(window.lclass[i] != "None")
-{
- window.boy.push(window.lclass[i]);
-}
-}
    }
    if(joey.name == nameS)
    {
 window.fclass = joey.classes
-console.log(window.fclass);
-for(i=0;i<window.fclass.length;i++)
-{
-if(window.fclass[i] != "None")
-{
- window.bo.push(window.fclass[i]);
-}
-}
      window.identification = joey.ID
    }
   match()
@@ -60,9 +44,9 @@ if(window.boy != undefined && window.bo != undefined)
   for(i=0;i<window.bo.length;i++)
  {
 
-if(window.bo[window.numb] == window.boy[window.numb])
+if(window.fclass[window.numb] == window.lclass[window.numb])
 {
-window.array.push(window.bo[window.numb])
+window.array.push(window.fclass[window.numb])
 window.yu.push(window.numb)
   console.log(window.array);
   console.log(window.yu);
