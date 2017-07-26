@@ -1,6 +1,7 @@
 window.j = 0;
 window.kool = 0;
 window.namers = [];
+window.green = [];
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -22,6 +23,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
+    for(i=0;i<window.lengths;i++)
+{
+if(window.johnny[i] != "None")
+{
+ window.green.push(window.johnny[i]); 
+}
+}
  if(window.lengths == 0)
  {
 location.href = "setClass"
@@ -40,7 +48,10 @@ for(i=0;i<window.lengths;i++)
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
+  if(joey != "None")
+  {
   window.hw.push(joey);
+  }
 })
 }
 }
@@ -75,7 +86,7 @@ function addNote(title, text) {
    });
     div.appendTo(".mdl-layout__content")
         
-  title = title || window.johnny[window.j];
+  title = title || window.green[window.j];
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title", 
@@ -133,7 +144,6 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html();
-         console.log(window.id)
          updateSave();
           window.numj = 0;
        }
