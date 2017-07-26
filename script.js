@@ -27,7 +27,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 {
 if(window.johnny[i] != "None")
 {
- window.green.push(window.johnny[i]); 
+ window.green.push(window.johnny[i]);
 }
 }
  if(window.lengths == 0)
@@ -158,7 +158,7 @@ function addAndSaveNote(title, text, index) {
 
 function loadNotes() {
     window.id = window.identification
-       for(i=0;i<window.lengths;i++){
+       for(i=0;i<window.green.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
