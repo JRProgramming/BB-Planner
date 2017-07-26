@@ -64,16 +64,19 @@ function addNote(title, text) {
 }
 
 
- window.b = 0
+
 function addAndSaveNote(title, index) {
  
     var note = addNote(title);
     window.obj = {
         title: note.title,
     }
-
+window.b = 0
      $("input[type=\"checkbox\"]").on("click", function() {
+       if(window.b == 0)
+       {
 console.log("HEY");
+       }
     });
     
    
