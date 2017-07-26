@@ -53,12 +53,12 @@ function match()
 {
 if(window.boy != undefined && window.bo != undefined)
 {
-  console.log("Passed the undefined test");
   if(window.kh == 0)
   {
   for(i=0;i<window.bo.length;i++)
  {
-   console.log("In repeat mode now");
+   console.log(window.bo[window.numb])
+   console.log(window.boy[window.numb])
 if(window.bo[window.numb] == window.boy[window.numb])
 {
 window.array.push(window.bo[window.numb])
