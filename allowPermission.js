@@ -2,6 +2,7 @@ window.names = [];
 window.joe = [];
 window.nameh = []
 window.number = 0;
+window.numj = 0;
 window.gf = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -70,11 +71,16 @@ function addAndSaveNote(title, index) {
     }
 
      $("input[type=\"checkbox\"]").on("click", function() {
-      if(window.b == 0)
+    while(window.names[window.numj] != note.title)
       {
-       window.nameh.push(note.title);
-        console.log(window.nameh)
+    window.numj += 1
       }
+       if(window.names[window.numj] == note.title)
+       {
+         window.hat = note.title;
+      console.log(note.title);
+          window.numj = 0;
+       }
     });
     
    
