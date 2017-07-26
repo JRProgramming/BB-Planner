@@ -72,20 +72,11 @@ function addAndSaveNote(title, index) {
     }
 
      $("input[type=\"checkbox\"]").on("click", function() {
-    while(window.names[window.numj] != note.title)
-      {
-    window.numj += 1
-      }
-       if(window.names[window.numj] == note.title)
-       {
-         if(window.b == 0)
-         {
+ 
          window.hat = note.title;
       console.log(note.title);
-          window.numj = 0;
-           window.b = 1
-         }
-       }
+ var value = $("input[type='checkbox']").val();
+        console.log(value);
     });
     
    
