@@ -1,6 +1,7 @@
 window.names = [];
 window.joe = [];
 window.nameh = []
+window.hat = "";
 window.number = 0;
 window.numj = 0;
 window.gf = 0;
@@ -72,11 +73,7 @@ function addAndSaveNote(title, index) {
     }
 
      $("input[type=\"checkbox\"]").on("click", function() {
- 
-         window.hat = note.title;
-      console.log(note.title);
- var value = $("input[type='checkbox']").val();
-        console.log(value);
+console.log("HEY");
     });
     
    
