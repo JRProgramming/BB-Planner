@@ -15,6 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    if(joey.name == names)
    {
 window.lclass = joey.classes
+console.log(window.lclass)
 for(i=0;i<window.lclass.length;i++)
 {
 if(window.lclass[i] != "None")
@@ -26,6 +27,7 @@ if(window.lclass[i] != "None")
    if(joey.name == nameS)
    {
 window.fclass = joey.classes
+console.log(window.fclass);
 for(i=0;i<window.fclass.length;i++)
 {
 if(window.fclass[i] != "None")
@@ -57,8 +59,7 @@ if(window.boy != undefined && window.bo != undefined)
   {
   for(i=0;i<window.bo.length;i++)
  {
-   console.log(window.bo)
-   console.log(window.boy)
+
 if(window.bo[window.numb] == window.boy[window.numb])
 {
 window.array.push(window.bo[window.numb])
