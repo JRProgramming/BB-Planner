@@ -20,6 +20,7 @@ for(i=0;i<window.lclass.length;i++)
 if(window.lclass[i] != "None")
 {
  window.boy.push(window.lclass[i]);
+ console.log(window.boy);
 }
 }
    }
@@ -31,6 +32,7 @@ for(i=0;i<window.fclass.length;i++)
 if(window.fclass[i] != "None")
 {
  window.bo.push(window.fclass[i]);
+  console.log(window.bo);
 }
 }
      window.identification = joey.ID
