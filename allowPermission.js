@@ -76,6 +76,7 @@ window.b = 0
        if(window.b == 0)
        {
 console.log("HEY");
+         window.b = 1
        }
     });
     
