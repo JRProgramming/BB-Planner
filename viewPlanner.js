@@ -44,11 +44,10 @@ if(window.lclass != undefined && window.fclass != undefined)
 if(window.fclass.indexOf(window.lclass[window.numb]) > -1 )
 {
 window.array.push(window.fclass[window.numb])
-  console.log(window.array)
 window.yu.push(window.numb)
-  console.log(window.yu)
 }
 window.numb += 1
+   console.log(window.numb);
 }
     homework()
     window.kh += 1
