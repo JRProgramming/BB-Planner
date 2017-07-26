@@ -4,6 +4,8 @@ window.array = [];
 window.tarray = [];
 window.hw = [];
 window.yu = [];
+window.bo = [];
+window.boy = [];
 window.j = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -13,10 +15,24 @@ playersRef.on("child_added", function(data, prevChildKey) {
    if(joey.name == names)
    {
 window.lclass = joey.classes
+for(i=0;i<window.lclass.length;i++)
+{
+if(window.lclass[i] != "None")
+{
+ window.boy.push(window.lclass[i]);
+}
+}
    }
    if(joey.name == nameS)
    {
 window.fclass = joey.classes
+for(i=0;i<window.fclass.length;i++)
+{
+if(window.fclass[i] != "None")
+{
+ window.bo.push(window.fclass[i]);
+}
+}
      window.identification = joey.ID
    }
   match()
@@ -35,16 +51,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 function match()
 {
-if(window.lclass != undefined && window.fclass != undefined)
+if(window.boy != undefined && window.bo != undefined)
 {
   if(window.kh == 0)
   {
-  for(i=0;i<window.fclass.length;i++)
+  for(i=0;i<window.bo.length;i++)
  {
-   console.log(window.fclass);
-if(window.fclass.indexOf(window.lclass[window.numb]) > -1 )
+if(window.bo[window.numb] == window.boy[window.numb])
 {
-window.array.push(window.fclass[window.numb])
+window.array.push(window.bo[window.numb])
 window.yu.push(window.numb)
 }
 window.numb += 1
