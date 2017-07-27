@@ -1,6 +1,7 @@
 window.names = [];
 window.joe = [];
 window.nameh = []
+window.nameb = [];
 window.hat = "";
 window.number = 0;
 window.numj = 0;
@@ -105,17 +106,15 @@ function loadData()
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-for(i=0;i<window.nameh.length;i++)
-{
-  console.log(window.nameh.length);
-  if(window.nameh[window.gf] == joey.name)
+
+ window.nameb.push(joey.name)
+  if(window.nameh[window.gf] == windo.nameb[window.gf])
   {
      window.identification = joey.ID;
     console.log(window.identification)
   }
   
     window.gf += 1
-}
 })
 
 }
