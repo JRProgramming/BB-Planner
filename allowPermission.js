@@ -81,6 +81,7 @@ function addAndSaveNote(title, index) {
          if(window.l == 1)
          {
           window.nameh.splice(i, 1);
+           window.l = 0
          }
          else
          {
