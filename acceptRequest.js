@@ -105,7 +105,7 @@ if(window.a == true)
    window.tr = note.title; 
     }
   }
-  console.log(window.tr);
+  console.log(window.v)
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
