@@ -85,6 +85,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
      window.identification = joey.ID
   }
+  console.log(joey.Access);
 if(joey.Access != undefined)
 {
   console.log("Not equal to undefined");
