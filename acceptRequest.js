@@ -95,7 +95,7 @@ if(joey.Access != undefined)
 }
 })
         console.log(window.tr)
-window.tr.push(note.title)
+window.tr.push(note.title[0])
         console.log(window.tr);
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
