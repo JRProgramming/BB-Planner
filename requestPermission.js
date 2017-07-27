@@ -9,6 +9,7 @@ window.gf = 0;
 window.b = 0;
 window.l = 0;
 window.y = 0;
+window.id = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -116,11 +117,13 @@ if(joey.name != sessionStorage.getItem("name"))
   if(window.nameh[window.gf] == window.nameb[window.y])
   {
      window.identification = joey.ID;
+    window.id.push(window.identification);
     window.y += 1;
     window.gf = 0;
   }
 window.gf += 1
   }
+  console.log(window.id);
 })
 
 }
