@@ -107,6 +107,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(window.nameh[window.gf] == joey.name)
   {
+    console.log(widow.nameh[window.gf]);
      window.identification = joey.ID
     console.log(window.identification);
   }
