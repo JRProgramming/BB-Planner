@@ -75,19 +75,14 @@ function addAndSaveNote(title, index) {
        
        for(i=0;i<window.names.length;i++)
        {
-         if(window.l == 1 && window.cd == note.title[i])
-         {
-          window.nameh.splice(i, 1);
-           window.l = 0
-         }
+      
+       
          else
          {
          var hg = note.title[i]
 window.nameh.push(hg);
-  window.l = 1
          }
-         window.cd = note.title[i];
-         console.log(window.nameh);
+         console.log(note.card.find("input[type=\"checkbox\"]"));
        }
     });
     
