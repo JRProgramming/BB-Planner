@@ -80,7 +80,6 @@ function addAndSaveNote(title, index) {
    console.log(note.card.find("a").text())
        window.tilt = note.title
         sessionStorage.setItem("nameS", window.tilt)
-        location.href = "viewPlanner"
     });
     
    
