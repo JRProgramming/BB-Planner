@@ -84,7 +84,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 });
       note.card.find("a").on("click", function() {
-       window.tilt = note.title  
 
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -92,8 +91,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
   window.tr = joey.Access
 
-
 })
+        window.tr.push(note.title);
+        console.log(window.tr);
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
          Access: note.title
