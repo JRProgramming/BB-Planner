@@ -113,13 +113,15 @@ if(joey.name != sessionStorage.getItem("name"))
 }
  console.log(window.nameh[window.gf]);
   console.log(window.nameb[window.y]);
+  if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
+  {
   if(window.nameh[window.gf] == window.nameb[window.y])
   {
      window.identification = joey.ID;
     console.log(window.identification)
   }
-  
-    window.gf += 1
+window.gf += 1
+  }
 })
 
 }
