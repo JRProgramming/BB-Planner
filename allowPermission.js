@@ -87,6 +87,7 @@ function addAndSaveNote(title, index) {
 window.nameh.push(hg);
          }
          console.log(window.nameh);
+         console.log(note.card.find("input[type=\"checkbox\"]").checked)
        }
     });
     
