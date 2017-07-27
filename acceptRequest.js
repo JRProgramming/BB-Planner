@@ -92,7 +92,7 @@ ref.once("value")
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-
+console.log(joey.Access
 if(window.a == true)
 {
   window.tr = joey.Access
@@ -105,7 +105,6 @@ if(window.a == true)
    window.tr = note.title; 
     }
   }
-  console.log(window.v)
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
