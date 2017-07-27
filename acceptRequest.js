@@ -85,31 +85,19 @@ playersRef.on("child_added", function(data, prevChildKey) {
 });
       note.card.find("a").on("click", function() {
        window.tilt = note.title  
-              var ref = firebase.database().ref("Classes/" + window.identification + "/Access");
-ref.once("value")
-  .then(function(snapshot) { // true
-  window.a = snapshot.exists();
+
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-if(window.a == true)
-{
+
   window.tr = joey.Access
-  window.v = "Taken";
-}
-  else
-  {
-    if(window.v != "Taken")
-    {
-   window.tr = note.title; 
-    }
-  }
+
+
   console.log(window.tr);
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
          Access: note.title
-   })
 });
     });
   
