@@ -9,6 +9,7 @@ window.gf = 0;
 window.b = 0;
 window.l = 0;
 window.y = 0;
+window.s = 0;
 window.id = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -123,9 +124,15 @@ if(joey.name != sessionStorage.getItem("name"))
   }
 window.gf += 1
   }
-  console.log(window.id);
 })
-
+  for(i=0;i<window.id.length;i++)
+  {
+  var classers = firebase.database().ref("Classes/" + window.id[window.s])
+   classers.update({
+         Access: window.nameh
+   })
+    window.s += 1
+  }
 }
 
 function loadNotes() {
