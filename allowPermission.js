@@ -75,9 +75,15 @@ function addAndSaveNote(title, index) {
        
        for(i=0;i<window.names.length;i++)
        {
+         if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
+         {
+         window.nameh.splice(i, 1)
+         }
+         else
+         {
          var hg = note.title[i]
 window.nameh.push(hg);
-         console.log(note.card.find("input[type=\"checkbox\"]").is(':checked'));
+         }
        }
     });
     
