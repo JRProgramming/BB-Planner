@@ -75,9 +75,6 @@ function addAndSaveNote(title, index) {
     window.obj = {
         title: note.title,
     }
-
-      note.card.find("a").on("click", function() {
-       window.tilt = note.title  
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -85,7 +82,18 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
      window.identification = joey.ID
   }
-if(joey.Access != undefined)
+});
+      note.card.find("a").on("click", function() {
+       window.tilt = note.title  
+              var ref = firebase.database().ref("Classes/" + window.identification + "/Access");
+ref.once("value")
+  .then(function(snapshot) { // true
+  window.a = snapshot.exists();
+   var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+
+if(window.a == true)
 {
   window.tr = joey.Access
   window.v = "Taken";
@@ -103,6 +111,7 @@ if(joey.Access != undefined)
    classers.update({
          Access: note.title
    })
+});
     });
   
       note.card.find("button").on("click", function() {
