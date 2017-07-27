@@ -91,9 +91,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
 
   window.tr = joey.Access
-
+console.log(window.tr)
 })
-        console.log(window.tr);
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
          Access: note.title
