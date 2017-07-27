@@ -13,7 +13,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
-    console.log(window.names);
   }
   loadNotes()
 
@@ -99,8 +98,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
 })
    var classers = firebase.database().ref("Classes/" + window.identification + "/Access")
    classers.update({
-         access: window.nameh
+         access: window.nameh[window.b]
    })
+  window.b += 1
 }
 
 function loadNotes() {
