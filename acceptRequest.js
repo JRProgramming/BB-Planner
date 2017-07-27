@@ -89,10 +89,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
 ref.once("value")
   .then(function(snapshot) { // true
   window.a = snapshot.exists();
+  console.log(window.identification)
    var playersRef = firebase.database().ref("Classes/" + window.identification);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-console.log(joey.Access)
 if(window.a == true)
 {
   window.tr = joey.Access
