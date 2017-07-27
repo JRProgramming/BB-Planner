@@ -91,12 +91,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") == joey.name)
   {
      window.identification = joey.ID
-    console.log(window.identification);
   }
   
     window.gf += 1
 })
-  for(i=0;i<window.names.length;i++)
+  console.log(window.nameh);
+  for(i=0;i<window.nameh.length;i++)
   {
    var classers = firebase.database().ref("Classes/" + window.identification + "/Access")
    classers.update({
