@@ -9,6 +9,7 @@ window.b = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
+  window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
@@ -102,6 +103,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 
 function loadNotes() {
+  console.log(window.names.length);
        for(i=0;i<window.names.length;i++){
          console.log("HEY");
        var note = addAndSaveNote();
