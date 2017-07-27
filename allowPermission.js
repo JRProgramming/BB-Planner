@@ -27,7 +27,7 @@ function addNote(title, text) {
    });
     div.appendTo(".mdl-layout__content")
         
-  title = title || window.names;
+  title = title || window.names[window.number];
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -103,9 +103,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 
 function loadNotes() {
-  console.log(window.names.length);
        for(i=0;i<window.names.length;i++){
-         console.log("HEY");
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
