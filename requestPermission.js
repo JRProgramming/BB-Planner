@@ -8,6 +8,7 @@ window.numj = 0;
 window.gf = 0;
 window.b = 0;
 window.l = 0;
+window.y = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -109,10 +110,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
  window.nameb.push(joey.name)
   console.log(window.nameb);
-  if(window.nameh[window.gf] == window.nameb[window.gf])
+  if(window.nameh[window.gf] == window.nameb[window.y])
   {
      window.identification = joey.ID;
     console.log(window.identification)
+    var classers = firebase.database().ref("Classes/" + window.identification)
+   classers.update({
+         Access: window.nameh
+   })
+    window.y += 1
   }
   
     window.gf += 1
