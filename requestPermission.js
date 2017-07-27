@@ -105,12 +105,11 @@ function loadData()
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  console.log(window.nameh[window.gf]);
+  console.log(joey.name);
   if(window.nameh[window.gf] == joey.name)
   {
     
-     window.identification = joey.ID
-    console.log(joey.ID);
+     window.identification = joey.ID;
   }
   
     window.gf += 1
