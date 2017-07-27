@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>BB Planner-Allow Permission</title>
+        <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAPZwtE0Luy_umjawZcUXr5VbBeDlUvrlo",
+        authDomain: "bbclassmatch.firebaseapp.com",
+        databaseURL: "https://bbclassmatch.firebaseio.com",
+        projectId: "bbclassmatch",
+        storageBucket: "bbclassmatch.appspot.com",
+        messagingSenderId: "984402365769"
+    };
+    firebase.initializeApp(config);
+    </script>
 
+        <meta name="description" content="A planner for BB">
+        <link rel="shortcut icon" href="icon.png">
+        <link rel="icon" href="icon.png">
+        <meta name="application-name" content="BB Planner">
+        
+        <!-- Microsoft Pinned Site Metadata -->
+        <meta name="msapplication-tooltip" content="A planner for BB" />
+        <meta name="msapplication-starturl" content="./index.html" />
+        <meta name="msapplication-window" content="width=1024;height=768" />
+        <meta name="msapplication-navbutton-color" content="#FFA000" /> <!-- 700 color -->
+        <meta name="msapplication-square70x70logo" content="icon.png">
+        <meta name="msapplication-TileColor" content="#FFC107"> <!-- 500 Color -->
+        
+        <!-- Progressive Web Apps -->
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#FFC107"> <!-- 500 color -->
+        
+        <!-- Apple Web App Config -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="icon.png">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-light_green.min.css" />
+        <link rel="stylesheet" href="requestPermission.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no,maximum-scale=1.0,minimum-scale=1.0">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="requestPermission.js"></script>
+    </head>
+    <body>
+          <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title" id="names">Blind Brook Planner</span>
+              
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">
+                        Blind Brook Planner</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="https://jrprogramming.github.io/BB-Planner/otherPlanner.html">See other planners</a>
+                    <a class="mdl-navigation__link" href="https://jrprogramming.github.io/BB-Planner/setClass.html">Set up classes</a>
+                    <a class="mdl-navigation__link" href="#">Report Problem</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+    <h3>Now, request anybody who you would like to have access to their planner.</h3>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="position:fixed;bottom:16px;right:16px;z-index:8;" onclick="loadData()">Done</button>
+            </main>
+              
+        </div>
+    </body>
+    
+
+</html>
