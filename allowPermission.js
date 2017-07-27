@@ -19,9 +19,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
   });
 
-
-
-
 function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
