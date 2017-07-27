@@ -103,6 +103,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 function loadNotes() {
        for(i=0;i<window.names.length;i++){
+         console.log("HEY");
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
