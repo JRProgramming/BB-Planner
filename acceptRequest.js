@@ -81,6 +81,10 @@ function addAndSaveNote(title, index) {
        window.tilt = note.title
         sessionStorage.setItem("nameS", window.tilt)
     });
+  
+      note.card.find("button").on("click", function() {
+console.log(note.card.find("button").text())
+      })
     
    
  
