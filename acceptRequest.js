@@ -87,10 +87,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 if(joey.Access != undefined)
 {
+  console.log("Not equal to undefined");
   window.tr = joey.Access
 }
   else
   {
+    console.log("Equals to undefined");
    window.tr = note.title; 
   }
   console.log(window.tr);
