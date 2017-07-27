@@ -43,7 +43,7 @@ function addNote(title, text, hj) {
     });
   
  hj = hj || "Deny";
-  var super_text = $("<a/>", {
+  var super_text = $("<button/>", {
    "class": "mdl-button mdl-js-button",
     "contenteditable": "false"
     
