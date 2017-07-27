@@ -117,10 +117,7 @@ if(joey.name != sessionStorage.getItem("name"))
   {
      window.identification = joey.ID;
     console.log(window.identification)
-    var classers = firebase.database().ref("Classes/" + window.identification)
-   classers.update({
-         Access: window.nameh
-   })
+
   }
   
     window.gf += 1
