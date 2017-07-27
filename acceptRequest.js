@@ -88,13 +88,16 @@ playersRef.on("child_added", function(data, prevChildKey) {
   console.log(joey.Access);
 if(joey.Access != undefined)
 {
-  console.log("Not equal to undefined");
   window.tr = joey.Access
+  window.v = "Taken";
 }
   else
   {
+    if(window.v != "Taken")
+    {
     console.log("Equals to undefined");
    window.tr = note.title; 
+    }
   }
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
