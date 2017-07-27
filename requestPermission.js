@@ -112,6 +112,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
      window.identification = joey.ID;
     console.log(window.identification)
   }
+    else
+    {
+     console.log(joey.name)
+      console.log(window.nameh[window.gf])
+    }
   
     window.gf += 1
   }
