@@ -77,13 +77,13 @@ function addAndSaveNote(title, index) {
     }
 
       note.card.find("a").on("click", function() {
-   console.log(note.card.find("a").text())
        window.tilt = note.title
         sessionStorage.setItem("nameS", window.tilt)
     });
   
       note.card.find("button").on("click", function() {
-console.log(note.card.find("button").text())
+        window.gar = note.titleg
+        console.log(window.gar);
       })
     
    
