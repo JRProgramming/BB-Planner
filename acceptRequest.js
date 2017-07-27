@@ -85,7 +85,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
      window.identification = joey.ID
   }
-  window.tr = joey.Accesss
+
+  window.tr = joey.Access
   console.log(window.tr);
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
