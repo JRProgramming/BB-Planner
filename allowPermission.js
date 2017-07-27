@@ -74,11 +74,15 @@ function addAndSaveNote(title, index) {
     }
 
      note.card.find("input[type=\"checkbox\"]").on("click", function() {
+       
        for(i=0;i<window.names.length;i++)
        {
+         if(note.card.find("input[type=\"checkbox\"]").checked == false)
+         {
+          window.nameh.splice(i, 1);
+         }
          var hg = note.title[i]
 window.nameh.push(hg);
-       console.log(window.nameh);
        }
     });
     
