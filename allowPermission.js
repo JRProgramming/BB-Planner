@@ -81,8 +81,12 @@ function addAndSaveNote(title, index) {
          {
           window.nameh.splice(i, 1);
          }
+         else
+         {
          var hg = note.title[i]
 window.nameh.push(hg);
+         }
+         console.log(window.nameh);
        }
     });
     
