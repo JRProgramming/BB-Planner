@@ -14,7 +14,7 @@ window.names = [];
 
 
 
-function addNote(title, text) {
+function addNote(title, text, hj) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
@@ -36,12 +36,21 @@ function addNote(title, text) {
     title_text.val(title);
     title_text.appendTo(title_e);
    
-     text = text || "Select"; 
+     text = text || "Accept"; 
     var sup_text = $("<a/>", {
         "class": "mdl-button mdl-js-button",
         "contenteditable": "false"
     });
   
+ hj = hj || "Deny";
+  var super_text = $("<a/>", {
+   "class": "mdl-button mdl-js-button",
+    "contenteditable": "false"
+    
+  });
+   super_text.html(hj);
+  super_text.appendTo(div);
+                     
     sup_text.html(text);
     sup_text.appendTo(div);
 
@@ -58,7 +67,7 @@ function addNote(title, text) {
 }
 
 
-window.b = 0
+
 function addAndSaveNote(title, index) {
  
     var note = addNote(title);
@@ -66,14 +75,11 @@ function addAndSaveNote(title, index) {
         title: note.title,
     }
 
-     $("a").on("click", function() {
-      if(window.b == 0)
-      {
+      note.card.find("a").on("click", function() {
+   
        window.tilt = note.title
-        window.b += 1
         sessionStorage.setItem("nameS", window.tilt)
         location.href = "viewPlanner"
-      }
     });
     
    
