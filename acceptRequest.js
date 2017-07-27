@@ -77,12 +77,25 @@ function addAndSaveNote(title, index) {
     }
 
       note.card.find("a").on("click", function() {
-       window.tilt = note.title
-        sessionStorage.setItem("nameS", window.tilt)
+       window.tilt = note.title  
+   var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
+     window.identification = joey.ID
+  }
+  
+    window.gf += 1
+})
+   var classers = firebase.database().ref("Classes/" + window.identification)
+   classers.update({
+         Access: note.title
+   })
     });
   
       note.card.find("button").on("click", function() {
-        window.gar = note.titleg
+        window.gar = note.title
         console.log(window.gar);
       })
     
