@@ -109,7 +109,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
 
  window.nameb.push(joey.name)
-  console.log(window.nameb);
+console.log(window.nameh[window.gf]);
   if(window.nameh[window.gf] == window.nameb[window.y])
   {
      window.identification = joey.ID;
@@ -118,7 +118,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
    classers.update({
          Access: window.nameh
    })
-    window.y += 1
   }
   
     window.gf += 1
