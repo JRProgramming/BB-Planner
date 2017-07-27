@@ -110,7 +110,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     
      window.identification = joey.ID
-    console.log(window.identification);
+    console.log(joey.ID);
   }
   
     window.gf += 1
