@@ -130,7 +130,7 @@ window.gf += 1
     console.log(window.id[window.s]);
   var classers = firebase.database().ref("Classes/" + window.id[window.s])
    classers.update({
-         Access: window.nameh[window.s]
+         Request: window.nameh[window.s]
    })
     window.s += 1
   }
