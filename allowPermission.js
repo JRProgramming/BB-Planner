@@ -78,7 +78,7 @@ function addAndSaveNote(title, index) {
        
        for(i=0;i<window.names.length;i++)
        {
-         if(window.l == 1)
+         if(window.l == 1 && window.cd = note.title[i])
          {
           window.nameh.splice(i, 1);
            window.l = 0
@@ -89,6 +89,7 @@ function addAndSaveNote(title, index) {
 window.nameh.push(hg);
   window.l = 1
          }
+         window.cd = note.title[i];
          console.log(window.nameh);
        }
     });
