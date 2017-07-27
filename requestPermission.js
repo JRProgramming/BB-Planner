@@ -105,17 +105,17 @@ function loadData()
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
+  for(i=0;i<window.nameh.length;i++)
+  {
   if(window.nameh[window.gf] == joey.name)
   {
     console.log("HEY");
      window.identification = joey.ID;
-  }
-  else
-  {
-   console.log(window.nameh[window.gf]); 
+    console.log(window.identification)
   }
   
     window.gf += 1
+  }
 })
      var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
