@@ -48,12 +48,13 @@ function addNote(title, text, hj) {
     "contenteditable": "false"
     
   });
-   super_text.html(hj);
-  super_text.appendTo(div);
+   
                      
     sup_text.html(text);
     sup_text.appendTo(div);
 
+  super_text.html(hj);
+  super_text.appendTo(div);
 
     var menu = $("<div/>", {
         "class": "mdl-card__menu" 
