@@ -75,7 +75,7 @@ function addAndSaveNote(title, index) {
        
        for(i=0;i<window.names.length;i++)
        {
-         if(window.l == 1 && window.cd = note.title[i])
+         if(window.l == 1 && window.cd == note.title[i])
          {
           window.nameh.splice(i, 1);
            window.l = 0
