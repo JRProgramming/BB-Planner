@@ -108,15 +108,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.nameh[window.gf] == joey.name)
   {
      window.identification = joey.ID
+    console.log(window.identification);
   }
   
     window.gf += 1
-    var classers = firebase.database().ref("Classes/" + window.identification)
+})
+     var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
          Request: window.nameh
    })
-})
- 
 }
 
 function loadNotes() {
