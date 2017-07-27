@@ -107,9 +107,10 @@ function loadData()
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-
+if(joey.name != sessionStorage.getItem("name"))
+   {
  window.nameb.push(joey.name)
-console.log(window.nameb[window.gf]);
+}
   
   if(window.nameh[window.gf] == window.nameb[window.y])
   {
