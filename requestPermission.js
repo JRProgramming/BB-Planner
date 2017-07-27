@@ -118,10 +118,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     window.gf += 1
   }
 })
-     var classers = firebase.database().ref("Classes/" + window.identification)
-   classers.update({
-         Request: window.nameh
-   })
+
 }
 
 function loadNotes() {
