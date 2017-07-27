@@ -114,7 +114,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
     else
     {
-     console.log(joey.name)
       console.log(window.nameh[window.gf])
     }
   
