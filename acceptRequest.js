@@ -1,4 +1,5 @@
 window.names = []
+window.tr = [];
 window.number = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
