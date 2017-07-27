@@ -94,12 +94,11 @@ if(joey.Access != undefined)
   window.tr = joey.Access
 }
 })
-        console.log(window.tr)
+
 window.tr.push(note.title[0])
-        console.log(window.tr);
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
-         Access: note.title
+         Access: window.tr
 });
     });
   
