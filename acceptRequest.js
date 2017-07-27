@@ -85,7 +85,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
      window.identification = joey.ID
   }
-  console.log(joey.Access);
 if(joey.Access != undefined)
 {
   window.tr = joey.Access
@@ -95,10 +94,10 @@ if(joey.Access != undefined)
   {
     if(window.v != "Taken")
     {
-    console.log("Equals to undefined");
    window.tr = note.title; 
     }
   }
+  console.log(window.tr);
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
