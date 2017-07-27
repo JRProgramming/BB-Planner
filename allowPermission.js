@@ -9,10 +9,10 @@ window.b = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
+    console.log(window.names);
   }
   loadNotes()
 
