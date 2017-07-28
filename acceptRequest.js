@@ -100,12 +100,10 @@ if(joey.Access != undefined)
 window.tr.push(note.title[0])
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
-         Access: window.tr
+         Access: window.tr,
+         Request: null
 });
-           var classers = firebase.database().ref("Classes/" + window.identification + "/Request/" + note.title)
-   classers.update({
-     Request: null
-});
+    
     });
   
       note.card.find("button").on("click", function() {
