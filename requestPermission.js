@@ -112,7 +112,7 @@ if(joey.name != sessionStorage.getItem("name"))
  window.nameb.push(joey.name)
 }
     console.log(window.nameh[window.y])
-    console.log(window.nameb[window.gf])
+    console.log(window.nameb)
   
   if(window.nameh[window.y] == window.nameb[window.gf])
   {
