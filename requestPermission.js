@@ -123,6 +123,7 @@ if(joey.name != sessionStorage.getItem("name"))
      if(joey.Request == undefined)
      {
 window.ds.push(sessionStorage.getItem("name"));
+console.log(window.ds);
      }
       else
       {
@@ -140,13 +141,13 @@ window.gr = "Nothing"
         if(window.gr == "Nothing")
         {
 window.ds.push(sessionStorage.getItem("name"))
+          console.log(window.ds);
         }
       }
     window.y += 1;
     }
   }
 window.gf += 1
-console.log(window.ds);
 })
 
   for(i=0;i<window.id.length;i++)
