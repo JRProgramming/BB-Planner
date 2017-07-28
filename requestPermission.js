@@ -122,6 +122,7 @@ if(joey.name != sessionStorage.getItem("name"))
       window.ds.push(joey.Request)
      if(joey.Request == undefined)
      {
+       winodw.ds = [];
 window.ds.push(sessionStorage.getItem("name"));
 console.log(window.ds);
        console.log("DUH");
