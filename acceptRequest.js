@@ -87,13 +87,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
      window.identification = joey.ID
   }
-  window.req = []
-  window.req.push(joey.Request)
-  if(window.req[window.num] == note.title)
-  {
-window.req.splice(window.num, 1)
-  }
-  console.log(window.req)
+
 });
       note.card.find("a").on("click", function() {
 
@@ -104,7 +98,13 @@ if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
-  
+    window.req = []
+  window.req.push(joey.Request)
+  if(window.req[window.num] == note.title)
+  {
+window.req.splice(window.num, 1)
+  }
+  console.log(window.req)
 })
 
 window.tr.push(note.title[0])
