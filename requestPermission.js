@@ -141,6 +141,7 @@ window.gr = "Nothing"
         if(window.gr == "Nothing")
         {
 window.ds.push(sessionStorage.getItem("name"))
+        }
       }
     window.y += 1;
     }
