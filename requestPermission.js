@@ -119,7 +119,7 @@ if(joey.name != sessionStorage.getItem("name"))
     {
      window.identification = joey.ID;
     window.id.push(window.identification);
-      window.ds.push(joey.Request)
+      window.ds = joey.Request
      if(joey.Request == undefined)
      {
        window.ds = [];
