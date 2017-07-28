@@ -111,10 +111,6 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
-  
-
-     console.log(window.nameh[window.y])
-  console.log(window.nameb[window.gf]) 
     
   
   if(window.nameh[window.y] == window.nameb[window.gf])
@@ -133,31 +129,7 @@ if(joey.name != sessionStorage.getItem("name"))
 window.gf += 1
 
 })
-  console.log(window.ds);
-   if(window.ds == undefined)
-   {
-    
-       window.ds.push(sessionStorage.getItem("name")); 
-      }
-  else
-  {
-for(i=0;i<window.ds.length;i++)
-{
-if(window.ds[i] != window.nameh[window.z])
-{
-window.bds = "Nothing";
-}
-  else
-  {
-   window.bds = "Taken"; 
-  }
-}
-  }
-  if(window.bds == "Nothing")
-  {
-window.ds.push(sessionStorage.getItem("name"));
-  }
-  window.z += 1
+console.log(window.ds)
   for(i=0;i<window.id.length;i++)
   {
     console.log(window.id[window.s]);
