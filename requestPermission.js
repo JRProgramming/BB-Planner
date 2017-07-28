@@ -128,7 +128,7 @@ if(joey.name != sessionStorage.getItem("name"))
 window.gf += 1
 
 })
-
+console.log(window.ds);
   if(window.ds == [])
   {
 window.ds.push(sessionStorage.getItem("name"));
