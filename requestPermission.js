@@ -125,7 +125,6 @@ if(joey.name != sessionStorage.getItem("name"))
   console.log(window.nameb[window.gf]) 
     }
 window.gf += 1
-  }
 
 })
   for(i=0;i<window.id.length;i++)
