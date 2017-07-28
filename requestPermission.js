@@ -111,7 +111,8 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
-    
+    console.log(window.nameh[window.y])
+    console.log(window.nameb[window.gf])
   
   if(window.nameh[window.y] == window.nameb[window.gf])
   {
@@ -120,7 +121,7 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
       window.ds.push(joey.Request)
-     console.log(window.id);
+     console.log(joey.Request);
     window.y += 1;
     }
   }
