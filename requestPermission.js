@@ -124,6 +124,7 @@ if(joey.name != sessionStorage.getItem("name"))
      {
 window.ds.push(sessionStorage.getItem("name"));
 console.log(window.ds);
+       console.log("DUH");
      }
       else
       {
@@ -142,6 +143,7 @@ window.gr = "Nothing"
         {
 window.ds.push(sessionStorage.getItem("name"))
           console.log(window.ds);
+          console.log("WOW");
         }
       }
     window.y += 1;
