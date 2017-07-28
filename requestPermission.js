@@ -158,7 +158,6 @@ window.bds = "Nothing";
 window.ds.push(sessionStorage.getItem("name"));
   }
   window.z += 1
-       console.log(window.ds)
   for(i=0;i<window.id.length;i++)
   {
     console.log(window.id[window.s]);
