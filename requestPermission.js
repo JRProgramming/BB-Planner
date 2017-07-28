@@ -131,6 +131,7 @@ window.gf += 1
 console.log(window.ds);
   if(window.ds == [])
   {
+    console.log("HEY");
 window.ds.push(sessionStorage.getItem("name"));
   }
  console.log(window.ds)
