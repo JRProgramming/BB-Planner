@@ -122,8 +122,31 @@ if(joey.name != sessionStorage.getItem("name"))
       window.ds.push(joey.Request)
      if(joey.Request == undefined)
      {
-console.log("DOFkjaspodkfjaos")
+window.ds.push(sessionStorage.getItem("name"));
      }
+      else
+      {
+for(i=0;i<window.ds.length;i++)
+{
+if(window.ds[i] == sessionStorage.getItem("name"))
+{
+window.gr = "Taken"
+}
+  else
+  {
+window.gr = "Nothing"
+  }
+}
+        if(window.gr == "Nothing")
+        {
+window.ds.push(sessionStorage.getItem("name"))
+          console.log(window.ds)
+        }
+        else
+        {
+console.log(window.ds);
+        }
+      }
     window.y += 1;
     }
   }
@@ -132,7 +155,6 @@ window.gf += 1
 
 })
 
-  console.log(window.ds);
   for(i=0;i<window.id.length;i++)
   {
     console.log(window.id[window.s]);
