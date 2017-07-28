@@ -92,7 +92,6 @@ var d = i
          {
          var hg = note.title[0]
 window.nameh.push(hg);
-           console.log(window.nameh)
          }
     });
     
@@ -110,6 +109,7 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
+  console.log(window.nameh)
   if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
   {
   if(window.nameh[window.gf] == window.nameb[window.y])
