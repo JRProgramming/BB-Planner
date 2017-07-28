@@ -132,6 +132,7 @@ if(window.ds == undefined)
 {
 console.log("BOYEORIWOEJ");
 }
+  console.log(window.ds);
   for(i=0;i<window.id.length;i++)
   {
     console.log(window.id[window.s]);
