@@ -124,7 +124,7 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
     
-      window.vc = joey.Request
+      window.ds = joey.Request
      
     window.y += 1;
     }
@@ -133,11 +133,11 @@ if(joey.name != sessionStorage.getItem("name"))
 window.gf += 1
 
 })
-  window.ds = window.vc
+  console.log(window.ds);
    if(window.ds == undefined)
    {
     
-       window.ds[0] = sessionStorage.getItem("name"); 
+       window.ds.push(sessionStorage.getItem("name"); 
       }
   else
   {
