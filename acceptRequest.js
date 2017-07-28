@@ -104,7 +104,6 @@ window.tr.push(note.title[0])
 });
            var classers = firebase.database().ref("Classes/" + window.identification)
    classers.remove({
-         Request: note.title
 });
     });
   
