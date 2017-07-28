@@ -108,7 +108,6 @@ if(joey.Access != undefined)
   {
 window.req.splice(window.num, 1)
   }
-  console.log(window.req)
 })
 for(i=0;i<window.tr.length;i++)
 {
