@@ -75,11 +75,10 @@ function addAndSaveNote(title, index) {
         title: note.title,
     }
 
-     $("input[type=\"checkbox\"]").on("click", function() {
+     note.card.find("input[type=\"checkbox\"]").on("click", function() {
        
        for(i=0;i<window.names.length;i++)
        {
-         console.log("BYE");
          if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
          {
            var hg = note.title[i]
@@ -94,7 +93,6 @@ var d = i
          }
          else
          {
-           console.log("HEY")
          var hg = note.title[i]
 window.nameh.push(hg);
          }
@@ -115,7 +113,6 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
-
   if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
   {
   if(window.nameh[window.gf] == window.nameb[window.y])
@@ -125,10 +122,7 @@ if(joey.name != sessionStorage.getItem("name"))
     window.y += 1;
     window.gf = 0;
   }
-    else
-    {
 window.gf += 1
-    }
   }
 })
   for(i=0;i<window.id.length;i++)
@@ -140,8 +134,6 @@ window.gf += 1
    })
     window.s += 1
   }
-  window.y = 0
-  window.gf = 0
 }
 
 function loadNotes() {
