@@ -138,21 +138,14 @@ window.gr = "Taken"
 window.gr = "Nothing"
   }
 }
-        console.log(window.ds);
         if(window.gr == "Nothing")
         {
 window.ds.push(sessionStorage.getItem("name"))
-          console.log(window.ds)
-        }
-        else
-        {
-console.log(window.ds);
-        }
       }
     window.y += 1;
     }
   }
-
+console.log(window.ds)
 window.gf += 1
 
 })
