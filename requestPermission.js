@@ -122,7 +122,7 @@ if(joey.name != sessionStorage.getItem("name"))
       window.ds.push(joey.Request)
      if(joey.Request == undefined)
      {
-       console.log("EH")
+      console.log(joey.Request);
 window.ds.push(sessionStorage.getItem("name"));
      }
       else
@@ -146,7 +146,6 @@ window.ds.push(sessionStorage.getItem("name"))
     window.y += 1;
     }
   }
-console.log(window.ds)
 window.gf += 1
 
 })
