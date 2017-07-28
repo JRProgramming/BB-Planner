@@ -5,10 +5,8 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
 window.names = [];
-  if(sessionStorage.getItem("name") != joey.name)
-  {
-  window.names.push(joey.name);
-  }
+window.names.push(joey.Request)
+  console.log(window.names);
   loadNotes()
   });
 
@@ -99,6 +97,10 @@ window.tr.push(note.title[0])
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
          Access: window.tr
+});
+           var classers = firebase.database().ref("Classes/" + window.identification)
+   classers.remove({
+         Request: note.title
 });
     });
   
