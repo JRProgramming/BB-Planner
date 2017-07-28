@@ -120,7 +120,10 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
       window.ds.push(joey.Request)
-     
+     if(joey.Request == undefined)
+     {
+console.log("DOFkjaspodkfjaos")
+     }
     window.y += 1;
     }
   }
@@ -128,10 +131,7 @@ if(joey.name != sessionStorage.getItem("name"))
 window.gf += 1
 
 })
-if(window.ds == [undefined])
-{
-console.log("BOYEORIWOEJ");
-}
+
   console.log(window.ds);
   for(i=0;i<window.id.length;i++)
   {
