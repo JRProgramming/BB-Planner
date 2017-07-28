@@ -120,7 +120,7 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
       window.ds.push(joey.Request)
-     console.log(joey.Request);
+     console.log(window.id);
     window.y += 1;
     }
   }
