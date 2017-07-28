@@ -102,9 +102,9 @@ window.tr.push(note.title[0])
    classers.update({
          Access: window.tr
 });
-           var classers = firebase.database().ref("Classes/" + window.identification + "/Request")
+           var classers = firebase.database().ref("Classes/" + window.identification)
    classers.remove({
-     note.title
+     Request: "Johnny Ramirez"
 });
     });
   
