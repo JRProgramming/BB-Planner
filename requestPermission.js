@@ -122,7 +122,10 @@ if(joey.name != sessionStorage.getItem("name"))
     window.y += 1;
     window.gf = 0;
   }
+    else
+    {
 window.gf += 1
+    }
   }
 })
   for(i=0;i<window.id.length;i++)
@@ -134,6 +137,8 @@ window.gf += 1
    })
     window.s += 1
   }
+  window.y = 0
+  window.gf = 0
 }
 
 function loadNotes() {
