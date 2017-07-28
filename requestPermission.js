@@ -134,6 +134,7 @@ window.gf += 1
 })
    if(window.ds == undefined)
    {
+     window.ds = [];
        window.ds.push(sessionStorage.getItem("name")); 
       }
   else
