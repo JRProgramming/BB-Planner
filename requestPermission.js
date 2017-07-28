@@ -109,8 +109,10 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
-  console.log(window.nameh)
-  console.log(window.nameb)
+  for(i=0;i<window.names.length;i++)
+  {
+  console.log(window.nameh[window.gf])
+  console.log(window.nameb[window.y])
   if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
   {
   if(window.nameh[window.y] == window.nameb[window.gf])
@@ -120,6 +122,7 @@ if(joey.name != sessionStorage.getItem("name"))
     window.y += 1;
   }
 window.gf += 1
+  }
   }
 })
   for(i=0;i<window.id.length;i++)
