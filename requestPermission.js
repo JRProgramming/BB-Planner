@@ -128,7 +128,7 @@ if(joey.name != sessionStorage.getItem("name"))
 window.gf += 1
 
 })
-if(window.ds == undefined)
+if(window.ds == [undefined])
 {
 console.log("BOYEORIWOEJ");
 }
