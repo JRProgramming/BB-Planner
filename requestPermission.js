@@ -75,7 +75,7 @@ function addAndSaveNote(title, index) {
         title: note.title,
     }
 
-     note.card.find("input[type=\"checkbox\"]").on("click", function() {
+     $("input[type=\"checkbox\"]").on("click", function() {
        
        for(i=0;i<window.names.length;i++)
        {
