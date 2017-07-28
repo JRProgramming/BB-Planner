@@ -9,8 +9,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.names = [];
   if(sessionStorage.getItem("name") == joey.name)
   {
+    if(joey.Request != undefined)
+    {
 window.names.push(joey.Request)
-  console.log(window.names);
+    }
   }
 
   loadNotes()
