@@ -113,12 +113,11 @@ if(joey.name != sessionStorage.getItem("name"))
   console.log(window.nameb)
   if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
   {
-  if(window.nameh[window.gf] == window.nameb[window.y])
+  if(window.nameh[window.y] == window.nameb[window.gf])
   {
      window.identification = joey.ID;
     window.id.push(window.identification);
     window.y += 1;
-    window.gf = 0;
   }
 window.gf += 1
   }
