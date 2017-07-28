@@ -104,7 +104,12 @@ window.nameh.push(hg);
 }
 function loadData()
 {
-    for(i=0;i<window.id.length;i++)
+     var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+  window.ih.push(joey.name);
+})
+    for(i=0;i<window.ih.length;i++)
   {
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
