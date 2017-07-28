@@ -113,7 +113,7 @@ for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != note.title)
 {
-window.df = "Nothing";
+window.gf = "Nothing";
 }
   else
   {
