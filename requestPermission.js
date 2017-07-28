@@ -11,6 +11,7 @@ window.b = 0;
 window.l = 0;
 window.y = 0;
 window.s = 0;
+window.z = 0;
 window.id = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -141,7 +142,7 @@ window.gf += 1
   {
 for(i=0;i<window.ds.length;i++)
 {
-if(window.ds[i] != window.nameh[0])
+if(window.ds[i] != window.nameh[window.z])
 {
 window.bds = "Nothing";
 }
@@ -155,6 +156,7 @@ window.bds = "Nothing";
   {
 window.ds.push(sessionStorage.getItem("name"));
   }
+  window.z += 1
        console.log(window.ds)
   for(i=0;i<window.id.length;i++)
   {
