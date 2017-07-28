@@ -2,6 +2,7 @@ window.names = [];
 window.joe = [];
 window.nameh = []
 window.nameb = [];
+window.ds = [];
 window.hat = "";
 window.number = 0;
 window.numj = 0;
@@ -121,6 +122,9 @@ if(joey.name != sessionStorage.getItem("name"))
     {
      window.identification = joey.ID;
     window.id.push(window.identification);
+    
+      window.ds = joey.Request
+     
     window.y += 1;
     }
   }
@@ -128,6 +132,29 @@ if(joey.name != sessionStorage.getItem("name"))
 window.gf += 1
 
 })
+   if(window.ds == undefined)
+   {
+       window.ds.push(sessionStorage.getItem("name")); 
+      }
+  else
+  {
+for(i=0;i<window.ds.length;i++)
+{
+if(window.ds[i] != note.title)
+{
+window.bds = "Nothing";
+}
+  else
+  {
+   window.bds = "Taken"; 
+  }
+}
+  }
+  if(window.bds == "Nothing")
+  {
+window.ds.push(sessionStorage.getItem("name"));
+  }
+       console.log(window.ds)
   for(i=0;i<window.id.length;i++)
   {
     console.log(window.id[window.s]);
