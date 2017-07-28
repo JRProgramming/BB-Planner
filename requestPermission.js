@@ -82,7 +82,6 @@ function addAndSaveNote(title, index) {
          if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
          {
            var hg = note.title[i]
-           console.log(hg);
           for(i=0;i<window.nameh.length;i++)
           {
 if(hg == window.nameh[i])
@@ -94,6 +93,7 @@ var d = i
          }
          else
          {
+           console.log("HEY")
          var hg = note.title[i]
 window.nameh.push(hg);
          }
