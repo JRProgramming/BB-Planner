@@ -136,8 +136,8 @@ window.gf += 1
   window.ds = window.vc
    if(window.ds == undefined)
    {
-     window.ds = [];
-       window.ds.push(sessionStorage.getItem("name")); 
+    
+       window.ds[0] = sessionStorage.getItem("name"); 
       }
   else
   {
