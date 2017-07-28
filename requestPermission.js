@@ -109,7 +109,8 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
-  
+  console.log(window.nameh)
+  console.log(window.nameb)
   if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
   {
   if(window.nameh[window.gf] == window.nameb[window.y])
