@@ -113,6 +113,8 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
+  console.log(window.nameh)
+  console.log(window.nameb)
   if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
   {
   if(window.nameh[window.gf] == window.nameb[window.y])
@@ -128,7 +130,6 @@ window.gf += 1
     }
   }
 })
-  console.log(window.id);
   for(i=0;i<window.id.length;i++)
   {
     console.log(window.id[window.s]);
