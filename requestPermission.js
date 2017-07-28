@@ -133,7 +133,6 @@ window.gf += 1
     console.log("HEY");
 window.ds.push(sessionStorage.getItem("name"));
   }
- console.log(window.ds)
   for(i=0;i<window.id.length;i++)
   {
     console.log(window.id[window.s]);
