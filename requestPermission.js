@@ -3,6 +3,7 @@ window.joe = [];
 window.nameh = []
 window.nameb = [];
 window.ds = [];
+window.ih = [];
 window.hat = "";
 window.number = 0;
 window.numj = 0;
