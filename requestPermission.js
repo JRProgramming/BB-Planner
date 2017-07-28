@@ -117,9 +117,12 @@ if(joey.name != sessionStorage.getItem("name"))
   
   if(window.nameh[window.y] == window.nameb[window.gf])
   {
+    if(window.nameh[window.y] != undefined && window.nameb[window.gf] != undefined)
+    {
      window.identification = joey.ID;
     window.id.push(window.identification);
     window.y += 1;
+    }
   }
 
 window.gf += 1
