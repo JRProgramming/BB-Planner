@@ -141,7 +141,7 @@ window.gf += 1
   {
 for(i=0;i<window.ds.length;i++)
 {
-if(window.ds[i] != note.title)
+if(window.ds[i] != window.nameh[0])
 {
 window.bds = "Nothing";
 }
