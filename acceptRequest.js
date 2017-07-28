@@ -108,8 +108,22 @@ window.req.splice(window.num, 1)
   }
   console.log(window.req)
 })
+for(i=0;i<window.tr.length;i++)
+{
+if(window.tr[i] != note.title)
+{
+window.df = "Nothing";
+}
+  else
+  {
+   window.gf = "Something"; 
+  }
 
+}
+if(window.gf == "Nothing")
+{
 window.tr.push(note.title[0])
+}
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
