@@ -111,8 +111,7 @@ if(joey.name != sessionStorage.getItem("name"))
 }
   
   
-  if(window.nameh[window.gf] != undefined && window.nameb[window.y] != undefined)
-  {
+  
   if(window.nameh[window.y] == window.nameb[window.gf])
   {
     console.log("Hello?");
@@ -127,12 +126,7 @@ if(joey.name != sessionStorage.getItem("name"))
     }
 window.gf += 1
   }
-  else
-  {
-    console.log("Undefined");
-console.log(window.nameh[window.y])
-  console.log(window.nameb[window.gf])
-  }
+
 })
   for(i=0;i<window.id.length;i++)
   {
