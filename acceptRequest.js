@@ -131,7 +131,7 @@ classers.update({
        Access: window.tr,
        Request: window.req
 });
-        location.href = "acceptPermission"
+        location.href = "acceptRequest"
 });  
       note.card.find("button").on("click", function() {
            var playersRef = firebase.database().ref("Classes/");
@@ -150,7 +150,7 @@ window.req.splice(window.num, 1)
 classers.update({
        Request: window.req
 });
-          location.href = "acceptPermission"
+          location.href = "acceptRequest"
       })
     
    
