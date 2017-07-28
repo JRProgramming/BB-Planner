@@ -122,6 +122,7 @@ window.df = "Nothing";
   }
 
 }
+        console.log(window.gf);
 if(window.gf == "Nothing")
 {
 window.tr.push(note.title[0])
