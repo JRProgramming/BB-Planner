@@ -103,8 +103,8 @@ window.tr.push(note.title[0])
          Access: window.tr
 });
            var classers = firebase.database().ref("Classes/" + window.identification)
-   classers.remove({
-     Request: "Johnny Ramirez"
+   classers.update({
+     Request: ""
 });
     });
   
