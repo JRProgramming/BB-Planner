@@ -2,7 +2,7 @@ window.names = [];
 window.joe = [];
 window.nameh = []
 window.nameb = [];
-window.ds = [];
+window.vc = [];
 window.hat = "";
 window.number = 0;
 window.numj = 0;
@@ -124,7 +124,7 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
     
-      window.ds = joey.Request
+      window.vc = joey.Request
      
     window.y += 1;
     }
@@ -133,6 +133,7 @@ if(joey.name != sessionStorage.getItem("name"))
 window.gf += 1
 
 })
+  window.ds = window.vc
    if(window.ds == undefined)
    {
      window.ds = [];
