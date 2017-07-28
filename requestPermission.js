@@ -142,6 +142,7 @@ window.gr = "Nothing"
 }
         if(window.gr == "Nothing")
         {
+          console.log(window.ds);
 window.ds.push(sessionStorage.getItem("name"))
           console.log(window.ds);
           console.log("WOW");
