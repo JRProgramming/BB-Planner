@@ -116,6 +116,7 @@ if(joey.name != sessionStorage.getItem("name"))
   {
   if(window.nameh[window.y] == window.nameb[window.gf])
   {
+    console.log("Hello?");
      window.identification = joey.ID;
     window.id.push(window.identification);
     window.y += 1;
