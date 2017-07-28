@@ -122,6 +122,7 @@ if(joey.name != sessionStorage.getItem("name"))
       window.ds.push(joey.Request)
      if(joey.Request == undefined)
      {
+       console.log("EH")
 window.ds.push(sessionStorage.getItem("name"));
      }
       else
@@ -137,6 +138,7 @@ window.gr = "Taken"
 window.gr = "Nothing"
   }
 }
+        console.log(window.ds);
         if(window.gr == "Nothing")
         {
 window.ds.push(sessionStorage.getItem("name"))
