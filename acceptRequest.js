@@ -2,7 +2,9 @@ window.names = []
 window.tr = [];
 window.req = [];
 window.number = 0;
-window.num = 0;
+window.num = 0;\
+function load()
+{
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -17,7 +19,7 @@ window.names.push(joey.Request)
 
   loadNotes()
   });
-
+}
 
 
 
@@ -129,16 +131,36 @@ classers.update({
        Access: window.tr,
        Request: window.req
 });
+        load()
 });  
       note.card.find("button").on("click", function() {
-        window.gar = note.title
-        console.log(window.gar);
+           var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+    window.req = []
+  window.req.push(joey.Request)
+  if(window.req[window.num] == note.title)
+  {
+window.req.splice(window.num, 1)
+  }
+  console.log(window.req)
+
+})
+           var classers = firebase.database().ref("Classes/" + window.identification)
+classers.update({
+       Request: window.req
+});
+          load()
       })
     
    
  
     return note;
     
+}
+window.onload = function()
+{
+load()
 }
 
 function loadNotes() {
