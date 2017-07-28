@@ -1,6 +1,8 @@
 window.names = []
 window.tr = [];
+window.req = [];
 window.number = 0;
+window.num = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -85,6 +87,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
      window.identification = joey.ID
   }
+  window.req = []
+  window.req.push(joey.Request)
+  if(window.req[window.num] == note.title)
+  {
+window.req.splice(window.num, 1)
+  }
+  console.log(window.req)
 });
       note.card.find("a").on("click", function() {
 
@@ -95,15 +104,15 @@ if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
+  
 })
 
 window.tr.push(note.title[0])
    var classers = firebase.database().ref("Classes/" + window.identification)
-   classers.remove({
-         Request: window.title
+classers.update({
+       Access: window.tr,
+       Request: null
 });
-    
-    });
   
       note.card.find("button").on("click", function() {
         window.gar = note.title
