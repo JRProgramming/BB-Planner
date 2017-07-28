@@ -111,7 +111,7 @@ window.tr.push(note.title[0])
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
-       Request: null
+       Request: window.req
 });
 });  
       note.card.find("button").on("click", function() {
