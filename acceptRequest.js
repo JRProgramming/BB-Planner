@@ -113,7 +113,7 @@ classers.update({
        Access: window.tr,
        Request: null
 });
-  
+});  
       note.card.find("button").on("click", function() {
         window.gar = note.title
         console.log(window.gar);
