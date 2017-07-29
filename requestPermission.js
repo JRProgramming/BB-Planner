@@ -14,6 +14,7 @@ window.y = 0;
 window.s = 0;
 window.z = 0;
 window.id = [];
+window.hy = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
