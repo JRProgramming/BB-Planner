@@ -108,7 +108,6 @@ if(joey.Access != undefined)
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
-    console.log(window.req)
   }
 })
    
@@ -131,8 +130,10 @@ window.gf = "Nothing"
         
 if(window.gf == "Nothing")
 {
-window.tr.push(note.title[0])
+window.tr = note.title[0])
 }
+        console.log(window.tr)
+        console.log(window.req)
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
