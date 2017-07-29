@@ -128,6 +128,7 @@ if(joey.name != sessionStorage.getItem("name"))
      {
        window.ds = [];
 window.ds.push(sessionStorage.getItem("name"));
+       console.log(window.ds);
      }
       else
       {
