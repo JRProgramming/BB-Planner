@@ -98,6 +98,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
+  console.log(joey.Access)
 if(joey.Access != undefined)
 {
   window.tr = joey.Access
