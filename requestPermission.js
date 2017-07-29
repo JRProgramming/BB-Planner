@@ -161,7 +161,7 @@ window.gf += 1
   {
    var classers = firebase.database().ref("Classes/" + window.id[window.s])
    classers.update({
-         Request: window.ds
+         Request: window.hy[window.s]
    })
     window.s += 1
   }
