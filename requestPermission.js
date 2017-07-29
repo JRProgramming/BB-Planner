@@ -124,6 +124,7 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
       window.ds = joey.Request
+      console.log(joey.Request);
      if(joey.Request == undefined)
      {
        window.ds = [];
@@ -147,7 +148,6 @@ window.gr = "Nothing"
 window.ds.push(sessionStorage.getItem("name"))
         }
       }
-      console.log("SUP BROTHa");
     window.y += 1;
     }
   }
