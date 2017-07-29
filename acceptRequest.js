@@ -108,9 +108,10 @@ if(joey.Access != undefined)
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
+    console.log(window.req)
   }
 })
-       
+   
 for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != note.title)
@@ -123,7 +124,11 @@ window.gf = "Nothing";
   }
 
 }
-        console.log(window.gf)
+        if(window.tr.length == 0)
+        {
+window.gf = "Nothing"
+        }
+        
 if(window.gf == "Nothing")
 {
 window.tr.push(note.title[0])
