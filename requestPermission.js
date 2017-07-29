@@ -118,7 +118,6 @@ if(joey.name != sessionStorage.getItem("name"))
   
   if(window.nameb[window.gf].includes(window.nameh[window.y]) == true)
   {
-    console.log("WOW");
     if(window.nameh[window.y] != undefined && window.nameb[window.gf] != undefined)
     {
      window.identification = joey.ID;
