@@ -109,7 +109,6 @@ if(joey.Access != undefined)
   {
 window.req.splice(window.num, 1)
   }
-   console.log(window.tr)
 })
        
 for(i=0;i<window.tr.length;i++)
@@ -124,7 +123,6 @@ window.gf = "Nothing";
   }
 
 }
-        console.log(window.gf);
 if(window.gf == "Nothing")
 {
 window.tr.push(note.title[0])
