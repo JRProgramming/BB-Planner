@@ -137,7 +137,6 @@ for(i=0;i<window.ds.length;i++)
 if(window.ds[i] == sessionStorage.getItem("name"))
 {
 window.gr = "Taken"
-  console.log("BYE")
 }
   else
   {
@@ -151,9 +150,10 @@ window.ds.push(sessionStorage.getItem("name"))
         }
       }
     window.y += 1;
-          console.log(window.ds);
-  window.hy.push(window.ds)
+         
     }
+     console.log(window.ds);
+  window.hy.push(window.ds)
   }
 
 
