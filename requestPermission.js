@@ -123,7 +123,7 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
       window.ds = joey.Request
-      console.log(window.ds);
+     
      if(joey.Request == undefined)
      {
        window.ds = [];
@@ -150,6 +150,7 @@ window.ds.push(sessionStorage.getItem("name"))
     window.y += 1;
     }
   }
+   console.log(window.ds);
 window.gf += 1
 })
 
