@@ -123,8 +123,6 @@ if(joey.name != sessionStorage.getItem("name"))
      window.identification = joey.ID;
     window.id.push(window.identification);
       window.ds = joey.Request
-      console.log(window.identification);
-      console.log(joey.Request);
      if(joey.Request == undefined)
      {
        window.ds = [];
@@ -154,7 +152,7 @@ window.ds.push(sessionStorage.getItem("name"))
 window.gf += 1
 })
 
-  
+  console.log(window.ds);
   var classers = firebase.database().ref("Classes/" + window.id[window.s])
    classers.update({
          Request: window.ds
