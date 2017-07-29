@@ -115,7 +115,7 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
-    console.log(window.nameh);
+    console.log(window.y);
   
   if(window.nameb[window.gf].includes(window.nameh[window.y]) == true)
   {
