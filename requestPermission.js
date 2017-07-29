@@ -147,6 +147,7 @@ window.gr = "Nothing"
         if(window.gr == "Nothing")
         {
 window.ds.push(sessionStorage.getItem("name"))
+          console.log("BYE")
         }
       }
     window.y += 1;
