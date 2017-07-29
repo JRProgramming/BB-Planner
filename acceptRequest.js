@@ -109,6 +109,7 @@ if(joey.Access != undefined)
 window.req.splice(window.num, 1)
   }
 })
+        console.log(window.tr)
 for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != note.title)
