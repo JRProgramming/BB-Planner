@@ -102,11 +102,7 @@ if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
-  else
-  {
-   window.tr = []; 
-  }
-    console.log(joey.Access)
+    console.log(window.tr)
     window.req = []
   window.req.push(joey.Request)
   if(window.req[window.num] == note.title)
