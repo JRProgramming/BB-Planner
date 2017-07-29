@@ -151,14 +151,13 @@ window.ds.push(sessionStorage.getItem("name"))
   }
      console.log(window.ds);
 window.gf += 1
-})
-console.log(window.ds);
-
-  var classers = firebase.database().ref("Classes/" + window.id[window.s])
+    var classers = firebase.database().ref("Classes/" + window.id[window.s])
    classers.update({
          Request: window.ds
    })
     window.s += 1
+})
+
   
 }
 
