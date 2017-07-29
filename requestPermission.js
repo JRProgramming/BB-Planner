@@ -152,7 +152,6 @@ window.ds.push(sessionStorage.getItem("name"))
     window.y += 1;
       
     }
-       console.log(window.ds);
   window.hy.push(window.ds) 
   }
 
@@ -160,7 +159,6 @@ window.ds.push(sessionStorage.getItem("name"))
 window.gf += 1
  
 })
-    console.log(window.hy);
   for(i=0;i<window.id.length;i++)
   {
    var classers = firebase.database().ref("Classes/" + window.id[window.s])
@@ -169,6 +167,7 @@ window.gf += 1
    })
     window.s += 1
   }
+  location.href = "requestPermission"
 }
 
 function loadNotes() {
