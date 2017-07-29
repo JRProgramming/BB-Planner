@@ -130,7 +130,7 @@ window.gf = "Nothing"
         
 if(window.gf == "Nothing")
 {
-window.tr = note.title[0])
+window.tr = note.title[0]
 }
         console.log(window.tr)
         console.log(window.req)
