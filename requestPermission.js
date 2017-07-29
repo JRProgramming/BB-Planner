@@ -149,16 +149,20 @@ window.ds.push(sessionStorage.getItem("name"))
     window.y += 1;
     }
   }
-     console.log(window.ds);
+
+  window.hy.push(window.ds)
+  console.log(window.hy);
 window.gf += 1
-    var classers = firebase.database().ref("Classes/" + window.id[window.s])
+ 
+})
+  for(i=0;i<window.id.length;i++)
+  {
+   var classers = firebase.database().ref("Classes/" + window.id[window.s])
    classers.update({
          Request: window.ds
    })
     window.s += 1
-})
-
-  
+  }
 }
 
 function loadNotes() {
