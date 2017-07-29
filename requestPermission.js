@@ -127,7 +127,6 @@ if(joey.name != sessionStorage.getItem("name"))
      if(joey.Request == undefined)
      {
        window.ds = [];
-       console.log("HEY");
 window.ds.push(sessionStorage.getItem("name"));
    
      }
@@ -152,10 +151,11 @@ window.ds.push(sessionStorage.getItem("name"))
         }
       }
     window.y += 1;
+          console.log(window.ds);
+  window.hy.push(window.ds)
     }
   }
-    console.log(window.ds);
-  window.hy.push(window.ds)
+
 
 window.gf += 1
  
