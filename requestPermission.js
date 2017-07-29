@@ -127,6 +127,7 @@ if(joey.name != sessionStorage.getItem("name"))
      if(joey.Request == undefined)
      {
        window.ds = [];
+       console.log("HEY");
 window.ds.push(sessionStorage.getItem("name"));
    
      }
