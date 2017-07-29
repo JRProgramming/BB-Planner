@@ -150,10 +150,10 @@ window.ds.push(sessionStorage.getItem("name"))
         }
       }
     window.y += 1;
-             console.log(window.ds);
-  window.hy.push(window.ds) 
+      
     }
-
+       console.log(window.ds);
+  window.hy.push(window.ds) 
   }
 
 
