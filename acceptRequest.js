@@ -102,7 +102,7 @@ if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
-    console.log(window.tr)
+    
     window.req = []
   window.req.push(joey.Request)
   if(window.req[window.num] == note.title)
@@ -123,6 +123,7 @@ window.gf = "Nothing";
   }
 
 }
+        console.log(window.gf)
 if(window.gf == "Nothing")
 {
 window.tr.push(note.title[0])
