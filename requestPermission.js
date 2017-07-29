@@ -147,6 +147,7 @@ window.gr = "Nothing"
 window.ds.push(sessionStorage.getItem("name"))
         }
       }
+      console.log("SUP BROTHa");
     window.y += 1;
     }
   }
