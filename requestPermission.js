@@ -138,6 +138,7 @@ for(i=0;i<window.ds.length;i++)
 if(window.ds[i] == sessionStorage.getItem("name"))
 {
 window.gr = "Taken"
+  console.log("BYE")
 }
   else
   {
@@ -147,7 +148,7 @@ window.gr = "Nothing"
         if(window.gr == "Nothing")
         {
 window.ds.push(sessionStorage.getItem("name"))
-          console.log("BYE")
+          
         }
       }
     window.y += 1;
