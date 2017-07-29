@@ -152,10 +152,11 @@ window.ds.push(sessionStorage.getItem("name"))
   }
 
   window.hy.push(window.ds)
-  console.log(window.hy);
+
 window.gf += 1
  
 })
+    console.log(window.hy);
   for(i=0;i<window.id.length;i++)
   {
    var classers = firebase.database().ref("Classes/" + window.id[window.s])
