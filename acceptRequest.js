@@ -98,11 +98,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  console.log(joey.Access)
 if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
+  else
+  {
+   window.tr = []; 
+  }
+    console.log(joey.Access)
     window.req = []
   window.req.push(joey.Request)
   if(window.req[window.num] == note.title)
