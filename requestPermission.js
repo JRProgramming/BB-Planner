@@ -105,13 +105,8 @@ window.nameh.push(hg);
 }
 function loadData()
 {
-     var playersRef = firebase.database().ref("Classes/");
-playersRef.on("child_added", function(data, prevChildKey) {
-  var joey = data.val()
-  window.ih.push(joey.name);
 
-  })
-    for(i=0;i<window.ih.length;i++)
+  for(i=0;i<window.nameh.length;i++)
   {
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -120,7 +115,7 @@ if(joey.name != sessionStorage.getItem("name"))
    {
  window.nameb.push(joey.name)
 }
-    
+    console.log(
   
   if(window.nameb[window.gf].includes(window.nameh[window.y]) == true)
   {
@@ -159,7 +154,7 @@ window.ds.push(sessionStorage.getItem("name"))
 window.gf += 1
 })
 
-
+  
   var classers = firebase.database().ref("Classes/" + window.id[window.s])
    classers.update({
          Request: window.ds
