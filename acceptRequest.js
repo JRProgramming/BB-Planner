@@ -152,8 +152,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
      
   }
     console.log(window.req)
-  console.log(note.title)
-  if(window.req[window.num] == note.title)
+  console.log(note.title[0])
+  if(window.req[window.num] == note.title[0])
   {
     console.log("WAKADODLKDLKJWE")
 window.req.splice(window.num, 1)
