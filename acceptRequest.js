@@ -150,9 +150,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     window.req = []
   window.req = joey.Request
-    console.log(joey.Request);
   }
-  console.log(window.req[window.num])
+  console.log(window.num)
   if(window.req[window.num] == note.title)
   {
     console.log("WAKADODLKDLKJWE")
