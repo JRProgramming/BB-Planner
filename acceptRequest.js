@@ -111,15 +111,12 @@ if(joey.Access != undefined)
     {
     window.req = []
   window.req = joey.Request
-       console.log(window.num)
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
     window.num += 1
   }
 
-   console.log(window.req[window.num]);
-  console.log(note.title)
     }
 })
    
@@ -127,7 +124,10 @@ for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != note.title)
 {
+  if(window.gf != "Something")
+  {
 window.gf = "Nothing";
+  }
 }
   else
   {
@@ -142,7 +142,8 @@ window.gf = "Nothing"
         
 if(window.gf == "Nothing")
 {
-window.tr = note.title
+window.tr.push(note.title);
+  console.log(window.tr);
 }
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
