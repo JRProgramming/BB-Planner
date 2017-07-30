@@ -102,10 +102,11 @@ if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
-    
+    if(sessionStorage.getItem("name") == joey.name)
+    {
     window.req = []
-  window.req.push(joey.Request)
-  console.log(joey.Request);
+  window.req = joey.Request
+    }
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
@@ -133,7 +134,8 @@ if(window.gf == "Nothing")
 {
 window.tr = note.title[0]
 }
-        
+        console.log(window.tr)
+        console.log(window.req)
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
