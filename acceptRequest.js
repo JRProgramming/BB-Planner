@@ -150,7 +150,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     window.req = []
   window.req = joey.Request
+    console.log(joey.Request);
   }
+  console.log(window.req[window.num])
   if(window.req[window.num] == note.title)
   {
     console.log("WAKADODLKDLKJWE")
@@ -158,7 +160,6 @@ window.req.splice(window.num, 1)
   }
 window.num += 1
 })
-        console.log(window.req);
         window.num = 0;
            var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
