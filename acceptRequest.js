@@ -110,11 +110,13 @@ if(joey.Access != undefined)
     
     window.req = []
   window.req.push(joey.Request)
-  console.log(window.req);
+ 
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
   }
+   console.log(window.req[window.num]);
+  console.log(note.title)
 })
    
 for(i=0;i<window.tr.length;i++)
@@ -138,7 +140,6 @@ if(window.gf == "Nothing")
 {
 window.tr = note.title
 }
-        console.log(window.tr)
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
@@ -155,7 +156,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
 window.req.splice(window.num, 1)
   }
-  console.log(note.title)
 
 })
            var classers = firebase.database().ref("Classes/" + window.identification)
