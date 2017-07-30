@@ -1,3 +1,4 @@
+window.names = [];
 window.tr = [];
 window.req = [];
 window.number = 0;
@@ -18,7 +19,11 @@ window.names.push(joey.Request[i])
       }
     }
   }
-  if(window.names != undefined)
+  else
+  {
+window.names = []
+  }
+  if(window.names != [])
   {
     console.log("JOHNNY IS COL")
   loadNotes()
