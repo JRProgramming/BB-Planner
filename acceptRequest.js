@@ -105,6 +105,7 @@ if(joey.Access != undefined)
     
     window.req = []
   window.req.push(joey.Request)
+  console.log(joey.Request);
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
