@@ -17,6 +17,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
       for(i=0;i<bg.length;i++)
       {
 window.names.push(joey.Request[i])
+        console.log(window.names);
       }
     }
   }
