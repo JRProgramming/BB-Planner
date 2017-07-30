@@ -177,7 +177,8 @@ load()
 }
 
 function loadNotes() {
-  console.log(window.names.length);
+  if(window.names.length != undefined)
+  {
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
@@ -186,5 +187,6 @@ function loadNotes() {
                     addAndSaveNote(item.title, index); 
             };
        }
+  }
 }
 
