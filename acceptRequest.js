@@ -107,7 +107,8 @@ if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
-    
+    if(sessionStorage.getItem("name") == joey.name)
+    {
     window.req = []
   window.req.push(joey.Request)
  
@@ -117,6 +118,7 @@ window.req.splice(window.num, 1)
   }
    console.log(window.req[window.num]);
   console.log(note.title)
+    }
 })
    
 for(i=0;i<window.tr.length;i++)
