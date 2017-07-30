@@ -133,8 +133,7 @@ if(window.gf == "Nothing")
 {
 window.tr = note.title[0]
 }
-        console.log(window.tr)
-        console.log(window.req)
+        
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
@@ -151,7 +150,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
 window.req.splice(window.num, 1)
   }
-  console.log(window.req)
 
 })
            var classers = firebase.database().ref("Classes/" + window.identification)
