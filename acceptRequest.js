@@ -177,17 +177,13 @@ load()
 }
 
 function loadNotes() {
-  if(window.names.length != undefined)
-  {
-    console.log(window.names.length);
-       for(i=0;i<window.names.length;i++){
+
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, index); 
             };
-       }
-  }
+ 
 }
 
