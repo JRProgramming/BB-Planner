@@ -152,6 +152,14 @@ classers.update({
        Access: window.tr,
        Request: window.req
 });
+             var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("There was a network error and we need you to try again.");
+  } else {
+   location.href = "acceptRequest";
+  }
+}); 
 });  
       note.card.find("button").on("click", function() {
            var playersRef = firebase.database().ref("Classes/");
@@ -174,6 +182,14 @@ window.req.splice(i, 1)
 classers.update({
        Request: window.req
 });
+                     var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("There was a network error and we need you to try again.");
+  } else {
+   location.href = "acceptRequest";
+  }
+}); 
       })
     
    
