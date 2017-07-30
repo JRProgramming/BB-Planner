@@ -149,9 +149,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") == joey.name)
   {
     window.req = []
-     console.log(window.req[window.num])
-  console.log(note.title)
   window.req = joey.Request
+         console.log(window.req[window.num])
+  console.log(note.title)
   }
 
   if(window.req[window.num] == note.title)
