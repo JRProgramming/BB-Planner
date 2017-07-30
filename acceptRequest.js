@@ -114,9 +114,9 @@ if(joey.Access != undefined)
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
-    window.num += 1
+   
   }
-
+ window.num += 1
     }
 })
    
@@ -163,6 +163,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
 window.req.splice(window.num, 1)
   }
+     window.num += 1
   }
 })
            var classers = firebase.database().ref("Classes/" + window.identification)
