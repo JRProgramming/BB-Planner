@@ -110,7 +110,7 @@ if(joey.Access != undefined)
     if(sessionStorage.getItem("name") == joey.name)
     {
     window.req = []
-  window.req.push(joey.Request)
+  window.req = joey.Request
        console.log(window.num)
   if(window.req[window.num] == note.title)
   {
