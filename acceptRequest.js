@@ -155,7 +155,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
 window.req.splice(window.num, 1)
   }
-  console.log(window.req)
+  console.log(note.title)
 
 })
            var classers = firebase.database().ref("Classes/" + window.identification)
