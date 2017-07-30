@@ -21,7 +21,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
-    if(joey.Access != sessionStorage.getItem("name") || joey.Request != sessionStorage.getItem("name"))
+    if(joey.Access.includes(sessionStorage.getItem("name")) == false && joey.Request.includes(sessionStorage.getItem("name")) == false)
     {
   window.names.push(joey.name);
     }
