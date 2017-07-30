@@ -177,7 +177,7 @@ load()
 }
 
 function loadNotes() {
-  console.log(window.names);
+  console.log(window.names.length);
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
