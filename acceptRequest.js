@@ -106,12 +106,12 @@ if(joey.Access != undefined)
     {
     window.req = []
   window.req = joey.Request
-      console.log("sdkfjal");
     }
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
   }
+  window.num += 1
 })
    
 for(i=0;i<window.tr.length;i++)
@@ -135,8 +135,6 @@ if(window.gf == "Nothing")
 {
 window.tr = note.title[0]
 }
-        console.log(window.tr)
-        console.log(window.req)
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
@@ -147,14 +145,18 @@ classers.update({
            var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
     window.req = []
-  window.req.push(joey.Request)
+  window.req = joey.Request
+  }
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
   }
-
+window.num += 1
 })
+        console.log(window.req);
            var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Request: window.req
