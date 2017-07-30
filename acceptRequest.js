@@ -111,11 +111,13 @@ if(joey.Access != undefined)
     {
     window.req = []
   window.req.push(joey.Request)
- 
+       console.log(window.num)
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
+    window.num += 1
   }
+
    console.log(window.req[window.num]);
   console.log(note.title)
     }
