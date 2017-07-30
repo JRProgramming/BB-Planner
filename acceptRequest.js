@@ -135,6 +135,7 @@ if(window.gf == "Nothing")
 {
 window.tr = note.title[0]
 }
+        console.log(window.req);
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
