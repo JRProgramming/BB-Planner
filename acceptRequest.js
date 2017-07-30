@@ -150,7 +150,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     window.req = []
   window.req = joey.Request
-         console.log(window.req[window.num])
+         console.log(joey.Request)
   console.log(note.title)
   }
 
