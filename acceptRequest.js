@@ -110,7 +110,6 @@ if(joey.Access != undefined)
     
     window.req = []
   window.req.push(joey.Request)
-  console.log(joey.Request);
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
@@ -176,7 +175,6 @@ load()
 }
 
 function loadNotes() {
-  console.log(window.names);
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
