@@ -113,7 +113,7 @@ window.req.splice(window.num, 1)
   }
   window.num += 1
 })
-   
+   window.num = 0;
 for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != note.title)
@@ -152,11 +152,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
   if(window.req[window.num] == note.title)
   {
+    console.log("WAKADODLKDLKJWE")
 window.req.splice(window.num, 1)
   }
 window.num += 1
 })
         console.log(window.req);
+        window.num = 0;
            var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Request: window.req
