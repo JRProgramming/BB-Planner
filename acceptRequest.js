@@ -14,7 +14,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     {
  window.names = joey.Request
   }
-
+  }
 loadNotes()
   });
     
