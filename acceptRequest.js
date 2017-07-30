@@ -17,7 +17,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
       for(i=0;i<bg.length;i++)
       {
 window.names.push(joey.Request[i])
-        console.log(window.names);
       }
     }
   }
@@ -183,6 +182,7 @@ load()
 }
 
 function loadNotes() {
+  console.log(window.names);
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
