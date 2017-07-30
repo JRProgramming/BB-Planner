@@ -111,12 +111,14 @@ if(joey.Access != undefined)
     {
     window.req = []
   window.req = joey.Request
-  if(window.req[window.num] == note.title)
+      for(i=0;i<window.req.length;i++)
+    {
+  if(window.req[i] == note.title)
   {
-window.req.splice(window.num, 1)
+window.req.splice(i, 1)
    
   }
- window.num += 1
+    }
     }
 })
    
@@ -159,11 +161,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     window.req = []
   window.req = joey.Request
-  if(window.req[window.num] == note.title)
+    for(i=0;i<window.req.length;i++)
+    {
+  if(window.req[i] == note.title)
   {
-window.req.splice(window.num, 1)
+window.req.splice(i, 1)
   }
-     window.num += 1
+    }
   }
 })
            var classers = firebase.database().ref("Classes/" + window.identification)
