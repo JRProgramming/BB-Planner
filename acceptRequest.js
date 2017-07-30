@@ -17,17 +17,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
       {
 window.names.push(joey.Request[i])
       }
+        loadNotes()
     }
   }
-  else
-  {
-window.names = undefined
-  }
-  if(window.names != undefined)
-  {
-    console.log("JOHNNY IS COL")
-  loadNotes()
-  }
+
+
+
+ 
   });
 }
 
