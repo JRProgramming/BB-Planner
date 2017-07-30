@@ -106,6 +106,7 @@ if(joey.Access != undefined)
     {
     window.req = []
   window.req = joey.Request
+      console.log("sdkfjal");
     }
   if(window.req[window.num] == note.title)
   {
