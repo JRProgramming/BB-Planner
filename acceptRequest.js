@@ -150,13 +150,15 @@ classers.update({
            var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
     window.req = []
   window.req.push(joey.Request)
   if(window.req[window.num] == note.title)
   {
 window.req.splice(window.num, 1)
   }
-
+  }
 })
            var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
