@@ -21,6 +21,7 @@ window.names.push(joey.Request[i])
   }
   if(window.names != [])
   {
+    console.log("JOHNNY IS COL")
   loadNotes()
   }
   });
