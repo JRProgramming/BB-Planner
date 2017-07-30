@@ -19,7 +19,10 @@ window.names.push(joey.Request[i])
       }
     }
   }
+  if(window.names != [])
+  {
   loadNotes()
+  }
   });
 }
 
