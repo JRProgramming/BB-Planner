@@ -21,9 +21,9 @@ window.names.push(joey.Request[i])
   }
   else
   {
-window.names = []
+window.names = undefined
   }
-  if(window.names != [])
+  if(window.names != undefined)
   {
     console.log("JOHNNY IS COL")
   loadNotes()
