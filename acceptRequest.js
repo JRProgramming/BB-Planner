@@ -13,13 +13,16 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     if(joey.Request != undefined)
     {
-window.names.push(joey.Request[window.numb])
+      var bg = joey.Request
+      for(i=0;i<bg.length;i++)
+      {
+window.names.push(joey.Request[i])
+      }
     }
   }
-window.number += 1
+
   loadNotes()
   });
-  window.numb = 0;
 }
 
 
