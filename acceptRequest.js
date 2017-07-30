@@ -8,7 +8,6 @@ function load()
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  window.names = [];
   if(sessionStorage.getItem("name") == joey.name)
   {
     if(joey.Request != undefined)
@@ -21,8 +20,9 @@ window.names.push(joey.Request[i])
     }
   }
 
-  loadNotes()
+loadNotes()
   });
+    
 }
 
 
