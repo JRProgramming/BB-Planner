@@ -21,11 +21,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
-    console.log(joey.Access)
-    console.log(joey.Request)
-    if(joey.Access.indexOf(sessionStorage.getItem("name")) != -1&& joey.Request.indexOf(sessionStorage.getItem("name")) != -1)
+    if(joey.Access != undefined )
+    {
+    console.log(joey.Access.indexOf(sessionStorage.getItem("name")))
+    if(joey.Access.indexOf(sessionStorage.getItem("name")) != -1)
     {
   window.names.push(joey.name);
+    }
     }
   }
   loadNotes()
