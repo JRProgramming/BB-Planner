@@ -26,10 +26,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     console.log(joey.Access.indexOf(sessionStorage.getItem("name")))
     if(joey.Access.indexOf(sessionStorage.getItem("name")) == -1)
     {
-  window.access = "nothing"
-    }
-    }
-    if(joey.Request != undefined)
+          if(joey.Request != undefined)
     {
     console.log(joey.Request.indexOf(sessionStorage.getItem("name")))
          if(joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
@@ -40,6 +37,31 @@ playersRef.on("child_added", function(data, prevChildKey) {
       }
     }
     }
+    else
+    {
+      window.names.push(joey.name);
+    }
+    }
+      else
+      {
+       if(joey.Request != undefined)
+    {
+    console.log(joey.Request.indexOf(sessionStorage.getItem("name")))
+         if(joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
+    {
+      if(window.access == "nothing")
+      {
+  window.names.push(joey.name);
+      }
+    }
+    }
+    else
+    {
+      window.names.push(joey.name);
+    }
+      }
+    }
+
   }
   loadNotes()
 
