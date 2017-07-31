@@ -48,6 +48,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
                         }
                     }
                 }
+                }
                 else
                 {
                     window.names.push(joey.name);
@@ -59,7 +60,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
         }
 
-    }
+    
     loadNotes()
 
 });
