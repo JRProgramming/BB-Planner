@@ -21,7 +21,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
     window.names = [];
     if (sessionStorage.getItem("name") != joey.name)
     {
-        console.log(joey.name);
         if (joey.Access != undefined)
         {
             if (joey.Access.indexOf(sessionStorage.getItem("name")) === -1)
@@ -41,7 +40,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
         else
         {
             if (joey.Request != undefined)
-                {
+            {
                 if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
                 {
                     if (window.access == "nothing")
@@ -49,6 +48,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
                         window.names.push(joey.name);
                     }
                 }
+            }
+            else
+            {
+            window.names.push(joey.name);
             }
         }
    }
