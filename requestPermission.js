@@ -56,8 +56,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
             {
             window.names.push(joey.name);
             }
-        }
-    }
    }
 }
 
