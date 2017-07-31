@@ -24,6 +24,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
         if (joey.Access != undefined)
         {
             console.log(joey.name);
+            console.log(joey.Access)
             console.log(joey.Access.indexOf(sessionStorage.getItem("name")))
             if (joey.Access.indexOf(sessionStorage.getItem("name")) === -1)
             {
