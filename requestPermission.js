@@ -39,6 +39,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
         else
         {
+            console.log(joey.Access);
             if (joey.Request != undefined)
             {
                 if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
