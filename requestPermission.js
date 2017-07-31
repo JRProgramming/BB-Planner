@@ -21,7 +21,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
-    if(joey.Access != undefined )
+    if(joey.Access != undefined)
     {
     console.log(joey.Access.indexOf(sessionStorage.getItem("name")))
     console.log(joey.Request.indexOf(sessionStorage.getItem("name")))
@@ -30,6 +30,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.access = "nothing"
     }
     }
+    console.log(joey.Request)
     if(joey.Request != undefined)
     {
 
