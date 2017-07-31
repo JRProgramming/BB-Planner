@@ -23,7 +23,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     console.log(joey.Access.indexOf(sessionStorage.getItem("name")))
     console.log(joey.RequestindexOf(sessionStorage.getItem("name")))
-    if(joey.Access.indexOf(sessionStorage.getItem("name")) != -1&& joey.Request.indexOf(sessionStorage.getItem("name") != -1)
+    if(joey.Access.indexOf(sessionStorage.getItem("name")) != -1&& joey.Request.indexOf(sessionStorage.getItem("name")) != -1)
     {
   window.names.push(joey.name);
     }
