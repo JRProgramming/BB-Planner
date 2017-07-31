@@ -35,6 +35,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
                         window.names.push(joey.name);
                     }
                 }
+                else
+                {
+                window.names.push(joey.name);   
+                }
             }
         else
         {
@@ -51,11 +55,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
         }
    }
-            else
-            {
-               
-            }
-        }
+}
 
     
     loadNotes()
