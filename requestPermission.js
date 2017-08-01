@@ -52,19 +52,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
             window.names.push(joey.name);
             }
    }
-}
-    var john = ""
-if(window.names.length == 0)
+        if(window.names.length == 0)
 {
-    if(john != "JOHNNY")
-    {
-document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
-    }
+document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."  
 }
-else
-{
-john = "JOHNNY"
 }
+
+
     loadNotes()
 
 });
