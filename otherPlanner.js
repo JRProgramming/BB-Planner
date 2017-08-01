@@ -1,8 +1,9 @@
+window.names = []
 window.number = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  window.names = []
+
   if(sessionStorage.getItem("name") == joey.name)
   {
     if(joey.Access != undefined)
@@ -22,7 +23,7 @@ function addNote(title, text) {
    });
     div.appendTo(".mdl-layout__content")
         
-  title = title || window.names[window.number];
+  title = title || window.names;
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
