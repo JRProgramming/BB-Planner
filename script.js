@@ -155,7 +155,9 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
-
+$("#names").click(function(){
+    alert('I got a click');
+});
 function loadNotes() {
     window.id = window.identification
        for(i=0;i<window.green.length;i++){
