@@ -147,7 +147,6 @@ window.gf = "Nothing"
 if(window.gf == "Nothing")
 {
 window.tr.push(note.title);
-  console.log(window.tr);
 }
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
