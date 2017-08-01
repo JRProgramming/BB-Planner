@@ -155,6 +155,10 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
+function hey()
+{
+console.log("HEY");
+}
 
 function loadNotes() {
     window.id = window.identification
