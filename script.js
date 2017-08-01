@@ -157,7 +157,7 @@ function addAndSaveNote(title, text, index) {
 }
 function homepage()
 {
-location.href = "index.html"'
+location.href = "index.html";
 }
 function loadNotes() {
     window.id = window.identification
