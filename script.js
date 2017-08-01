@@ -155,9 +155,10 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
-$("#names").click(function(){
-    alert('I got a click');
-});
+function homepage()
+{
+location.href = "index.html"'
+}
 function loadNotes() {
     window.id = window.identification
        for(i=0;i<window.green.length;i++){
