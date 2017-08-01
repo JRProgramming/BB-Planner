@@ -93,7 +93,7 @@ location.href = "requestPermission"
 }
 function home()
 {
-location.href = " "
+location.href = "index.html"
 }
 
 function loadNotes() {
