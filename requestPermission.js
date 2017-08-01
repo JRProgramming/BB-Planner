@@ -34,7 +34,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
                 }
                 else
                 {
-                window.names.push(joey.name);   
+                    window.names.push(joey.name);
                 }
             }
         }
@@ -49,19 +49,18 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
             else
             {
-            window.names.push(joey.name);
+                window.names.push(joey.name);
             }
-   }
-        console.log(window.names);
-        if(window.names.length == 0)
-{
-document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."  
-}
-else
-{
-document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
-}
-}
+        }
+        if (window.names.length == 0)
+        {
+            document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
+        }
+        else
+        {
+            document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
+        }
+    }
 
 
     loadNotes()
@@ -151,68 +150,68 @@ function addAndSaveNote(title, index) {
 function loadData()
 {
 
-for(i=0;i<window.nameh.length;i++)
-{
-    var playersRef = firebase.database().ref("Classes/");
-    playersRef.on("child_added", function(data, prevChildKey) {
-        var joey = data.val()
-        if (joey.name != sessionStorage.getItem("name"))
-        {
-            window.nameb.push(joey.name)
-        }
-
-        if (window.nameb[window.gf].includes(window.nameh[window.y]) == true)
-        {
-            if (window.nameh[window.y] != undefined && window.nameb[window.gf] != undefined)
-            {
-                window.identification = joey.ID;
-                window.id.push(window.identification);
-                window.ds = joey.Request
-
-                if (joey.Request == undefined)
-                {
-                    window.ds = [];
-                    window.ds.push(sessionStorage.getItem("name"));
-
-                }
-                else
-                {
-                    for (i = 0; i < window.ds.length; i++)
-                    {
-                        if (window.ds[i] == sessionStorage.getItem("name"))
-                        {
-                            window.gr = "Taken"
-                        }
-                        else
-                        {
-                            window.gr = "Nothing"
-                        }
-                    }
-                    if (window.gr == "Nothing")
-                    {
-                        window.ds.push(sessionStorage.getItem("name"))
-
-                    }
-                }
-                window.y += 1;
-
-            }
-            window.hy.push(window.ds)
-        }
-
-
-        window.gf += 1
-
-    })
-    for (i = 0; i < window.id.length; i++)
+    for (i = 0; i < window.nameh.length; i++)
     {
-        var classers = firebase.database().ref("Classes/" + window.id[window.s])
-        classers.update({
-            Request: window.hy[window.s]
+        var playersRef = firebase.database().ref("Classes/");
+        playersRef.on("child_added", function(data, prevChildKey) {
+            var joey = data.val()
+            if (joey.name != sessionStorage.getItem("name"))
+            {
+                window.nameb.push(joey.name)
+            }
+
+            if (window.nameb[window.gf].includes(window.nameh[window.y]) == true)
+            {
+                if (window.nameh[window.y] != undefined && window.nameb[window.gf] != undefined)
+                {
+                    window.identification = joey.ID;
+                    window.id.push(window.identification);
+                    window.ds = joey.Request
+
+                    if (joey.Request == undefined)
+                    {
+                        window.ds = [];
+                        window.ds.push(sessionStorage.getItem("name"));
+
+                    }
+                    else
+                    {
+                        for (i = 0; i < window.ds.length; i++)
+                        {
+                            if (window.ds[i] == sessionStorage.getItem("name"))
+                            {
+                                window.gr = "Taken"
+                            }
+                            else
+                            {
+                                window.gr = "Nothing"
+                            }
+                        }
+                        if (window.gr == "Nothing")
+                        {
+                            window.ds.push(sessionStorage.getItem("name"))
+
+                        }
+                    }
+                    window.y += 1;
+
+                }
+                window.hy.push(window.ds)
+            }
+
+
+            window.gf += 1
+
         })
-        window.s += 1
+        for (i = 0; i < window.id.length; i++)
+        {
+            var classers = firebase.database().ref("Classes/" + window.id[window.s])
+            classers.update({
+                Request: window.hy[window.s]
+            })
+            window.s += 1
+        }
     }
-}
     location.href = "requestPermission"
 }
 
@@ -227,3 +226,4 @@ function loadNotes() {
         ;
     }
 }
+
