@@ -10,6 +10,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(sessionStorage.getItem("name") == joey.name)
   {
+    window.identification = joey.ID
     if(joey.Request != undefined)
     {
       var bg = joey.Request
@@ -23,7 +24,7 @@ window.names.push(joey.Request[i])
 
 
 
- 
+ checkForFriends()
   });
 }
 
@@ -212,4 +213,16 @@ function loadNotes() {
                     addAndSaveNote(item.title, index); 
             };
        }
+}
+function checkForFriends()
+{
+ var ref = firebase.database().ref("Classes/" + window.identification + "/Request");
+ref.once("value")
+  .then(function(snapshot) { 
+  window.a = snapshot.exists();
+ if(window.a == false)
+ {
+console.log("STUPID");
+ }
+  });
 }
