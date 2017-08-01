@@ -15,6 +15,7 @@ window.names = [];
   {
 document.getElementById("h1").innerHTML = "Seems like no one is sharing their planner with you."
 document.getElementById("h3").innerHTML = "Would you like to request access to your friend's planner?"
+document.getElementById("button1").innerHTML = "<button onclick = \"noFriend()\">Let's look for some friends</button><span><button onclick=\"home()\">Go back to my planner</button></span>"
   }
   loadNotes()
   });
