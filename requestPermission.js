@@ -57,6 +57,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
 {
 document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."  
 }
+else
+{
+document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
+}
 }
 
 
