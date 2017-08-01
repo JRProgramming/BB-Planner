@@ -145,7 +145,8 @@ function addAndSaveNote(title, index) {
 function loadData()
 {
 
-
+for(i=0;i<window.nameh.length;i++)
+{
     var playersRef = firebase.database().ref("Classes/");
     playersRef.on("child_added", function(data, prevChildKey) {
         var joey = data.val()
@@ -205,6 +206,7 @@ function loadData()
         })
         window.s += 1
     }
+}
     location.href = "requestPermission"
 }
 
