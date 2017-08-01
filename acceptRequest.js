@@ -222,7 +222,8 @@ ref.once("value")
   window.a = snapshot.exists();
  if(window.a == false)
  {
-console.log("STUPID");
+document.getElementById("h1").innerHTML = "No one has requested access to your planner."
+document.getElementById("h3").innerHTML = "You are cleared so far."
  }
   });
 }
