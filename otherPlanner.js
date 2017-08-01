@@ -92,7 +92,7 @@ location.href = "requestPermission"
 }
 function home()
 {
-location.href = ""
+location.href = " "
 }
 
 function loadNotes() {
