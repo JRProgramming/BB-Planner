@@ -20,11 +20,12 @@ window.names.push(joey.Request[i])
       }
         loadNotes()
     }
+     checkForFriends()
   }
 
 
 
- checkForFriends()
+
   });
 }
 
