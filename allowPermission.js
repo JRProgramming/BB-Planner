@@ -121,6 +121,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
    })
 }
 
+function homepage()
+{
+location.href = "index.html";
+}
+
 function loadNotes() {
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
