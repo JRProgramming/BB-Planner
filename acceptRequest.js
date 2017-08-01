@@ -2,7 +2,7 @@ window.names = [];
 window.tr = [];
 window.req = [];
 window.number = 0;
-window.num = 0;
+window.num = 0; 
 function load()
 {
 var playersRef = firebase.database().ref("Classes/");
