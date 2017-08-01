@@ -8,7 +8,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     if(joey.Access != undefined)
     {
-  window.names.push(joey.Access);
+  window.names = joey.Access;
     }
   }
   loadNotes()
@@ -21,8 +21,7 @@ function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
-    div.appendTo(".mdl-layout__content")
-     console.log(window.names);   
+    div.appendTo(".mdl-layout__content")   
   title = title || window.names[window.number];
         
     var title_e = $("<div/>", {
