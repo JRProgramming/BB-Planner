@@ -202,6 +202,10 @@ window.onload = function()
 {
 load()
 }
+function homepage()
+{
+location.href = "index.html";
+}
 
 function loadNotes() {
   console.log(window.names.length);
