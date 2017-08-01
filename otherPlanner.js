@@ -11,6 +11,10 @@ window.names = [];
   window.names = joey.Access;
     }
   }
+  if(joey.Access == undefined)
+  {
+console.log("HI");
+  }
   loadNotes()
   });
 
