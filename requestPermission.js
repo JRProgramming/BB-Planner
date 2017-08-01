@@ -44,10 +44,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             {
                 if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
                 {
-                    if (window.access == "nothing")
-                    {
-                        window.names.push(joey.name);
-                    }
+                    window.names.push(joey.name);
                 }
             }
             else
