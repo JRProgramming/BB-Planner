@@ -13,7 +13,8 @@ window.names = [];
   }
   if(joey.Access == undefined)
   {
-console.log("HI");
+document.getElementById("h1").innerHTML = "Seems like no one is sharing their planner with you."
+document.getElementById("h3").innerHTML = "Would you like to request access to your friend's planner?"
   }
   loadNotes()
   });
