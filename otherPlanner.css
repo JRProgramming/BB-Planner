@@ -8,6 +8,7 @@ body, .mdl-layout__content {background: #FAFAFA /* According to material design 
 .note .mdl-card__title {background: #263238; color:#FFF}
 .note .mdl-card__title-text {border:0; outline:0; background: transparent;}
 .note .mdl-card__supporting-text, .note .mdl-card__supporting-text ul {border: 0; outline:0; font-size: 150%}
+.button {}
 @media (max-width:480px) {
     .note {display:block;width:auto;}
 }
