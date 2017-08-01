@@ -6,7 +6,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
 window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
-  window.names.push(joey.name);
+    if(joey.Access != undefined)
+    {
+  window.names.push(joey.Access);
+    }
   }
   loadNotes()
   });
@@ -66,14 +69,11 @@ function addAndSaveNote(title, index) {
         title: note.title,
     }
 
-     $("a").on("click", function() {
-      if(window.b == 0)
-      {
+     note.card.find("a").on("click", function() {
        window.tilt = note.title
         window.b += 1
         sessionStorage.setItem("nameS", window.tilt)
         location.href = "viewPlanner"
-      }
     });
     
    
