@@ -86,6 +86,15 @@ function addAndSaveNote(title, index) {
     
 }
 
+function noFriend()
+{
+location.href = "requestPermission"
+}
+function home()
+{
+location.href = ""
+}
+
 function loadNotes() {
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
