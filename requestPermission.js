@@ -52,6 +52,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             window.names.push(joey.name);
             }
    }
+        console.log(window.names);
         if(window.names.length == 0)
 {
 document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."  
