@@ -22,7 +22,7 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
-        
+     console.log(window.names);   
   title = title || window.names[window.number];
         
     var title_e = $("<div/>", {
