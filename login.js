@@ -329,8 +329,12 @@ return;
         console.log(errorMessage);
          
       });
-      // [END createwithemail]
+      firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+     
       toggleSignIn()
+  } 
+});
     }
 function logOut()
 {
