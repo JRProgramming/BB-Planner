@@ -155,7 +155,7 @@ function addAndSaveNote(title, text, index) {
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
       console.log(window.texter);
-       window.texter = $(this).html($("<input/>",{type:"checkbox"}))
+       window.texter = $(this).html("SUP")
       updateSave()
     }
 });
