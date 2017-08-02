@@ -160,7 +160,7 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         $(this).html("<div><br></div>YEP BRO")
+         $(this).html("<div>This is confirmation</div>")
          window.texter = $(this).html()
          updateSave();
           window.numj = 0;
