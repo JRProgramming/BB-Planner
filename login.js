@@ -295,7 +295,6 @@ firebase.auth().onAuthStateChanged(function(user) {
  ow.errors    * Handles the sign up button press.
      */
     function handleSignUp() {
-       console.log("YOWDY");
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
@@ -324,6 +323,10 @@ return;
           alert(errorMessage);
         }
         console.log(errorMessage);
+         if(errorMessage != "")
+         {
+        handleSignUp()
+         }
       });
       // [END createwithemail]
       toggleSignIn()
