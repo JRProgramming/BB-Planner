@@ -82,7 +82,7 @@ classes.push("Specials")
 for(i=0;i<classes.length;i++)
 {
   var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[i]);
- classers.set({
+ classers.update({
      homework: "No homework"
 });
 }
