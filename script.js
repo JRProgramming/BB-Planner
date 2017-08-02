@@ -152,6 +152,7 @@ window.texter = $(this).html() + "SUP BRO"
          {
          window.texter = $(this).html();
          }
+         console.log(window.texter);
          updateSave();
           window.numj = 0;
          
@@ -170,7 +171,6 @@ window.texter = $(this).html() + "SUP BRO"
          window.hat = note.title;
          window.texter = $(this).html() + "SUP BRO"
          window.g = "enterkey"
-         console.log(window.texter);
          updateSave();
           window.numj = 0;
          
