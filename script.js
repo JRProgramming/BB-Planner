@@ -154,8 +154,18 @@ function addAndSaveNote(title, text, index) {
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
       console.log(window.texter);
+         while(window.classes[window.numj] != note.title)
+      {
+    window.numj += 1
+      }
+       if(window.classes[window.numj] == note.title)
+       {
+         window.hat = note.title;
        window.texter = $(this).html("SUP")
-      onUp
+         updateSave();
+          window.numj = 0;
+         
+       }
     }
 });
      note.onUp = onUp;
