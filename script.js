@@ -143,7 +143,15 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
+         if(window.g == "enterkey")
+         {
+window.texter = this.html() + "SUP BRO"
+           window.g = ""
+         }
+         else
+         {
          window.texter = $(this).html();
+         }
          updateSave();
           window.numj = 0;
          
@@ -161,6 +169,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html() + "SUP BRO"
+         window.g = "enterkey"
          console.log(window.texter);
          updateSave();
           window.numj = 0;
