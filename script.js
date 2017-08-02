@@ -153,8 +153,7 @@ function addAndSaveNote(title, text, index) {
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
-        note.text = "THIS IS STUPID"
-      $(this).html() = note.text
+       window.texter = "THIS IS STUPID"
     }
 });
      note.onUp = onUp;
