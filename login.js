@@ -270,6 +270,7 @@ else
           {
            if (errorMessage == "A network error (such as timeout, interrupted connection or unreachable host) has occurred.")
            {
+              console.log("HOWDY");
            location.href = ""
            }
              else
