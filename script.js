@@ -153,6 +153,7 @@ window.texter = $(this).html() + "SUP BRO"
          window.texter = $(this).html();
          }
          console.log(window.texter);
+         $(this).html(window.texter)
          updateSave();
           window.numj = 0;
          
