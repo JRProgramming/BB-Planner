@@ -236,7 +236,6 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
-console.log(exists);
 if(exists == "unique")
 {
 if(document.getElementById("namej").innerHTML != "")
@@ -296,6 +295,7 @@ firebase.auth().onAuthStateChanged(function(user) {
  ow.errors    * Handles the sign up button press.
      */
     function handleSignUp() {
+       console.log("YOWDY");
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
