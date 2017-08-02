@@ -154,6 +154,7 @@ function addAndSaveNote(title, text, index) {
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
        window.texter = "THIS IS STUPID"
+      updateSave()
     }
 });
      note.onUp = onUp;
