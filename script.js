@@ -146,7 +146,7 @@ function addAndSaveNote(title, text, index) {
          window.texter = $(this).html();
          updateSave();
           window.numj = 0;
-         $(this).html().addEventListener("keydown", function (e) {
+         note.card.find(".mdl-card__supporting-text").addEventListener("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
         console.log("BOOO");
     }
