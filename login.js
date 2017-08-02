@@ -236,7 +236,7 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
-
+console.log(exists);
 if(exists == "unique")
 {
 if(document.getElementById("namej").innerHTML != "")
