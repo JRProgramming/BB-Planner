@@ -155,7 +155,6 @@ function addAndSaveNote(title, text, index) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
       console.log(window.texter);
        window.texter = $(this).html("SUP")
-      updateSave()
     }
 });
      note.onUp = onUp;
