@@ -214,7 +214,10 @@ function loadData()
     }
     location.href = "requestPermission"
 }
-
+function homepage()
+{
+location.href = "index.html";
+}
 function loadNotes() {
     for (i = 0; i < window.names.length; i++) {
         var note = addAndSaveNote();
