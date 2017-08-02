@@ -153,7 +153,6 @@ function addAndSaveNote(title, text, index) {
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
-      console.log(window.texter);
          while(window.classes[window.numj] != note.title)
       {
     window.numj += 1
@@ -161,8 +160,8 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         console.log(window.hat);
        window.texter = $(this).html("SUP")
+         console.log(window.texter)
          updateSave();
           window.numj = 0;
          
