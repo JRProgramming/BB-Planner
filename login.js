@@ -319,7 +319,7 @@ return;
         // [START_EXCLUDE]
          if(errorMessage == "A network error (such as timeout, interrupted connection or unreachable host) has occurred.")
          {
-        handleSignUp()
+        
          }
         if (errorCode == 'auth/weak-password') {
           alert('The password is too weak.');
