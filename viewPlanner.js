@@ -114,6 +114,11 @@ function addAndSaveNote(title, text, index) {
     
 }
 
+function homepage()
+{
+location.href = "index.html";
+}
+
 function loadNotes() {
        for(i=0;i<window.array.length;i++){
        var note = addAndSaveNote();
