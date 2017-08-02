@@ -74,7 +74,7 @@ else if (englishd.checked == true)
   classes.push("None");
  }
 classes.push("Specials")
- classers.set({
+ classers.update({
      name: window.names,
      classes: classes
 });
