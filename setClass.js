@@ -4,10 +4,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var data = sessionStorage.getItem("name")
  window.names = joey.name
  console.log(data);
-if(data == names)
+if(data == window.names)
 {
  window.identification = joey.ID
- console.log(window.identification);
 }
  
 });
@@ -75,7 +74,7 @@ else if (englishd.checked == true)
   classes.push("None");
  }
 classes.push("Specials")
- classers.update({
+ classers.set({
      name: window.names,
      classes: classes
 });
@@ -83,7 +82,7 @@ classes.push("Specials")
 for(i=0;i<classes.length;i++)
 {
   var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[i]);
- classers.update({
+ classers.set({
      homework: "No homework"
 });
 }
