@@ -145,7 +145,7 @@ function addAndSaveNote(title, text, index) {
          window.hat = note.title;
          if(window.g == "enterkey")
          {
-window.texter = this.html() + "SUP BRO"
+window.texter = $(this).html() + "SUP BRO"
            window.g = ""
          }
          else
