@@ -82,7 +82,8 @@ function updateSave()
 
 function addNote(title, text) {
    var div = $("<div/>", {
-        "class": "mdl-card mdl-shadow--2dp note"            
+        "class": "mdl-card mdl-shadow--2dp note",
+        "id": "div"
    });
     div.appendTo(".mdl-layout__content")
         
@@ -152,8 +153,7 @@ window.texter = $(this).html() + "SUP BRO"
          {
          window.texter = $(this).html();
          }
-         console.log(window.texter);
-         $(this).html(window.texter)
+        document.getElementById("div").innerHTML = window.texter
          updateSave();
           window.numj = 0;
          
