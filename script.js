@@ -82,8 +82,7 @@ function updateSave()
 
 function addNote(title, text) {
    var div = $("<div/>", {
-        "class": "mdl-card mdl-shadow--2dp note",
-        "id": "div"
+        "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
         
@@ -144,16 +143,7 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         if(window.g == "enterkey")
-         {
-window.texter = $(this).html() + "SUP BRO"
-           window.g = ""
-         }
-         else
-         {
          window.texter = $(this).html();
-         }
-        document.getElementById("div").innerHTML = window.texter
          updateSave();
           window.numj = 0;
          
@@ -170,8 +160,8 @@ window.texter = $(this).html() + "SUP BRO"
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         window.texter = $(this).html() + "SUP BRO"
-         window.g = "enterkey"
+         $(this).html(window.texter + "This is confirmation")
+         window.texter = $(this).html()
          updateSave();
           window.numj = 0;
          
