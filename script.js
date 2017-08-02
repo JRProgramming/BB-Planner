@@ -163,6 +163,7 @@ function addAndSaveNote(title, text, index) {
          $(this).html(window.texter + "<div>This is confirmation</div>")
          window.texter = $(this).html()
          updateSave();
+         window.obj.title = $(this).html()
           window.numj = 0;
          
        }
