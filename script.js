@@ -144,9 +144,6 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html()
-         $(this).html("<input type=\"checkbox\"><br>" + window.texter);
-         window.texter = $(this).html()
-         placeCaretAtEnd(this)
          updateSave();
           window.numj = 0;
          
@@ -163,7 +160,7 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         $(this).html(window.texter + "<input type=\"checkbox\"><br>")
+         $(this).html("<input type=\"checkbox\">" + window.texter + "<br><input type=\"checkbox\"><br>")
          window.texter = $(this).html()
          console.log(window.texter);
          placeCaretAtEnd(this)
