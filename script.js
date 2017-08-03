@@ -162,7 +162,7 @@ function addAndSaveNote(title, text, index) {
          window.hat = note.title;
          $(this).html("<input type=\"checkbox\">")
          window.texter = $(this).html()
-         console.log(window.texter);
+         console.log(this);
          placeCaretAtEnd(this)
          updateSave();
           window.numj = 0;
