@@ -173,7 +173,7 @@ function addAndSaveNote(title, text, index) {
         txt = txt + c[i].nodeName + "<br>";
     }
          console.log(txt)
-         console.log(el.childNodes[6])
+         console.log(el.childNodes[7])
           window.numj = 0;
          
        }
