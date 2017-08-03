@@ -144,6 +144,13 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html();
+         var range = document.createRange();
+    var sel = window.getSelection();
+    range.setStart(el.childNodes[4], 10);
+    range.collapse(true);
+    sel.removeAllRanges();
+    sel.addRange(range);
+    el.focus();
          updateSave();
           window.numj = 0;
          
