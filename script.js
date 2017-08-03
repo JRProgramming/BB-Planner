@@ -135,23 +135,7 @@ function addAndSaveNote(title, text, index) {
     });
   
       
-        var onUp = function() {
-      while(window.classes[window.numj] != note.title)
-      {
-    window.numj += 1
-      }
-       if(window.classes[window.numj] == note.title)
-       {
-         window.hat = note.title;
-         window.texter = $(this).html();
-         
-         updateSave();
-          window.numj = 0;
-         
-       }
-       
-     }
-    note.card.find(".mdl-card__supporting-text").on("input", onUp); 
+        
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
          while(window.classes[window.numj] != note.title)
@@ -172,7 +156,19 @@ function addAndSaveNote(title, text, index) {
     }
     else
     {
-     console.log("YOWDY") 
+     while(window.classes[window.numj] != note.title)
+      {
+    window.numj += 1
+      }
+       if(window.classes[window.numj] == note.title)
+       {
+         window.hat = note.title;
+         window.texter = $(this).html();
+         
+         updateSave();
+          window.numj = 0;
+         
+       }
     }
 });
      note.onUp = onUp;
