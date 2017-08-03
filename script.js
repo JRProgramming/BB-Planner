@@ -171,7 +171,6 @@ function addAndSaveNote(title, text, index) {
        }
     }
 });
-     note.onUp = onUp;
  
     return note;
     
