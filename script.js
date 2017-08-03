@@ -164,7 +164,13 @@ function addAndSaveNote(title, text, index) {
          $(this).html(window.texter + "This is confirmation")
          window.texter = $(this).html()
          updateSave();
-         console.log(note.card.find(".mdl-card__supporting-text").document.body.childNodes)
+         var c = document.body.childNodes;
+    var txt = "";
+    var i;
+    for (i = 0; i < c.length; i++) {
+        txt = txt + c[i].nodeName + "<br>";
+    }
+         console.log(txt)
           window.numj = 0;
          
        }
