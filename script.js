@@ -161,19 +161,9 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         $(this).html(window.texter + "<input type=\"checkbox\">")
+         $(this).html(window.texter + "Hey")
          window.texter = $(this).html()
          updateSave();
-          var el = note.card.find(".mdl-card__supporting-text");
-         
-         var c = document.body.childNodes;
-    var txt = "";
-    var i;
-    for (i = 0; i < c.length; i++) {
-        txt = txt + c[i].nodeName + "<br>";
-    }
-         console.log(txt)
-         console.log(el.childNodes[7])
           window.numj = 0;
          
        }
