@@ -144,13 +144,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html();
-         var range = document.createRange();
-    var sel = window.getSelection();
-    range.setStart(el.childNodes[4], 10);
-    range.collapse(true);
-    sel.removeAllRanges();
-    sel.addRange(range);
-    el.focus();
+         
          updateSave();
           window.numj = 0;
          
@@ -170,6 +164,7 @@ function addAndSaveNote(title, text, index) {
          $(this).html(window.texter + "This is confirmation")
          window.texter = $(this).html()
          updateSave();
+         console.log($(this).html().document.body.childNodes())
           window.numj = 0;
          
        }
