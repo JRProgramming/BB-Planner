@@ -164,7 +164,7 @@ function addAndSaveNote(title, text, index) {
          $(this).html(window.texter + "This is confirmation")
          window.texter = $(this).html()
          updateSave();
-           placeCaretAtEnd(note.card.find(".mdl-card__supporting-text"));
+         console.log(note.card.find(".mdl-card__supporting-text").document.body.childNodes)
           window.numj = 0;
          
        }
@@ -175,23 +175,7 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
-function placeCaretAtEnd(el) {
-    el.focus();
-    if (typeof window.getSelection != "undefined"
-            && typeof document.createRange != "undefined") {
-        var range = document.createRange();
-        range.selectNodeContents(el);
-        range.collapse(false);
-        var sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-    } else if (typeof document.body.createTextRange != "undefined") {
-        var textRange = document.body.createTextRange();
-        textRange.moveToElementText(el);
-        textRange.collapse(false);
-        textRange.select();
-    }
-}
+
 
 
 function homepage()
