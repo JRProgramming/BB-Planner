@@ -164,7 +164,7 @@ function addAndSaveNote(title, text, index) {
          $(this).html(window.texter + "<input type=\"checkbox\">")
          window.texter = $(this).html()
          updateSave();
-          var el = note.card.find(".dml-card__supporting-text");
+          var el = note.card.find(".mdl-card__supporting-text");
          console.log(el.childNodes[6])
          var c = document.body.childNodes;
     var txt = "";
