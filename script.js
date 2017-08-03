@@ -165,7 +165,7 @@ function addAndSaveNote(title, text, index) {
          window.texter = $(this).html()
          updateSave();
           var el = note.card.find(".mdl-card__supporting-text");
-         console.log(el.childNodes[6])
+         
          var c = document.body.childNodes;
     var txt = "";
     var i;
@@ -173,6 +173,7 @@ function addAndSaveNote(title, text, index) {
         txt = txt + c[i].nodeName + "<br>";
     }
          console.log(txt)
+         console.log(el.childNodes[6])
           window.numj = 0;
          
        }
