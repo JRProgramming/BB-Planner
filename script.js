@@ -163,6 +163,7 @@ function addAndSaveNote(title, text, index) {
          window.hat = note.title;
          $(this).html(window.texter + "Hey")
          window.texter = $(this).html()
+            placeCaretAtEnd(this);
          updateSave();
           window.numj = 0;
          
@@ -174,6 +175,25 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
+
+function placeCaretAtEnd(el) {
+    el.focus();
+    if (typeof window.getSelection != "undefined"
+            && typeof document.createRange != "undefined") {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        range.collapse(false);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    } else if (typeof document.body.createTextRange != "undefined") {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.collapse(false);
+        textRange.select();
+    }
+}
+
 
 
 
