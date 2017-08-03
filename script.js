@@ -136,6 +136,7 @@ function addAndSaveNote(title, text, index) {
   
       
         var onUp = function() {
+          console.log(this);
       while(window.classes[window.numj] != note.title)
       {
     window.numj += 1
