@@ -167,7 +167,7 @@ function addAndSaveNote(title, text, index) {
              var el = note.card.find(".mdl-card__supporting-text");
     var range = document.createRange();
     var sel = window.getSelection();
-    range.setStart(el.childNodes[3], 1);
+    range.setStart(el.childNodes[0], 3);
     range.collapse(true);
     sel.removeAllRanges();
     sel.addRange(range);
