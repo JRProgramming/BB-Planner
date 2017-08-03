@@ -164,15 +164,7 @@ function addAndSaveNote(title, text, index) {
          $(this).html(window.texter + "This is confirmation")
          window.texter = $(this).html()
          updateSave();
-             var el = note.card.find(".mdl-card__supporting-text");
-    var range = document.createRange();
-    var sel = window.getSelection();
-         console.log(el.childNodes[0])
-    range.setStart(el.childNodes[0], 4);
-    range.collapse(true);
-    sel.removeAllRanges();
-    sel.addRange(range);
-    el.focus();
+           placeCaretAtEnd(note.card.find(".mdl-card__supporting-text"));
           window.numj = 0;
          
        }
@@ -183,6 +175,25 @@ function addAndSaveNote(title, text, index) {
     return note;
     
 }
+function placeCaretAtEnd(el) {
+    el.focus();
+    if (typeof window.getSelection != "undefined"
+            && typeof document.createRange != "undefined") {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        range.collapse(false);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    } else if (typeof document.body.createTextRange != "undefined") {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.collapse(false);
+        textRange.select();
+    }
+}
+
+
 function homepage()
 {
 location.href = "index.html";
