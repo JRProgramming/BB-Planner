@@ -170,6 +170,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  
 })
     window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
+        console.log(window.texter)
          updateSave();
         $(this).html("")
          window.numj = 0;
