@@ -159,7 +159,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.texter = [];
          window.hat = note.title;
-         for(i=0;i<window.hw.[window.numj].lenth;i++)
+         for(i=0;i<window.hw[window.numj].lenth;i++)
          {
           window.texter.push(window.hw[window.numj][i] 
          }
