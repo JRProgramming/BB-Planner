@@ -161,7 +161,6 @@ function addAndSaveNote(title, text, index) {
          console.log(note.card.find(".mdl-card__supporting-text").html())
          note.card.find(".mdl-card__supporting-text").html("");
          updateSave();
-         note.card.find(".mdl-card__supporting-text").html(window.texter)
          $(this).html("")
           window.numj = 0;
          
