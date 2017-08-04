@@ -55,7 +55,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
  if(joey != "None" )
   {
   window.hw.push(joey);
-   window.bullet.push(window.hw)
   }
 
 })
@@ -161,17 +160,13 @@ function addAndSaveNote(title, text, index) {
       }
        if(window.classes[window.numj] == note.title)
        {
-         window.hat = note.title;
          
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).html() + "<br>")
-         
-         console.log(window.bullet)
-       window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
-        console.log(window.texter)
-         updateSave();
-        $(this).html("")
-         window.numj = 0;
-         yo += 1
+         var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
+playersRef.on("child_added", function(data, prevChildKey) {
+ var joey = data.val()
+ alert(joey)
+})
+       
          }
       
     }
