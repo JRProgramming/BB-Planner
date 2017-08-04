@@ -167,11 +167,14 @@ function addAndSaveNote(title, text, index) {
          var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
+ if(joey == "No homework")
+ {
+joey = null
+ }
  window.texter = joey
  
 })
     window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
-        console.log(window.texter)
          updateSave();
         $(this).html("")
          window.numj = 0;
