@@ -161,7 +161,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          var preHTML = $(this).html()
-         $(this).append("<br><input type=\"checkbox\">")
+         $(this).append("<input type=\"checkbox\">")
          window.texter = $(this).html()
          console.log(this);
          updateSave();
