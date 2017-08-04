@@ -163,8 +163,7 @@ function addAndSaveNote(title, text, index) {
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
   window.texter.push(joey);
-})
-         console.log(window.texter)
+  console.log(window.texter)
          window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
          note.card.find(".mdl-card__supporting-text").html("");
          updateSave();
@@ -173,7 +172,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
          $(this).html("")
           window.numj = 0;
          yo += 1
-         
+         })
        } 
     }
   })
