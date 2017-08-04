@@ -167,6 +167,7 @@ function addAndSaveNote(title, text, index) {
          $(this).html("")
          for(i=0;i<array.length;i++)
          {
+           alert(array[i])
          $(this).append("<input type=\"checkbox\">" + array[i])
          }
          window.texter = $(this).html()
