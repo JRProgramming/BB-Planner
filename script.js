@@ -2,7 +2,6 @@ window.j = 0;
 window.kool = 0;
 window.namers = [];
 window.green = [];
-var array = [];
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -161,15 +160,6 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         var preHTML = $(this).html()
-         array.push(preHTML);
-         
-         $(this).html("")
-         for(i=0;i<array.length;i++)
-         {
-           alert(array[i])
-         $(this).append("<input type=\"checkbox\">" + array[i] + "<br>")
-         }
          window.texter = $(this).html()
          placeCaretAtEnd(this)
          console.log(this);
