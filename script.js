@@ -162,7 +162,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title
         console.log(window.identification)
-         var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.hat);
+         var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
  alert(joey)
