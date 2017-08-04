@@ -158,21 +158,14 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         window.texter = [];
-        var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.hat + "/homework");
-playersRef.on("child_added", function(data, prevChildKey) {
-  var joey =  data.val()
-  window.texter.push(joey);
-  console.log(window.texter)
          window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
-         note.card.find(".mdl-card__supporting-text").html("");
          updateSave();
          console.log(window.texter);
          note.card.find(".mdl-card__supporting-text").html(window.texter)
          $(this).html("")
           window.numj = 0;
          yo += 1
-         })
+       
        } 
     }
   })
