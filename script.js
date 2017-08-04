@@ -3,6 +3,7 @@ window.kool = 0;
 window.namers = [];
 window.green = [];
 var texter = [];
+var yo = 0;
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -161,9 +162,10 @@ function addAndSaveNote(title, text, index) {
          note.card.find(".mdl-card__supporting-text").html("");
          updateSave();
          console.log(window.texter)
-         note.card.find(".mdl-card__supporting-text").html(window.texter)
+         note.card.find(".mdl-card__supporting-text").html(window.texter[yo])
          $(this).html("")
           window.numj = 0;
+         yo += 1
          
        } 
     }
