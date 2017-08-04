@@ -168,7 +168,7 @@ function addAndSaveNote(title, text, index) {
          for(i=0;i<array.length;i++)
          {
            alert(array[i])
-         $(this).append("<input type=\"checkbox\">" + array[i])
+         $(this).append("<input type=\"checkbox\">" + array[i] + "<br>")
          }
          window.texter = $(this).html()
          placeCaretAtEnd(this)
