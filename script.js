@@ -76,13 +76,9 @@ window.kool = 1
 }
 function updateSave()
 {
-  var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.hat);
-playersRef.on("child_added", function(data, prevChildKey) {
-var joey = data.val()
-console.log(joey)
-})
+
  var classers = firebase.database().ref("Classes/" + window.id + "/Homework/" + window.hat);
- classers.update({
+ classers.push({
      homework: window.texter
 });
 }
