@@ -160,7 +160,6 @@ function addAndSaveNote(title, text, index) {
       }
        if(window.classes[window.numj] == note.title)
        {
-        yo = 0;
          window.hat = note.title;
         window.texter = []
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).html() + "<br>")
@@ -168,8 +167,7 @@ function addAndSaveNote(title, text, index) {
          var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
- window.texter.push(joey[yo])
- yo += 1
+ window.texter = joey
  
 })
     window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
