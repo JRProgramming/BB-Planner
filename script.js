@@ -161,7 +161,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter = $(this).html()
-         alert(this)
+         alert($(this).html())
          updateSave();
           window.numj = 0;
          
