@@ -107,14 +107,16 @@ function addNote(title, text) {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
     });
+  
     sup_text.html(text);
     sup_text.appendTo(div);
-  
-  var textfieldsj $("<div/>", {
-    "class": "mdl-card__actions mdl-card--border"
-   "input": "type=\"text\" 
-  }
-   textfieldsj.appendTo(div);
+   var textfield_j = $("<div/>", {
+    "class": "mdl-card__actions mdl-card--border",
+     "contenteditable": ""
+  });
+  textfield_j.appendTo(div);
+ 
+   
   
     var menu = $("<div/>", {
         "class": "mdl-card__menu" 
