@@ -103,7 +103,7 @@ function addNote(title, text) {
    
 
        text = text || window.hw[window.j]; 
-    var sup_text = $("<input type=\"text\"/>", {
+    var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
     });
