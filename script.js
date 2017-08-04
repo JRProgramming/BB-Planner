@@ -54,8 +54,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(joey.homework != undefined)
   {
   console.log(joey.homework);
+    window.hw.push(joey.homework)
   }
-  if(joey != "None")
+  else if(joey != "None" && joey.homework == undefined)
   {
   window.hw.push(joey);
   }
