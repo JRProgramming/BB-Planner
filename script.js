@@ -161,6 +161,7 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
+        window.texter = []
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).html() + "<br>")
          
          var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
