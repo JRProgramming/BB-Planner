@@ -113,7 +113,7 @@ function addNote(title, text) {
    var textfield_j = $("<div/>", {
     "class": "mdl-card__actions mdl-card--border",
      "contenteditable": ""
-  });
+  }); 
   textfield_j.appendTo(div);
  
    
@@ -159,7 +159,7 @@ function addAndSaveNote(title, text, index) {
        
      }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
-  note.card.find("mdl-card__actions mdl-card--border-text").on("input", function () {
+  note.card.find(".mdl-card__actions mdl-card--border-text").on("input", function () {
     console.log("WOWOWOWOWOWOLSKDJf;laksjdf")
   })
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
