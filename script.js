@@ -139,13 +139,17 @@ function addAndSaveNote(title, text, index) {
         text: note.text
     }
     window.classes.push(note.title)
-     note.card.find(".mdl-card__title-text").on("input", function() {
-        window.obj.title = $(this).val();
-    });
   
       
         var onUp = function() {
-      while(window.classes[window.numj] != note.title)
+     
+       
+     }
+    note.card.find(".mdl-card__supporting-text").on("input", onUp); 
+  note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
+    if(e.keyCode === 13)
+    {
+       while(window.classes[window.numj] != note.title)
       {
     window.numj += 1
       }
@@ -154,16 +158,10 @@ function addAndSaveNote(title, text, index) {
          window.hat = note.title;
          window.texter = $(this).html()
          updateSave();
+         $(this).html()
           window.numj = 0;
          
-       }
-       
-     }
-    note.card.find(".mdl-card__supporting-text").on("input", onUp); 
-  note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
-    if(e.keyCode === 13)
-    {
-      console.log($(this).html())
+       } 
     }
   })
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
