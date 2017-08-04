@@ -165,6 +165,7 @@ function addAndSaveNote(title, text, index) {
          $(this).html("")
          
        window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
+        console.log(window.texter)
          updateSave();
          window.numj = 0;
          yo += 1
