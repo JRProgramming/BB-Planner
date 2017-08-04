@@ -114,7 +114,8 @@ function addNote(title, text) {
     sup_text.appendTo(div);
    var textfield_j = $("<div/>", {
     "class": "mdl-card__actions mdl-card--border",
-     "contenteditable": ""
+     "contenteditable": "",
+     "placeholder": "Type down your homework here"
   }); 
   textfield_j.appendTo(div);
  
