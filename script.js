@@ -164,9 +164,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   window.texter = joey
   window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
+  updateSave();
 })
          
-         updateSave();
+         
          $(this).html("")
           window.numj = 0;
          yo += 1
