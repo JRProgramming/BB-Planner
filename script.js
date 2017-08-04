@@ -144,6 +144,7 @@ function addAndSaveNote(title, text, index) {
   
       
         
+         window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
  
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
@@ -156,7 +157,6 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
          window.texter.push(note.card.find(".mdl-card__supporting-text").html())
-         window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
          updateSave();
          note.card.find(".mdl-card__supporting-text").html(window.texter)
          $(this).html("")
