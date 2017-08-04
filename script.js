@@ -4,6 +4,7 @@ window.namers = [];
 window.green = [];
 var texter = [];
 var yo = 0;
+var bo = 0;
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -156,8 +157,9 @@ function addAndSaveNote(title, text, index) {
       }
        if(window.classes[window.numj] == note.title)
        {
+         window.texter = [];
          window.hat = note.title;
-         window.texter.push(note.card.find(".mdl-card__supporting-text").html())
+         console.log(window.hw);
          window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
          note.card.find(".mdl-card__supporting-text").html("");
          updateSave();
@@ -174,24 +176,6 @@ function addAndSaveNote(title, text, index) {
  
     return note;
     
-}
-
-function placeCaretAtEnd(el) {
-    el.focus();
-    if (typeof window.getSelection != "undefined"
-            && typeof document.createRange != "undefined") {
-        var range = document.createRange();
-        range.selectNodeContents(el);
-        range.collapse(false);
-        var sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-    } else if (typeof document.body.createTextRange != "undefined") {
-        var textRange = document.body.createTextRange();
-        textRange.moveToElementText(el);
-        textRange.collapse(false);
-        textRange.select();
-    }
 }
 
 
