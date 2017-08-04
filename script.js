@@ -157,16 +157,26 @@ function addAndSaveNote(title, text, index) {
       }
        if(window.classes[window.numj] == note.title)
        {
+         window.texter = [];
          window.hat = note.title;
+         if(yo == 0){
+         for(i=0;i<window.hw[window.numj].length;i++)
+         {
+          window.texter.push(window.hw[window.numj][i]); 
+         }
+         }
+         console.log(window.texter)
          window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
+         note.card.find(".mdl-card__supporting-text").html("");
          updateSave();
          console.log(window.texter);
          note.card.find(".mdl-card__supporting-text").html(window.texter)
          $(this).html("")
           window.numj = 0;
          yo += 1
-       
-       } 
+         }
+       }
+      
     }
   })
 
