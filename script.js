@@ -168,13 +168,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   window.texter = joey
   
-})
+
          console.log(window.texter)
          window.texter = "<input type=\"checkbox\">" + $(this).html() + "<br>"
          updateSave();
          
          
-          
+})
          }
       
     }
