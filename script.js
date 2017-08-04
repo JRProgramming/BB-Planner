@@ -152,7 +152,7 @@ function addAndSaveNote(title, text, index) {
       }
        if(window.classes[window.numj] == note.title)
        {
-         console.log($(this).html()
+         console.log($(this).html())
          window.hat = note.title;
          window.texter = $(this).html()
          updateSave();
