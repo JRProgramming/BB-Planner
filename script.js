@@ -109,7 +109,13 @@ function addNote(title, text) {
     });
     sup_text.html(text);
     sup_text.appendTo(div);
-    
+  
+  var textfieldsj $("<div/>", {
+    "class": "mdl-card__actions mdl-card--border"
+   "input": "type=\"text\" 
+  }
+   textfieldsj.appendTo(div);
+  
     var menu = $("<div/>", {
         "class": "mdl-card__menu" 
     });
