@@ -3,6 +3,7 @@ window.kool = 0;
 window.namers = [];
 window.green = [];
 var texter = [];
+ var yu = []
 var yo = 0;
 var bo = 0;
 window.num = 0
@@ -51,12 +52,7 @@ for(i=0;i<window.lengths;i++)
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
-  if(joey.homework != undefined)
-  {
-  console.log(joey.homework);
-    window.hw.push(joey.homework)
-  }
-  else if(joey != "None" && joey.homework == undefined)
+ if(joey != "None" )
   {
   window.hw.push(joey);
   }
@@ -83,7 +79,7 @@ function updateSave()
 {
 
  var classers = firebase.database().ref("Classes/" + window.id + "/Homework/" + window.hat);
- classers.push({
+ classers.update({
      homework: window.texter
 });
 }
