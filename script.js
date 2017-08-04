@@ -169,7 +169,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
  if(joey == "No homework")
  {
-joey = null
+joey = []
  }
  window.texter = joey
  
