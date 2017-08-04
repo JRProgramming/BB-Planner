@@ -159,11 +159,9 @@ function addAndSaveNote(title, text, index) {
        {
          window.texter = [];
          window.hat = note.title;
-         if(yo == 0){
          for(i=0;i<window.hw[window.numj].length;i++)
          {
-          window.texter.push(window.hw[window.numj][i]); 
-         }
+          window.texter = window.hw[window.numj]; 
          }
          console.log(window.texter)
          window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
@@ -175,7 +173,6 @@ function addAndSaveNote(title, text, index) {
           window.numj = 0;
          yo += 1
          }
-       }
       
     }
   })
