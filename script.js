@@ -162,8 +162,14 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
         window.texter = []
+        if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
+        {
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).html() + "<br>")
-         
+        }
+        else
+        {
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\">" + $(this).html() + "<br>")
+        }
          var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
