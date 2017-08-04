@@ -107,7 +107,6 @@ function addNote(title, text) {
         "class": "mdl-card__supporting-text",
         "contenteditable": ""
     });
-    sup_text.append("<input type=\"text\">")
     sup_text.html(text);
     sup_text.appendTo(div);
     
