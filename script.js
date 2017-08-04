@@ -2,6 +2,7 @@ window.j = 0;
 window.kool = 0;
 window.namers = [];
 window.green = [];
+var texter = [];
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -154,11 +155,10 @@ function addAndSaveNote(title, text, index) {
        {
          console.log($(this).html())
          window.hat = note.title;
-         window.texter = $(this).html()
+         window.texter.push($(this).html())
          updateSave();
          note.card.find(".mdl-card__supporting-text").html(window.texter)
          $(this).html("")
-         console.log($(this).html())
           window.numj = 0;
          
        } 
