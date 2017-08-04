@@ -158,9 +158,14 @@ function addAndSaveNote(title, text, index) {
        if(window.classes[window.numj] == note.title)
        {
          window.hat = note.title;
-         updateSave();
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).html() + "<br>")
-         window.texter = note.card.find(".mdl-card__supporting-text").html()
+         var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.hat);
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+  window.texter = joey
+})
+         window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
+         updateSave();
          $(this).html("")
           window.numj = 0;
          yo += 1
