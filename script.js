@@ -95,7 +95,8 @@ function addNote(title, text) {
     title_e.appendTo(div);
         
     var title_text = $("<input>", {
-        "class": "mdl-card__title-text"
+        "class": "mdl-card__title-text",
+        "contenteditable": "false"
     });
     
     title_text.val(title);
@@ -105,7 +106,7 @@ function addNote(title, text) {
        text = text || window.hw[window.j]; 
     var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
-        "contenteditable": ""
+        "contenteditable": "false"
     });
   
     sup_text.html(text);
