@@ -159,8 +159,11 @@ function addAndSaveNote(title, text, index) {
        
      }
     note.card.find(".mdl-card__supporting-text").on("input", onUp); 
-  note.card.find(".mdl-card__actions.mdl-card--border").on("input", function () {
-    console.log("WOWOWOWOWOWOLSKDJf;laksjdf")
+  note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
+    if(e.keyCode === 13)
+    {
+      console.log($(this).html())
+    }
   })
   note.card.find(".mdl-card__supporting-text").on("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
