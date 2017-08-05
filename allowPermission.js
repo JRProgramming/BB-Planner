@@ -72,9 +72,10 @@ function addAndSaveNote(title, index) {
     }
 
      note.card.find("input[type=\"checkbox\"]").on("click", function() {
-       alert("Houston here we go");
+       
        for(i=0;i<window.names.length;i++)
        {
+         alert(note.card.find("input[type=\"checkbox\"]").is(':checked'))
          if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
          {
            var hg = note.title[i]
@@ -103,7 +104,7 @@ window.nameh.push(hg);
 }
 function loadData()
 {
-   alert(window.nameh);
+  
 for(i=0;i<window.nameh.length;i++)
 {
     var playersRef = firebase.database().ref("Classes/");
