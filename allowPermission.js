@@ -1,4 +1,3 @@
-window.names = [];
 window.joe = [];
 window.nameh = []
 window.hat = "";
@@ -12,9 +11,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(sessionStorage.getItem("name") != joey.name)
   {
-  window.names.push(joey.name);
-  }
+  window.names = joey.name;
+    
   loadNotes()
+  }
 
   });
 
@@ -130,12 +130,10 @@ location.href = "index.html";
 }
 
 function loadNotes() {
-       for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, index); 
             };
-       }
 }
