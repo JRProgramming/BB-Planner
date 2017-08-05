@@ -119,6 +119,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
    classers.update({
          Access: window.nameh
    })
+  location.href = ""
 }
 
 function homepage()
