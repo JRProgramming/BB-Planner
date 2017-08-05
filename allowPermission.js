@@ -92,7 +92,7 @@ var d = i
 window.nameh.push(hg);
          }
        }
-      
+      alert(window.nameh)
     });
     
    
@@ -105,7 +105,6 @@ function loadData()
   
 for(i=0;i<window.nameh.length;i++)
 {
-  alert(window.nameh);
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
