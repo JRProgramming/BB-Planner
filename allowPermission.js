@@ -72,7 +72,7 @@ function addAndSaveNote(title, index) {
     }
 
      note.card.find("input[type=\"checkbox\"]").on("click", function() {
-       
+       alert("Houston here we go");
        for(i=0;i<window.names.length;i++)
        {
          if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
