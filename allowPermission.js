@@ -6,13 +6,14 @@ window.numj = 0;
 window.gf = 0;
 window.b = 0;
 window.l = 0;
+var count = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names = joey.name;
-    
+    count += 1
   loadNotes()
   }
 
@@ -71,8 +72,7 @@ function addAndSaveNote(title, index) {
     }
 
      note.card.find("input[type=\"checkbox\"]").on("click", function() {
-       alert(window.names);
-       for(i=0;i<window.names.length;i++)
+       for(i=0;i<count;i++)
        {
          alert(note.card.find("input[type=\"checkbox\"]").is(':checked'))
          if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
