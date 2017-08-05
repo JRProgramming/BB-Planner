@@ -92,8 +92,8 @@ var d = i
          var hg = note.title[i]
 window.nameh.push(hg);
          }
-         alert(window.nameh);
        }
+      
     });
     
    
@@ -103,7 +103,7 @@ window.nameh.push(hg);
 }
 function loadData()
 {
-  
+   alert(window.nameh);
 for(i=0;i<window.nameh.length;i++)
 {
     var playersRef = firebase.database().ref("Classes/");
