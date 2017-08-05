@@ -92,7 +92,7 @@ var d = i
          var hg = note.title[i]
 window.nameh.push(hg);
          }
-         console.log(window.nameh);
+         alert(window.nameh);
        }
     });
     
