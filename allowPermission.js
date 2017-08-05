@@ -77,7 +77,7 @@ function addAndSaveNote(title, index) {
          alert(note.card.find("input[type=\"checkbox\"]").is(':checked'))
          if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
          {
-           var hg = note.title[i]
+           var hg = note.title[0]
           for(i=0;i<window.nameh.length;i++)
           {
 if(hg == window.nameh[i])
@@ -89,7 +89,7 @@ var d = i
          }
          else
          {
-         var hg = note.title[i]
+         var hg = note.title[0]
 window.nameh.push(hg);
          }
        }
