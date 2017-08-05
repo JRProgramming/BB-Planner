@@ -104,22 +104,24 @@ window.nameh.push(hg);
 function loadData()
 {
   
-
+for(i=0;i<window.nameh.length;i++)
+{
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
+  if(window.nameh[i] == joey.name)
   {
      window.identification = joey.ID
   }
   
-    window.gf += 1
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
-         Access: window.nameh
+         Access: sessionStorage.getItem("name")
    })
+}
   location.href = ""
+  
 }
 
 function homepage()
