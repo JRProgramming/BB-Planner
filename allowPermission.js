@@ -12,6 +12,35 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(sessionStorage.getItem("name") != joey.name)
   {
+    if(joey.Access != undefined)
+    {
+      if(joey.Access[1] != undefined)
+      {
+for(i=0;i<joey.Access.length;i++)
+{
+if(joey.Access[i] == sessionStorage.getItem("name"))
+{
+window.kl = "Taken"
+}
+}
+        if(window.kl != "Taken")
+        {
+window.names = joey.name
+        }
+   }
+   else
+   {
+if(joey.Access != sessionStorage.getItem("name"))
+{
+window.names = joey.name
+}
+   }
+     else
+     {
+window.names = joey.name
+     } 
+    
+    
   window.names = joey.name;
     count += 1
   loadNotes()
@@ -109,7 +138,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(window.nameh[i] == joey.name)
   {
      window.identification = joey.ID
-    if(joey.Access == undefined)
+      if(joey.Access == undefined)
     {
 window.user.push(sessionStorage.getItem("name"))
     }
@@ -120,6 +149,7 @@ window.user = joey.Access
      
     }
   }
+  
    alert(window.user)
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
