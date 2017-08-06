@@ -40,6 +40,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
         }
         else
         {
+            if (sessionStorage.getItem("name") == joey.name)
+    {
             if (joey.Request != undefined)
             {
                 if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
@@ -60,6 +62,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
         {
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
+   }
     }
 
 
