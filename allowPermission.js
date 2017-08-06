@@ -13,7 +13,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") != joey.name)
   {
     alert("Passed first test")
-
+    if(joey.Access != undefined)
+    {
+   alert("Passed second test")
+   }
+     else
+     {
+ 
+     } 
+    
 
   }
 
