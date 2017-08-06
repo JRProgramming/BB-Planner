@@ -6,8 +6,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     if(joey.Access != undefined)
     {
-      alert(joey.Access)
   window.names = joey.Access;
+       loadNotes()
     }
   if(joey.Access == undefined)
   {
@@ -16,7 +16,7 @@ document.getElementById("h3").innerHTML = "Would you like to request access to y
 document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" onclick = \"noFriend()\">Let's look for some friends</button><span><button class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" style=\"margin: 8px\" onclick=\"home()\">Go back to my planner</button></span>"
   }
   }
-  loadNotes()
+ 
   });
 
 
