@@ -12,6 +12,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(sessionStorage.getItem("name") != joey.name)
   {
+    alert("Passed first test")
     if(joey.Access != undefined)
     {
       if(joey.Access[1] != undefined)
@@ -39,7 +40,7 @@ window.names = joey.name
      {
 window.names = joey.name
      } 
-    
+    }
     
   window.names = joey.name;
     count += 1
