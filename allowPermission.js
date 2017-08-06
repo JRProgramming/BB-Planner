@@ -142,6 +142,43 @@ for(i=0;i<window.nameh.length;i++)
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
+window.id = joey.ID
+    if(joey.Request != undefined)
+    {
+window.gh = joey.Request
+ for(x=0;x<window.gh.length;x++)
+ {
+if(joey.Request != window.nameh[i])
+{
+  if(fey != "Something")
+  {
+fey = "Nothing"
+  }
+}
+     else
+   {
+fey = "Something"
+   }
+}
+    }
+    else
+    {
+fey = "Nothing"
+    }
+    if(fey == "Something")
+    {
+for(q=0;q<window.gh.length;q++)
+{
+if(joey.Request[q] == window.nameh[i])
+{
+window.gh.splice(q,1)
+}
+}
+    }
+  }
+  alert(window.gh)
   if(window.nameh[i] == joey.name)
   {
      window.identification = joey.ID
