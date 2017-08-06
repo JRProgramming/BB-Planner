@@ -90,7 +90,6 @@ var d = i
          var hg = note.title
 window.nameh.push(hg);
          }
-      alert(window.nameh)
     });
     
    
@@ -103,18 +102,29 @@ function loadData()
   
 for(i=0;i<window.nameh.length;i++)
 {
+  window.user = [];
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(window.nameh[i] == joey.name)
   {
      window.identification = joey.ID
+    if(joey.Access == undefined)
+    {
+window.user.push(sessionStorage.getItem("name"))
+    }
+    else
+    {
+window.user = joey.Access
+      window.user.push(sessionStorage.getItem("name"))
+     
+    }
   }
-  
+   alert(window.user)
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
-         Access: sessionStorage.getItem("name")
+         Access: window.user
    })
 }
   location.href = ""
