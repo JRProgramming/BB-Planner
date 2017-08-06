@@ -10,48 +10,46 @@ var count = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") != joey.name)
-  {
-    
-     if(joey.Access != undefined)
+    if (sessionStorage.getItem("name") == joey.name)
     {
-     
-      if(joey.Access[1] != undefined)
-      {
-for(i=0;i<joey.Access.length;i++)
-{
-if(joey.Access[i] == sessionStorage.getItem("name"))
-{
-window.kl = "Taken"
-}
-}
-        if(window.kl != "Taken")
+        if (joey.Access != undefined)
         {
-  window.names = joey.name;
-    count += 1
-  loadNotes()
+            if (joey.Access.indexOf(joey.name) === -1)
+            {
+               window.access = "Confirmed"
+            }
         }
-   }
-   else
-   {
-if(joey.Access != sessionStorage.getItem("name"))
-{
-  window.names = joey.name;
-    count += 1
-  loadNotes()
-}
-   }
     }
-     else
-     {
-  window.names = joey.name;
-    count += 1
-  loadNotes()
-     } 
-    
+    else
+    {
+if(window.access == "Confirmed")
+{
+ if (joey.Request != undefined)
+                {
+                    if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
+                    {
+                        window.names.push(joey.name);
+                    }
+                }
+                else
+                {
+                    window.names.push(joey.name);
+                }
+}
+ }
+    if (window.names.length == 0)
+        {
+            document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
+        }
+        else
+        {
+            document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
+        }
     
 
-  }
+
+    loadNotes()
+
 
   });
 
