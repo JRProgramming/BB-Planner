@@ -1,4 +1,3 @@
-window.names = []
 window.number = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -102,7 +101,6 @@ location.href = "index.html";
 }
 
 function loadNotes() {
-  alert(window.names.length);
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
