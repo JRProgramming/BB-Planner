@@ -34,7 +34,6 @@ window.kl = "Taken"
    }
    else
    {
-      alert("1st Passed");
 if(joey.Access != sessionStorage.getItem("name"))
 {
   window.names = joey.name;
