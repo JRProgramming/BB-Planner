@@ -15,7 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
     
      if(joey.Access != undefined)
     {
-      alert("Passed");
+     
       if(joey.Access[1] != undefined)
       {
 for(i=0;i<joey.Access.length;i++)
@@ -34,6 +34,7 @@ window.kl = "Taken"
    }
    else
    {
+      alert("1st Passed");
 if(joey.Access != sessionStorage.getItem("name"))
 {
   window.names = joey.name;
