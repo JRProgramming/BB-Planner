@@ -100,7 +100,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
     if(sessionStorage.getItem("name") == joey.name)
     {
-      
+      window.id = joey.ID
     window.req = []
   window.req = joey.Request
       for(i=0;i<window.req.length;i++)
@@ -146,11 +146,14 @@ if(window.gf == "Nothing")
 {
 window.tr.push(sessionStorage.getItem("name"));
 }
-        alert(window.tr);
+        
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
-       Access: window.tr,
        Request: window.req
+});
+          var classers = firebase.database().ref("Classes/" + window.id)
+classers.update({
+       Access: window.tr
 });
              var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
