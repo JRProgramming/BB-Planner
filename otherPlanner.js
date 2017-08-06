@@ -6,6 +6,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   {
     if(joey.Access != undefined)
     {
+      alert(joey.Access)
   window.names = joey.Access;
     }
   if(joey.Access == undefined)
