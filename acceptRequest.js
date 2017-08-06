@@ -97,13 +97,10 @@ function addAndSaveNote(title, index) {
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-if(joey.Access != undefined)
-{
-  window.tr = joey.Access
-}
-    if(sessionStorage.getItem("name") != joey.name)
+
+    if(sessionStorage.getItem("name") == joey.name)
     {
-      window.identification = joey.ID
+      
     window.req = []
   window.req = joey.Request
       for(i=0;i<window.req.length;i++)
@@ -115,8 +112,16 @@ window.req.splice(i, 1)
   }
     }
     }
+  else
+  {
+window.identification = joey.ID
+    if(joey.Access != undefined)
+{
+  window.tr = joey.Access
+}
+  }
 })
-   alert(window.identification);
+   
 for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != sessionStorage.getItem("name"))
@@ -141,6 +146,7 @@ if(window.gf == "Nothing")
 {
 window.tr.push(sessionStorage.getItem("name"));
 }
+        alert(window.tr);
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr,
