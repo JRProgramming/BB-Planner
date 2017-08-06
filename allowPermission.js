@@ -12,6 +12,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(sessionStorage.getItem("name") != joey.name)
   {
+    alert("Passed");
      if(joey.Access != undefined)
     {
       if(joey.Access[1] != undefined)
