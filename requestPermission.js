@@ -21,10 +21,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
     window.names = [];
     if (sessionStorage.getItem("name") != joey.name)
     {
+        alert("Passed 1st test");
         if (joey.Access != undefined)
         {
+            alert("Passed 2nd test")
             if (joey.Access.indexOf(sessionStorage.getItem("name")) === -1)
             {
+                alert("Failed 3rdd test");
                 if (joey.Request != undefined)
                 {
                     if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
@@ -40,6 +43,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
         }
         else
         {
+            alert("Passed else test");
             if (sessionStorage.getItem("name") == joey.name)
     {
             if (joey.Request != undefined)
