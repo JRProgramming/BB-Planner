@@ -119,7 +119,7 @@ window.req.splice(i, 1)
    alert(window.identification);
 for(i=0;i<window.tr.length;i++)
 {
-if(window.tr[i] != note.title)
+if(window.tr[i] != sessionStorage.getItem("name"))
 {
   if(window.gf != "Something")
   {
@@ -139,7 +139,7 @@ window.gf = "Nothing"
         
 if(window.gf == "Nothing")
 {
-window.tr.push(note.title);
+window.tr.push(sessionStorage.getItem("name"));
 }
    var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
