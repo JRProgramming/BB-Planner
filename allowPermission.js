@@ -179,7 +179,6 @@ window.gh.splice(q,1)
 }
     }
   }
-  alert(window.gh)
   if(window.nameh[i] == joey.name)
   {
      window.identification = joey.ID
