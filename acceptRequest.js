@@ -91,15 +91,7 @@ function addAndSaveNote(title, index) {
     window.obj = {
         title: note.title,
     }
-   var playersRef = firebase.database().ref("Classes/");
-playersRef.on("child_added", function(data, prevChildKey) {
-  var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
-  {
-     window.identification = joey.ID
-  }
 
-});
       note.card.find("a").on("click", function() {
 
    var playersRef = firebase.database().ref("Classes/");
@@ -109,8 +101,9 @@ if(joey.Access != undefined)
 {
   window.tr = joey.Access
 }
-    if(sessionStorage.getItem("name") == joey.name)
+    if(sessionStorage.getItem("name") != joey.name)
     {
+      window.identification = joey.ID
     window.req = []
   window.req = joey.Request
       for(i=0;i<window.req.length;i++)
@@ -208,7 +201,6 @@ location.href = "index.html";
 }
 
 function loadNotes() {
-  console.log(window.names.length);
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
