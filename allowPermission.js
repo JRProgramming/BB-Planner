@@ -156,8 +156,6 @@ window.user = joey.Access
      
     }
   }
-  
-   alert(window.user)
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
