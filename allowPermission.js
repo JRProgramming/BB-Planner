@@ -147,11 +147,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
 window.id = joey.ID
     if(joey.Request != undefined)
     {
-      alert(joey.Request);
+    
 window.gh = joey.Request
  for(x=0;x<window.gh.length;x++)
  {
-if(joey.Request != window.nameh[i])
+if(joey.Request[x] != window.nameh[i])
 {
   if(fey != "Something")
   {
