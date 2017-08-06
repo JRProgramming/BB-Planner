@@ -198,6 +198,10 @@ window.user = joey.Access
    classers.update({
          Access: window.user
    })
+   var classers = firebase.database().ref("Classes/" + window.id)
+   classers.update({
+         Request: window.gh
+   })
 }
   location.href = ""
   
