@@ -147,11 +147,11 @@ if(window.gf == "Nothing")
 window.tr.push(sessionStorage.getItem("name"));
 }
         
-   var classers = firebase.database().ref("Classes/" + window.identification)
+   var classers = firebase.database().ref("Classes/" + window.id)
 classers.update({
        Request: window.req
 });
-          var classers = firebase.database().ref("Classes/" + window.id)
+          var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
        Access: window.tr
 });
