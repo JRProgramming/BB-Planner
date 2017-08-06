@@ -116,7 +116,7 @@ window.req.splice(i, 1)
     }
     }
 })
-   
+   alert(window.identification);
 for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != note.title)
@@ -162,6 +162,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") == joey.name)
   {
     window.req = []
+    window.identification = joey.ID
   window.req = joey.Request
     for(i=0;i<window.req.length;i++)
     {
