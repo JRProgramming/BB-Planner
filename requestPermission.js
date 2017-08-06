@@ -39,9 +39,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
                 }
             }
         }
-        else
-        {
-            alert("Passed else test");
+    }
+    else
+    {
+      alert("Passed else test");
             if (sessionStorage.getItem("name") != joey.name)
     {
         alert("Passed the 2nd test")
@@ -66,7 +67,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
         {
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
-   }
     }
 
 
