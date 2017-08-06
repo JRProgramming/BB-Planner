@@ -13,40 +13,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") != joey.name)
   {
     alert("Passed first test")
-    if(joey.Access != undefined)
-    {
-      if(joey.Access[1] != undefined)
-      {
-for(i=0;i<joey.Access.length;i++)
-{
-if(joey.Access[i] == sessionStorage.getItem("name"))
-{
-window.kl = "Taken"
-}
-}
-        if(window.kl != "Taken")
-        {
-  window.names = joey.name;
-    count += 1
-  loadNotes()
-        }
-   }
-   else
-   {
-if(joey.Access != sessionStorage.getItem("name"))
-{
-  window.names = joey.name;
-    count += 1
-  loadNotes()
-}
-   }
-     else
-     {
-  window.names = joey.name;
-    count += 1
-  loadNotes()
-     } 
-    
+
 
   }
 
