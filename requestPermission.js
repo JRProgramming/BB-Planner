@@ -25,7 +25,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
         {
             if (joey.Access.indexOf(sessionStorage.getItem("name")) === -1)
             {
-                alert("Failed 3rdd test");
                 if (joey.Request != undefined)
                 {
                     if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
@@ -40,12 +39,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
         }
     }
-    else
-    {
-      alert("Passed else test");
+
             if (sessionStorage.getItem("name") != joey.name)
     {
-        alert("Passed the 2nd test")
             if (joey.Request != undefined)
             {
                 if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
@@ -55,7 +51,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
             else
             {
-                alert("Passed all of the tests");
                 window.names.push(joey.name);
             }
         }
@@ -67,7 +62,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
         {
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
-    }
+    
 
 
     loadNotes()
