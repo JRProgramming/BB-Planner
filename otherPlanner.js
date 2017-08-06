@@ -100,13 +100,11 @@ location.href = "index.html";
 }
 
 function loadNotes() {
-       for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, index); 
             };
-       }
 }
 
