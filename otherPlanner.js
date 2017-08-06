@@ -1,13 +1,14 @@
+window.names = []
 window.number = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
+window.names = [];
   if(sessionStorage.getItem("name") == joey.name)
   {
     if(joey.Access != undefined)
     {
   window.names = joey.Access;
-       loadNotes()
     }
   if(joey.Access == undefined)
   {
@@ -16,7 +17,7 @@ document.getElementById("h3").innerHTML = "Would you like to request access to y
 document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" onclick = \"noFriend()\">Let's look for some friends</button><span><button class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" style=\"margin: 8px\" onclick=\"home()\">Go back to my planner</button></span>"
   }
   }
- 
+  loadNotes()
   });
 
 
@@ -27,7 +28,7 @@ function addNote(title, text) {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")   
-  title = title || window.names;
+  title = title || window.names[window.number];
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title" 
@@ -101,11 +102,12 @@ location.href = "index.html";
 }
 
 function loadNotes() {
+       for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, index); 
             };
+       }
 }
-
