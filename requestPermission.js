@@ -35,8 +35,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
             window.names.push(joey.name)
         }
-    
-    alert(access)
+
 if(access != undefined)
 {
     for(i=0;i<window.names.length;i++)
