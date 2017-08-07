@@ -55,6 +55,7 @@ window.names.splice(i, 1)
 }
 }
 }
+}
     else
     {
 if(request != undefined)
