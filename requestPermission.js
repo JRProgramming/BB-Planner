@@ -46,7 +46,6 @@ if(access.indexOf(window.names[i]) != -1)
 window.names.splice(i, 1)
 }
     }
-    alert(window.names)
     if(request != undefined)
 {
 for(i=0;i<window.names.length;i++)
@@ -74,7 +73,7 @@ window.names.splice(i, 1)
 }
 
 }
-
+alert(window.names);
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
