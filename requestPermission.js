@@ -41,7 +41,7 @@ if(access != undefined)
 {
     for(i=0;i<window.names.length;i++)
     {
- alert(joey.Access)
+ alert(access)
  alert(window.names[i]);
 if(access.indexOf(window.names[i]) != -1)
 {
