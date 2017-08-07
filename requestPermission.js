@@ -39,7 +39,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 
 if(access.length != 0)
 {
-    
+  alert(window.names.length)  
     for(i=0;i<window.names.length;i++)
     {
 alert(window.names[i])
