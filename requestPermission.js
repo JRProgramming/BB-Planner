@@ -21,12 +21,17 @@ playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
     if (sessionStorage.getItem("name") == joey.name)
     {
+        if(joey.access != undefined)
+        {
         var access = joey.Access
-            
+        }
         }
         else
         {
+            if(joey.request != undefined)
+            {
             var request = joey.Request
+            }
         }
     if(access != undefined)
     {
@@ -47,6 +52,19 @@ window.names.push(joey.name);
 }
 }
    }
+    }
+    else
+    {
+if(joey.request != undefined)
+{
+
+}
+        else
+            
+        {
+
+window.names.push(joey.name)
+        }
     }
         if (window.names.length == 0)
         {
