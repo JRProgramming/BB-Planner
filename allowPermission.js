@@ -118,7 +118,7 @@ window.jh = joey.Request
       }
     }
   }
-  
+  alert(window.jh)
     window.gf += 1
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
