@@ -20,7 +20,6 @@ var access = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
-    window.names = [];
     if (sessionStorage.getItem("name") == joey.name)
     {
         if(joey.Access != undefined)
@@ -36,7 +35,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
             window.names.push(joey.name)
         }
-alert(access.length);
  
 if(access.length != 0)
 {
