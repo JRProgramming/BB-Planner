@@ -19,6 +19,7 @@ var request = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
+    window.names = [];
     if (sessionStorage.getItem("name") == joey.name)
     {
         if(joey.Access != undefined)
@@ -80,7 +81,7 @@ window.names.splice(i, 1)
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
 
-    
+    loadNotes()
 
 
 });
