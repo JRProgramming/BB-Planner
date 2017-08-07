@@ -55,7 +55,10 @@ if(request.indexOf(joey.name) == -1)
 {
     if(window.h == "nothing")
     {
+        if(sessionStorage.getItem("name") != joey.name)
+        {
 window.names.push(joey.name)
+        }
     }
 }
 }
@@ -72,14 +75,20 @@ for(i=0;i<window.names.length;i++)
 {
 if(request.indexOf(sessionStorage.getItem("name")) == -1)
 {
+    if(sessionStorage.getItem("name") != joey.name)
+                              {
 window.names.push(joey.name)
+       }
 }
 }
 
 }
         else
         {
+       if(sessionStorage.getItem("name") != joey.name)
+                              {
 window.names.push(joey.name)
+}
         }
         alert("@");
 alert(window.names);
