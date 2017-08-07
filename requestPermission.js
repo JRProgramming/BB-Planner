@@ -21,14 +21,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
     if (sessionStorage.getItem("name") == joey.name)
     {
-        if(joey.access != undefined)
+        if(joey.Access != undefined)
         {
         var access = joey.Access
         }
         }
         else
         {
-            if(joey.request != undefined)
+            if(joey.Request != undefined)
             {
             var request = joey.Request
             }
