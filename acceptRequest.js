@@ -91,16 +91,26 @@ function addAndSaveNote(title, index) {
     window.obj = {
         title: note.title,
     }
+   var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
+     window.identification = joey.ID
+  }
 
+});
       note.card.find("a").on("click", function() {
 
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-
+if(joey.Access != undefined)
+{
+  window.tr = joey.Access
+}
     if(sessionStorage.getItem("name") == joey.name)
     {
-      window.id = joey.ID
     window.req = []
   window.req = joey.Request
       for(i=0;i<window.req.length;i++)
@@ -112,19 +122,11 @@ window.req.splice(i, 1)
   }
     }
     }
-  else
-  {
-window.identification = joey.ID
-    if(joey.Access != undefined)
-{
-  window.tr = joey.Access
-}
-  }
 })
    
 for(i=0;i<window.tr.length;i++)
 {
-if(window.tr[i] != sessionStorage.getItem("name"))
+if(window.tr[i] != note.title)
 {
   if(window.gf != "Something")
   {
@@ -144,16 +146,12 @@ window.gf = "Nothing"
         
 if(window.gf == "Nothing")
 {
-window.tr.push(sessionStorage.getItem("name"));
+window.tr.push(note.title);
 }
-        
-   var classers = firebase.database().ref("Classes/" + window.id)
+   var classers = firebase.database().ref("Classes/" + window.identification)
 classers.update({
+       Access: window.tr,
        Request: window.req
-});
-          var classers = firebase.database().ref("Classes/" + window.identification)
-classers.update({
-       Access: window.tr
 });
              var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
@@ -171,7 +169,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") == joey.name)
   {
     window.req = []
-    window.identification = joey.ID
   window.req = joey.Request
     for(i=0;i<window.req.length;i++)
     {
@@ -211,6 +208,7 @@ location.href = "index.html";
 }
 
 function loadNotes() {
+  console.log(window.names.length);
        for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
