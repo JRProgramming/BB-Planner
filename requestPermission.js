@@ -19,6 +19,7 @@ var request = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
+    window.names = [];
     if (sessionStorage.getItem("name") == joey.name)
     {
         if(joey.Access != undefined)
@@ -45,8 +46,32 @@ if(access.indexOf(window.names[i]) != -1)
 window.names.splice(i, 1)
 }
     }
+    if(request != undefined)
+{
+for(i=0;i<window.names.length;i++)
+{
+if(request.indexOf(window.names[i] != -1))
+{
+window.names.splice(i, 1)
 }
-   
+}
+}
+    else
+    {
+if(request != undefined)
+{
+for(i=0;i<window.names.length;i++)
+{
+if(request.indexOf(window.names[i] != -1))
+{
+window.names.splice(i, 1)
+}
+}
+
+}
+       
+    }
+   alert(window.names)
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
@@ -56,7 +81,7 @@ window.names.splice(i, 1)
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
 
-    loadNotes()
+    
 
 
 });
