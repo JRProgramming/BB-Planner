@@ -8,7 +8,6 @@ window.names = [];
   {
     if(joey.Access != undefined)
     {
-      alert(joey.Access);
   window.names = joey.Access;
     }
   if(joey.Access == undefined)
