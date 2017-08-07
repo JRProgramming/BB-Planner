@@ -46,6 +46,7 @@ window.names.splice(i, 1)
 }
     }
 }
+    alert(joey.access)
     alert(window.names)
         if (window.names.length == 0)
         {
