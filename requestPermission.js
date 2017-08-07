@@ -40,8 +40,7 @@ if(access.length != 0)
 {
     for(i=0;i<window.names.length;i++)
     {
-alert(window.names[i])
-alert(access)
+alert(access.indexOf(window.names[i]))
 if(access.indexOf(window.names[i]) != -1)
 {
 window.names.splice(i, 1)
