@@ -15,94 +15,43 @@ window.s = 0;
 window.z = 0;
 window.id = [];
 window.hy = [];
-var request = [];
-var access = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
-    window.names =[];
-    if (sessionStorage.getItem("name") == joey.name)
+    window.names = [];
+    if (sessionStorage.getItem("name") != joey.name)
     {
-        if(joey.Access != undefined)
+        if (joey.Access != undefined)
         {
-        access = joey.Access
-        }
-        }
-        else
-        {
-            if(joey.Request != undefined)
+            if (joey.Access.indexOf(sessionStorage.getItem("name")) === -1)
             {
-            var request = joey.Request
+                if (joey.Request != undefined)
+                {
+                    if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
+                    {
+                        window.names.push(joey.name);
+                    }
+                }
+                else
+                {
+                    window.names.push(joey.name);
+                }
             }
-            
         }
-
-
-    
-
-
-});
-
-function j()
-{
- 
-if(access.length != 0)
-{
-    for(i=0;i<window.names.length;i++)
-    {
-
-if(access.indexOf(joey.name) == -1)
-{
-window.h = "nothing"
-}
-    }
-    if(request != undefined)
-{
-for(i=0;i<window.names.length;i++)
-{
-if(request.indexOf(joey.name) == -1)
-{
-    if(window.h == "nothing")
-    {
-        if(sessionStorage.getItem("name") != joey.name)
-        {
-window.names.push(joey.name)
-        }
-    }
-}
-}
-}
-    alert("!")
-    alert(window.names)
-    loadNotes()
-}
-    else
-    {
-if(request != undefined)
-{
-for(i=0;i<window.names.length;i++)
-{
-if(request.indexOf(sessionStorage.getItem("name")) == -1)
-{
-    if(sessionStorage.getItem("name") != joey.name)
-                              {
-window.names.push(joey.name)
-       }
-}
-}
-
-}
         else
         {
-       if(sessionStorage.getItem("name") != joey.name)
-                              {
-window.names.push(joey.name)
-}
+            if (joey.Request != undefined)
+            {
+                if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
+                {
+                    window.names.push(joey.name);
+                }
+            }
+            else
+            {
+                window.names.push(joey.name);
+            }
         }
-        alert("@");
-alert(window.names);
-loadNotes()
-}
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
@@ -111,7 +60,12 @@ loadNotes()
         {
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
-}
+    }
+
+
+    loadNotes()
+
+});
 
 function addNote(title, text) {
     var div = $("<div/>", {
@@ -272,5 +226,6 @@ function loadNotes() {
                 if (item)
                     addAndSaveNote(item.title, index);
             }
+        ;
     }
 }
