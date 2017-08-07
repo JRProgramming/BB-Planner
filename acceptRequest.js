@@ -126,8 +126,7 @@ window.req.splice(i, 1)
     }
     }
 })
-   alert(note.title);
-        alert(window.tr)
+
 for(i=0;i<window.tr.length;i++)
 {
 if(window.tr[i] != note.title)
