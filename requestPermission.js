@@ -56,6 +56,8 @@ window.names.splice(i, 1)
 }
 }
 }
+    alert("!")
+    alert(window.names)
     loadNotes()
 }
     else
@@ -71,6 +73,8 @@ window.names.splice(i, 1)
 }
 
 }
+        alert("@");
+alert(window.names);
 loadNotes()
 }
         if (window.names.length == 0)
