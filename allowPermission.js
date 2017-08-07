@@ -14,16 +14,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
     {
         if (joey.Access != undefined)
         {
-            if (joey.Access.indexOf(joey.name) === -1)
-            {
-               window.access = "Confirmed"
-            }
+            window.array = joey.Access
         }
     }
     else
     {
-if(window.access == "Confirmed")
-{
+
  if (joey.Request != undefined)
                 {
                     if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
@@ -33,10 +29,20 @@ if(window.access == "Confirmed")
                 }
                 else
                 {
+                  if(window.array != undefined)
+                  {
+                  if(window.array.indexOf(joey.name) == -1)
+                    {
                     window.names.push(joey.name);
+                    }
+                    }
+                    else
+                    {
+                    window.names.push(joey.name);
+                    }
                 }
 }
- }
+ 
     if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
