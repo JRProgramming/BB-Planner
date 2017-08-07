@@ -38,7 +38,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             window.names.push(joey.name)
         }
 
-if(joey.access != undefined)
+if(joey.Access != undefined)
 {
     alert("PASSED")
     for(i=0;i<window.names.length;i++)
