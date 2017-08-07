@@ -15,20 +15,22 @@ window.s = 0;
 window.z = 0;
 window.id = [];
 window.hy = [];
-var access = [];
 var request = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
     if (sessionStorage.getItem("name") == joey.name)
     {
-        access = joey.Access
+        var access = joey.Access
             
         }
         else
         {
             var request = joey.Request
         }
+    if(access != undefined)
+    {
+        alert(access)
     for(i=0;i<access.length;i++)
 {
 if(access[i] != joey.name)
@@ -43,6 +45,7 @@ window.names.push(joey.name);
 }
 }
    }
+    }
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
