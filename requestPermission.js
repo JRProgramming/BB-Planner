@@ -39,6 +39,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 alert(access)
 if(access != undefined)
 {
+    alert("HEY")
     for(i=0;i<window.names.length;i++)
     {
 
