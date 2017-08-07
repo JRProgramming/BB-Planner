@@ -15,42 +15,34 @@ window.s = 0;
 window.z = 0;
 window.id = [];
 window.hy = [];
+var access = [];
+var request = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
-    if (sessionStorage.getItem("name") != joey.name)
+    if (sessionStorage.getItem("name") == joey.name)
     {
-        if (joey.Access != undefined)
-        {
-            if (joey.Access.indexOf(sessionStorage.getItem("name")) === -1)
-            {
-                if (joey.Request != undefined)
-                {
-                    if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
-                    {
-                        window.names.push(joey.name);
-                    }
-                }
-                else
-                {
-                    window.names.push(joey.name);
-                }
-            }
+        access = joey.Access
+            
         }
         else
         {
-            if (joey.Request != undefined)
-            {
-                if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
-                {
-                    window.names.push(joey.name);
-                }
-            }
-            else
-            {
-                window.names.push(joey.name);
-            }
+            var request = joey.Request
         }
+    for(i=0;i<access.length;i++)
+{
+if(access[i] != joey.name)
+{
+var j = 1
+}
+if(request[i] != joey.name)
+{
+if(j == 1)
+{
+window.names.push(joey.name);
+}
+}
+   }
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
@@ -59,8 +51,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
         {
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
-    }
-
 
     loadNotes()
 
