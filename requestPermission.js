@@ -40,8 +40,7 @@ if(access != undefined)
 {
     for(i=0;i<window.names.length;i++)
     {
-        alert(access)
-        alert(window.names[i])
+        
 if(access.indexOf(window.names[i]) != -1)
 {
 window.names.splice(i, 1)
@@ -62,12 +61,15 @@ window.names.splice(i, 1)
     {
 if(request != undefined)
 {
+    alert("Passed first test");
 for(i=0;i<window.names.length;i++)
 {
 if(request.indexOf(window.names[i] != -1))
 {
 window.names.splice(i, 1)
 }
+}
+
 }
 
 }
