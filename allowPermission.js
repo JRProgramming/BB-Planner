@@ -119,7 +119,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if (error) {
     alert("There was a network error and we need you to try again.");
   } else {
-   location.href = "requestPermission";
+   location.href = "allowPermission";
   }
 }); 
 }
