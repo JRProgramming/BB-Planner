@@ -30,9 +30,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
         }
     if(access != undefined)
     {
-        alert(access)
+        
     for(i=0;i<access.length;i++)
 {
+    alert(access[i])
+    alert(joey.name)
 if(access[i] != joey.name)
 {
 var j = 1
