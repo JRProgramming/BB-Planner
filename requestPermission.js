@@ -70,9 +70,9 @@ if(request != undefined)
 {
 for(i=0;i<window.names.length;i++)
 {
-if(request.indexOf(joey.name) == -1)
+if(request.indexOf(sessionStorage.getItem("name")) == -1)
 {
-window.names.splice(i, 1)
+window.names.push(joey.name)
 }
 }
 
