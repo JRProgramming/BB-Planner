@@ -20,6 +20,7 @@ var access = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
+    window.names =[];
     if (sessionStorage.getItem("name") == joey.name)
     {
         if(joey.Access != undefined)
@@ -33,7 +34,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             {
             var request = joey.Request
             }
-            window.names = joey.name
+            window.names.push(joey.name)
         }
  
 if(access.length != 0)
@@ -41,22 +42,24 @@ if(access.length != 0)
     for(i=0;i<window.names.length;i++)
     {
 
-if(access.indexOf(window.names) != -1)
+if(access.indexOf(window.names[i]) != -1)
 {
-window.names = ""
+window.names.splice(i, 1)
 }
     }
     if(request != undefined)
 {
 for(i=0;i<window.names.length;i++)
 {
-if(request.indexOf(window.names != -1))
+if(request.indexOf(window.names[i] != -1))
 {
-window.names = ""
+window.names.splice(i, 1)
 }
 }
 }
-
+    alert("!")
+    alert(window.names)
+    loadNotes()
 }
     else
     {
@@ -66,14 +69,15 @@ for(i=0;i<window.names.length;i++)
 {
 if(request.indexOf(window.names[i] != -1))
 {
-window.names = ""
+window.names.splice(i, 1)
 }
 }
 
 }
-
+        alert("@");
+alert(window.names);
+loadNotes()
 }
-    alert(window.names);
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
@@ -249,4 +253,3 @@ function loadNotes() {
             }
     }
 }
-
