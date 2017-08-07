@@ -26,7 +26,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
         if(joey.Access != undefined)
         {
         access = joey.Access
-            alert(access)
         }
         }
         else
