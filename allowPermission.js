@@ -114,7 +114,6 @@ window.jh = joey.Request
         if(joey.Request.indexOf(window.nameh[i]) != -1)
         {
            window.jh.splice(i, 1)
-          alert(window.jh)
         }
       }
     }
@@ -124,7 +123,8 @@ window.jh = joey.Request
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
-         Access: window.nameh
+         Access: window.nameh,
+         Request: window,jh
    })
               var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
