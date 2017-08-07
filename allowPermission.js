@@ -114,6 +114,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
    classers.update({
          Access: window.nameh
    })
+              var bob = firebase.database().ref("Completion/")
+       bob.set("Data is stored", function(error) {
+  if (error) {
+    alert("There was a network error and we need you to try again.");
+  } else {
+   location.href = "requestPermission";
+  }
+}); 
 }
 
 function homepage()
