@@ -36,6 +36,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
             }
             
         }
+
+
+    
+
+
+});
+
+function j()
+{
  
 if(access.length != 0)
 {
@@ -102,11 +111,7 @@ loadNotes()
         {
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
-
-    
-
-
-});
+}
 
 function addNote(title, text) {
     var div = $("<div/>", {
