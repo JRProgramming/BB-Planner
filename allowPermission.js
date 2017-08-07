@@ -106,6 +106,18 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") == joey.name)
   {
      window.identification = joey.ID
+    if(joey.Request != undefined)
+    {
+window.jh = joey.Request
+      for(i=0;i<joey.Request.length;i++)
+      {
+        if(joey.Request.indexOf(window.nameh[i]) != -1)
+        {
+           window.jh.splice(i, 1)
+          alert(window.jh)
+        }
+      }
+    }
   }
   
     window.gf += 1
