@@ -5,7 +5,7 @@ window.hat = "";
 window.number = 0;
 window.numj = 0;
 window.gf = 0;
-window.b = 0;
+window.b = 0; 
 window.l = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
