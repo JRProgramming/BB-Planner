@@ -107,7 +107,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
 if(joey.Access != undefined)
 {
+  if(sessionStorage.getItem("name") == joey.name)
+  { 
   window.tr = joey.Access
+  }
 }
     if(sessionStorage.getItem("name") == joey.name)
     {
