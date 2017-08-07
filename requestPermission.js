@@ -77,6 +77,10 @@ window.names.push(joey.name)
 }
 
 }
+        else
+        {
+window.names.push(joey.name)
+        }
         alert("@");
 alert(window.names);
 loadNotes()
