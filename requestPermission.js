@@ -34,7 +34,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             {
             var request = joey.Request
             }
-            window.names.push(joey.name)
+            
         }
  
 if(access.length != 0)
@@ -42,18 +42,21 @@ if(access.length != 0)
     for(i=0;i<window.names.length;i++)
     {
 
-if(access.indexOf(window.names[i]) != -1)
+if(access.indexOf(joey.name) == -1)
 {
-window.names.splice(i, 1)
+window.h = "nothing"
 }
     }
     if(request != undefined)
 {
 for(i=0;i<window.names.length;i++)
 {
-if(request.indexOf(window.names[i] != -1))
+if(request.indexOf(joey.name) == -1)
 {
-window.names.splice(i, 1)
+    if(window.h == "nothing")
+    {
+window.names.push(joey.name)
+    }
 }
 }
 }
@@ -67,7 +70,7 @@ if(request != undefined)
 {
 for(i=0;i<window.names.length;i++)
 {
-if(request.indexOf(window.names[i] != -1))
+if(request.indexOf(joey.name) == -1)
 {
 window.names.splice(i, 1)
 }
