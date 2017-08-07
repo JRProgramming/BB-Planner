@@ -32,40 +32,21 @@ playersRef.on("child_added", function(data, prevChildKey) {
             {
             var request = joey.Request
             }
+            window.names.push(joey.name)
         }
-    if(access != undefined)
+    
+    
+if(joey.access != undefined)
+{
+    for(i=0;i<window.names.i++)
     {
-        
-    for(i=0;i<access.length;i++)
+if(joey.access.indexOf(window.names[i]) != -1)
 {
-    alert(request[i])
-    alert(joey.name)
-if(access[i] != joey.name)
-{
-var j = 1
+window.names.splice(i, 1)
 }
-if(request[i] != joey.name)
-{
-if(j == 1)
-{
-window.names.push(joey.name);
-}
-}
-   }
     }
-    else
-    {
-if(joey.request != undefined)
-{
-
 }
-        else
-            
-        {
-
-window.names.push(joey.name)
-        }
-    }
+    alert(window.names)
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
