@@ -56,12 +56,12 @@ window.names.splice(i, 1)
 }
 }
 }
+    loadNotes()
 }
     else
     {
 if(request != undefined)
 {
-    alert("Passed first test");
 for(i=0;i<window.names.length;i++)
 {
 if(request.indexOf(window.names[i] != -1))
@@ -71,9 +71,8 @@ window.names.splice(i, 1)
 }
 
 }
-
+loadNotes()
 }
-alert(window.names);
         if (window.names.length == 0)
         {
             document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
@@ -83,7 +82,7 @@ alert(window.names);
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
 
-    loadNotes()
+    
 
 
 });
@@ -247,7 +246,6 @@ function loadNotes() {
                 if (item)
                     addAndSaveNote(item.title, index);
             }
-        ;
     }
 }
 
