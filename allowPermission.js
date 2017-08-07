@@ -1,3 +1,4 @@
+window.names = [];
 window.joe = [];
 window.nameh = []
 window.hat = "";
@@ -6,50 +7,15 @@ window.numj = 0;
 window.gf = 0;
 window.b = 0;
 window.l = 0;
-var count = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-    if (sessionStorage.getItem("name") == joey.name)
-    {
-        if (joey.Access != undefined)
-        {
-            if (joey.Access.indexOf(joey.name) === -1)
-            {
-               window.access = "Confirmed"
-            }
-        }
-    }
-    else
-    {
-if(window.access == "Confirmed")
-{
- if (joey.Request != undefined)
-                {
-                    if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
-                    {
-                        window.names.push(joey.name);
-                    }
-                }
-                else
-                {
-                    window.names.push(joey.name);
-                }
-}
- }
-    if (window.names.length == 0)
-        {
-            document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
-        }
-        else
-        {
-            document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
-        }
-    
-
-
-    loadNotes()
-
+  window.names = [];
+  if(sessionStorage.getItem("name") != joey.name)
+  {
+  window.names.push(joey.name);
+  }
+  loadNotes()
 
   });
 
@@ -106,10 +72,12 @@ function addAndSaveNote(title, index) {
     }
 
      note.card.find("input[type=\"checkbox\"]").on("click", function() {
-      
+       
+       for(i=0;i<window.names.length;i++)
+       {
          if(note.card.find("input[type=\"checkbox\"]").is(':checked') == false)
          {
-           var hg = note.title
+           var hg = note.title[i]
           for(i=0;i<window.nameh.length;i++)
           {
 if(hg == window.nameh[i])
@@ -121,9 +89,11 @@ var d = i
          }
          else
          {
-         var hg = note.title
+         var hg = note.title[i]
 window.nameh.push(hg);
          }
+         console.log(window.nameh);
+       }
     });
     
    
@@ -134,75 +104,21 @@ window.nameh.push(hg);
 function loadData()
 {
   
-for(i=0;i<window.nameh.length;i++)
-{
-  window.user = [];
+
     var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
   if(sessionStorage.getItem("name") == joey.name)
   {
-window.id = joey.ID
-    if(joey.Request != undefined)
-    {
-    
-window.gh = joey.Request
- for(x=0;x<window.gh.length;x++)
- {
-if(joey.Request[x] != window.nameh[i])
-{
-  if(fey != "Something")
-  {
-fey = "Nothing"
-  }
-}
-     else
-   {
-fey = "Something"
-   }
-}
-    }
-    else
-    {
-fey = "Nothing"
-    }
-    if(fey == "Something")
-    {
-for(q=0;q<window.gh.length;q++)
-{
-if(joey.Request[q] == window.nameh[i])
-{
-window.gh.splice(q,1)
-}
-}
-    }
-  }
-  if(window.nameh[i] == joey.name)
-  {
      window.identification = joey.ID
-      if(joey.Access == undefined)
-    {
-window.user.push(sessionStorage.getItem("name"))
-    }
-    else
-    {
-window.user = joey.Access
-      window.user.push(sessionStorage.getItem("name"))
-     
-    }
   }
+  
+    window.gf += 1
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
-         Access: window.user
+         Access: window.nameh
    })
-   var classers = firebase.database().ref("Classes/" + window.id)
-   classers.update({
-         Request: window.gh
-   })
-}
-  location.href = ""
-  
 }
 
 function homepage()
@@ -211,10 +127,12 @@ location.href = "index.html";
 }
 
 function loadNotes() {
+       for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, index); 
             };
+       }
 }
