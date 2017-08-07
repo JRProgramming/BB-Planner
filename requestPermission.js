@@ -19,7 +19,7 @@ var request = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
-    if (sessionStorage.getItem("name") != joey.name)
+    if (sessionStorage.getItem("name") == joey.name)
     {
         var access = joey.Access
             
