@@ -26,7 +26,7 @@ var access = joey.Access
 alert(joet)
   if(access != undefined)
   {
-   alert("PASSEDF") 
+   alert(joet.length) 
 if(joet.length != 0)
 {
   for(i=0;i<window.joet.length; i++)
