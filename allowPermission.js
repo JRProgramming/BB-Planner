@@ -27,7 +27,7 @@ var access = joey.Access
   {
 if(joet.length != 0)
 {
-  for(i=0;i<window.joet.length; i++)
+  for(i=0;i<joet.length; i++)
   {
 if(access.indexOf(joet[i]) != -1)
 {
