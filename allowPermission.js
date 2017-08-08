@@ -60,6 +60,10 @@ window.hr = "nothing"
 window.names.push(joey.name)
     }
   }
+  else 
+  {
+window.names.push(joey.name)
+  }
 
   loadNotes()
 }
