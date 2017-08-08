@@ -19,7 +19,7 @@ else
 {
 
 var access = joey.Access
-alert(access)
+alert("YIP PITY DOT")
 }
 
   if(access != undefined)
