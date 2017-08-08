@@ -18,15 +18,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
 window.yut.push(joey.name)
   }
 else
-{
-  
+{  
 access = joey.Access
-
-    
-
 }
   if(access != undefined)
   {
+     alert(access)
+     alert(window.yut)
     for(i=0;i<window.yut.length; i++)
     {
   if(access.indexOf(window.yut[i]) == -1)
