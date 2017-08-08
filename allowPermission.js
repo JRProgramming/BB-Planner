@@ -7,6 +7,7 @@ window.numj = 0;
 window.gf = 0;
 window.b = 0; 
 window.l = 0;
+var joet = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -14,7 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
-    var joet = window.names
+   joet = window.names
   }
 else
 {
@@ -25,13 +26,11 @@ var access = joey.Access
 alert(joet)
   if(access != undefined)
   {
-   alert(access) 
+   alert("PASSEDF") 
 if(joet.length != 0)
 {
-  alert(access)
   for(i=0;i<window.joet.length; i++)
   {
-alert(access)
 if(access.indexOf(window.joet[i]) != -1)
 {
 window.names.splice(i, 1)
