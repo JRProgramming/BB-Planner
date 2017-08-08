@@ -24,7 +24,10 @@ access = joey.Access
   
   if(access != undefined)
   {
+if(window.names.length != 0)
+{
 
+}
   }
   else
   {
