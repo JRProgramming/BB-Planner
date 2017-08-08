@@ -11,58 +11,36 @@ var joet = []
 var access = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
-  window.joey = data.val()
+   var joey = data.val()
   window.names = []
   if(sessionStorage.getItem("name") != window.joey.name)
   {
-
+window.yut.push(joey.name)
   }
 else
 {
   
-access = window.joey.Access
+access = joey.Access
+
+    
 
 }
-
-
-
-
-developNotes()
-
-  });
-
-function developNotes()
-{
-
-  if(access.length != 0)
+  if(access != undefined)
   {
-
-    for(i=0;i<access.length;i++)
+    for(i=0;i<window.yut.length; i++)
     {
-alert(access[i])
-alert(window.joey.name)
-if(access[i] == window.joey.name)
-{
-window.hr = "something"
-}
-      else
-      {
-        if(window.hr != "something")
-        {
-window.hr = "nothing"
-        }
-      }
-    }
-
-    if(window.hr == "nothing")
-    {
-window.names.push(window.joey.name)
+  if(access.indexOf(window.yut[i]) == -1)
+  {
+window.names.push(window.yut[i])
+  }
     }
   }
 
+loadNotes()
 
-  loadNotes()
-}
+  });
+
+
 
 function addNote(title, text) {
    var div = $("<div/>", {
