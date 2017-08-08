@@ -24,16 +24,7 @@ access = joey.Access
   
   if(access != undefined)
   {
-if(window.names.length != 0)
-{
-  for(i=0;i<window.names.length)
-  {
-if(access.indexOf(window.names[i]) != -1)
-{
-window.names.splice(i, 1)
-}
-  }
-}
+
   }
   else
   {
