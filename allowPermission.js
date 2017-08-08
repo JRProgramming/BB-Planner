@@ -146,9 +146,15 @@ window.jh = joey.Request
 })
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
-         Access: window.nameh,
+         Access: window.nameh
+   })
+  if(window.jh != undefined)
+  {
+  var classers = firebase.database().ref("Classes/" + window.identification)
+   classers.update({
          Request: window.jh
    })
+  }
               var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
   if (error) {
