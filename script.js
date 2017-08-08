@@ -78,7 +78,8 @@ window.kool = 1
 }
 function updateSave()
 {
-
+$(this).html("")
+         window.numj = 0;
  var classers = firebase.database().ref("Classes/" + window.id + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
@@ -181,11 +182,11 @@ joey = []
  
 })
     window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
-         updateSave();   
-         window.numj = 0;
+         updateSave();  
+        
           
 }
-      $(this).html("")
+      
     }
   
   })
