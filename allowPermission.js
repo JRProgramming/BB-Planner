@@ -34,7 +34,6 @@ developNotes()
 
 function developNotes()
 {
-  alert(access)
   if(access.length != 0)
   {
     for(i=0;i<access.length;i++)
@@ -52,8 +51,9 @@ window.names.splice(i, 1)
   }
 }
     }
-    loadNotes()
+    
   }
+  loadNotes()
 }
 
 function addNote(title, text) {
