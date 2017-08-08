@@ -21,7 +21,7 @@ else
 {  
 access = joey.Access
 }
-   alert(access)
+   alert("STUPID WILD LOSER")
 
 
 loadNotes()
