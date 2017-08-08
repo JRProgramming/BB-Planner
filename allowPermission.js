@@ -23,8 +23,20 @@ else
 var access = joey.Access
 
 }
+
+
+
+
+developNotes()
+
+  });
+
+function developNotes()
+{
   if(access != undefined)
   {
+    for(i=0;i<access.length;i++)
+    {
 if(joet.length != 0)
 {
   for(i=0;i<joet.length; i++)
@@ -37,13 +49,10 @@ window.names.splice(i, 1)
 }
   }
 }
+    }
+    loadNotes()
   }
-
-
-
-  loadNotes()
-
-  });
+}
 
 function addNote(title, text) {
    var div = $("<div/>", {
