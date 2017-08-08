@@ -124,7 +124,7 @@ window.jh = joey.Request
    var classers = firebase.database().ref("Classes/" + window.identification)
    classers.update({
          Access: window.nameh,
-         Request: window,jh
+         Request: window.jh
    })
               var bob = firebase.database().ref("Completion/")
        bob.set("Data is stored", function(error) {
