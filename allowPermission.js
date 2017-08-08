@@ -25,6 +25,7 @@ else
 
 access = joey.Access
    j = 1
+   alert("YOWDY")
 }
 alert(access.length);
   if(access.length != 0)
