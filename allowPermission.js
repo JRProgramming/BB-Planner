@@ -33,12 +33,14 @@ developNotes()
 
 function developNotes()
 {
-
+alert(access)
   if(access.length != 0)
   {
+    alert("BEE BOP")
     for(i=0;i<access.length;i++)
     {
-
+alert(access[i])
+alert(joey.name)
 if(access[i] == joey.name)
 {
 window.hr = "something"
@@ -51,13 +53,14 @@ window.hr = "nothing"
         }
       }
     }
+    alert("WOO LOO")
+    alert(window.hr);
     if(window.hr == "nothing")
     {
 window.names.push(joey.name)
     }
   }
-  alert("YODA")
-   alert(window.names);
+
   loadNotes()
 }
 
