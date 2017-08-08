@@ -14,6 +14,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
+    var joet = window.names
   }
 else
 {
@@ -25,13 +26,13 @@ var access = joey.Access
   if(access != undefined)
   {
    alert(access) 
-if(window.names.length != 0)
+if(joet.length != 0)
 {
   alert(access)
-  for(i=0;i<window.names.length; i++)
+  for(i=0;i<window.joet.length; i++)
   {
 alert(access)
-if(access.indexOf(window.names[i]) != -1)
+if(access.indexOf(window.joet[i]) != -1)
 {
 window.names.splice(i, 1)
 }
