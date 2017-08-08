@@ -56,6 +56,7 @@ window.hr = "nothing"
 window.names.push(joey.name)
     }
   }
+  alert("YODA")
    alert(window.names);
   loadNotes()
 }
