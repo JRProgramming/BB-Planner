@@ -37,6 +37,10 @@ window.names.splice(i, 1)
 }
   }
   }
+  else
+  {
+alert("YOWDY")
+  }
 
 
   loadNotes()
