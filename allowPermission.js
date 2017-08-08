@@ -15,7 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.names = []
   if(sessionStorage.getItem("name") != window.joey.name)
   {
-window.yut.push(joey.name)
+joet.push(joey.name)
   }
 else
 {  
