@@ -22,7 +22,7 @@ else
 var access = joey.Access
 
 }
-
+alert(joet)
   if(access != undefined)
   {
    alert(access) 
