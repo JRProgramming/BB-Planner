@@ -17,10 +17,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
   }
 else
 {
+  alert("YOWDY")
+  alert(joey.Access)
 access = joey.Access
-
+alert(access)
 }
-  alert(access)
+
 
 
   loadNotes()
