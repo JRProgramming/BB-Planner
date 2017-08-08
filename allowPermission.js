@@ -42,7 +42,7 @@ if(joet.length != 0)
 {
   for(i=0;i<joet.length; i++)
   {
-    alert(window.names);
+   
 if(access.indexOf(joet[i]) != -1)
 {
 window.names.splice(i, 1)
@@ -52,6 +52,7 @@ window.names.splice(i, 1)
     }
     
   }
+   alert(window.names);
   loadNotes()
 }
 
