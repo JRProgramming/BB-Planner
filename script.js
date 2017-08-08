@@ -188,7 +188,6 @@ joey = []
 }
       
     }
-  alert($(this).html())
   })
 
  
