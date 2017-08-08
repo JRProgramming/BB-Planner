@@ -22,18 +22,7 @@ else
 access = joey.Access
 }
    alert(access)
-  if(access != undefined)
-  {
-     alert(access)
-     alert(window.yut)
-    for(i=0;i<window.yut.length; i++)
-    {
-  if(access.indexOf(window.yut[i]) == -1)
-  {
-window.names.push(window.yut[i])
-  }
-    }
-  }
+
 
 loadNotes()
 
