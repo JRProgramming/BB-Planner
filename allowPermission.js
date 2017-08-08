@@ -15,7 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.names = []
   if(sessionStorage.getItem("name") != window.joey.name)
   {
-joet.push(joey.name)
+window.names.push(joey.name)
   }
 else
 {  
@@ -23,7 +23,18 @@ access = joey.Access
 }
    alert("STUPID WILD LOSER")
 
-
+  if(access != undefined)
+  {
+     alert(access)
+     alert(window.yut)
+    for(i=0;i<window.yut.length; i++)
+    {
+  if(access.indexOf(window.yut[i]) == -1)
+  {
+window.names.push(window.yut[i])
+  }
+    }
+  }
 loadNotes()
 
   });
