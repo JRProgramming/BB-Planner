@@ -23,7 +23,7 @@ else
 access = joey.Access
 }
 
-
+alert(access)
   if(access != undefined)
   {
      
@@ -31,7 +31,6 @@ access = joey.Access
      {
     for(i=0;i<yut.length; i++)
     {
-       alert(access)
      alert(yut)
   if(access.indexOf(yut[i]) == -1)
   {
