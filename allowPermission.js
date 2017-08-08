@@ -33,10 +33,12 @@ developNotes()
 
 function developNotes()
 {
+  alert(access)
   if(access.length != 0)
   {
     for(i=0;i<access.length;i++)
     {
+      alert(joey.name)
 if(access[i] == joey.name)
 {
 window.hr = "something"
@@ -49,6 +51,7 @@ window.hr = "nothing"
         }
       }
     }
+    alert(window.hr)
     if(window.hr == "nothing")
     {
 window.names.push(joey.name)
