@@ -25,11 +25,10 @@ else
 access = joey.Access
 }
 
-alert(access)
-  if(access != undefined)
+  if(access.length != 0)
   {
      
-     if(yut != undefined)
+     if(yut.length != 0)
      {
     for(i=0;i<yut.length; i++)
     {
