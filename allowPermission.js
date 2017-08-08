@@ -27,6 +27,8 @@ access = joey.Access
   {
      alert(access)
      alert(window.yut)
+     if(window.yut != undefined)
+     {
     for(i=0;i<window.yut.length; i++)
     {
   if(access.indexOf(window.yut[i]) == -1)
@@ -34,6 +36,7 @@ access = joey.Access
 window.names.push(window.yut[i])
   }
     }
+     }
   }
 loadNotes()
 
