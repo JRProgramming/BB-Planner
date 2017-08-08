@@ -149,7 +149,9 @@ function addAndSaveNote(title, text, index) {
   
       
         
-   
+     note.card.find(".mdl-card__actions.mdl-card--border").focus(function () {
+      $(this).html("")
+     })
  
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
@@ -182,7 +184,6 @@ joey = []
 })
     window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
          updateSave();  
-       $(this).val("")
          window.numj = 0;
           
 }
