@@ -9,13 +9,14 @@ window.b = 0;
 window.l = 0;
 var joet = []
 var access = [] 
+var yut = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var joey = data.val()
   window.names = []
   if(sessionStorage.getItem("name") != joey.name)
   {
-window.yut.push(joey.name)
+yut.push(joey.name)
   }
 else
 {  
@@ -26,14 +27,14 @@ access = joey.Access
   if(access != undefined)
   {
      alert(access)
-     alert(window.yut)
-     if(window.yut != undefined)
+     alert(yut)
+     if(yut != undefined)
      {
-    for(i=0;i<window.yut.length; i++)
+    for(i=0;i<yut.length; i++)
     {
-  if(access.indexOf(window.yut[i]) == -1)
+  if(access.indexOf(yut[i]) == -1)
   {
-window.names.push(window.yut[i])
+window.names.push(yut[i])
   }
     }
      }
