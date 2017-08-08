@@ -9,14 +9,14 @@ window.b = 0;
 window.l = 0;
 var joet = []
 var access = [] 
-var yut = [];
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var joey = data.val()
   window.names = []
   if(sessionStorage.getItem("name") != joey.name)
   {
-yut.push(joey.name)
+     var yut = [];
+     yut.push(joey.name)
   }
 else
 {  
