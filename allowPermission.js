@@ -10,6 +10,7 @@ window.l = 0;
 var joet = []
 var access = [] 
 var yut = [];
+var j = 0;
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var joey = data.val()
@@ -23,7 +24,7 @@ else
 {  
 
 access = joey.Access
-   var j = 1
+   j = 1
 }
 
   if(access.length != 0)
