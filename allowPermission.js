@@ -7,7 +7,6 @@ window.numj = 0;
 window.gf = 0;
 window.b = 0; 
 window.l = 0;
-var access = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -19,10 +18,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
 else
 {
 
-access = joey.Access
+var access = joey.Access
 
 }
-  
+  alert(access)
   if(access != undefined)
   {
 if(window.names.length != 0)
