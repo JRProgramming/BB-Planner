@@ -11,16 +11,16 @@ var joet = []
 var access = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
-  var joey = data.val()
+  window.joey = data.val()
   window.names = []
-  if(sessionStorage.getItem("name") != joey.name)
+  if(sessionStorage.getItem("name") != window.joey.name)
   {
 
   }
 else
 {
   
-access = joey.Access
+access = window.joey.Access
 
 }
 
@@ -33,15 +33,15 @@ developNotes()
 
 function developNotes()
 {
-alert(access)
+
   if(access.length != 0)
   {
-    alert("BEE BOP")
+
     for(i=0;i<access.length;i++)
     {
 alert(access[i])
-alert(joey.name)
-if(access[i] == joey.name)
+alert(window.joey.name)
+if(access[i] == window.joey.name)
 {
 window.hr = "something"
 }
@@ -53,16 +53,15 @@ window.hr = "nothing"
         }
       }
     }
-    alert("WOO LOO")
-    alert(window.hr);
+
     if(window.hr == "nothing")
     {
-window.names.push(joey.name)
+window.names.push(window.joey.name)
     }
   }
   else 
   {
-window.names.push(joey.name)
+window.names.push(window.joey.name)
   }
 
   loadNotes()
