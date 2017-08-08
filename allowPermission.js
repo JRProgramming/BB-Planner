@@ -7,14 +7,33 @@ window.numj = 0;
 window.gf = 0;
 window.b = 0; 
 window.l = 0;
+var access = []
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  window.names = [];
   if(sessionStorage.getItem("name") != joey.name)
   {
   window.names.push(joey.name);
   }
+else
+{
+access = joey.access
+
+}
+  if(access.length != 0)
+  {
+if(window.names.length != 0)
+{
+  for(i=0;i<window.names.length)
+  {
+if(access.indexOf(window.names[i]) != -1)
+{
+window.names.splice(i, 1)
+}
+  }
+}
+  }
+  alert(window.names)
   loadNotes()
 
   });
