@@ -21,6 +21,7 @@ else
 {  
 access = joey.Access
 }
+   alert(access)
   if(access != undefined)
   {
      alert(access)
