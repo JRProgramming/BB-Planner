@@ -43,7 +43,7 @@ if(joet.length != 0)
   for(i=0;i<joet.length; i++)
   {
     alert("HALO")
-    alert(access.indexOf(joey[i]))
+    alert(access.indexOf(joet[i]))
 if(access.indexOf(joet[i]) != -1)
 {
 window.names.splice(i, 1)
