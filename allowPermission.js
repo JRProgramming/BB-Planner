@@ -13,7 +13,7 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var joey = data.val()
   window.names = []
-  if(sessionStorage.getItem("name") != window.joey.name)
+  if(sessionStorage.getItem("name") != window.name)
   {
 window.names.push(joey.name)
   }
@@ -21,7 +21,7 @@ else
 {  
 access = joey.Access
 }
-   alert("STUPID WILD LOSER")
+
 
   if(access != undefined)
   {
