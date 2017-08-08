@@ -26,8 +26,8 @@ else
 access = joey.Access
    j = 1
 }
-
-  if(access.length != 0 || access != undefined)
+alert(access.length);
+  if(access.length != 0)
   {
      
      if(yut.length != 0)
