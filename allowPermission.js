@@ -19,11 +19,12 @@ else
 {
 
 var access = joey.Access
-alert(access)
-}
 
+}
+alert(access)
   if(access != undefined)
   {
+    
 if(window.names.length != 0)
 {
   for(i=0;i<window.names.length; i++)
