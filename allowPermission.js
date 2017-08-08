@@ -23,15 +23,13 @@ else
 var access = joey.Access
 
 }
-alert(joet)
   if(access != undefined)
   {
-   alert(joet.length) 
 if(joet.length != 0)
 {
   for(i=0;i<window.joet.length; i++)
   {
-if(access.indexOf(window.joet[i]) != -1)
+if(access.indexOf(joet[i]) != -1)
 {
 window.names.splice(i, 1)
 }
