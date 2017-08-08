@@ -26,7 +26,10 @@ access = joey.Access
   {
 if(window.names.length != 0)
 {
+  for(i=0;i<window.names.length)
+  {
 
+  }
 }
   }
   else
