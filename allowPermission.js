@@ -21,26 +21,16 @@ else
 access = joey.Access
 
 }
+  
   if(access != undefined)
   {
-   if(access.length != 0)
-  {
-if(window.names.length != 0)
-{
-  for(i=0;i<window.names.length)
-  {
-if(access.indexOf(window.names[i]) != -1)
-{
-window.names.splice(i, 1)
-}
-  }
-}
-  }
+alert("BEE BOP")
   }
   else
   {
 alert("YOWDY")
   }
+
 
 
   loadNotes()
