@@ -20,6 +20,8 @@ else
 access = joey.access
 
 }
+  alert(access)
+ 
 
   alert(window.names)
   loadNotes()
