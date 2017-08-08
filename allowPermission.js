@@ -20,6 +20,7 @@ else
 access = joey.Access
 
 }
+  alert(access)
    if(access.length != 0)
   {
 if(window.names.length != 0)
