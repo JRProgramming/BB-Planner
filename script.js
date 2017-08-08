@@ -184,6 +184,7 @@ joey = []
          updateSave();
         $(this).html("")
          window.numj = 0;
+        alert(window.numj)
 }
       
     }
