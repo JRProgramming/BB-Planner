@@ -23,6 +23,7 @@ else
 {  
 
 access = joey.Access
+   var j = 1
 }
 
   if(access.length != 0)
@@ -40,6 +41,13 @@ window.names.push(yut[i])
     }
      }
   }
+   else
+   {
+ if(j == 1)
+ {
+window.names = yut
+ }
+   }
 loadNotes()
 
   });
