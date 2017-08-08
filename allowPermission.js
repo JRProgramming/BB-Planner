@@ -15,8 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   window.names = []
   if(sessionStorage.getItem("name") != joey.name)
   {
-  window.names.push(joey.name);
-   joet = window.names
+
   }
 else
 {
@@ -38,19 +37,22 @@ function developNotes()
   {
     for(i=0;i<access.length;i++)
     {
-if(joet.length != 0)
+if(access[i] == joey.name)
 {
-  for(i=0;i<joet.length; i++)
-  {
-   
-if(access.indexOf(joet[i]) != -1)
-{
-window.names.splice(i, 1)
+window.hr = "something"
 }
-  }
-}
+      else
+      {
+        if(window.hr != "something")
+        {
+window.hr = "nothing"
+        }
+      }
     }
-    
+    if(window.hr == "nothing")
+    {
+window.names.push(joey.name)
+    }
   }
    alert(window.names);
   loadNotes()
