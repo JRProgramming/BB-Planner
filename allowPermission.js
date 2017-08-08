@@ -59,10 +59,7 @@ window.hr = "nothing"
 window.names.push(window.joey.name)
     }
   }
-  else 
-  {
-window.names.push(window.joey.name)
-  }
+
 
   loadNotes()
 }
