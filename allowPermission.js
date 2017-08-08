@@ -44,6 +44,7 @@ window.names.push(yut[i])
   }
    else
    {
+      alert(j)
  if(j == 1)
  {
 window.names = yut
