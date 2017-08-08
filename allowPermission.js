@@ -26,12 +26,13 @@ access = joey.Access
 
   if(access != undefined)
   {
-     alert(access)
-     alert(yut)
+     
      if(yut != undefined)
      {
     for(i=0;i<yut.length; i++)
     {
+       alert(access)
+     alert(yut)
   if(access.indexOf(yut[i]) == -1)
   {
 window.names.push(yut[i])
