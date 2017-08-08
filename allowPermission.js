@@ -8,7 +8,7 @@ window.gf = 0;
 window.b = 0; 
 window.l = 0;
 var joet = []
-var access = []
+var access = [] 
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
    var joey = data.val()
