@@ -182,13 +182,13 @@ joey = []
 })
     window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
          updateSave();  
-       
+       $(this).html("")
          window.numj = 0;
           
 }
       
     }
-    $(this).html(" ")
+    
   })
 
  
