@@ -216,7 +216,10 @@ joey = []
     return note;
     
 }
-
+window.onload = function()
+{
+script()
+}
 
 
 
