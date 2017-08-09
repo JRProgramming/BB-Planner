@@ -29,6 +29,7 @@ document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" cl
 
 function signal()
 {
+  alert("YO")
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
