@@ -150,6 +150,7 @@ if(joey.email ==  window.email)
 });  
 localStorage.setItem("loggedOut", "");
 localStorage.setItem("name", window.nme);
+   alert("DOO LOO")
    if(window.a == false)
  {
   location.href = "setClass";
