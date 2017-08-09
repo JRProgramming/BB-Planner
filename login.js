@@ -5,7 +5,6 @@ window.errors = ""
 var namets = [];
 function start()
 {
-   alert("BAA DOO")
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
@@ -37,8 +36,7 @@ setclass()
 });
 }
 else
-{
-alert(window.names.length)  
+{  
 for(i=0; i<window.names.length; i++)
 {
   
@@ -251,7 +249,6 @@ handleSignUp();
 }
 else
 {
-   alert(window.names)
  unique(); 
 }
 }
