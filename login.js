@@ -2,6 +2,7 @@ window.names = [];
 window.emails = [];
 window.signup = "Not In"
 window.errors = ""
+var exists = ""
 function start()
 {
 var playersRef = firebase.database().ref("Classes/");
