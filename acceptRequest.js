@@ -29,6 +29,29 @@ window.names.push(joey.Request[i])
   });
 }
 
+function signal()
+{
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
+    window.identification = joey.ID
+    if(joey.Request != undefined)
+    {
+      var bg = joey.Request
+      for(i=0;i<bg.length;i++)
+      {
+window.names.push(joey.Request[i])
+      }
+    }
+  }
+  });
+  if(window.names.length != 0)
+  {
+
+  }
+}
 
 
 function addNote(title, text, hj) {
