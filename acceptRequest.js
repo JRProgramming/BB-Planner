@@ -39,11 +39,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
     window.identification = joey.ID
     if(joey.Request != undefined)
     {
-      var bg = joey.Request
-      for(i=0;i<bg.length;i++)
-      {
-window.names.push(joey.Request[i])
-      }
+
+window.names = joey.Request
+        alert(window.names)
+    
     }
   }
   });
