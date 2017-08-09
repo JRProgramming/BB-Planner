@@ -249,6 +249,7 @@ handleSignUp();
 }
 else
 {
+   alert("WOO LOO")
  unique(); 
 }
 }
