@@ -386,6 +386,7 @@ location.reload();
     }
 window.onload =  function()
 {
+   alert(document.getElementById("id01").style.display)
 if(document.getElementById('id01').style.display == 'block')
 {
    alert("BEE BOP")
