@@ -47,6 +47,7 @@ window.num ++
 window.hw = [];
 function signal()
 {
+ alert("YO")
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
