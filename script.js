@@ -40,6 +40,7 @@ location.href = "setClass"
  }
      homework();
    loadNotes() 
+   signal()
    }
   }
 window.num ++
@@ -47,7 +48,6 @@ window.num ++
 window.hw = [];
 function signal()
 {
- alert("YO")
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -217,10 +217,7 @@ joey = []
     return note;
     
 }
-window.onload = function()
-{
-signal()
-}
+
 
 
 
