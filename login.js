@@ -213,10 +213,7 @@ function setUp()
 alert("Not allowed here")
 return;
 }
-         for(i=0;i<email.length;i++)
-         {
-          alert(email[i])
-         }
+         
  var exists = ""
  var num = 0
 var playersRef = firebase.database().ref("Classes/");
