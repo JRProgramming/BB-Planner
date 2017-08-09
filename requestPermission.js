@@ -61,7 +61,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
             document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
         }
     }
-
+alert(window.names)
     signal()
     loadNotes()
 
@@ -242,11 +242,13 @@ function homepage()
 location.href = "index.html";
 }
 function loadNotes() {
+    for (i = 0; i < window.names.length; i++) {
         var note = addAndSaveNote();
         if (note)
             function load(item, index) {
                 if (item)
                     addAndSaveNote(item.title, index);
             }
-   
+        ;
+    }
 }
