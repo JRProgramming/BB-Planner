@@ -5,6 +5,7 @@ window.errors = ""
 var namets = [];
 function start()
 {
+   alert("BAA DOO")
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
@@ -28,7 +29,6 @@ if(document.getElementById("namej").innerHTML == "")
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
 window.emailj = joey.email;
-namets.push(joey.name)
   if(window.emailj == window.email)
 {
 window.identification = joey.ID;
@@ -38,11 +38,10 @@ setclass()
 }
 else
 {
-   alert(namets.length)
-for(i=0; i<namets.length; i++)
+alert(window.names.length)  
+for(i=0; i<window.names.length; i++)
 {
-   alert(window.namel);
-   alert(namets[i]);
+  
   if(window.namel != window.names[i])
     {
       if(exists != "taken"){
