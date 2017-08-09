@@ -40,10 +40,10 @@ location.href = "setClass"
  }
      homework();
    loadNotes() 
-   signal()
    }
   }
 window.num ++
+ signal()
   });
 window.hw = [];
 function signal()
@@ -227,6 +227,7 @@ location.href = "index.html";
 }
 function loadNotes() {
     window.id = window.identification
+ 
        for(i=0;i<window.green.length;i++){
        var note = addAndSaveNote();
         if(note)
