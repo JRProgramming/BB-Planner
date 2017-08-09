@@ -252,6 +252,7 @@ handleSignUp();
 }
 else
 {
+   alert(window.names)
  unique(); 
 }
 }
