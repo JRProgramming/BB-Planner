@@ -12,7 +12,6 @@ var data = joey.name;
 var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
-namets.push(joey.name)
 if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
 {
 toggleSignIn();
@@ -29,6 +28,7 @@ if(document.getElementById("namej").innerHTML == "")
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
 window.emailj = joey.email;
+namets.push(joey.name)
   if(window.emailj == window.email)
 {
 window.identification = joey.ID;
