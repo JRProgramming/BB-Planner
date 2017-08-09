@@ -2,7 +2,6 @@ window.names = [];
 window.emails = [];
 window.signup = "Not In"
 window.errors = ""
-var exists = ""
 function start()
 {
 var playersRef = firebase.database().ref("Classes/");
@@ -37,8 +36,11 @@ setclass()
 }
 else
 {
+   alert(window.names.length)
 for(i=0; i<window.names.length; i++)
 {
+   alert(window.namel);
+   alert(window.names[i]);
   if(window.namel != window.names[i])
     {
       if(exists != "taken"){
