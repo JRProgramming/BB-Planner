@@ -249,7 +249,7 @@ handleSignUp();
 }
 else
 {
-   alert("WOO LOO")
+   alert(window.namel)
  unique(); 
 }
 }
