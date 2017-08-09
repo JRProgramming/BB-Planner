@@ -338,6 +338,7 @@ return;
     }
 function logOut()
 {
+localStorage.removeItem("name")
 localStorage.setItem("loggedOut", "Log Out");
 location.reload();
 }
