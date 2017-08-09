@@ -382,7 +382,10 @@ location.reload();
     }
 window.onload =  function()
 {
+if(document.getElementById('id01').style.display == 'block')
+{
 start()
+}
 document.getElementById("email").value = localStorage.email
 document.getElementById("password").value = localStorage.password
 if(localStorage.email == undefined || localStorage.password == undefined){
