@@ -47,6 +47,7 @@ window.names.push(joey.Request[i])
     }
   }
   });
+  alert(window.names)
   if(window.names.length != 0)
   {
 document.getElementById("accept").innerHTML = "Accept Friend Request (" + window.names.length + ")"
