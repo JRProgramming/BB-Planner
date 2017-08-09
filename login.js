@@ -115,7 +115,7 @@ alert("Name is taken");
    setclass()
   }
 });
-sessionStorage.setItem("name", window.namel);
+localStorage.setItem("name", window.namel);
      }
      else
      {
