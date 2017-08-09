@@ -15,6 +15,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
   if(names == null)
   {
   document.getElementById('id01').style.display='block';
+  start()
   document.getElementById("namer").innerHTML = "";
   document.getElementById("namej").innerHTML = "";
   }
