@@ -150,7 +150,6 @@ if(joey.email ==  window.email)
 });  
 localStorage.setItem("loggedOut", "");
 localStorage.setItem("name", window.nme);
-   alert("DOO LOO")
    if(window.a == false)
  {
   location.href = "setClass";
@@ -186,11 +185,7 @@ function setUp()
   }
   
     function toggleSignIn() {
-      if (firebase.auth().currentUser) {
-        // [START signout]
-        firebase.auth().signOut();
-        // [END signout]
-      } else {
+     
         window.email = document.getElementById('email').value;
         window.password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
@@ -291,7 +286,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
    
 }
-      }
+      
  
 }
     /**
