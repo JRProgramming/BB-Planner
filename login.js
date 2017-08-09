@@ -37,7 +37,6 @@ setclass()
 }
 else
 {
-   alert(window.namel)
 for(i=0; i<window.names.length; i++)
 {
   if(window.namel != window.names[i])
@@ -52,7 +51,6 @@ for(i=0; i<window.names.length; i++)
       
     }
 }
-   alert(exists)
 if(exists == "unique"){
   setter();
 }
@@ -250,7 +248,6 @@ handleSignUp();
 }
 else
 {
-   alert(window.namel)
  unique(); 
 }
 }
