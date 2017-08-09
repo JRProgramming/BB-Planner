@@ -24,6 +24,7 @@ document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" cl
   }
   }
   loadNotes()
+  signal()
   });
 
 
