@@ -147,7 +147,7 @@ if(joey.email ==  window.email)
 }
 });  
 localStorage.setItem("loggedOut", "");
-sessionStorage.setItem("name", window.nme);
+localStorage.setItem("name", window.nme);
    if(window.a == false)
  {
   location.href = "setClass";
@@ -338,7 +338,6 @@ return;
     }
 function logOut()
 {
-sessionStorage.removeItem("name");
 localStorage.setItem("loggedOut", "Log Out");
 location.reload();
 }
