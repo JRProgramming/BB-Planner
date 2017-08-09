@@ -213,6 +213,10 @@ function setUp()
 alert("Not allowed here")
 return;
 }
+         for(i=0;i<email.length;i++)
+         {
+          alert(email[i])
+         }
  var exists = ""
  var num = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -270,7 +274,6 @@ else
           {
            if (errorMessage == "A network error (such as timeout, interrupted connection or unreachable host) has occurred.")
            {
-              console.log("HOWDY");
            location.href = ""
            }
              else
