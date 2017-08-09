@@ -41,16 +41,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
     {
 
 window.names = joey.Request
-        alert(window.names)
-    
-    }
-  }
-  });
-  alert(window.names)
   if(window.names.length != 0)
   {
 document.getElementById("accept").innerHTML = "Accept Friend Request (" + window.names.length + ")"
   }
+    
+    }
+  }
+  });
+
 }
 
 
