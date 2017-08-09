@@ -51,7 +51,7 @@ function signal()
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
+  if(localStorage.getItem("name") == joey.name)
   {
     window.identification = joey.ID
     if(joey.Request != undefined)
