@@ -27,7 +27,28 @@ document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" cl
   });
 
 
+function signal()
+{
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
+    window.identification = joey.ID
+    if(joey.Request != undefined)
+    {
 
+window.names = joey.Request
+  if(window.names.length != 0)
+  {
+document.getElementById("accept").innerHTML = "Accept Friend Request (" + window.names.length + ")"
+  }
+    
+    }
+  }
+  });
+
+}
 
 function addNote(title, text) {
    var div = $("<div/>", {
