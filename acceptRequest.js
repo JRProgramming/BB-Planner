@@ -49,7 +49,7 @@ window.names.push(joey.Request[i])
   });
   if(window.names.length != 0)
   {
-
+document.getElementById("accept").innerHTML = "Accept Friend Request (" + window.names.length + ")"
   }
 }
 
@@ -227,6 +227,7 @@ classers.update({
 window.onload = function()
 {
 load()
+signal()
 }
 function homepage()
 {
