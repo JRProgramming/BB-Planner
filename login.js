@@ -2,7 +2,18 @@ window.names = [];
 window.emails = [];
 window.signup = "Not In"
 window.errors = ""
- 
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+var joey = data.val();
+var data = joey.name;
+var emailer = joey.email;
+window.identification = joey.ID;
+window.names.push(data);
+if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
+{
+toggleSignIn();
+}
+}); 
 
 
    function unique(){
