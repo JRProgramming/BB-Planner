@@ -42,7 +42,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 window.names = joey.Request
   if(window.names.length != 0)
   {
-document.getElementById("accept").innerHTML = "Accept Friend Request (" + window.names.length + ")"
+document.getElementById("access").innerHTML = "Accept Friend Request (" + window.names.length + ")"
   }
     
     }
