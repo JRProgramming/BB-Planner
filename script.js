@@ -45,6 +45,28 @@ location.href = "setClass"
 window.num ++
   });
 window.hw = [];
+function signal()
+{
+var playersRef = firebase.database().ref("Classes/");
+playersRef.on("child_added", function(data, prevChildKey) {
+  var joey = data.val()
+  if(sessionStorage.getItem("name") == joey.name)
+  {
+    window.identification = joey.ID
+    if(joey.Request != undefined)
+    {
+
+window.names = joey.Request
+  if(window.names.length != 0)
+  {
+document.getElementById("accept").innerHTML = "Accept Friend Request (" + window.names.length + ")"
+  }
+    
+    }
+  }
+  });
+
+}
 function homework()
 {
 for(i=0;i<window.lengths;i++)
