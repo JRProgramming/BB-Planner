@@ -10,7 +10,7 @@ window.j = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  var names = sessionStorage.getItem("name")
+  var names = localStorage.getItem("name")
  var nameS = sessionStorage.getItem("nameS");
    if(joey.name == names)
    {
@@ -43,7 +43,6 @@ if(window.boy != undefined && window.bo != undefined)
   {
   for(i=0;i<window.fclass.length;i++)
  {
-console.log(window.lclass[window.numb]);
 if(window.fclass[window.numb] == window.lclass[window.numb])
 {
 window.array.push(window.fclass[window.numb])
