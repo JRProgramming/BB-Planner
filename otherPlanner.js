@@ -127,6 +127,10 @@ function homepage()
 {
 location.href = "index.html";
 }
+window.onload = function()
+{
+signal()
+}
 
 function loadNotes() {
        for(i=0;i<window.names.length;i++){
