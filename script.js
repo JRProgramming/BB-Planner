@@ -60,7 +60,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 window.names = joey.Request
   if(window.names.length != 0)
   {
-document.getElementById("accept").innerHTML = "See Other planners (" + window.names.length + ")"
+document.getElementById("access").innerHTML = "See other planners (" + window.names.length + ")"
   }
     
     }
