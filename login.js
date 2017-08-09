@@ -2,6 +2,8 @@ window.names = [];
 window.emails = [];
 window.signup = "Not In"
 window.errors = ""
+function start()
+{
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
 var joey = data.val();
@@ -14,7 +16,7 @@ if(document.getElementById("email").value != "" && document.getElementById("pass
 toggleSignIn();
 }
 }); 
-
+}
 
    function unique(){
 var num = 0
@@ -380,6 +382,7 @@ location.reload();
     }
 window.onload =  function()
 {
+start()
 document.getElementById("email").value = localStorage.email
 document.getElementById("password").value = localStorage.password
 if(localStorage.email == undefined || localStorage.password == undefined){
