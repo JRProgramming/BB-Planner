@@ -386,12 +386,6 @@ location.reload();
     }
 window.onload =  function()
 {
-   alert(document.getElementById("id01").style.display)
-if(document.getElementById('id01').style.display == 'block')
-{
-   alert("BEE BOP")
-start()
-}
 document.getElementById("email").value = localStorage.email
 document.getElementById("password").value = localStorage.password
 if(localStorage.email == undefined || localStorage.password == undefined){
