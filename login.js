@@ -388,6 +388,7 @@ window.onload =  function()
 {
 if(document.getElementById('id01').style.display == 'block')
 {
+   alert("BEE BOP")
 start()
 }
 document.getElementById("email").value = localStorage.email
