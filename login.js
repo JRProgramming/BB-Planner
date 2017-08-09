@@ -12,7 +12,7 @@ var data = joey.name;
 var emailer = joey.email;
 window.identification = joey.ID;
 window.names.push(data);
-names.push(joey.name)
+namets.push(joey.name)
 if(document.getElementById("email").value != "" && document.getElementById("password").value != "" && document.getElementById("remember").checked == true && localStorage.getItem("loggedOut") != "Log Out")
 {
 toggleSignIn();
