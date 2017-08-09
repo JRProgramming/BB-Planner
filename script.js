@@ -218,9 +218,6 @@ joey = []
     
 }
 
-
-
-
 function homepage()
 {
 location.href = "index.html";
