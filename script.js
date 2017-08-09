@@ -110,14 +110,14 @@ function addNote(title, text) {
    
 
        text = text || window.hw[window.j]; 
-    var sup_text = $("<input/>", {
+    var sup_text = $("<div/>", {
         "class": "mdl-card__supporting-text",
         "contenteditable": "false"
     });
   
     sup_text.html(text);
     sup_text.appendTo(div);
-   var textfield_j = $("<div/>", {
+   var textfield_j = $("<input/>", {
     "class": "mdl-card__actions mdl-card--border",
      "contenteditable": "",
      "placeholder": "Type down your homework here"
