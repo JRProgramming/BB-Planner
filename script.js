@@ -163,11 +163,11 @@ function addAndSaveNote(title, text, index) {
         window.texter = []
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).html() + "<br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).val() + "<br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\">" + $(this).html() + "<br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\">" + $(this).val() + "<br>")
         }
          var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -179,9 +179,9 @@ joey = []
  window.texter = joey
  
 })
-    window.texter.push("<input type=\"checkbox\">" + $(this).html() + "<br>")
+    window.texter.push("<input type=\"checkbox\">" + $(this).val() + "<br>")
          updateSave();  
-        $(this).html("")
+        $(this).val("")
          window.numj = 0;
           
 }
