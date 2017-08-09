@@ -8,7 +8,7 @@ function load()
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
+  if(localStorage.getItem("name") == joey.name)
   {
     window.identification = joey.ID
     if(joey.Request != undefined)
@@ -34,7 +34,7 @@ function signal()
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
+  if(localStorage.getItem("name") == joey.name)
   {
     window.identification = joey.ID
     if(joey.Request != undefined)
@@ -116,7 +116,7 @@ function addAndSaveNote(title, index) {
    var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
+  if(localStorage.getItem("name") == joey.name)
   {
      window.identification = joey.ID
   }
@@ -129,12 +129,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
 if(joey.Access != undefined)
 {
-  if(sessionStorage.getItem("name") == joey.name)
+  if(localStorage.getItem("name") == joey.name)
   { 
   window.tr = joey.Access
   }
 }
-    if(sessionStorage.getItem("name") == joey.name)
+    if(localStorage.getItem("name") == joey.name)
     {
     window.req = []
   window.req = joey.Request
@@ -191,7 +191,7 @@ classers.update({
            var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
+  if(localStorage.getItem("name") == joey.name)
   {
     window.req = []
   window.req = joey.Request
