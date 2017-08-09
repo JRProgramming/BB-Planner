@@ -36,13 +36,13 @@ setclass()
 }
 else
 {
+   alert(window.namel)
 for(i=0; i<window.names.length; i++)
 {
-  if(window.namel != window.names[num])
+  if(window.namel != window.names[i])
     {
       if(exists != "taken"){
         exists = "unique";
-        num ++;
     }
     }
   else
@@ -51,7 +51,7 @@ for(i=0; i<window.names.length; i++)
       
     }
 }
-num = 0
+   alert(exists)
 if(exists == "unique"){
   setter();
 }
