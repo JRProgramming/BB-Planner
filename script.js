@@ -10,41 +10,7 @@ window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
-  var joey = data.val()
-  var names = localStorage.getItem("name")
-  alert(names)
-  if(names == null)
-  {
-  document.getElementById('id01').style.display='block';
-  document.getElementById("namer").innerHTML = "";
-  document.getElementById("namej").innerHTML = "";
-  }
-   window.namers.push(joey.name);
-   if(names == window.namers[window.num])
-   {
- window.identification = joey.ID 
- document.getElementById("names").innerHTML = names + "'s Planner"
- count()
-  if(window.kool = 1){
- window.johnny = joey.classes;
- window.lengths = joey.classes.length
-    for(i=0;i<window.lengths;i++)
-{
-if(window.johnny[i] != "None")
-{
- window.green.push(window.johnny[i]);
-}
-}
- if(window.lengths == 0)
- {
-location.href = "setClass"
- }
-     homework();
-   loadNotes() 
-   }
-  }
-window.num ++
- signal()
+  
   });
 window.hw = [];
 function signal()
