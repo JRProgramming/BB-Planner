@@ -19,15 +19,15 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
     var joey = data.val()
     window.names = [];
-    if (sessionStorage.getItem("name") != joey.name)
+    if (localStorage.getItem("name") != joey.name)
     {
         if (joey.Access != undefined)
         {
-            if (joey.Access.indexOf(sessionStorage.getItem("name")) === -1)
+            if (joey.Access.indexOf(localStorage.getItem("name")) === -1)
             {
                 if (joey.Request != undefined)
                 {
-                    if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
+                    if (joey.Request.indexOf(localStorage.getItem("name")) == -1)
                     {
                         window.names.push(joey.name);
                     }
@@ -42,7 +42,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
         {
             if (joey.Request != undefined)
             {
-                if (joey.Request.indexOf(sessionStorage.getItem("name")) == -1)
+                if (joey.Request.indexOf(localStorage.getItem("name")) == -1)
                 {
                     window.names.push(joey.name);
                 }
@@ -71,7 +71,7 @@ function signal()
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
-  if(sessionStorage.getItem("name") == joey.name)
+  if(localStorage.getItem("name") == joey.name)
   {
     window.identification = joey.ID
     if(joey.Request != undefined)
@@ -178,7 +178,7 @@ function loadData()
         var playersRef = firebase.database().ref("Classes/");
         playersRef.on("child_added", function(data, prevChildKey) {
             var joey = data.val()
-            if (joey.name != sessionStorage.getItem("name"))
+            if (joey.name != localStorage.getItem("name"))
             {
                 window.nameb.push(joey.name)
             }
@@ -194,14 +194,14 @@ function loadData()
                     if (joey.Request == undefined)
                     {
                         window.ds = [];
-                        window.ds.push(sessionStorage.getItem("name"));
+                        window.ds.push(localStorage.getItem("name"));
 
                     }
                     else
                     {
                         for (i = 0; i < window.ds.length; i++)
                         {
-                            if (window.ds[i] == sessionStorage.getItem("name"))
+                            if (window.ds[i] == localStorage.getItem("name"))
                             {
                                 window.gr = "Taken"
                             }
@@ -212,7 +212,7 @@ function loadData()
                         }
                         if (window.gr == "Nothing")
                         {
-                            window.ds.push(sessionStorage.getItem("name"))
+                            window.ds.push(localStorage.getItem("name"))
 
                         }
                     }
