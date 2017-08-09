@@ -1,7 +1,7 @@
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val();
- var data = sessionStorage.getItem("name")
+ var data = localStorage.getItem("name")
  window.names = joey.name
  console.log(data);
 if(data == window.names)
