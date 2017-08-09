@@ -218,7 +218,7 @@ joey = []
 }
 window.onload = function()
 {
-script()
+signal()
 }
 
 
