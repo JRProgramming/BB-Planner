@@ -259,5 +259,10 @@ ref.once("value")
 document.getElementById("h1").innerHTML = "No one has requested access to your planner."
 document.getElementById("h3").innerHTML = "You are cleared so far."
  }
+  else
+  {
+document.getElementById("h1").innerHTML = "They request to have access to your planner."
+    document.getElementById("h3").innerHTML = "Please accept or deny the request."
+  }
   });
 }
