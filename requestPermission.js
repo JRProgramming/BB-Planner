@@ -63,7 +63,8 @@ location.href = "https://jrprogramming.github.io/BB-Planner"
         }
         else
         {
-            document.getElementById("h3").innerHTML = "Now, request anybody who you would like to have access to their planner."
+            document.getElementById("h3").innerHTML = "Request anybody who you would like to have access to their planner."
+            document.getElementById("button").innerHTML = "Done"
         }
     }
 loadNotes()
