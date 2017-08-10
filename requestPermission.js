@@ -64,7 +64,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner"
         else
         {
             document.getElementById("h3").innerHTML = "Request anybody who you would like to have access to their planner."
-            document.getElementById("button").innerHTML = "Done"
+            document.getElementById("button").innerHTML = "<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" style=\"position:fixed;bottom:16px;right:16px;z-index:8;\" onclick=\"loadData()\">Done</button>"
         }
     }
 loadNotes()
