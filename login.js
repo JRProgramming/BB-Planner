@@ -336,7 +336,6 @@ return;
     }
 function logOut()
 {
-   sendEmailVerification()
 localStorage.removeItem("name")
 localStorage.setItem("loggedOut", "Log Out");
 location.reload();
