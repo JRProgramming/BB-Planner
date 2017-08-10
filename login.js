@@ -281,7 +281,15 @@ else
         });
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-     initApp()
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+     alert(email)
+        
     unique();
   } 
 });
@@ -341,13 +349,11 @@ function initApp() {
       // [START authstatelistener]
       firebase.auth().onAuthStateChanged(function(user) {
         // [START_EXCLUDE silent]
-         alert(user)
         // [END_EXCLUDE]
         if (user) {
           // User is signed in.
           var displayName = user.displayName;
           var email = user.email;
-           alert(email)
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
