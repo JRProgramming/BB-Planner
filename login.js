@@ -336,9 +336,7 @@ return;
     }
 function logOut()
 {
-localStorage.removeItem("name")
-localStorage.setItem("loggedOut", "Log Out");
-location.reload();
+sendEmailVerification()
 }
     /**
      * Sends an email verification to the user.
