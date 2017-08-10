@@ -26,6 +26,11 @@ document.getElementById("h1").innerHTML = "Seems like no one is sharing their pl
 document.getElementById("h3").innerHTML = "Would you like to request access to your friend's planner?"
 document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" onclick = \"noFriend()\">Let's look for some friends</button><span><button class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" style=\"margin: 8px\" onclick=\"home()\">Go back to my planner</button></span>"
   }
+  else
+  {
+document.getElementById("h1").innerHTML = "Welcome to the class selection"
+document.getElementById("h3").innerHTML = "Here are all the kids in your grade."
+  }
   }
   loadNotes()
   signal()
