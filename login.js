@@ -282,13 +282,14 @@ else
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
           var displayName = user.displayName;
-          var email = user.email;
+          var email = window.email;
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
      alert(email)
+     alert(displayName)
         
     unique();
   } 
@@ -349,7 +350,7 @@ function logOut()
 {
 localStorage.removeItem("name")
 localStorage.setItem("loggedOut", "Log Out");
-location.href = "jrprogramming.github.io/BB-Planner";
+location.href = "https://jrprogramming.github.io/BB-Planner";
 }
     /**
      * Sends an email verification to the user.
