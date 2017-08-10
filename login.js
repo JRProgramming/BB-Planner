@@ -364,6 +364,9 @@ function initApp() {
 function logOut()
 {
 sendEmailVerification()
+localStorage.removeItem("name")
+localStorage.setItem("loggedOut", "Log Out");
+location.href = "jrprogramming.github.io/BB-Planner";
 }
     /**
      * Sends an email verification to the user.
