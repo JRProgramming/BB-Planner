@@ -289,7 +289,7 @@ firebase.auth().onAuthStateChanged(function(user) {
           var uid = user.uid;
           var providerData = user.providerData;
      alert(email)
-     sendEmailVerification
+     sendEmailVerification();
         
     unique();
   } 
