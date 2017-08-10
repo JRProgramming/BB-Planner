@@ -4,6 +4,10 @@ var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
 window.names = [];
+  if(localStorage.getItem("name") == null)
+  {
+location.href = "https://jrprogramming.github.io/BB-Planner"
+  }
   if(localStorage.getItem("name") != joey.name)
   {
     if(joey.Access != undefined)
