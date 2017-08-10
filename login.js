@@ -342,7 +342,7 @@ sendEmailVerification()
      * Sends an email verification to the user.
      */
     function sendEmailVerification() {
-      alert(firebase.auth().currentUser)
+      console.log(firebase.auth().currentUser)
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
         alert('Email Verification Sent!');
