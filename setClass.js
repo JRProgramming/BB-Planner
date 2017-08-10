@@ -3,7 +3,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val();
  var data = localStorage.getItem("name")
  window.names = joey.name
- console.log(data);
+ if(localStorage.getItem("name") == null)
+  {
+location.href = "https://jrprogramming.github.io/BB-Planner"
+  }
 if(data == window.names)
 {
  window.identification = joey.ID
