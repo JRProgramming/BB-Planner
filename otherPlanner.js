@@ -17,6 +17,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner"
 if(joey.Access[i] == localStorage.getItem("name"))
 {
 window.names.push(joey.name)
+    loadNotes()
 }
   }
     }
@@ -32,7 +33,7 @@ document.getElementById("h1").innerHTML = "Welcome to the class selection"
 document.getElementById("h3").innerHTML = "Here are all the kids in your grade."
   }
   }
-  loadNotes()
+
   signal()
   });
 
@@ -143,13 +144,10 @@ signal()
 }
 
 function loadNotes() {
-  alert(window.names.length)
-       for(i=0;i<window.names.length;i++){
        var note = addAndSaveNote();
         if(note)
      function load(item, index) {
                 if(item)
                     addAndSaveNote(item.title, index); 
             };
-       }
 }
