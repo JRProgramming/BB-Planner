@@ -259,7 +259,7 @@ else
 {
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
-     sendEmailVerification()  
+     unique()  
   }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -310,7 +310,7 @@ return;
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-     toggleSignIn()
+     sendEmailVerification()
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
