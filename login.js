@@ -281,7 +281,6 @@ else
         });
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-     alert(user)
     unique();
   } 
 });
@@ -311,7 +310,10 @@ return;
 }
       // Sign in with email and pass.
       // [START createwithemail]
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+    
+     toggleSignIn()
+    }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -328,20 +330,20 @@ return;
         console.log(errorMessage);
          
       });
-      firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-     
-      toggleSignIn()
-  } 
-});
+
     }
 
 
 function logOut()
 {
-localStorage.removeItem("name")
+   firebase.auth().signOut().then(function() {
+  localStorage.removeItem("name")
 localStorage.setItem("loggedOut", "Log Out");
 location.href = "https://jrprogramming.github.io/BB-Planner";
+}).catch(function(error) {
+  alert("An error had occured, please try again.")
+});
+
 }
     /**
      * Sends an email verification to the user.
