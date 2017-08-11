@@ -311,7 +311,7 @@ return;
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
      firebase.auth().onAuthStateChanged(function(user) {
-  user.sendEmailVerification(); 
+  sendEmailVerification()
 });
     }).catch(function(error) {
         // Handle Errors here.
