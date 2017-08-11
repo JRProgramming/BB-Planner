@@ -190,7 +190,6 @@ function setUp()
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
-     alert(email)
     window.emailVerified = user.emailVerified;
     var photoURL = user.photoURL;
     var isAnonymous = user.isAnonymous;
