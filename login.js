@@ -264,7 +264,6 @@ else
           // [START_EXCLUDE]
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
-             return;
           } 
           else
           {
@@ -275,25 +274,14 @@ else
              else
              {
      alert(errorMessage)
-                return;
              }
           }
           
           console.log(error);
-          return;
         });
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-          var displayName = user.displayName;
-          var email = window.email;
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
-     alert(email)
-     sendEmailVerification();
-        
+     alert(user)
     unique();
   } 
 });
