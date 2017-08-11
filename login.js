@@ -353,7 +353,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
         alert('Email Verification Sent!');
         // [END_EXCLUDE]
       }).catch(function(error) {
-  alert("An error happened, please try again");
+  alert(error);
 });
       // [END sendemailverification]
     }
