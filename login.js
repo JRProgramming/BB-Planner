@@ -190,9 +190,7 @@ function setUp()
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
-     alert(email)
-    var emailVerified = user.emailVerified;
-     alert(emailVerified);
+    window.emailVerified = user.emailVerified;
     var photoURL = user.photoURL;
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
@@ -203,7 +201,8 @@ function setUp()
     // ...
   }
 });
-       
+       if(window.emailVerified == true)
+       {
         window.email = document.getElementById('email').value;
         window.password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
@@ -303,7 +302,11 @@ else
 
    
 }
-      
+       }
+       else
+       {
+handleSignUp()
+       }
  
 }
     /**
@@ -328,9 +331,7 @@ return;
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-     firebase.auth().onAuthStateChanged(function(user) {
   sendEmailVerification()
-});
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -383,9 +384,10 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
     // ...
   }
 });
+       
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
-        alert('Email Verification Sent!');
+        alert('Verify your email now. After that, sign in again');
         // [END_EXCLUDE]
       }).catch(function(error) {
   alert(error);
