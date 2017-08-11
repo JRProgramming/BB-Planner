@@ -260,7 +260,7 @@ else
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
 alert("Woo hoo")
-     uniq8e()
+     unique()
   }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
