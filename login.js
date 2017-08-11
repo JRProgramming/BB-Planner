@@ -190,7 +190,9 @@ function setUp()
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
-    window.emailVerified = user.emailVerified;
+     alert(email)
+    var emailVerified = user.emailVerified;
+     alert(emailVerified);
     var photoURL = user.photoURL;
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
@@ -301,8 +303,7 @@ else
 
    
 }
-       }
-
+      
  
 }
     /**
@@ -327,11 +328,9 @@ return;
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-           firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
+     firebase.auth().onAuthStateChanged(function(user) {
   sendEmailVerification()
-  }
-           })
+});
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -384,10 +383,9 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
     // ...
   }
 });
-       
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
-        alert('Verify your email now. After that, sign in again');
+        alert('Email Verification Sent!');
         // [END_EXCLUDE]
       }).catch(function(error) {
   alert(error);
