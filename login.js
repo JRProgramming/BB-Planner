@@ -257,7 +257,11 @@ setUp();
 
 else
 {
-  firebase.auth().signInWithEmailAndPassword(window.email, window.password).catch(function(error) {
+  firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
+  {
+alert("Woo hoo")
+     uniq8e()
+  }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
@@ -279,11 +283,7 @@ else
           
           console.log(error);
         });
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    unique();
-  } 
-});
+
    
 }
       
