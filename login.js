@@ -352,7 +352,9 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
         // Email Verification sent!
         alert('Email Verification Sent!');
         // [END_EXCLUDE]
-      });
+      }).catch(function(error) {
+  alert("An error happened, please try again");
+});
       // [END sendemailverification]
     }
     function sendPasswordReset() {
