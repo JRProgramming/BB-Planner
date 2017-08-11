@@ -264,6 +264,7 @@ else
           // [START_EXCLUDE]
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
+             return;
           } 
           else
           {
@@ -274,10 +275,12 @@ else
              else
              {
      alert(errorMessage)
+                return;
              }
           }
           
           console.log(error);
+          return;
         });
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
