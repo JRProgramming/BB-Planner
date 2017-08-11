@@ -191,17 +191,13 @@ function setUp()
     var displayName = user.displayName;
     var email = user.email;
      alert(email)
-    var emailVerified = user.emailVerified;
-     alert(emailVerified);
+    window.emailVerified = user.emailVerified;
     var photoURL = user.photoURL;
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
     // ...
-  } else {
-    // User is signed out.
-    // ...
-  }
+  } 
 });
        
         window.email = document.getElementById('email').value;
@@ -263,7 +259,15 @@ handleSignUp();
 }
 else
 {
+   if(window.emailVerified == true)
+   {
  unique(); 
+   }
+   else
+   {
+alert("Your email hasn't been verified")
+      sendEmailVerification()
+   }
 }
 }
 else
@@ -275,6 +279,8 @@ setUp();
 
 else
 {
+   if(window.emailVerified == true)
+   {
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
      unique()  
@@ -301,7 +307,13 @@ else
           console.log(error);
         });
 
-   
+   }
+   else
+   {
+alert("Your email hasn't been verified")
+      sendEmailVerification()
+     
+   }
 }
       
  
@@ -385,7 +397,8 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
 });
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
-        alert('Email Verification Sent!');
+        alert('An email has been sent to you, please verify that this is your email.');
+         location.href = "https://jrprogramming.github.io/BB-Planner"
         // [END_EXCLUDE]
       }).catch(function(error) {
   alert(error);
