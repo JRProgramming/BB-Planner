@@ -259,8 +259,8 @@ else
 {
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
-alert("Woo hoo")
      unique()
+    sendEmailVerification()  
   }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -311,7 +311,6 @@ return;
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-    
      toggleSignIn()
     }).catch(function(error) {
         // Handle Errors here.
@@ -349,7 +348,6 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
      * Sends an email verification to the user.
      */
     function sendEmailVerification() {
-      console.log(firebase.auth().currentUser)
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
         alert('Email Verification Sent!');
