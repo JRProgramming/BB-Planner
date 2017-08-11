@@ -201,8 +201,7 @@ function setUp()
     // ...
   }
 });
-       if(window.emailVerified == true)
-       {
+       
         window.email = document.getElementById('email').value;
         window.password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
@@ -303,10 +302,7 @@ else
    
 }
        }
-       else
-       {
-handleSignUp()
-       }
+
  
 }
     /**
@@ -331,7 +327,11 @@ return;
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+           firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
   sendEmailVerification()
+  }
+           })
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
