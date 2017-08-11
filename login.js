@@ -302,7 +302,7 @@ else
         alert('Please enter a password.');
         return;
       }
- if (email != "jramirez@blindbrook.org" && email != "harondwald@blindbrook.org" && email != "jkaminsky@blindbrook.org" && email != "abao@blindbrook.org" && email != "mshaw@blindbrook.org" && email != "jmayer@blindbrook.org" && email != "rcampbell@blindbrook.org")
+ if (email != "jramirez@blindbrook.org" && email != "harondwald@blindbrook.org" && email != "jkaminsky@blindbrook.org" && email != "abao@blindbrook.org" && email != "mshaw@blindbrook.org" && email != "jmayer@blindbrook.org" && email != "rcampbell@blindbrook.org" && email != "ramirezjohnny@icloud.com")
 {
 alert("Not allowed here")
 return;
