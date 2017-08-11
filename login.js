@@ -112,7 +112,14 @@ alert("Name is taken");
   if (error) {
     alert("Log in failed." + error);
   } else {
+     if(window.emailVerified != false)
+     {
    setclass()
+     }
+     else
+     {
+location.href = "https://jrprogramming.github.io/BB-Planner"
+     }
   }
 });
 localStorage.setItem("name", window.namel);
@@ -378,6 +385,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
      * Sends an email verification to the user.
      */
     function sendEmailVerification() {
+       unique()
        firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -395,9 +403,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
   }
 });
       firebase.auth().currentUser.sendEmailVerification().then(function() {
-        // Email Verification sent!
         alert('An email has been sent to you, please verify that this is your email.');
-         location.href = "https://jrprogramming.github.io/BB-Planner"
         // [END_EXCLUDE]
       }).catch(function(error) {
   alert(error);
