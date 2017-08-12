@@ -118,7 +118,8 @@ alert("Name is taken");
      }
      else
      {
-location.href = "https://jrprogramming.github.io/BB-Planner"
+alert("Your email hasn't been verified")
+sendEmailVerification()
      }
   }
 });
@@ -265,15 +266,9 @@ handleSignUp();
 }
 else
 {
-   if(window.emailVerified == true)
-   {
+
  unique(); 
-   }
-   else
-   {
-alert("Your email hasn't been verified")
-      sendEmailVerification()
-   }
+
 }
 }
 else
@@ -316,8 +311,7 @@ else
    }
    else
    {
-alert("Your email hasn't been verified")
-      sendEmailVerification()
+unique()
      
    }
 }
