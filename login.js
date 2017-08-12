@@ -347,7 +347,7 @@ return;
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
      firebase.auth().onAuthStateChanged(function(user) {
-  sendEmailVerification()
+    toggleSignIn()
 });
     }).catch(function(error) {
         // Handle Errors here.
@@ -385,7 +385,6 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
      * Sends an email verification to the user.
      */
     function sendEmailVerification() {
-       unique()
        firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -403,6 +402,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
   }
 });
       firebase.auth().currentUser.sendEmailVerification().then(function() {
+         
         alert('An email has been sent to you, please verify that this is your email.');
         // [END_EXCLUDE]
       }).catch(function(error) {
