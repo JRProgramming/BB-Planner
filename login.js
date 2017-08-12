@@ -123,7 +123,10 @@ sendEmailVerification()
      }
   }
 });
+if(window.emailVerified == true)
+{
 localStorage.setItem("name", window.namel);
+}
      }
      else
      {
