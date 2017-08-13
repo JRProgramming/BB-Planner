@@ -195,7 +195,7 @@ joey = []
  window.texter = joey
  
 })
-         alert(document.getElementById("x2").innerHTML)
+         alert(document.getElementById("x2/").innerHTML)
         var length = window.texter.length + 1
           var alength = "x" + length;  
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
