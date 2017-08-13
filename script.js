@@ -175,7 +175,7 @@ function addAndSaveNote(title, text, index) {
    note.card.find(".mdl-card__supporting-text").on("click", function()
                                                    {
 
-for(i=1;i<window.length + 1;i++)
+for(i=0;i<window.length;i++)
 {
 if(document.getElementById(i).checked == true)
 {
@@ -215,7 +215,7 @@ joey = []
  
 })
 
-        window.length = window.texter.length + 1
+        window.length = window.texter.length
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + length + ">" + $(this).val() + "<br>")
