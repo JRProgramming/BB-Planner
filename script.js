@@ -45,7 +45,6 @@ location.href = "setClass"
   }
 window.num ++
  signal()
-alert("<input type=\"checkbox\" id=\"" + "x2" + "\">" + $(this).val() + "<br>")
   });
 window.hw = [];
 function signal()
@@ -208,7 +207,7 @@ joey = []
          note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=" + alength + "\">" + $(this).val() + "<br>")
+    window.texter.push("<input type=\"checkbox\" id=\"" + alength + "\">" + $(this).val() + "<br>")
          updateSave();  
         $(this).val("")
          window.numj = 0;
