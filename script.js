@@ -199,14 +199,14 @@ joey = []
           var alength = "x" + length;  
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
         }
          
-    window.texter.push("<input type=\"checkbox\">" + $(this).val() + "<br>")
+    window.texter.push("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
          updateSave();  
         $(this).val("")
          window.numj = 0;
