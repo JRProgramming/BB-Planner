@@ -208,7 +208,7 @@ joey = []
          note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
+    window.texter.push("<input type=\"checkbox\" id=\"" + alength + "\">" + $(this).val() + "<br>")
          updateSave();  
         $(this).val("")
          window.numj = 0;
