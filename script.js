@@ -179,7 +179,15 @@ for(i=1;i<window.length + 1;i++)
 {
 if(document.getElementById(i).checked == true)
 {
-alert(i)
+ window.texter.splice(i, 1)
+ note.card.find(".mdl-card__supporting-text").html("")
+ for(i=0;i<window.texter.length;i++)
+ {
+ note.card.find(".mdl-card__supporting-text").append(window.texter[i])
+  }
+
+updateSave()
+ 
 }
 }
    });
