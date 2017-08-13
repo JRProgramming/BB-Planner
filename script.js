@@ -174,8 +174,8 @@ function addAndSaveNote(title, text, index) {
       
    note.card.find(".mdl-card__supporting-text").on("click", function()
                                                    {
-    alert(window.length)
-for(i=1;i<window.length.length + 1;i++)
+
+for(i=1;i<window.length + 1;i++)
 {
 if(document.getElementById(i).checked == true)
 {
