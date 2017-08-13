@@ -186,15 +186,7 @@ function addAndSaveNote(title, text, index) {
        {
          window.hat = note.title;
         window.texter = []
-        if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
-        {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).val() + "<br>")
-        }
-        else
-        {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\">" + $(this).val() + "<br>")
-        }
-         var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
+        var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
  if(joey == "No homework")
@@ -206,7 +198,16 @@ joey = []
 })
         var length = window.texter.length + 1
           var alength = "x" + length;  
-    window.texter.push("<input type=\"checkbox\">" + $(this).val() + "<button id=" + alength + ">X</button>" + "<br>")
+        if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
+        {
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\">" + $(this).val() + "<button id=" + alength + " class=\"x\">X</button>" + "<br>")
+        }
+        else
+        {
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\">" + $(this).val() + "<button id=" + alength + " class=\"x\">X</button>" + "<br>")
+        }
+         
+    window.texter.push("<input type=\"checkbox\">" + $(this).val() + "<button id=" + alength + " class=\"x\">X</button>" + "<br>")
          updateSave();  
         $(this).val("")
          window.numj = 0;
