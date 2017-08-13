@@ -204,7 +204,7 @@ joey = []
  
 })
         
-    window.texter.push("<input type=\"checkbox\">" + $(this).val() + "<button>X</button>" + "<br>")
+    window.texter.push("<input type=\"checkbox\">" + $(this).val() + "<button class=\"x\">X</button>" + "<br>")
          updateSave();  
         $(this).val("")
          window.numj = 0;
