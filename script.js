@@ -203,7 +203,9 @@ joey = []
  window.texter = joey
  
 })
-          var alength = "x" + window.texter.length + 1;  
+        var length = window.texter.length + 1
+        alert(length)
+          var alength = "x" + length;  
         alert(alength);
     window.texter.push("<input type=\"checkbox\">" + $(this).val() + "<button id=" + alength + ">X</button>" + "<br>")
         alert(document.getElementById("x2").innerHTML);
