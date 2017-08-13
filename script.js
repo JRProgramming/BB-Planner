@@ -195,19 +195,18 @@ joey = []
  window.texter = joey
  
 })
-         alert(document.getElementById("x2/").innerHTML)
+
         var length = window.texter.length + 1
-          var alength = "x" + length;  
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + length + ">" + $(this).val() + "<br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + alength + ">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + length + ">" + $(this).val() + "<br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=\"" + alength + "\">" + $(this).val() + "<br>")
+    window.texter.push("<input type=\"checkbox\" id=\"" + length + "\">" + $(this).val() + "<br>")
          updateSave();  
         $(this).val("")
          window.numj = 0;
