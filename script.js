@@ -172,7 +172,13 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
   
       
-        
+   note.card.find(".mdl-card__supporting-text").on("click", function()
+                                                   {
+alert("LOSER")
+   });
+    note.card.find("button").click(function() {
+        askRemoveNote(index, note.card); 
+    });      
   
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
