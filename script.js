@@ -174,11 +174,15 @@ function addAndSaveNote(title, text, index) {
       
    note.card.find(".mdl-card__supporting-text").on("click", function()
                                                    {
-alert("LOSER")
+for(i=0;i<window.length.length;i++)
+{
+if(document.getElementById(i).checked == true)
+{
+alert(i)
+}
+}
    });
-    note.card.find("button").click(function() {
-        askRemoveNote(index, note.card); 
-    });      
+   
   
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
@@ -202,7 +206,7 @@ joey = []
  
 })
 
-        var length = window.texter.length + 1
+        window.length = window.texter.length + 1
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + length + ">" + $(this).val() + "<br>")
