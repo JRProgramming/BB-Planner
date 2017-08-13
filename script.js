@@ -45,6 +45,7 @@ location.href = "setClass"
   }
 window.num ++
  signal()
+ alert(document.getElementById("x2).innerHTML)
   });
 window.hw = [];
 function signal()
