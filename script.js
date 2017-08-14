@@ -196,10 +196,15 @@ joey = []
         tyr ++
         }
         }
+  
+         var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-         var title = note.card.find(".mdl-card__title-text").val()
-        note.card.find(".mdl-card__title-text").val(title + "LOLO")
+        note.card.find(".mdl-card__title-text").val(title + "<button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
+        }
+        else
+        {
+         note.card.find(".mdl-card__title-text").val(title)
         }
  });
 
