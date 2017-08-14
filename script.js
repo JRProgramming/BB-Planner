@@ -176,7 +176,17 @@ function addAndSaveNote(title, text, index) {
     }
     window.classes.push(note.title)
   
-      
+         var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
+playersRef.on("child_added", function(data, prevChildKey) {
+ var joey = data.val()
+ if(joey == "No homework")
+ {
+joey = []
+ }
+ window.texter = joey
+ window.length = window.texter.length
+})     
+ 
  note.card.find(".mdl-card__supporting-text").on("click", function(){
         var tyr = 0;
         for(i=0;i<window.length;i++)
