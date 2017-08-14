@@ -185,10 +185,12 @@ joey = []
  }
  window.texter = joey
  window.length = window.texter.length
+ alert(window.length)
 })     
  
  note.card.find(".mdl-card__supporting-text").on("click", function(){
         var tyr = 0;
+        alert(window.length);
         for(i=0;i<window.length;i++)
         {
         if(document.getElementById(i).checked == true)
