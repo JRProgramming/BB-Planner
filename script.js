@@ -177,8 +177,21 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
   
       
+ note.card.find(".mdl-card__supporting-text").on("click", function(){
+        var tyr = 0;
+        for(i=0;i<window.length;i++)
+        {
+        if(document.getElementById(i).checked == true)
+        {
+        tyr ++
+        }
+        }
+        if(tyr == window.length)
+        {
+          alert("Alert is activated");
+        }
+ });
 
-   
   
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
@@ -215,18 +228,6 @@ joey = []
     window.texter.push("<input type=\"checkbox\" id=\"" + length + "\">" + $(this).val() + "<br>")
          updateSave();  
         window.length = window.texter.length
-        var tyr = 0;
-        for(i=0;i<window.length;i++)
-        {
-        if(document.getElementById(i).checked == true)
-        {
-        tyr ++
-        }
-        }
-        if(tyr == window.length)
-        {
-          alert("Alert is activated");
-        }
         $(this).val("")
          window.numj = 0;
           
