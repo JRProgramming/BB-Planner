@@ -183,11 +183,10 @@ playersRef.on("child_added", function(data, prevChildKey) {
  {
 joey = []
  }
- window.ased = joey
- 
+ window.lengthj = joey.length
 })
 
-        window.lengthj = window.ased.length
+       
  
  
  note.card.find(".mdl-card__supporting-text").on("click", function(){
