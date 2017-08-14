@@ -184,21 +184,21 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.texter = joey
- window.length = window.texter.length
- alert(window.length)
+ window.lengths = window.texter.length
+ alert(window.lengths)
 })     
  
  note.card.find(".mdl-card__supporting-text").on("click", function(){
         var tyr = 0;
-        alert(window.length);
-        for(i=0;i<window.length;i++)
+        alert(window.lengths);
+        for(i=0;i<window.lengths;i++)
         {
         if(document.getElementById(i).checked == true)
         {
         tyr ++
         }
         }
-        if(tyr == window.length)
+        if(tyr == window.lengths)
         {
          var title = note.card.find(".mdl-card__title-text").val()
          alert(title)
@@ -228,7 +228,7 @@ joey = []
  
 })
 
-        window.length = window.texter.length
+        window.lengths = window.texter.length
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + length + ">" + $(this).val() + "<br>")
@@ -240,7 +240,7 @@ joey = []
          
     window.texter.push("<input type=\"checkbox\" id=\"" + length + "\">" + $(this).val() + "<br>")
          updateSave();  
-        window.length = window.texter.length
+        window.lengths = window.texter.length
         $(this).val("")
          window.numj = 0;
           
