@@ -188,7 +188,8 @@ function addAndSaveNote(title, text, index) {
         }
         if(tyr == window.length)
         {
-          alert("Alert is activated");
+         var title = note.card.find(".mdl-card__title-text").val()
+         alert(title)
         }
  });
 
