@@ -172,25 +172,7 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
   
       
-   note.card.find(".mdl-card__supporting-text").on("click", function()
-                                                   {
 
-for(i=0;i<window.length;i++)
-{
-if(document.getElementById(i).checked == true)
-{
- window.texter.splice(i, 1)
- note.card.find(".mdl-card__supporting-text").html("")
- for(i=0;i<window.texter.length;i++)
- {
- note.card.find(".mdl-card__supporting-text").append(window.texter[i])
-  }
-
-updateSave()
- 
-}
-}
-   });
    
   
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
