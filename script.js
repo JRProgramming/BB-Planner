@@ -147,6 +147,11 @@ function addNote(title, text) {
      "placeholder": "Type down your homework here"
   }); 
   textfield_j.appendTo(div);
+ var button_j = $("<div/>", {
+  "class": "mdl-card__supporting-text",
+  "contenteditable": "false"
+  
+ })
  
    
   
@@ -210,6 +215,18 @@ joey = []
     window.texter.push("<input type=\"checkbox\" id=\"" + length + "\">" + $(this).val() + "<br>")
          updateSave();  
         window.length = window.texter.length
+        var tyr = 0;
+        for(i=0;i<window.length;i++)
+        {
+        if(document.getElementById(i).checked == true)
+        {
+        tyr ++
+        }
+        }
+        if(tyr == window.length)
+        {
+          alert("Alert is activated");
+        }
         $(this).val("")
          window.numj = 0;
           
