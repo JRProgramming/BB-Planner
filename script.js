@@ -180,7 +180,6 @@ function addAndSaveNote(title, text, index) {
  
  note.card.find(".mdl-card__supporting-text").on("click", function(){
         var tyr = 0;
-        alert(window.lengthj);
         for(i=0;i<window.lengthj;i++)
         {
         if(document.getElementById(i).checked == true)
@@ -188,6 +187,8 @@ function addAndSaveNote(title, text, index) {
         tyr ++
         }
         }
+  alert(tyr)
+  alert(window.lengthj)
         if(tyr == window.lengthj)
         {
          var title = note.card.find(".mdl-card__title-text").val()
