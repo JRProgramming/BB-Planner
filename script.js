@@ -187,8 +187,6 @@ function addAndSaveNote(title, text, index) {
         tyr ++
         }
         }
-  alert(tyr)
-  alert(window.lengthj)
         if(tyr == window.lengthj)
         {
          var title = note.card.find(".mdl-card__title-text").val()
@@ -222,14 +220,14 @@ joey = []
         window.lengthj = window.texter.length
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + length + ">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + window.lengthj + ">" + $(this).val() + "<br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + length + ">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + window.lengthj + ">" + $(this).val() + "<br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=\"" + length + "\">" + $(this).val() + "<br>")
+    window.texter.push("<input type=\"checkbox\" id=\"" + window.lengthj + "\">" + $(this).val() + "<br>")
          updateSave();  
         window.lengthj = window.texter.length
         $(this).val("")
