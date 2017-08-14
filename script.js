@@ -175,7 +175,10 @@ function addAndSaveNote(title, text, index) {
         text: note.text
     }
     window.classes.push(note.title)
-  
+ 
+ 
+ note.card.find(".mdl-card__supporting-text").on("click", function(){
+   window.hat = note.title;
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
@@ -185,13 +188,7 @@ joey = []
  }
  window.lengthj = joey.length
 })
-
-       
- 
- 
- note.card.find(".mdl-card__supporting-text").on("click", function(){
         var tyr = 0;
-       alert(window.lengthj)
         for(i=0;i<window.lengthj;i++)
         {
         if(document.getElementById(i).checked == true)
