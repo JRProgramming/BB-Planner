@@ -199,7 +199,7 @@ joey = []
         if(tyr == window.lengthj)
         {
          var title = note.card.find(".mdl-card__title-text").val()
-         alert(title)
+        note.card.find(".mdl-card__title-text").val(title + "LOLO")
         }
  });
 
