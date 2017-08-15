@@ -201,8 +201,10 @@ joey = []
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-         alert(note.card.find(".mdl-card__supporting-text").html())
+         if(window.re != 1)
+         {
          suptext = note.card.find(".mdl-card__supporting-text").html()
+         }
         note.card.find(".mdl-card__supporting-text").append("<br><button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
@@ -210,7 +212,8 @@ joey = []
          alert(suptext)
          if(suptext != null)
           {
-         note.card.find(".mdl-card__supporting-text").html()
+         note.card.find(".mdl-card__supporting-text").html(suptext)
+          window.re = 1
           }
         }
  });
