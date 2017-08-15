@@ -1,4 +1,4 @@
-var suptext = ""
+var suptext = null
 window.j = 0;
 window.kool = 0;
 window.namers = [];
@@ -201,15 +201,16 @@ joey = []
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
+         alert(note.card.find(".mdl-card__supporting-text").html())
          suptext = note.card.find(".mdl-card__supporting-text").html()
         note.card.find(".mdl-card__supporting-text").append("<br><button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
         {
          alert(suptext)
-         if(suptext != undefined)
+         if(suptext != null)
           {
-         note.card.find(".mdl-card__supporting-text").html(suptext)
+         note.card.find(".mdl-card__supporting-text").html()
           }
         }
  });
