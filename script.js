@@ -1,3 +1,4 @@
+
 window.j = 0;
 window.kool = 0;
 window.namers = [];
@@ -118,13 +119,19 @@ function addNote(title, text) {
         
   title = title || window.green[window.j];
         
+    var title_e = $("<div/>", {
+        "class": "mdl-card__title", 
+        "contenteditable": "false"
+    });
+    title_e.appendTo(div);
+        
     var title_text = $("<div/>", {
         "class": "mdl-card__title-text",
         "contenteditable": "false"
     });
     
-    title_text.html(title);
-    title_text.appendTo(div);
+    title_text.val(title);
+    title_text.appendTo(title_e);
    
 
        text = text || window.hw[window.j]; 
@@ -194,11 +201,11 @@ joey = []
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title-text").val(title + "<button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
+        note.card.find(".mdl-card__title").val(title + "<button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
         {
-         note.card.find(".mdl-card__title-text").val(title)
+         note.card.find(".mdl-card__title").val(title)
         }
  });
 
@@ -268,4 +275,3 @@ function loadNotes() {
             };
        }
 }
-
