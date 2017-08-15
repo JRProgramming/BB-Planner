@@ -202,6 +202,7 @@ joey = []
         if(tyr == window.lengthj)
         {
          var suptext = note.card.find(".mdl-card__supporting-text").html()
+         alert(suptext)
         note.card.find(".mdl-card__supporting-text").append("<br><button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
