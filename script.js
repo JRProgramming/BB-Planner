@@ -201,11 +201,11 @@ joey = []
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title").val(title + "<button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
+        note.card.find(".mdl-card__supporting-text").append("<br><button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
         {
-         note.card.find(".mdl-card__title").val(title)
+         note.card.find(".mdl-card__supporting-text").append("")
         }
  });
 
