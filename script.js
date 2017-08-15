@@ -206,6 +206,7 @@ joey = []
         }
         else
         {
+         alert(suptext)
          if(suptext != undefined)
           {
            alert(suptext)
