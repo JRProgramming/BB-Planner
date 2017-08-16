@@ -190,7 +190,7 @@ joey = []
  window.lengthj = joey.length
 })
         var tyr = 0;
-        for(i=0;i<window.lengthj;i++)
+        for(i=0;i<2;i++)
         {
          alert(document.getElementById(i).checked)
         if(document.getElementById(i).checked == true)
@@ -200,8 +200,6 @@ joey = []
         }
   
          var title = note.card.find(".mdl-card__title-text").val()
-         alert(tyr)
-         alert(window.lengthj)
         if(tyr == window.lengthj)
         {
         note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
