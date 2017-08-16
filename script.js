@@ -209,7 +209,8 @@ joey = []
          if(window.re == 1)
          {
           note.card.find(".mdl-card__supporting-text").remove("<br><button class=\"clearbutton\" onclick=\"clearHW()\">Clear Homework</button>")
-          ]
+          window.re = 0;
+         }
         }
  });
 
