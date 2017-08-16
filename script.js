@@ -213,6 +213,11 @@ joey = []
         }
  });
 
+ function clearHW()
+ {
+alert("Hello World!");
+  
+ }
   
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
@@ -264,6 +269,7 @@ joey = []
     return note;
     
 }
+
 
 function homepage()
 {
