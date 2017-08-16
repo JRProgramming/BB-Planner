@@ -202,7 +202,7 @@ joey = []
         if(tyr == window.lengthj)
         {
          window.re = 1
-        note.card.find(".mdl-card__supporting-text").append("<br><button class=\"clearbutton\" id=\"buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
+        note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
         {
