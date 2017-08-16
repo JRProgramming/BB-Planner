@@ -204,6 +204,7 @@ joey = []
         }
         else
         {
+         alert("#" + note.title + "buttonx")
           $("#" + note.title + "buttonx").remove()
         }
  });
