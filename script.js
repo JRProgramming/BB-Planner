@@ -206,8 +206,6 @@ joey = []
         }
         else
         {
-         if(window.re == 1)
-         {
           $("#buttonx").remove()
         }
  });
