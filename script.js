@@ -197,12 +197,10 @@ joey = []
         tyr ++
         }
         }
-        alert(tyr)
-        alert(window.lengthj);
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
+        note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"" + note.title + "buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
         {
