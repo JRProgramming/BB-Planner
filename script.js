@@ -190,7 +190,7 @@ joey = []
  window.lengthj = joey.length
 })
         var tyr = 0;
-        for(i=0;i<2;i++)
+        for(i=0;i<window.lengthj;i++)
         {
          alert(document.getElementById(note.title + i).checked)
         if(document.getElementById(note.title + i).checked == true)
@@ -198,7 +198,8 @@ joey = []
         tyr ++
         }
         }
-  
+        alert(tyr)
+        alert(window.lengthj);
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
