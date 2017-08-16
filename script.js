@@ -208,7 +208,7 @@ joey = []
         {
          if(window.re == 1)
          {
-          note.card.find(".mdl-card__supporting-text").removeChild(document.getElementById("buttonx"))
+          $("#buttonx").remove()
           window.re = 0;
          }
         }
