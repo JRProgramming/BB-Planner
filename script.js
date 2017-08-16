@@ -209,7 +209,6 @@ joey = []
         }
         else
         {
-         alert("#" + classes + "buttonx")
           $("#" + classes + "buttonx").remove()
         }
  });
