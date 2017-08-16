@@ -190,6 +190,11 @@ joey = []
  window.lengthj = joey.length
 })
         var tyr = 0;
+        var classes = note.title
+        if(classes == "Social Studies")
+        {
+        classes = "Social_Studies"
+        }
         for(i=0;i<window.lengthj;i++)
         {
         if(document.getElementById(note.title + i).checked == true)
@@ -200,12 +205,12 @@ joey = []
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"" + note.title + "buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
+        note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
         {
-         alert("#" + note.title + "buttonx")
-          $("#" + note.title + "buttonx").remove()
+         alert("#" + classes + "buttonx")
+          $("#" + classes + "buttonx").remove()
         }
  });
 
