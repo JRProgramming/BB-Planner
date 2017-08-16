@@ -192,6 +192,7 @@ joey = []
         var tyr = 0;
         for(i=0;i<window.lengthj;i++)
         {
+         alert(document.getElementById(i).checked)
         if(document.getElementById(i).checked == true)
         {
         tyr ++
