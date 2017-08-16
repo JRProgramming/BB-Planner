@@ -180,7 +180,6 @@ function addAndSaveNote(title, text, index) {
  
  note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
-  alert(note.title)
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
@@ -200,6 +199,8 @@ joey = []
         }
   
          var title = note.card.find(".mdl-card__title-text").val()
+         alert(tyr)
+         alert(window.lengthj)
         if(tyr == window.lengthj)
         {
         note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
