@@ -180,6 +180,7 @@ function addAndSaveNote(title, text, index) {
  
  note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
+  alert(note.title)
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
@@ -201,7 +202,6 @@ joey = []
          var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-         window.re = 1
         note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
         }
         else
@@ -209,8 +209,6 @@ joey = []
          if(window.re == 1)
          {
           $("#buttonx").remove()
-          window.re = 0;
-         }
         }
  });
 
