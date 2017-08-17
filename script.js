@@ -117,7 +117,7 @@ function addNote(title, text) {
    });
     div.appendTo(".mdl-layout__content")
         
-  title = title || window.green[window.j] + "<span>Hello World!</span>";
+  title = title || window.green[window.j];
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title", 
@@ -201,10 +201,9 @@ joey = []
         tyr ++
         }
         }
-         var title = note.card.find(".mdl-card__title-text").val()
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__supporting-text").append("<button class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear Homework</button>")
+        note.card.find(".mdl-card__title-text").val(note.title + "<span class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear Homework</span>")
         }
         else
         {
