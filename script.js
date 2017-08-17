@@ -256,17 +256,15 @@ joey = []
     }
     
   })
-
+ 
+    return note;
+    
+}
  function clearHW()
  {
 alert("Hello World!");
   
  }
- 
-    return note;
-    
-}
-
 
 function homepage()
 {
