@@ -111,30 +111,21 @@ function updateSave()
 }
 
 
-function addNote(title, text, hgf) {
+function addNote(title, text) {
    var div = $("<div/>", {
         "class": "mdl-card mdl-shadow--2dp note"            
    });
     div.appendTo(".mdl-layout__content")
         
   title = title || window.green[window.j];
- 
- hgf = hgf || "<button>lskjdfoiasd</button>"
         
-    var title_e = $("<div/>", {
-        "class": "mdl-card__title", 
-        "contenteditable": "false"
-    });
-    title_e.val(hgf);
-    title_e.appendTo(div);
-        
-    var title_text = $("<input>", {
+    var title_text = $("<div/>", {
         "class": "mdl-card__title-text",
         "contenteditable": "false"
     });
     
-    title_text.val(title);
-    title_text.appendTo(title_e);
+    title_text.html(title);
+    title_text.appendTo(div);
    
 
        text = text || window.hw[window.j]; 
