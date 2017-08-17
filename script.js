@@ -257,17 +257,19 @@ joey = []
     }
     
   })
- function clearHW()
+
+ 
+    return note;
+  function clearHW()
 {
  alert("Loser")
  prevHW = note.card.find(".mdl-card__title-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework");
 }
-
- 
-    return note;
     
 }
+
+
 
 function homepage()
 {
