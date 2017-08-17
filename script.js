@@ -117,7 +117,7 @@ function addNote(title, text) {
    });
     div.appendTo(".mdl-layout__content")
         
-  title = title || window.green[window.j] + "<button>Hello World!</button>";
+  title = title || window.green[window.j] + "<p>Hello World!</p>";
         
     var title_e = $("<div/>", {
         "class": "mdl-card__title", 
