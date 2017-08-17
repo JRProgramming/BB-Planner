@@ -7,6 +7,7 @@ var texter = [];
  var yu = []
 var yo = 0;
 var bo = 0;
+var prevHW = "";
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -203,7 +204,7 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer; display: inline-block; float:right;\" class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear HW</span>")
+        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear HW</span>")
         }
         else
         {
@@ -260,10 +261,11 @@ joey = []
     return note;
     
 }
- function clearHW()
+ function clearHW(title, text)
  {
-alert("Hello World!");
-  
+var note = addNote(title, text);
+prevHW = note.card.find(".mdl-card__title-text").html()
+note.card.find(".mdl-card__title-text").html("No homework");
  }
 
 function homepage()
