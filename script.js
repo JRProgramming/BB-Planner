@@ -177,10 +177,6 @@ function addAndSaveNote(title, text, index) {
         text: note.text
     }
     window.classes.push(note.title)
- note.card.find(".mdl-card__title-text").on("click", function(){
-prevHW = note.card.find(".mdl-card__title-text").html()
-note.card.find(".mdl-card__supporting-text").html("No homework");
- })
  
  note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
@@ -208,7 +204,7 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\">Clear HW</span>")
+        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick\"clearHW()\">Clear HW</span>")
         }
         else
         {
@@ -261,11 +257,17 @@ joey = []
     }
     
   })
+ function clearHW()
+{
+ alert("Loser")
+ prevHW = note.card.find(".mdl-card__title-text").html()
+note.card.find(".mdl-card__supporting-text").html("No homework");
+}
+
  
     return note;
     
 }
-
 
 function homepage()
 {
