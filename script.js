@@ -257,7 +257,7 @@ joey = []
     }
     
   }) 
-   $(".clearButton").click(function()
+   $(".clearbutton").click(function()
 {
  prevHW = note.card.find(".mdl-card__title-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework");
