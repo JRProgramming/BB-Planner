@@ -204,7 +204,7 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear HW</span>")
+        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\">Clear HW</span>")
         }
         else
         {
@@ -257,15 +257,12 @@ joey = []
     }
     
   }) 
-    return note;
- 
-}
-   function clearHW(title, text)
+   $(".clearButton").click(function()
 {
- var note = addNote(title, text);
  prevHW = note.card.find(".mdl-card__title-text").html()
- alert("Loser")
 note.card.find(".mdl-card__supporting-text").html("No homework");
+})
+    return note;
 }
 
 function homepage()
