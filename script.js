@@ -257,7 +257,7 @@ joey = []
     }
     
   }) 
-   $(".clearbutton").on("click", function()
+   $("#Algebrabuttonx").on("click", function()
 {
 alert("Loser")
 })
