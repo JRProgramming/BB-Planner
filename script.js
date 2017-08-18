@@ -260,15 +260,14 @@ joey = []
 
  
     return note;
-  function clearHW()
+}
+  function clearHW(title, text)
 {
- alert("Loser")
+ var note = addNote(title, text)
  prevHW = note.card.find(".mdl-card__title-text").html()
+ alert(prevHW)
 note.card.find(".mdl-card__supporting-text").html("No homework");
 }
-    
-}
-
 
 
 function homepage()
