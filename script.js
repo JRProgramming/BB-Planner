@@ -207,7 +207,8 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-        document.createElement("span").onclick - clearHW()
+       var joe = document.createElement("span")
+       note.card.find(".mdl-card__title-text").append(joe)
         }
         else
         {
