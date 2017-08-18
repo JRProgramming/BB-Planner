@@ -257,16 +257,16 @@ joey = []
     }
     
   }) 
-   function clearHW()
+    return note;
+ 
+}
+   function clearHW(title, text)
 {
+ var note = addNote(title, text);
  prevHW = note.card.find(".mdl-card__title-text").html()
  alert("Loser")
 note.card.find(".mdl-card__supporting-text").html("No homework");
 }
-    return note;
- 
-}
-
 
 function homepage()
 {
