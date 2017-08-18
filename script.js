@@ -257,12 +257,14 @@ joey = []
     }
     
   }) 
-   $("#Algebrabuttonx").on("click", function()
+
+    return note;
+}
+   $(".clearbutton").on("click", function()
 {
 alert("Loser")
 })
-    return note;
-}
+
 
 function homepage()
 {
