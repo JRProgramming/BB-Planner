@@ -177,7 +177,10 @@ function addAndSaveNote(title, text, index) {
         text: note.text
     }
     window.classes.push(note.title)
- 
+     function clearHW()
+{
+alert("Loser")
+}
  note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
@@ -257,10 +260,6 @@ joey = []
     }
     
   }) 
-    function clearHW()
-{
-alert("Loser")
-}
 
     return note;
 }
