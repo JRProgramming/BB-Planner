@@ -207,7 +207,7 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title-text").append("<span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear HW</span>")
+        document.createElement("span").onclick - clearHW()
         }
         else
         {
