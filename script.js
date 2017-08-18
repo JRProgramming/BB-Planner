@@ -204,7 +204,7 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\">Clear HW</span>")
+        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW\">Clear HW</span>")
         }
         else
         {
@@ -257,13 +257,14 @@ joey = []
     }
     
   }) 
+    function clearHW()
+{
+alert("Loser")
+}
 
     return note;
 }
-   $(".clearbutton").on("click", function()
-{
-alert("Loser")
-})
+
 
 
 function homepage()
