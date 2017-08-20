@@ -231,12 +231,19 @@ function setUp()
           return;
         }
 var h = ""
+var j = ""
+var email = "j@blindbrook.org"
+for(i=0;i<email.length;i++)
+{
+var joe = email[i]
+h = joe + h 
+}
 for(i=0;i<14;i++)
 {
-
-h = email[i] + h 
+var joey = h[i]
+j = joey + j 
 }
-         if (h == "gro.koorbdnild")
+if (j == "blindbrook.org")
 {
 alert("Not allowed here")
 return;
