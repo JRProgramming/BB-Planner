@@ -231,7 +231,6 @@ function setUp()
           return;
         }
 var h = ""
-var email = "blindbrook.org"
 for(i=0;i<14;i++)
 {
 
