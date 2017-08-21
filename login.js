@@ -198,7 +198,7 @@ function setUp()
     function toggleSignIn() {
      firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    // User is signed in.
+   aler("Woo ka doo")
     var displayName = user.displayName;
     var email = user.email;
     window.emailVerified = user.emailVerified;
