@@ -326,8 +326,8 @@ else
    }
    else
    {
-unique()
-     
+alert("Your email hasn't been verified")
+sendEmailVerification()    
    }
 }
       
@@ -422,15 +422,12 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
     var uid = user.uid;
     var providerData = user.providerData;
     // ...
-  } else {
-    // User is signed out.
-    // ...
-  }
+  } 
 });
       firebase.auth().currentUser.sendEmailVerification().then(function() {
          
         alert('An email has been sent to you, please verify that this is your email.');
-        // [END_EXCLUDE]
+       unique()
       }).catch(function(error) {
   alert(error);
 });
