@@ -326,8 +326,7 @@ else
    }
    else
    {
-alert("Your email hasn't been verified")
-sendEmailVerification()    
+unique()  
    }
 }
       
@@ -370,8 +369,7 @@ sendEmailVerification()
       }
         else
        {
-          alert("Your email hasn't been verified")
-       sendEmailVerification()
+          unique()
        }
 });
     }).catch(function(error) {
@@ -427,7 +425,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
       firebase.auth().currentUser.sendEmailVerification().then(function() {
          
         alert('An email has been sent to you, please verify that this is your email.');
-       unique()
+       
       }).catch(function(error) {
   alert(error);
 });
