@@ -283,7 +283,7 @@ else
 {
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
-                  firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     var displayName = user.displayName;
@@ -293,6 +293,7 @@ else
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
+     alert(window.emailVerified)
      if(window.emailVerified == true)
      {
      unique()
@@ -394,8 +395,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
      */
     function sendEmailVerification() {
       firebase.auth().currentUser.sendEmailVerification().then(function() {
-         
-        alert('An email has been sent to you, please verify that this is your email.');
+      alert('An email has been sent to you, please verify that this is your email.');
         // [END_EXCLUDE]
       }).catch(function(error) {
   alert(error);
