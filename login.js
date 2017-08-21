@@ -348,8 +348,8 @@ unique()
         return;
       }
 
-      // Sign in with email and pass.
-      // [START createwithemail]
+      if(window.emailVerified == true)
+      {
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
      firebase.auth().onAuthStateChanged(function(user) {
     toggleSignIn()
@@ -371,7 +371,12 @@ unique()
         console.log(errorMessage);
          
       });
-
+      }
+       else
+       {
+          alert("Your email hasn't been verified")
+       sendEmailVerification()
+       }
     }
 
 
