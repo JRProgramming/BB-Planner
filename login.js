@@ -232,10 +232,9 @@ function setUp()
         }
 var h = ""
 var j = ""
-var email = "j@blindbrook.org"
-for(i=0;i<email.length;i++)
+for(i=0;i<window.email.length;i++)
 {
-var joe = email[i]
+var joe = window.email[i]
 h = joe + h 
 }
 for(i=0;i<14;i++)
