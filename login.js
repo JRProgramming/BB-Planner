@@ -327,10 +327,7 @@ alert("Woo ka doo doo")
           }
           
           console.log(error);
-        });
-
-   }
-
+        })
 }
       
  
