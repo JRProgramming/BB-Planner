@@ -1,4 +1,3 @@
-
 window.names = [];
 window.emails = [];
 window.signup = "Not In"
@@ -327,8 +326,6 @@ sendEmailVerification()
           
           console.log(error);
         });
-
-   }
 
 }
       
