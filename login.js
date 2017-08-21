@@ -373,9 +373,30 @@ unique()
       });
       }
        else
-       {
-          alert("Your email hasn't been verified")
+       {      
+          firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+     firebase.auth().onAuthStateChanged(function(user) {
+     alert("Your email hasn't been verified")
        sendEmailVerification()
+});
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+         if(errorMessage == "A network error (such as timeout, interrupted connection or unreachable host) has occurred.")
+         {
+        
+         }
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(errorMessage);
+         
+      });
+        
        }
     }
 
