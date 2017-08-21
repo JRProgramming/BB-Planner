@@ -280,9 +280,10 @@ setUp();
 }
 else
 {
-
+alert("Woo ka doo doo")
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
+     alert("ba ba do")
           firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     var displayName = user.displayName;
@@ -295,6 +296,7 @@ else
     // ...
   } 
 });
+     alert(window.emailVerified)
      if(window.emailVerified == true)
      {
      unique()  
