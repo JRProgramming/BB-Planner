@@ -267,53 +267,7 @@ handleSignUp();
 }
 else
 {
-  firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
-  {
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    window.emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-     alert(window.emailVerified)
-     if(window.emailVerified == true)
-     {
-     unique()
-     }
-     else
-     { 
-        alert("Your email hasn't been verified")
-sendEmailVerification()
-     }
-      } 
-});
-  }).catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // [START_EXCLUDE]
-          if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } 
-          else
-          {
-           if (errorMessage == "A network error (such as timeout, interrupted connection or unreachable host) has occurred.")
-           {
-           location.href = ""
-           }
-             else
-             {
-     alert(errorMessage)
-             }
-          }
-          
-          console.log(error);
-        });
-
+toggleSignIn()
 }
 }
 else
@@ -337,7 +291,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-     alert(window.emailVerified)
      if(window.emailVerified == true)
      {
      unique()
@@ -380,7 +333,17 @@ sendEmailVerification()
  ow.errors    * Handles the sign up button press.
      */
     function handleSignUp() {
-      var email = document.getElementById('email').value;
+       firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    window.emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+     var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
         alert('Please enter an email address.');
@@ -420,6 +383,9 @@ sendEmailVerification()
           alert("Your email hasn't been verified")
        sendEmailVerification()
        }
+      } 
+});
+     
     }
 
 
