@@ -284,7 +284,6 @@ else
   {
           firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-     alert("YOOKLE")
     var displayName = user.displayName;
     var email = user.email;
     window.emailVerified = user.emailVerified;
@@ -292,10 +291,7 @@ else
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    // ...
-  } 
-});
-     if(window.emailVerified == true)
+    if(window.emailVerified == true)
      {
      unique()  
      }
@@ -304,6 +300,9 @@ else
      alert("You haven't verified your email yet")
      sendEmailVerification()
      }
+  } 
+});
+     
   }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
