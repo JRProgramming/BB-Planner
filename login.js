@@ -347,11 +347,7 @@ unique()
         alert('Please enter a password.');
         return;
       }
- if (email != "jramirez@blindbrook.org" && email != "harondwald@blindbrook.org" && email != "jkaminsky@blindbrook.org" && email != "abao@blindbrook.org" && email != "mshaw@blindbrook.org" && email != "jmayer@blindbrook.org" && email != "rcampbell@blindbrook.org" && email != "ramirezjohnny@icloud.com")
-{
-alert("Not allowed here")
-return;
-}
+
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
