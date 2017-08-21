@@ -292,11 +292,12 @@ alert("Email is not found");
 setUp();
 }
 }
-
 else
 {
+   alert("Woo ka doo")
    if(window.emailVerified == true)
    {
+      alert("Passed email verification")
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
      alert("For some reason, they are so stupid they can't even tell the password")
