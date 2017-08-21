@@ -283,9 +283,9 @@ else
 alert("Woo ka doo doo")
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
-     alert("ba ba do")
           firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+     alert("YOOKLE")
     var displayName = user.displayName;
     var email = user.email;
     window.emailVerified = user.emailVerified;
@@ -296,7 +296,6 @@ alert("Woo ka doo doo")
     // ...
   } 
 });
-     alert(window.emailVerified)
      if(window.emailVerified == true)
      {
      unique()  
@@ -304,7 +303,7 @@ alert("Woo ka doo doo")
      else
      {
      alert("You haven't verified your email yet")
-     emailVerification()
+     sendEmailVerification()
      }
   }).catch(function(error) {
           // Handle Errors here.
