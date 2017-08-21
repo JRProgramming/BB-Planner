@@ -1,3 +1,4 @@
+
 window.names = [];
 window.emails = [];
 window.signup = "Not In"
@@ -196,6 +197,20 @@ function setUp()
   }
   
     function toggleSignIn() {
+     firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    window.emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    // ...
+  } 
+});
+       
         window.email = document.getElementById('email').value;
         window.password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
@@ -278,31 +293,14 @@ alert("Email is not found");
 setUp();
 }
 }
+
 else
 {
+   if(window.emailVerified == true)
+   {
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
-          firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    var displayName = user.displayName;
-    var email = user.email;
-    window.emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    if(window.emailVerified == true)
-     {
      unique()  
-     }
-     else
-     {
-     alert("You haven't verified your email yet")
-     sendEmailVerification()
-     }
-  } 
-});
-     
   }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -324,7 +322,14 @@ else
           }
           
           console.log(error);
-        })
+        });
+
+   }
+   else
+   {
+unique()
+     
+   }
 }
       
  
@@ -369,30 +374,9 @@ else
       });
       }
        else
-       {      
-          firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-     firebase.auth().onAuthStateChanged(function(user) {
-     alert("Your email hasn't been verified")
+       {
+          alert("Your email hasn't been verified")
        sendEmailVerification()
-});
-    }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-         if(errorMessage == "A network error (such as timeout, interrupted connection or unreachable host) has occurred.")
-         {
-        
-         }
-        if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(errorMessage);
-         
-      });
-        
        }
     }
 
