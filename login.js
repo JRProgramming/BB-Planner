@@ -270,6 +270,7 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
+alert(exists)
 if(exists == "unique")
 {
 if(document.getElementById("namej").innerHTML != "")
