@@ -280,7 +280,6 @@ setUp();
 }
 else
 {
-alert("Woo ka doo doo")
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
           firebase.auth().onAuthStateChanged(function(user) {
