@@ -360,12 +360,19 @@ unique()
         alert('Please enter a password.');
         return;
       }
-      alert(window.emailVerified)
-      if(window.emailVerified == true)
-      {
+      
+      
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
      firebase.auth().onAuthStateChanged(function(user) {
+        if(window.emailVerified == true)
+      {
     toggleSignIn()
+      }
+        else
+       {
+          alert("Your email hasn't been verified")
+       sendEmailVerification()
+       }
 });
     }).catch(function(error) {
         // Handle Errors here.
@@ -384,12 +391,8 @@ unique()
         console.log(errorMessage);
          
       });
-      }
-       else
-       {
-          alert("Your email hasn't been verified")
-       sendEmailVerification()
-       }
+      
+       
     }
 
 
