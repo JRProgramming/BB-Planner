@@ -294,13 +294,11 @@ setUp();
 }
 else
 {
-   alert("Woo ka doo")
    if(window.emailVerified == true)
    {
-      alert("Passed email verification")
+     
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
-     alert("For some reason, they are so stupid they can't even tell the password")
      unique()  
   }).catch(function(error) {
           // Handle Errors here.
@@ -328,8 +326,7 @@ else
    }
    else
    {
-unique()
-     
+sendEmailVerification()
    }
 }
       
