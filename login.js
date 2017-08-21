@@ -270,7 +270,6 @@ for(i=0; i<window.emails.length; i++)
       
     }
 }
-alert(exists)
 if(exists == "unique")
 {
 if(document.getElementById("namej").innerHTML != "")
@@ -300,6 +299,7 @@ else
    {
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
+     alert("For some reason, they are so stupid they can't even tell the password")
      unique()  
   }).catch(function(error) {
           // Handle Errors here.
