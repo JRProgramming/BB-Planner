@@ -187,7 +187,6 @@ note.card.find(".mdl-card__title-text").html(note.title)
  updateSave()
 }
  note.card.find(".mdl-card__supporting-text").on("click", function(){
-   alert($(this).value)
    window.hat = note.title;
   window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
@@ -210,7 +209,8 @@ for(i=0;i<window.lengthj;i++)
    var j = classes + i
   if(document.getElementById(classes + i).checked == true)
   {
-george = document.getElementById(classes + i).value
+   var x = document.getElementById(classes + i).getAttribute("value"); 
+   alert(x)
    window.texter.push("<input type=\"checkbox\" id=" + j + " value=\"" + george + "\">" + george + "<br>")
   }
   else
