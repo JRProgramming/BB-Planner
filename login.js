@@ -281,9 +281,7 @@ handleSignUp();
 }
 else
 {
-
- unique(); 
-
+ toggleSignIn(); 
 }
 }
 else
