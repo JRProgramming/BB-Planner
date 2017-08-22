@@ -186,7 +186,7 @@ note.card.find(".mdl-card__title-text").html(note.title)
  window.texter = "No homework"
  updateSave()
 }
- note.card.find(".mdl-card__supporting-text").on("click", function(){
+ note.card.find(".mdl-card__supporting-text").on("click", function(this){
    window.hat = note.title;
   window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
@@ -209,8 +209,8 @@ for(i=0;i<window.lengthj;i++)
    var j = classes + i
   if(document.getElementById(classes + i).checked == true)
   {
-george = this.value
-   alert(george)
+george = document.getElementById(classes + i).value
+   alert(this.value)
    window.texter.push("<input type=\"checkbox\" id=" + j + " value=\"" + george + "\">" + george + "<br>")
   }
   else
