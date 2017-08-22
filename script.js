@@ -199,18 +199,25 @@ joey = []
  window.lengthj = joey.length
 })
   var classes = note.title
+  
         if(classes == "Social Studies")
         {
         classes = "Social_Studies"
         }
+  var j = classes + window.lengthj
 for(i=0;i<window.lengthj;i++)
   {
   if(document.getElementById(classes + i).checked == true)
   {
 george = document.getElementById(classes + i + "x").innerHTML
-   alert(george)
+   window.texter.push("<input type=\"checkbox\" id=" + j + " checked>" + "<span id=" + j + "x>" + george + "</span><br>")
+  }
+  else
+  {
+   window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
   }
+  aler(window.texter)
         var tyr = 0;
         var classes = note.title
         if(classes == "Social Studies")
@@ -219,7 +226,7 @@ george = document.getElementById(classes + i + "x").innerHTML
         }
         for(i=0;i<window.lengthj;i++)
         {
-        if(document.getElementById(note.title + i).checked == true)
+        if(document.getElementById(classes + i).checked == true)
         {
         tyr ++
         }
