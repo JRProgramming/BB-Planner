@@ -214,7 +214,7 @@ george = document.getElementById(classes + i + "x").innerHTML
   }
   else
   {
-   window.texter.push("<input type=\"checkbox\" checked id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
+   window.texter.push("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
   }
   updateSave()
