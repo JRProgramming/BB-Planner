@@ -207,7 +207,9 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-        note.card.find(".mdl-card__title-text").html(note.title + "  <span style=\"text-decoration: underline; cursor:pointer;\" class=\"clearbutton\" id=\"" + classes + "buttonx\" onclick=\"clearHW()\">Clear HW</span>")
+         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer"})
+         spaner.click(function() { clearHW() })
+        note.card.find(".mdl-card__title-text").append(spaner)
         }
         else
         {
