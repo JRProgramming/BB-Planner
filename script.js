@@ -7,6 +7,7 @@ var texter = [];
  var yu = []
 var yo = 0;
 var bo = 0;
+var george = ""
 var prevHW = "";
 window.num = 0
 window.number = 0
@@ -196,15 +197,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
- var george = joey
- alert(george)
+
 })
   for(i=0;i<window.lengthj;i++)
   {
   if(document.getElementById(note.title + i).checked == true)
   {
-  
-  }
+george = document.getElementById(note.title + i).innerHTML
+   alert(george)
   }
         var tyr = 0;
         var classes = note.title
