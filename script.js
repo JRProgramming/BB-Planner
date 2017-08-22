@@ -197,14 +197,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
-   alert(joey)
-   alert(window.lengthj)
 })
 for(i=0;i<window.lengthj;i++)
   {
-   alert(document.getElementById(note.title + i).checked)
   if(document.getElementById(note.title + i).checked == true)
   {
+   
 george = document.getElementById(note.title + i + "x").innerHTML
    alert(george)
   }
@@ -257,7 +255,7 @@ joey = []
 })
 
         window.lengthj = window.texter.length
-        var j = note.title + window.lengthj
+        var j = classes + window.lengthj
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
          note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
