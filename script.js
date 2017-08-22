@@ -210,11 +210,11 @@ for(i=0;i<window.lengthj;i++)
   if(document.getElementById(classes + i).checked == true)
   {
 george = document.getElementById(classes + i + "x").innerHTML
-   window.texter.push("<input type=\"checkbox\" id=" + j + " value=" + george + "><br>")
+   window.texter.push("<input type=\"checkbox\" id=" + j + " value=" + george + ">" + george + "<br>")
   }
   else
   {
-   window.texter.push("<input type=\"checkbox\" id=" + j + " value=" + george + "><br>")
+   window.texter.push("<input type=\"checkbox\" id=" + j + " value=" + george + ">" + george + "<br>")
   }
   }
   updateSave()
@@ -272,14 +272,14 @@ if(classes == "Social Studies")
         var j = classes + window.lengthj
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + "><br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + ">" + $(this).val() + "<br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + "><br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + ">" + $(this).val() + "<br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + "><br>")
+    window.texter.push("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + ">" + $(this).val() + "<br>")
          updateSave();  
         window.lengthj = window.texter.length
         j = note.title + window.lengthj
