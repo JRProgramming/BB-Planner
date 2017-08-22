@@ -187,7 +187,6 @@ note.card.find(".mdl-card__title-text").html(note.title)
  updateSave()
 }
  note.card.find(".mdl-card__supporting-text").on("click", function(){
-  $("input[type=\"checkbox\"]").on("click", function(){ 
    window.hat = note.title;
   window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
@@ -211,7 +210,7 @@ for(i=0;i<window.lengthj;i++)
   if(document.getElementById(classes + i).checked == true)
   {
 george = document.getElementById(classes + i + "x").innerHTML
-   window.texter.push("<input type=\"checkbox\" checked id=" + j + ">" + "<span onclick='return false;' id=" + j + "x>" + george + "</span><br>")
+   window.texter.push("<input type=\"checkbox\" checked id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
   else
   {
@@ -234,7 +233,7 @@ george = document.getElementById(classes + i + "x").innerHTML
         }
         if(tyr == window.lengthj)
         {
-         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer", html: "Clear HW"})
+         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", onclick: "return false", style: "text-decoration: underline; cursor:pointer", html: "Clear HW"})
          spaner.click(function() { clearHW() })
         note.card.find(".mdl-card__title-text").append(spaner)
         }
@@ -242,7 +241,6 @@ george = document.getElementById(classes + i + "x").innerHTML
         {
           $("#" + classes + "buttonx").remove()
         }
- })
  })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
