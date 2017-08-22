@@ -203,7 +203,7 @@ joey = []
   {
   if(document.getElementById(note.title + i).checked == true)
   {
-george = document.getElementById(i).innerHTML
+george = document.getElementById(note.title + i + "x").innerHTML
    alert(george)
   }
   }
@@ -258,14 +258,14 @@ joey = []
         var j = note.title + window.lengthj
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + window.lengthj + ">" + $(this).val() + "</span><br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + window.lengthj + ">" + $(this).val() + "</span><br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + "<span id=" + window.lengthj + ">" + $(this).val() + "</span><br>")
+    window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
          updateSave();  
         window.lengthj = window.texter.length
         j = note.title + window.lengthj
