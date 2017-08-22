@@ -197,9 +197,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
-
-})
-  for(i=0;i<window.lengthj;i++)
+   for(i=0;i<window.lengthj;i++)
   {
   if(document.getElementById(note.title + i).checked == true)
   {
@@ -207,6 +205,8 @@ george = document.getElementById(note.title + i + "x").innerHTML
    alert(george)
   }
   }
+})
+
         var tyr = 0;
         var classes = note.title
         if(classes == "Social Studies")
