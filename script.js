@@ -196,6 +196,7 @@ joey = []
  }
  window.lengthj = joey.length
 })
+  alert(note.card.find(".mdl-card__supporting-text").html())
         var tyr = 0;
         var classes = note.title
         if(classes == "Social Studies")
