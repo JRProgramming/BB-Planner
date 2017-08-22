@@ -214,10 +214,10 @@ george = document.getElementById(classes + i + "x").innerHTML
   }
   else
   {
-   window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + "<span id=" + j + "x>" + george + "</span><br>")
+   window.texter.push("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
   }
-  aler(window.texter)
+  alert(window.texter)
         var tyr = 0;
         var classes = note.title
         if(classes == "Social Studies")
