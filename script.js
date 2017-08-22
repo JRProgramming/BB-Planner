@@ -202,6 +202,7 @@ joey = []
 })
 for(i=0;i<window.lengthj;i++)
   {
+   alert(document.getElementById(note.title + i).checked)
   if(document.getElementById(note.title + i).checked == true)
   {
 george = document.getElementById(note.title + i + "x").innerHTML
