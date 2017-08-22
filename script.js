@@ -233,7 +233,7 @@ george = document.getElementById(classes + i + "x").innerHTML
         }
         if(tyr == window.lengthj)
         {
-         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", onclick: "return false", style: "text-decoration: underline; cursor:pointer", html: "Clear HW"})
+         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer", html: "Clear HW"})
          spaner.click(function() { clearHW() })
         note.card.find(".mdl-card__title-text").append(spaner)
         }
@@ -276,7 +276,7 @@ if(classes == "Social Studies")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" onclick='return false;' id=" + j + ">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + ">" + "<span onclick='return false;' id=" + j + "x>" + $(this).val() + "</span><br>")
         }
          
     window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
