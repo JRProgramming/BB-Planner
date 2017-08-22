@@ -187,6 +187,7 @@ note.card.find(".mdl-card__title-text").html(note.title)
 }
  note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
+  window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
@@ -195,8 +196,16 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
+ var george = joey
+ alert(george)
 })
-  alert(note.card.find(".mdl-card__supporting-text").html())
+  for(i=0;i<window.lengthj;i++)
+  {
+  if(document.getElementById(note.title + i).checked == true)
+  {
+  
+  }
+  }
         var tyr = 0;
         var classes = note.title
         if(classes == "Social Studies")
