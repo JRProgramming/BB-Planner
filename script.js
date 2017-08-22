@@ -187,6 +187,7 @@ note.card.find(".mdl-card__title-text").html(note.title)
  updateSave()
 }
  note.card.find(".mdl-card__supporting-text").on("click", function(){
+  $("input type=\"text\"").on("click", function(){ 
    window.hat = note.title;
   window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
@@ -242,7 +243,7 @@ george = document.getElementById(classes + i + "x").innerHTML
           $("#" + classes + "buttonx").remove()
         }
  })
-  
+ })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
     {
