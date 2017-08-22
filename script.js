@@ -258,11 +258,11 @@ joey = []
         var j = note.title + window.lengthj
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + " value=$(this).val()>" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + ">" + $(this).val() + "<br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + " value=$(this).val()>" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + " value=" + $(this).val() + ">" + $(this).val() + "<br>")
         }
          
     window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + $(this).val() + "<br>")
