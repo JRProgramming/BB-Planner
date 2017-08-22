@@ -210,11 +210,11 @@ for(i=0;i<window.lengthj;i++)
   if(document.getElementById(classes + i).checked == true)
   {
 george = document.getElementById(classes + i + "x").innerHTML
-   window.texter.push("<input type=\"checkbox\" id=" + j + " checked>" + "<span id=" + j + "x>" + george + "</span><br>")
+   window.texter.push("<input type=\"checkbox\" checked id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
   else
   {
-   window.texter.push("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
+   window.texter.push("<input type=\"checkbox\" checked id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
   }
   updateSave()
