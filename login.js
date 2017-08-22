@@ -324,7 +324,8 @@ else
    }
    else
    {
-unique()  
+alert("You haven't verified your email")
+sendEmailVerification() 
    }
 }
       
