@@ -265,7 +265,7 @@ joey = []
          note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + window.lengthj + ">" + $(this).val() + "</span><br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + $(this).val() + "<br>")
+    window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + "<span id=" + window.lengthj + ">" + $(this).val() + "</span><br>")
          updateSave();  
         window.lengthj = window.texter.length
         j = note.title + window.lengthj
