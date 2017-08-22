@@ -196,19 +196,6 @@ function setUp()
   }
   
     function toggleSignIn() {
-     firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    window.emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    // ...
-  } 
-});
        
         window.email = document.getElementById('email').value;
         window.password = document.getElementById('password').value;
@@ -282,7 +269,7 @@ handleSignUp();
 else
 {
 
- unique(); 
+toggleSignIn()
 
 }
 }
@@ -295,11 +282,31 @@ setUp();
 
 else
 {
-   if(window.emailVerified == true)
-   {
+   
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
+          firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    window.emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    if(window.emailVerified == true)
+   {
      unique()  
+   }
+    else
+    {
+       alert("Your email hasn't been verified")
+       sendEmailVerification()
+    }
+  } 
+});
+     
   }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -323,12 +330,6 @@ else
           console.log(error);
         });
 
-   }
-   else
-   {
-unique()
-     
-   }
 }
       
  
@@ -348,11 +349,31 @@ unique()
         return;
       }
 
-      if(window.emailVerified == true)
-      {
+
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
      firebase.auth().onAuthStateChanged(function(user) {
-    toggleSignIn()
+                  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    window.emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+           if(window.emailVerified == true)
+      {
+         toggleSignIn()
+      }
+        else
+       {
+          unique()
+       }
+     
+  }
+  })
+    
 });
     }).catch(function(error) {
         // Handle Errors here.
@@ -371,12 +392,7 @@ unique()
         console.log(errorMessage);
          
       });
-      }
-       else
-       {
-          alert("Your email hasn't been verified")
-       sendEmailVerification()
-       }
+      
     }
 
 
