@@ -196,6 +196,19 @@ function setUp()
   }
   
     function toggleSignIn() {
+     firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    window.emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    // ...
+  } 
+});
        
         window.email = document.getElementById('email').value;
         window.password = document.getElementById('password').value;
@@ -268,7 +281,9 @@ handleSignUp();
 }
 else
 {
- toggleSignIn(); 
+
+ unique(); 
+
 }
 }
 else
@@ -280,29 +295,11 @@ setUp();
 
 else
 {
+   if(window.emailVerified == true)
+   {
   firebase.auth().signInWithEmailAndPassword(window.email, window.password).then(function()
   {
-          firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    window.emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-         if(window.emailVerified == true)
-     {
-     unique()
-     }
-     else
-     {
-alert("You haven't verified your email")
-sendEmailVerification() 
-     }
-  } 
-});
+     unique()  
   }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -326,7 +323,12 @@ sendEmailVerification()
           console.log(error);
         });
 
-
+   }
+   else
+   {
+unique()
+     
+   }
 }
       
  
@@ -335,19 +337,6 @@ sendEmailVerification()
  ow.errors    * Handles the sign up button press.
      */
     function handleSignUp() {
-            firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    window.emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    // ...
-  } 
-});
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
@@ -358,18 +347,12 @@ sendEmailVerification()
         alert('Please enter a password.');
         return;
       }
-      
-      
+
+      if(window.emailVerified == true)
+      {
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
      firebase.auth().onAuthStateChanged(function(user) {
-        if(window.emailVerified == true)
-      {
     toggleSignIn()
-      }
-        else
-       {
-          unique()
-       }
 });
     }).catch(function(error) {
         // Handle Errors here.
@@ -388,8 +371,12 @@ sendEmailVerification()
         console.log(errorMessage);
          
       });
-      
-       
+      }
+       else
+       {
+          alert("Your email hasn't been verified")
+       sendEmailVerification()
+       }
     }
 
 
@@ -419,12 +406,15 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
     var uid = user.uid;
     var providerData = user.providerData;
     // ...
-  } 
+  } else {
+    // User is signed out.
+    // ...
+  }
 });
       firebase.auth().currentUser.sendEmailVerification().then(function() {
          
         alert('An email has been sent to you, please verify that this is your email.');
-       
+        // [END_EXCLUDE]
       }).catch(function(error) {
   alert(error);
 });
