@@ -206,6 +206,7 @@ joey = []
 george = document.getElementById(note.title + i).innerHTML
    alert(george)
   }
+  }
         var tyr = 0;
         var classes = note.title
         if(classes == "Social Studies")
