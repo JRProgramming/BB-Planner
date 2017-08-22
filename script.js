@@ -257,7 +257,11 @@ joey = []
  window.texter = joey
  
 })
-
+var classes = note.title
+if(classes == "Social Studies")
+{
+ classes = "Social_Studies"
+}
         window.lengthj = window.texter.length
         var j = classes + window.lengthj
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
