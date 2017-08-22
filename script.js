@@ -209,7 +209,8 @@ for(i=0;i<window.lengthj;i++)
    var j = classes + i
   if(document.getElementById(classes + i).checked == true)
   {
-george = document.getElementById(classes + i + "x").innerHTML
+george = document.getElementById(classes + i).value
+   alert(george)
    window.texter.push("<input type=\"checkbox\" id=" + j + " value=" + george + ">" + george + "<br>")
   }
   else
