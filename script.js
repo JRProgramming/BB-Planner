@@ -198,12 +198,16 @@ joey = []
  }
  window.lengthj = joey.length
 })
+  var classes = note.title
+        if(classes == "Social Studies")
+        {
+        classes = "Social_Studies"
+        }
 for(i=0;i<window.lengthj;i++)
   {
-  if(document.getElementById(note.title + i).checked == true)
+  if(document.getElementById(classes + i).checked == true)
   {
-   
-george = document.getElementById(note.title + i + "x").innerHTML
+george = document.getElementById(classes + i + "x").innerHTML
    alert(george)
   }
   }
