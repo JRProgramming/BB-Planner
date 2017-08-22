@@ -207,7 +207,7 @@ joey = []
         }
         if(tyr == window.lengthj)
         {
-         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer"})
+         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer", html: "Clear HW"})
          spaner.click(function() { clearHW() })
         note.card.find(".mdl-card__title-text").append(spaner)
         }
