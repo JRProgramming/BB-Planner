@@ -200,12 +200,9 @@ var tyrs = 0;
         {
         classes = "Social_Studies"
         }
-        for(i=0;i<window.lengthj;i++)
-        {
         if(document.getElementById(classes + i).checked == true)
         {
         tyrs ++
-        }
         }
         if(tyrs == window.lengthj && tyrs != 0)
         {
@@ -237,12 +234,13 @@ joey = []
         {
         classes = "Social_Studies"
         }
-        
+        for(i=0;i<window.lengthj;i++)
+        {
         if(document.getElementById(classes + i).checked == true)
         {
         tyr ++
         }
-        
+        }
         if(tyr == window.lengthj)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
