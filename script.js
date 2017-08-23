@@ -186,7 +186,7 @@ note.card.find(".mdl-card__title-text").html(note.title)
  window.texter = "No homework"
  updateSave()
 }
- note.card.find(".mdl-card__supporting-text").on("click", function(){
+  $("input[type=\"checkbox\"]").on("click", function(){ 
    alert("Stupid")
    window.hat = note.title;
   window.texter = [];
