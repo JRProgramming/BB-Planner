@@ -242,7 +242,7 @@ george = document.getElementById(classes + i + "x").innerHTML
         }
         else
         {
-          note.card.find(".mdl-card__menu").html("")
+          $("#" + classes + "buttonx").remove()
         }
  })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
