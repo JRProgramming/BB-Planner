@@ -182,7 +182,7 @@ function addAndSaveNote(title, text, index) {
 {
  prevHW = note.card.find(".mdl-card__supporting-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework")
-note.card.find(".mdl-card__title-text").html(note.title)
+note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  updateSave()
 }
