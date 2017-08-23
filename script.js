@@ -187,7 +187,7 @@ note.card.find(".mdl-card__title-text").html(note.title)
  updateSave()
 }
  note.card.find(".mdl-card__supporting-text").on("click", function(){
-
+  $("input[type=\"checkbox\"]").on("click", function(){ 
    window.hat = note.title;
   window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
@@ -210,9 +210,13 @@ for(i=0;i<window.lengthj;i++)
    var j = classes + i
   if(document.getElementById(classes + i).checked == true)
   {
-   alert(document.getElementById(classes + i).value)
+george = document.getElementById(classes + i + "x").innerHTML
+   window.texter.push("<input type=\"checkbox\" checked id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
-
+  else
+  {
+   window.texter.push("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
+  }
   }
   updateSave()
         var tyr = 0;
@@ -238,6 +242,7 @@ for(i=0;i<window.lengthj;i++)
         {
           $("#" + classes + "buttonx").remove()
         }
+ })
  })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
@@ -269,14 +274,14 @@ if(classes == "Social Studies")
         var j = classes + window.lengthj
         if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
         {
-         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + ">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").append("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
         }
         else
         {
-         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + ">" + $(this).val() + "<br>")
+         note.card.find(".mdl-card__supporting-text").html("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
         }
          
-    window.texter.push("<input type=\"checkbox\" id=" + j + " value=\"" + $(this).val() + "\">" + $(this).val() + "<br>")
+    window.texter.push("<input type=\"checkbox\" id=\"" + j + "\">" + "<span id=" + j + "x>" + $(this).val() + "</span><br>")
          updateSave();  
         window.lengthj = window.texter.length
         j = note.title + window.lengthj
