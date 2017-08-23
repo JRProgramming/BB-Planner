@@ -186,6 +186,41 @@ note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  updateSave()
 }
+         var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
+playersRef.on("child_added", function(data, prevChildKey) {
+ var joey = data.val()
+ if(joey == "No homework")
+ {
+joey = []
+ }
+ window.lengthj = joey.length
+var tyrs = 0;
+ var classes = note.title
+        if(classes == "Social Studies")
+        {
+        classes = "Social_Studies"
+        }
+        for(i=0;i<window.lengthj;i++)
+        {
+        if(document.getElementById(classes + i).checked == true)
+        {
+        tyrs ++
+        }
+        }
+        if(tyrs == window.lengthj && tyrs == 0)
+        {
+         if(note.card.find(".mdl-card__menu").html() == "")
+         {
+         var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
+         spaner.click(function() { clearHW() })
+        note.card.find(".mdl-card__menu").append(spaner)
+         }
+        }
+        else
+        {
+          $("#" + classes + "buttonx").remove()
+        }
+})
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
   window.texter = [];
@@ -340,40 +375,4 @@ function loadNotes() {
                     addAndSaveNote(item.title, item.text, index); 
             };
        }
-        var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
-playersRef.on("child_added", function(data, prevChildKey) {
- var joey = data.val()
- if(joey == "No homework")
- {
-joey = []
- }
- window.lengthj = joey.length
-var tyrs = 0;
- var classes = note.title
-        if(classes == "Social Studies")
-        {
-        classes = "Social_Studies"
-        }
-        for(i=0;i<window.lengthj;i++)
-        {
-         alert(document.getElementById(classes + i).checked)
-        if(document.getElementById(classes + i).checked == true)
-        {
-        tyrs ++
-        }
-        }
-        if(tyrs == window.lengthj && tyrs == 0)
-        {
-         if(note.card.find(".mdl-card__menu").html() == "")
-         {
-         var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
-         spaner.click(function() { clearHW() })
-        note.card.find(".mdl-card__menu").append(spaner)
-         }
-        }
-        else
-        {
-          $("#" + classes + "buttonx").remove()
-        }
-})
 }
