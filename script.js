@@ -187,7 +187,6 @@ note.card.find(".mdl-card__title-text").html(note.title)
  updateSave()
 }
  note.card.find(".mdl-card__supporting-text").on("click", function(){
-  $("input[type=\"checkbox\"]").on("click", function(){ 
    alert("Stupid")
    window.hat = note.title;
   window.texter = [];
@@ -243,7 +242,6 @@ george = document.getElementById(classes + i + "x").innerHTML
         {
           $("#" + classes + "buttonx").remove()
         }
- })
  })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
