@@ -237,13 +237,12 @@ joey = []
         {
         classes = "Social_Studies"
         }
-        for(i=0;i<window.lengthj;i++)
-        {
+        
         if(document.getElementById(classes + i).checked == true)
         {
         tyr ++
         }
-        }
+        
         if(tyr == window.lengthj)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
