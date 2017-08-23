@@ -194,6 +194,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
  {
 joey = []
  }
+ alert(window.id)
  window.lengthj = joey.length
 var tyr = 0;
  var classes = note.title
@@ -201,7 +202,6 @@ var tyr = 0;
         {
         classes = "Social_Studies"
         }
- alert(window.lengthj)
         for(i=0;i<window.lengthj;i++)
         {
          alert(document.getElementById(classes + i).checked)
