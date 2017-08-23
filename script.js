@@ -237,7 +237,7 @@ george = document.getElementById(classes + i + "x").innerHTML
         {
          var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer", html: "Clear HW"})
          spaner.click(function() { clearHW() })
-        note.card.find(".mdl-card__title-text").append(spaner)
+        note.card.find(".mdl-card__title-text").html(note.title + spaner)
         }
         else
         {
