@@ -233,7 +233,8 @@ george = document.getElementById(classes + i + "x").innerHTML
         }
         if(tyr == window.lengthj)
         {
-         if(note.card.find(".mdl-card__title-text").html() == note.title)
+         alert(note.card.find(".mdl-card__menu").html())
+         if(note.card.find(".mdl-card__menu").html() == "")
          {
          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
          spaner.click(function() { clearHW() })
