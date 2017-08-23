@@ -186,6 +186,17 @@ note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  updateSave()
 }
+ 
+       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
+playersRef.on("child_added", function(data, prevChildKey) {
+ var joey = data.val()
+ if(joey == "No homework")
+ {
+joey = []
+ }
+ window.lengthj = joey.length
+ alert(note.title)
+})
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
   window.texter = [];
