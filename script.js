@@ -201,8 +201,10 @@ var tyr = 0;
         {
         classes = "Social_Studies"
         }
+ alert(window.lengthj)
         for(i=0;i<window.lengthj;i++)
         {
+         alert(document.getElementById(classes + i).checked)
         if(document.getElementById(classes + i).checked == true)
         {
         tyr ++
