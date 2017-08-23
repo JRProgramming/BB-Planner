@@ -232,9 +232,9 @@ joey = []
 for(i=0;i<window.lengthj;i++)
   {
    var j = classes + i
+   george = document.getElementById(classes + i + "x").innerHTML
   if(document.getElementById(classes + i).checked == true)
   {
-george = document.getElementById(classes + i + "x").innerHTML
    window.texter.push("<input type=\"checkbox\" checked id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
   else
