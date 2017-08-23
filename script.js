@@ -235,8 +235,7 @@ george = document.getElementById(classes + i + "x").innerHTML
         {
          if(note.card.find(".mdl-card__title-text").html() == note.title)
          {
-          note.card.find(".mdl-card__title-text").append("    ")
-         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer; float: right", html: "Clear HW"})
+         var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer; right: 0;", html: "Clear HW"})
          spaner.click(function() { clearHW() })
         note.card.find(".mdl-card__title-text").append(spaner)
          }
