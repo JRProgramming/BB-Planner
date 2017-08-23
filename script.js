@@ -197,6 +197,18 @@ joey = []
  window.lengthj = joey.length
 var tyrs = 0;
  var classes = note.title
+         if(classes == "Social Studies")
+        {
+        classes = "Social_Studies"
+        }
+        for(i=0;i<window.lengthj;i++)
+        {
+        if(document.getElementById(classes + i).checked == true)
+        {
+        tyrs ++
+        }
+        }
+        
 
 })
    note.card.find(".mdl-card__supporting-text").on("click", function(){
