@@ -207,7 +207,7 @@ var tyrs = 0;
         tyrs ++
         }
         }
-        if(tyrs == window.lengthj && tyrs == 0)
+        if(tyrs == window.lengthj && tyrs != 0)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
