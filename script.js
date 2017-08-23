@@ -194,7 +194,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
  {
 joey = []
  }
- alert(window.id)
  window.lengthj = joey.length
 var tyr = 0;
  var classes = note.title
@@ -204,13 +203,12 @@ var tyr = 0;
         }
         for(i=0;i<window.lengthj;i++)
         {
-         alert(document.getElementById(classes + i).checked)
         if(document.getElementById(classes + i).checked == true)
         {
         tyr ++
         }
         }
-        if(tyr == window.lengthj)
+        if(tyr == window.lengthj && tyr != 0)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
