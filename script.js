@@ -187,8 +187,6 @@ note.card.find(".mdl-card__title-text").html(note.title)
  updateSave()
 }
    note.card.find(".mdl-card__supporting-text").on("click", function(){
-
-   alert(note.title)
    window.hat = note.title;
   window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
@@ -235,6 +233,7 @@ george = document.getElementById(classes + i + "x").innerHTML
         }
         if(tyr == window.lengthj)
         {
+         alert(note.card.find(".mdl-card__title-text").html())
          if(note.card.find(".mdl-card__title-text").html() != note.title)
          {
          var spaner = $("<span>", {id: classes + "buttonx", "class": "clearbutton", style: "text-decoration: underline; cursor:pointer", html: "Clear HW"})
