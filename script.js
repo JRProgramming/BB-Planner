@@ -211,13 +211,7 @@ for(i=0;i<window.lengthj;i++)
    var j = classes + i
   if(document.getElementById(classes + i).checked == true)
   {
-   george = document.getElementById(classes + i).getAttribute("value"); 
-   window.texter.push("<input type=\"checkbox\" id=" + j + " value=\"" + george + "\">" + george + "<br>")
-  }
-  else
-  {
-   window.texter.push("<input type=\"checkbox\" id=" + j + " value=\"" + george + "\">" + george + "<br>")
-  }
+
   }
   updateSave()
         var tyr = 0;
