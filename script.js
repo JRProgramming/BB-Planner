@@ -211,6 +211,7 @@ for(i=0;i<window.lengthj;i++)
    var j = classes + i
   if(document.getElementById(classes + i).checked == true)
   {
+  }
 
   }
   updateSave()
