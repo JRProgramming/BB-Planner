@@ -194,14 +194,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
  {
 joey = []
  }
- window.lengthj = joey.length
 var tyrs = 0;
  var classes = note.title
          if(classes == "Social Studies")
         {
         classes = "Social_Studies"
         }
- for(i=0;i<window.lengthj;i++)
+ for(i=0;i<joey.length;i++)
  {
         if(document.getElementById(classes + i).checked == true)
         {
