@@ -195,7 +195,13 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
- alert(note.title)
+  var classes = note.title
+  
+        if(classes == "Social Studies")
+        {
+        classes = "Social_Studies"
+        }
+
 })
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
@@ -208,6 +214,31 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
+ var classes = note.title
+    if(classes == "Social Studies")
+        {
+        classes = "Social_Studies"
+        }
+        for(i=0;i<window.lengthj;i++)
+        {
+        if(document.getElementById(classes + i).checked == true)
+        {
+        tyr ++
+        }
+        }
+        if(tyr == window.lengthj)
+        {
+         if(note.card.find(".mdl-card__menu").html() == "")
+         {
+         var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
+         spaner.click(function() { clearHW() })
+        note.card.find(".mdl-card__menu").append(spaner)
+         }
+        }
+        else
+        {
+          $("#" + classes + "buttonx").remove()
+        }
 })
   var classes = note.title
   
