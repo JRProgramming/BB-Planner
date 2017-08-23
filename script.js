@@ -200,13 +200,11 @@ var tyrs = 0;
         {
         classes = "Social_Studies"
         }
- for(i=0;i<joey.length;i++)
- {
+
         if(document.getElementById(classes + i).checked == true)
         {
         tyrs ++
         }
- }
  if(tyrs == window.lengthj && tyrs != 0)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
