@@ -187,6 +187,8 @@ note.card.find(".mdl-card__title-text").html(note.title)
  updateSave()
 }
  note.card.find(".mdl-card__supporting-text").on("click", function(){
+  alert(this.value)
+  
    window.hat = note.title;
   window.texter = [];
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.hat);
