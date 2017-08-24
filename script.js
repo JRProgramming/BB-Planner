@@ -313,9 +313,9 @@ joey = []
         {
         classes = "Social_Studies"
         }
-    alert(window.lengthj)
-for(i=0;i<window.lengthj;i++)
-  {
+var i = 0
+while(i < window.lengthj)
+{
    var j = classes + i
    george = document.getElementById(classes + i + "x").innerHTML
   if(document.getElementById(classes + i).checked == true)
