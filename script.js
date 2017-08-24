@@ -281,7 +281,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
- alert(window.lengthj)
  var classes = note.title
     if(classes == "Social Studies")
         {
@@ -290,7 +289,8 @@ joey = []
         var n = 0;
         while(n < window.lengthj)
         {
-        if(document.getElementById(classes + i).checked == true)
+         alert(window.lengthj)
+        if(document.getElementById(classes + n).checked == true)
         {
         tyr ++
         }
