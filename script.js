@@ -184,9 +184,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
  prevHW[note.title] = joey
  })
+ var classes = note.title
+ if(classes == "Social Studies")
+ {
+classes = "Social_Studies"
+ }
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
- var spaner = $("<span>", {style: "text-decoration: underline; cursor:pointer; color: white;", html: "Undo"})
+ var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Undo"})
          spaner.click(function() { 
           undoClear() 
          })
@@ -200,6 +205,11 @@ note.card.find(".mdl-card__menu").html("")
 note.card.find(".mdl-card__supporting-text").html("")
 note.card.find(".mdl-card__supporting-text").append(prevHW[note.title])
 note.card.find(".mdl-card__menu").html("")
+  var classes = note.title
+  if(classes == "Social Studies")
+  {
+classes = "Social_Studies"
+  }
 var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
  spaner.click(function() { 
   clearHW()
