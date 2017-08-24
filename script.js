@@ -321,7 +321,6 @@ joey = []
         classes = "Social_Studies"
         }
 var i = 0
-alert(window.lengthj)
 while(i < window.lengthj)
 {
    var j = classes + i
@@ -336,7 +335,10 @@ while(i < window.lengthj)
   }
  i ++
   }
+    if(window.lengthj > 0)
+    {
   updateSave()
+    }
  })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
