@@ -182,9 +182,8 @@ function addAndSaveNote(title, text, index) {
        var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
- alert(joey)
+ prevHW[note.title] = joey
  })
-  prevHW[note.title] = note.card.find(".mdl-card__supporting-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
  var spaner = $("<span>", {style: "text-decoration: underline; cursor:pointer; color: white;", html: "Undo"})
