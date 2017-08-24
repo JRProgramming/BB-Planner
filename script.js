@@ -308,6 +308,7 @@ joey = []
         }
         else
         {
+         alert("b")
           $("#" + classes + "buttonx").remove()
         }
 })
