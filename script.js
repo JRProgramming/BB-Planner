@@ -293,6 +293,7 @@ joey = []
         {
         tyr ++
         }
+         n++
         }
         if(tyr == window.lengthj)
         {
