@@ -364,5 +364,6 @@ for(i=0;i<window.lengthj;i++)
 alert("Stupid")
 }
  }
-})     
+})
+ }
 }
