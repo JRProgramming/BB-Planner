@@ -223,53 +223,7 @@ var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: unde
   window.hat = note.title
   window.texter = prevHW[note.title]
   updateSave()
- }
-
-     var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
-playersRef.on("child_added", function(data, prevChildKey) {
- var joey = data.val()
- if(joey == "No homework")
- {
-joey = []
- }
- window.lengthj = joey.length
-var tyrs = 0;
- var classes = note.title
-        if(classes == "Social Studies")
-        {
-        classes = "Social_Studies"
-        }
- if(note.text != "No homework")
- {
-var i = 0;
-while(i<window.lengthj)
-{
- if(document.getElementById(classes + i).checked == true)
-        {
-        tyrs ++
-        }
- if(tyrs == window.lengthj && tyrs != 0)
-        {
-         if(note.card.find(".mdl-card__menu").html() == "")
-         {
-          if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
-          {
-         var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
-         spaner.click(function() { 
-          clearHW() 
-         })
-        note.card.find(".mdl-card__menu").append(spaner)
-          }
-         }
-        }
-        else
-        {
-          $("#" + classes + "buttonx").remove()
-        }
- i++
-}
- }
-})        
+ }   
 
  
    note.card.find(".mdl-card__supporting-text").on("click", function(){
