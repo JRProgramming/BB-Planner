@@ -299,7 +299,6 @@ joey = []
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
-          alert("Spant")
          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
          spaner.click(function() { clearHW() })
         note.card.find(".mdl-card__menu").append(spaner)
@@ -332,34 +331,6 @@ while(i < window.lengthj)
  i ++
   }
   updateSave()
- var tyr = 0;
-        var classes = note.title
-         if(classes == "Social Studies")
-         {
-         classes = "Social_Studies"
-         }
-         for(i=0;i<window.lengthj;i++)
-         {
-         if(document.getElementById(classes + i).checked == true)
-         {
-         tyr ++
-         }
-         }
-         if(tyr == window.lengthj)
-         {
-          if(note.card.find(".mdl-card__menu").html() == "")
-          {
-           alert("Spanb")
-          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
-          spaner.click(function() { clearHW() })
-         note.card.find(".mdl-card__menu").append(spaner)
-          }
-         }
-         else
-         {
-           $("#" + classes + "buttonx").remove()
-         }
-
  })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
