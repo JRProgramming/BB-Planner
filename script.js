@@ -340,9 +340,9 @@ function loadNotes() {
             };
         
        }
- alert(window.green)
  for(i=0;i<window.green.length;i++)
  {
+  alert(window.green.length)
       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.green[i]);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
