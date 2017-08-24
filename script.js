@@ -184,6 +184,7 @@ function addAndSaveNote(title, text, index) {
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
+ window.hat = note.title
  updateSave()
 }
    loser()
@@ -197,7 +198,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
- window.hat = note.title
 var tyrs = 0;
  var classes = note.title
         if(classes == "Social Studies")
@@ -218,7 +218,9 @@ while(i<window.lengthj)
          if(note.card.find(".mdl-card__menu").html() == "")
          {
          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
-         spaner.click(function() { clearHW() })
+         spaner.click(function() { 
+          clearHW() 
+         })
         note.card.find(".mdl-card__menu").append(spaner)
          }
         }
