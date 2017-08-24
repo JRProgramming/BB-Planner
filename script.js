@@ -179,6 +179,9 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
      function clearHW()
 {
+ var report = confirm("Are you sure you want to clear your homework for " + note.title + "?")
+ if(report)
+ {
        var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
@@ -199,6 +202,8 @@ note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  window.hat = note.title
  updateSave()
+  report = null
+ }
 }
  function undoClear()
  {
