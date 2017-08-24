@@ -178,6 +178,7 @@ function addAndSaveNote(title, text, index) {
         text: note.text
     }
     window.classes.push(note.title)
+ loser()
      function clearHW()
 {
  prevHW = note.card.find(".mdl-card__supporting-text").html()
