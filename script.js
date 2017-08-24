@@ -286,7 +286,8 @@ joey = []
         {
         classes = "Social_Studies"
         }
-        for(i=0;i<window.lengthj;i++)
+        var n = 0;
+        while(n < window.lengthj)
         {
         if(document.getElementById(classes + i).checked == true)
         {
