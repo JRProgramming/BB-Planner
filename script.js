@@ -358,6 +358,7 @@ if(classes == "Social Studies")
          updateSave();  
         window.lengthj = window.texter.length
         j = note.title + window.lengthj
+        $("#" + classes + "buttonx").remove()
         $(this).val("")
          window.numj = 0;
           
