@@ -8,7 +8,7 @@ var texter = [];
 var yo = 0;
 var bo = 0;
 var george = ""
-var prevHW = "";
+var prevHW = [[]]
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -179,7 +179,6 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
      function clearHW()
 {
- prevHW = note.card.find(".mdl-card__supporting-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
@@ -383,8 +382,10 @@ function loadNotes() {
         if(note)
      function load(item, index) {
                 if(item)
-                    addAndSaveNote(item.title, item.text, index); 
+                    addAndSaveNote(item.title, item.text, index);
             };
        
        }
+ prevHW.push(window.classes)
+alert(prevHW)
 }
