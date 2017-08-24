@@ -387,5 +387,5 @@ function loadNotes() {
        
        }
  prevHW.push(window.classes)
-alert(prevHW)
+ alert(window.classes[0])
 }
