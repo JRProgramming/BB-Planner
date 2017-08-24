@@ -180,6 +180,7 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
      function clearHW()
 {
+ alert("Losers")
  prevHW = note.card.find(".mdl-card__supporting-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
