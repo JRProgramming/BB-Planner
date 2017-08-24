@@ -105,7 +105,7 @@ window.kool = 1
 }
 function updateSave()
 {
-
+alert(window.hat)
  var classers = firebase.database().ref("Classes/" + window.id + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
@@ -180,7 +180,6 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
      function clearHW()
 {
- alert("Losers")
  prevHW = note.card.find(".mdl-card__supporting-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
@@ -198,6 +197,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
+ window.hat = note.title
 var tyrs = 0;
  var classes = note.title
         if(classes == "Social Studies")
