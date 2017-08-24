@@ -17,12 +17,27 @@ function logClasses()
 {
  var classers = firebase.database().ref("Classes/" + window.identification);
  var classes = []
- var algC4 = document.getElementById("AlgebraC");
- var SocialS = document.getElementById("SSG");
- var spanish = document.getElementById("SpanishH");
- var science = document.getElementById("ScienceH");
- var english = document.getElementById("EnglishT");
- var englishd = document.getElementById("EnglishD");
+var Spanish1 = document.getElementById("Hellman1")
+var EnglishD1 = document.getElementById("EngilshD1")
+var ES1 = document.getElementById("ES1")
+var Math81 = document.getElementById("M81")
+var PS3 = document.getElementById("PS3")
+var ES3 = document.getElementById("ES3")
+var SSL3 = document.getElementById("SSL3")
+var ET3 = document.getElementById("ET3")
+var Italian3 = document.getElementById("Italian3")
+var Algebra4 = document.getElementById("Algebra4")
+var EnglishD4 = document.getElementById("EnglishD4")
+var Spanish4 = document.getElementById("Spanish4")
+var SSB4 = document.getElementById("SSB4")
+var Science6 = document.getElementById("Science6")
+var Spanish6 = document.getElementById("Spanish6")
+var EnglishT6 = document.getElementById("EnglishT6")
+var AlgebraT6 = document.getElementById("AlgebraT6")
+var EnglishT9 = document.getElementById("EnglishT9")
+var PS9 = document.getElementById("PS9")
+var SSB9 = document.getElementById("SSB9")
+var AlgebraC9 = document.getElementById("AlgebraC9")
  if (english.checked == true)
  {
   englishd.checked = false
