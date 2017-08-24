@@ -321,6 +321,7 @@ joey = []
         classes = "Social_Studies"
         }
 var i = 0
+alert(window.lengthj)
 while(i < window.lengthj)
 {
    var j = classes + i
