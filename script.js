@@ -313,6 +313,7 @@ joey = []
         {
         classes = "Social_Studies"
         }
+    alert(window.lengthj)
 for(i=0;i<window.lengthj;i++)
   {
    var j = classes + i
