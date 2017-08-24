@@ -179,6 +179,11 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
      function clearHW()
 {
+       var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
+playersRef.on("child_added", function(data, prevChildKey) {
+ var joey = data.val()
+ alert(joey)
+ })
   prevHW[note.title] = note.card.find(".mdl-card__supporting-text").html()
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
@@ -195,6 +200,12 @@ note.card.find(".mdl-card__menu").html("")
  {
 note.card.find(".mdl-card__supporting-text").html("")
 note.card.find(".mdl-card__supporting-text").append(prevHW[note.title])
+note.card.find(".mdl-card__menu").html("")
+var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
+ spaner.click(function() { 
+  clearHW()
+ })
+ note.card.find(".mdl-card__menu").append(spaner)
  }
    loadClear()
  function loadClear()
