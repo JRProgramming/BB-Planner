@@ -234,7 +234,6 @@ while(i<window.lengthj)
          {
           if(note.text != "No homework")
           {
-           alert("Spaner")
          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
          spaner.click(function() { 
           clearHW() 
@@ -300,7 +299,7 @@ joey = []
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
-          alert("Span")
+          alert("Spant")
          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
          spaner.click(function() { clearHW() })
         note.card.find(".mdl-card__menu").append(spaner)
@@ -350,7 +349,7 @@ while(i < window.lengthj)
          {
           if(note.card.find(".mdl-card__menu").html() == "")
           {
-           alert("Span")
+           alert("Spanb")
           var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
           spaner.click(function() { clearHW() })
          note.card.find(".mdl-card__menu").append(spaner)
