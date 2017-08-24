@@ -209,6 +209,7 @@ var i = 0;
 while(i<window.lengthj)
 {
 alert("Stupid")
+ i++
 }
  }
 })        
