@@ -224,7 +224,10 @@ var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: unde
   window.texter = prevHW[note.title]
   updateSave()
  }
+ window.onload = function()
+ {
    loadClear()
+ }
  function loadClear()
  {
      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
