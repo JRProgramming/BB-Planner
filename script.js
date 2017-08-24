@@ -289,13 +289,13 @@ joey = []
         var n = 0;
         while(n < window.lengthj)
         {
-         alert(window.lengthj)
         if(document.getElementById(classes + n).checked == true)
         {
         tyr ++
         }
          n++
         }
+        alert(tyr)
         if(tyr == window.lengthj && tyr != 0)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
