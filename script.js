@@ -224,12 +224,7 @@ var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: unde
   window.texter = prevHW[note.title]
   updateSave()
  }
- window.onload = function()
- {
-   loadClear()
- }
- function loadClear()
- {
+
      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
@@ -257,11 +252,14 @@ while(i<window.lengthj)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
+          if(note.card.find(".mdl-card__supporting-text").html() != "No homework")
+          {
          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
          spaner.click(function() { 
           clearHW() 
          })
         note.card.find(".mdl-card__menu").append(spaner)
+          }
          }
         }
         else
@@ -272,7 +270,7 @@ while(i<window.lengthj)
 }
  }
 })        
- } 
+
  
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
