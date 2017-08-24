@@ -294,7 +294,6 @@ joey = []
         {
         tyrj ++
         }
-         alert(tyrj)
          n++
         }
         
