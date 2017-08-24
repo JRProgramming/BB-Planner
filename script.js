@@ -179,14 +179,23 @@ function addAndSaveNote(title, text, index) {
     window.classes.push(note.title)
      function clearHW()
 {
+  prevHW[note.title] = note.card.find(".mdl-card__supporting-text").html()
+ alert(prevHW)
 note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
+ var spaner = $("<span>", {style: "text-decoration: underline; cursor:pointer; color: white;", html: "Undo"})
+         spaner.click(function() { 
+          undoClear() 
+         })
+        note.card.find(".mdl-card__menu").append(spaner)
  window.texter = "No homework"
  window.hat = note.title
- prevHW[note.title] = note.card.find(".mdl-card__supporting-text").html()
- alert(prevHW[note.title])
  updateSave()
 }
+ function undoClear()
+ {
+alert("Rice University")
+ }
    loadClear()
  function loadClear()
  {
