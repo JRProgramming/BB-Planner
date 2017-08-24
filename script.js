@@ -208,7 +208,23 @@ var tyrs = 0;
 var i = 0;
 while(i<window.lengthj)
 {
-alert("Stupid")
+ if(document.getElementById(classes + i).checked == true)
+        {
+        tyrs ++
+        }
+ if(tyrs == window.lengthj && tyrs != 0)
+        {
+         if(note.card.find(".mdl-card__menu").html() == "")
+         {
+         var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
+         spaner.click(function() { clearHW() })
+        note.card.find(".mdl-card__menu").append(spaner)
+         }
+        }
+        else
+        {
+          $("#" + classes + "buttonx").remove()
+        }
  i++
 }
  }
