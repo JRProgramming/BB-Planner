@@ -281,6 +281,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 joey = []
  }
  window.lengthj = joey.length
+ alert(window.lengthj)
  var classes = note.title
     if(classes == "Social Studies")
         {
