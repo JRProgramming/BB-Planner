@@ -251,6 +251,7 @@ while(i<window.lengthj)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
+          alert(note.text)
           if(note.text != "No homework")
           {
          var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: underline; cursor:pointer; color: white;", html: "Clear HW"})
