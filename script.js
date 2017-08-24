@@ -388,5 +388,5 @@ function loadNotes() {
        }
  prevHW.push(window.classes)
  prevHW[0].push("STUPID")
- alert(prevHW[0])
+ alert(prevHW[0][0])
 }
