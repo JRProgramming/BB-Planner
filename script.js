@@ -308,6 +308,7 @@ joey = []
         }
         else
         {
+         alert(note.card.find(".mdl-card__menu").html())
          if(note.card.find(".mdl-card__menu").html() != "Undo")
          {
           $("#" + classes + "buttonx").remove()
