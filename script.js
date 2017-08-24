@@ -186,6 +186,7 @@ note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  updateSave()
 }
+   loser()
  function loser()
  {
      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
@@ -365,5 +366,4 @@ function loadNotes() {
             };
        
        }
-  loser()
 }
