@@ -205,7 +205,8 @@ var tyrs = 0;
         }
  if(note.text != "No homework")
  {
-for(i=0;i<window.lengthj;i++)
+var i = 0;
+while(i<window.lengthj)
 {
 alert("Stupid")
 }
