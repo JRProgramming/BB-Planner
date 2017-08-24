@@ -186,6 +186,8 @@ note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  updateSave()
 }
+ function loser()
+ {
      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
@@ -202,12 +204,13 @@ var tyrs = 0;
         }
  if(note.text != "No homework")
  {
-
+for(i=0;i<window.lengthj;i++)
+{
 alert("Stupid")
-
+}
  }
 })        
-  
+ } 
  
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
