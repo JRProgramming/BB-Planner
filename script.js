@@ -105,7 +105,6 @@ window.kool = 1
 }
 function updateSave()
 {
-alert(window.hat)
  var classers = firebase.database().ref("Classes/" + window.id + "/Homework/" + window.hat);
  classers.update({
      homework: window.texter
@@ -187,8 +186,8 @@ note.card.find(".mdl-card__menu").html("")
  window.hat = note.title
  updateSave()
 }
-   loser()
- function loser()
+   loadClear()
+ function loadClear()
  {
      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
 playersRef.on("child_added", function(data, prevChildKey) {
