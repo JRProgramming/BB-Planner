@@ -206,7 +206,7 @@ var spaner = $("<span>", {id: classes + "buttonx", style: "text-decoration: unde
  })
  note.card.find(".mdl-card__menu").append(spaner)
   window.hat = note.title
-  window.texter = note.card.find(".mdl-card__supporting-text").html()
+  window.texter = prevHW[note.title]
   updateSave()
  }
    loadClear()
