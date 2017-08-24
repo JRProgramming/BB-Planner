@@ -340,7 +340,10 @@ function loadNotes() {
             };
         
        }
-      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
+ alert(window.green)
+ for(i=0;i<window.green.length;i++)
+ {
+      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.green[i]);
 playersRef.on("child_added", function(data, prevChildKey) {
  var joey = data.val()
  if(joey == "No homework")
