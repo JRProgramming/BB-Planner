@@ -318,7 +318,7 @@ joey = []
 var i = 0
 while(i < window.lengthj)
 {
- alert("Stupid")
+ alert(window.lengthj)
    var j = classes + i
    george = document.getElementById(classes + i + "x").innerHTML
   if(document.getElementById(classes + i).checked == true)
