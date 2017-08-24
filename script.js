@@ -287,16 +287,18 @@ joey = []
         classes = "Social_Studies"
         }
         var n = 0;
+        var tyrj = 0;
         while(n < window.lengthj)
         {
         if(document.getElementById(classes + n).checked == true)
         {
-        tyr ++
+        tyrj ++
         }
+         alert(tyrj)
          n++
         }
-        alert(tyr)
-        if(tyr == window.lengthj && tyr != 0)
+        
+        if(tyrj == window.lengthj && tyrj != 0)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
