@@ -326,6 +326,7 @@ while(i < window.lengthj)
   {
    window.texter.push("<input type=\"checkbox\" id=" + j + ">" + "<span id=" + j + "x>" + george + "</span><br>")
   }
+ i ++
   }
   updateSave()
         var tyr = 0;
