@@ -308,8 +308,7 @@ joey = []
         }
         else
         {
-         alert(note.card.find(".mdl-card__menu").html())
-         if(note.card.find(".mdl-card__menu").html() != "Undo")
+         if(note.card.find(".mdl-card__menu").html() != "<span id=\"Algebrabuttonx\" style=\"text-decoration: underline; cursor:pointer; color: white;\">Undo</span>")
          {
           $("#" + classes + "buttonx").remove()
          }
