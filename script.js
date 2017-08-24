@@ -205,13 +205,6 @@ var tyrs = 0;
   addButton()
  }
 })        
- function addButton()
- {
-  for(i=0;i<window.lengthj;i++)
-  {
-alert("Wiedo")
-  }
- }
  
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
@@ -349,7 +342,13 @@ if(classes == "Social Studies")
 
     return note;
 }
-
+ function addButton()
+ {
+  for(i=0;i<window.lengthj;i++)
+  {
+alert("Wiedo")
+  }
+ }
 
 
 function homepage()
