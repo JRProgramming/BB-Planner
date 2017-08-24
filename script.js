@@ -202,10 +202,13 @@ var tyrs = 0;
         }
  if(note.text != "No homework")
  {
-
+  addButton()
  }
 })        
- 
+ function addButton()
+ {
+alert("Wiedo")
+ }
  
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
