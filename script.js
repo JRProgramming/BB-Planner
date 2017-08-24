@@ -8,7 +8,7 @@ var texter = [];
 var yo = 0;
 var bo = 0;
 var george = ""
-var prevHW = []
+var prevHW = {}
 window.num = 0
 window.number = 0
 var playersRef = firebase.database().ref("Classes/");
@@ -183,6 +183,8 @@ note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  window.hat = note.title
+ prevHW[note.title] = note.card.find(".mdl-card__supporting-text").html()
+ alert(prevHW[note.title])
  updateSave()
 }
    loadClear()
@@ -386,7 +388,4 @@ function loadNotes() {
             };
        
        }
- prevHW.push(window.classes)
- prevHW[0][0].push("STUPID")
- alert(prevHW[0][0])
 }
