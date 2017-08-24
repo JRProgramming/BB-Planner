@@ -200,7 +200,13 @@ var tyrs = 0;
         {
         classes = "Social_Studies"
         }
-alert(note.text)
+ if(note.text != "No homework")
+ {
+for(i=0;i<joey.length;i++)
+{
+
+}
+ }
 })        
  
  
