@@ -295,7 +295,7 @@ joey = []
         }
          n++
         }
-        if(tyr == window.lengthj)
+        if(tyr == window.lengthj && tyr != 0)
         {
          if(note.card.find(".mdl-card__menu").html() == "")
          {
@@ -316,6 +316,7 @@ joey = []
         classes = "Social_Studies"
         }
 var i = 0
+alert(window.lengthj)
 while(i < window.lengthj)
 {
    var j = classes + i
