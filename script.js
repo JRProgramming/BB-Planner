@@ -207,7 +207,10 @@ var tyrs = 0;
 })        
  function addButton()
  {
+  for(i=0;i<window.lengthj;i++)
+  {
 alert("Wiedo")
+  }
  }
  
    note.card.find(".mdl-card__supporting-text").on("click", function(){
