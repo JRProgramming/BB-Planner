@@ -185,7 +185,32 @@ note.card.find(".mdl-card__supporting-text").html("No homework")
 note.card.find(".mdl-card__menu").html("")
  window.texter = "No homework"
  updateSave()
-}   
+}
+ function loser()
+ {
+     var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ note.title);
+playersRef.on("child_added", function(data, prevChildKey) {
+ var joey = data.val()
+ if(joey == "No homework")
+ {
+joey = []
+ }
+ window.lengthj = joey.length
+var tyrs = 0;
+ var classes = note.title
+        if(classes == "Social Studies")
+        {
+        classes = "Social_Studies"
+        }
+ if(note.text != "No homework")
+ {
+for(i=0;i<window.lengthj;i++)
+{
+alert("Stupid")
+}
+ }
+})        
+ } 
  
    note.card.find(".mdl-card__supporting-text").on("click", function(){
    window.hat = note.title;
@@ -338,32 +363,7 @@ function loadNotes() {
                 if(item)
                     addAndSaveNote(item.title, item.text, index); 
             };
-        
+       
        }
- for(i=0;i<window.green.length;i++)
- {
-  alert(window.green.length)
-      var playersRef = firebase.database().ref("Classes/" + window.id + "/Homework/"+ window.green[i]);
-playersRef.on("child_added", function(data, prevChildKey) {
- var joey = data.val()
- if(joey == "No homework")
- {
-joey = []
- }
- window.lengthj = joey.length
-var tyrs = 0;
- var classes = note.title
-        if(classes == "Social Studies")
-        {
-        classes = "Social_Studies"
-        }
- if(note.text != "No homework")
- {
-for(i=0;i<window.lengthj;i++)
-{
-alert("Stupid")
-}
- }
-})
- }
+  loser()
 }
