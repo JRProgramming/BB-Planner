@@ -117,7 +117,12 @@ for(i=0;i<classes.length;i++)
  
 }
 function UnCheck(obj) {
-    var eng = document.getElementsByClassName("english");
+    var first = document.getElementsByClassName("first");
+    var third = document.getElementsByClassName("third")
+    var fourth = document.getElementsByClassName("fourth")
+    var sixth = document.getElementsByClassName("sixth")
+    var ninth = document.getElementsByClassName("ninth")
+    
     for (var i = 0; i < eng.length; i++) {
         eng[i].checked = false;
     }
