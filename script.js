@@ -79,7 +79,7 @@ for(i=0;i<window.lengths;i++)
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
- if(joey != "None" )
+ if(joey != "None")
   {
   window.hw.push(joey);
   }
@@ -335,6 +335,7 @@ while(i < window.lengthj)
   }
  i ++
   }
+    alert(window.texter)
     if(window.lengthj > 0)
     {
   updateSave()
