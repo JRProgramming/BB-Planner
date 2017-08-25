@@ -33,9 +33,29 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.lengths = joey.classes.length
     for(i=0;i<window.lengths;i++)
 {
-if(window.johnny[i] != "None")
+if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
- window.green.push(window.johnny[i]);
+ window.green.push("Spanish");
+}
+else if(window.johnny[i] == "EnglishD1" || window.johnny[i] == "EnglishT3" || window.johnny[i] == "EnglishD4" || window.johnny[i] == "EnglishT6" || window.johnny[i] == "EnglishT9")
+{
+window.green.push("English")
+}
+else if(window.johnny[i] == "ES1" || window.johnny[i] == "PS3" || window.johnny[i] == "ES3" || window.johnny[i] == "ES6" || window.johnny[i] == "ES9")
+{
+window.green.push("Science")
+}
+else if(window.johnny[i] == "M8t")
+{
+window.green.push("Math")
+}
+else if(window.johnny[i] == "AlgebraC4" || window.johnny[i] == "AlgebraT6" || window.johnny[i] == "AlgebraC9")
+{
+window.green.push("Algebra")
+}
+else if(window.johnny[i] == "Italian3")
+{
+window.green.push("Italian")
 }
 }
      homework();
