@@ -38,10 +38,6 @@ if(window.johnny[i] != "None")
  window.green.push(window.johnny[i]);
 }
 }
- if(window.lengths == 0)
- {
-location.href = "setClass"
- }
      homework();
    loadNotes() 
    }
