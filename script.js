@@ -57,6 +57,14 @@ else if(window.johnny[i] == "Italian3")
 {
 window.green.push("Italian")
 }
+else if(window.johnny[i] == "SSL3" || window.johnny[i] == "SSB4" || window.johnny[i] == "SSB9")
+{
+window.green.push("Social Studies")
+}
+ else
+ {
+window.green.push("Specials")
+ }
 }
      homework();
    loadNotes() 
