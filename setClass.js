@@ -21,7 +21,7 @@ var Spanish1 = document.getElementById("Hellman1")
 var EnglishD1 = document.getElementById("EngilshD1")
 var EScience1 = document.getElementById("ES1")
 var Math81 = document.getElementById("M81")
-var PS3 = document.getElementById("PS3")
+var PScience3 = document.getElementById("PS3")
 var EScience3 = document.getElementById("ES3")
 var SocialSL3 = document.getElementById("SSL3")
 var EnglishT3 = document.getElementById("ET3")
@@ -48,27 +48,27 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  }
   if (EScience1.checked == true)
  {
-  classes.push(ES1.value)
+  classes.push(EScience1.value)
  }
   if (Math81.checked == true)
  {
   classes.push(Math81.value)
  }
- if (PS3.checked == true)
+ if (PScience3.checked == true)
  {
-  classes.push(PS3.value)
+  classes.push(PScience3.value)
  }
- if (ES3.checked == true)
+ if (EScience3.checked == true)
  {
-  classes.push(ES3.value)
+  classes.push(EScience3.value)
  }
- if (SSL3.checked == true)
+ if (SocialSL3.checked == true)
  {
-  classes.push(SSL3.value)
+  classes.push(SocialSL3.value)
  }
- if (ET3.checked == true)
+ if (EnglishT3.checked == true)
  {
-  classes.push(ET3.value)
+  classes.push(EnglishT3.value)
  }
  if (AlgebraC4.checked == true)
  {
@@ -82,13 +82,13 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  {
   classes.push(Spanish4.value)
  }
- if (SSB4.checked == true)
+ if (SocialSB4.checked == true)
  {
-  classes.push(SSB4.value)
+  classes.push(SocialSB4.value)
  }
- if (ES6.checked == true)
+ if (EScience6.checked == true)
  {
-  classes.push(ES6.value)
+  classes.push(EScience6.value)
  }
  if (Spanish6.checked == true)
  {
@@ -106,13 +106,13 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  {
   classes.push(EnglishT9.value)
  }
- if (PS9.checked == true)
+ if (PScience9.checked == true)
  {
-  classes.push(PS9.value)
+  classes.push(PScience9.value)
  }
- if (SSB9.checked == true)
+ if (SocialSB9.checked == true)
  {
-  classes.push(SSB9.value)
+  classes.push(SocialSB9.value)
  }
  if (AlgebraC9.checked == true)
  {
