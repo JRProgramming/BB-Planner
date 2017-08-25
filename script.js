@@ -38,6 +38,7 @@ if(window.johnny[i] != "None")
  window.green.push(window.johnny[i]);
 }
 }
+   alert(window.lengths)
  if(window.lengths == 0)
  {
 location.href = "setClass"
