@@ -18,7 +18,7 @@ function logClasses()
  var classers = firebase.database().ref("Classes/" + window.identification);
  var classes = []
 var Spanish1 = document.getElementById("Hellman1")
-var EnglishD1 = document.getElementById("EngilshD1")
+var EnglishD1 = document.getElementById("EnglishD1")
 var EScience1 = document.getElementById("ES1")
 var Math81 = document.getElementById("M81")
 var PScience3 = document.getElementById("PS3")
