@@ -88,11 +88,11 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 }
 function count(){
-alert(window.identification)
  var ref = firebase.database().ref("Classes/" + window.identification + "/name");
 ref.once("value")
   .then(function(snapshot) { 
   window.a = snapshot.exists();
+ alert(window.a)
  if(window.a == false)
  {
   location.href = "setClass" 
