@@ -26,11 +26,11 @@ var ES3 = document.getElementById("ES3")
 var SSL3 = document.getElementById("SSL3")
 var ET3 = document.getElementById("ET3")
 var Italian3 = document.getElementById("Italian3")
-var Algebra4 = document.getElementById("Algebra4")
+var AlgebraC4 = document.getElementById("Algebra4")
 var EnglishD4 = document.getElementById("EnglishD4")
 var Spanish4 = document.getElementById("Spanish4")
 var SSB4 = document.getElementById("SSB4")
-var Science6 = document.getElementById("Science6")
+var ES6 = document.getElementById("Science6")
 var Spanish6 = document.getElementById("Spanish6")
 var EnglishT6 = document.getElementById("EnglishT6")
 var AlgebraT6 = document.getElementById("AlgebraT6")
@@ -38,58 +38,85 @@ var EnglishT9 = document.getElementById("EnglishT9")
 var PS9 = document.getElementById("PS9")
 var SSB9 = document.getElementById("SSB9")
 var AlgebraC9 = document.getElementById("AlgebraC9")
- if (english.checked == true)
+ if(Spanish1.checked == true)
  {
-  englishd.checked = false
+  classes.push(Spanish1.value)
  }
- if (englishd.checked == true)
+   if (EnglishD1.checked == true)
  {
- english.checked =  false
+  classes.push(EnglishD1.value)
  }
-
- if(algC4.checked == true)
+  if (ES1.checked == true)
  {
-  classes.push(algC4.value)
+  classes.push(ES1.value)
  }
- else
+  if (Math81.checked == true)
  {
-  classes.push("None");
+  classes.push(Math81.value)
  }
-   if (SocialS.checked == true)
+ if (PS3.checked == true)
  {
-  classes.push(SocialS.value)
+  classes.push(PS3.value)
  }
- else
+ if (ES3.checked == true)
  {
-  classes.push("None");
+  classes.push(ES3.value)
  }
-  if (spanish.checked == true)
+ if (SSL3.checked == true)
  {
-  classes.push(spanish.value)
+  classes.push(SSL3.value)
  }
-  else
+ if (ET3.checked == true)
  {
-  classes.push("None");
+  classes.push(ET3.value)
  }
- if (science.checked == true)
+ if (AlgebraC4.checked == true)
  {
-  classes.push(science.value)
+  classes.push(AlgebraC4.value)
  }
-  else
+ if (EnglishD4.checked == true)
  {
-  classes.push("None");
+  classes.push(EnglishD4.value)
  }
- if (english.checked == true)
+ if (Spanish4.checked == true)
  {
-  classes.push(english.value)
+  classes.push(Spanish4.value)
  }
-else if (englishd.checked == true)
-{
- classes.push(englishd.value)
-}
-   else
+ if (SSB4.checked == true)
  {
-  classes.push("None");
+  classes.push(SSB4.value)
+ }
+ if (ES6.checked == true)
+ {
+  classes.push(ES6.value)
+ }
+ if (Spanish6.checked == true)
+ {
+  classes.push(Spanish6.value)
+ }
+ if (EnglishT6.checked == true)
+ {
+  classes.push(EnglishT6.value)
+ }
+ if (AlgebraT6.checked == true)
+ {
+  classes.push(AlgebraT6.value)
+ }
+ if (EnglishT9.checked == true)
+ {
+  classes.push(EnglishT9.value)
+ }
+ if (PS9.checked == true)
+ {
+  classes.push(PS9.value)
+ }
+ if (SSB9.checked == true)
+ {
+  classes.push(SSB9.value)
+ }
+ if (AlgebraC9.checked == true)
+ {
+  classes.push(AlgebraC9.value)
  }
 classes.push("Specials")
  classers.update({
