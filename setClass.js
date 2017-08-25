@@ -118,29 +118,7 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  {
   classes.push(AlgebraC9.value)
  }
-classes.push("Specials")
- classers.update({
-     name: window.names,
-     classes: classes
-});
-
-for(i=0;i<classes.length;i++)
-{
-  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[i]);
- classers.update({
-     homework: "No homework"
-});
-}
- 
-
-     var bob = firebase.database().ref("Completion/")
-       bob.set("Data is stored", function(error) {
-  if (error) {
-    alert("Classes failed to register, please try again.");
-  } else {
-   location.href = "index.html";
-  }
-}); 
+alert(classes)
  
 }
 function UnCheck(obj) {
