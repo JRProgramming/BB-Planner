@@ -28,9 +28,12 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.identification = joey.ID 
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
+    alert(window.kool)
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
+   alert("Classes")
+   alert(window.lengths)
     for(i=0;i<window.lengths;i++)
 {
 if(window.johnny[i] != "None")
@@ -38,7 +41,6 @@ if(window.johnny[i] != "None")
  window.green.push(window.johnny[i]);
 }
 }
-   alert(window.lengths)
  if(window.lengths == 0)
  {
 location.href = "setClass"
