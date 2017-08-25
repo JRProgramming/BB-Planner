@@ -28,12 +28,9 @@ playersRef.on("child_added", function(data, prevChildKey) {
  window.identification = joey.ID 
  document.getElementById("names").innerHTML = names + "'s Planner"
  count()
-    alert(window.kool)
   if(window.kool = 1){
  window.johnny = joey.classes;
  window.lengths = joey.classes.length
-   alert("Classes")
-   alert(window.lengths)
     for(i=0;i<window.lengths;i++)
 {
 if(window.johnny[i] != "None")
@@ -91,7 +88,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 }
 function count(){
-
+alert(window.identification)
  var ref = firebase.database().ref("Classes/" + window.identification + "/name");
 ref.once("value")
   .then(function(snapshot) { 
