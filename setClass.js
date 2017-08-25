@@ -17,6 +17,12 @@ function logClasses()
 {
  var classers = firebase.database().ref("Classes/" + window.identification);
  var classes = []
+ var hw = []
+ var language = 0
+ var english = 0;
+ var math = 0;
+ var science = 0;
+ var socialstudies = 0;
 var Spanish1 = document.getElementById("Hellman1")
 var EnglishD1 = document.getElementById("EnglishD1")
 var EScience1 = document.getElementById("ES1")
@@ -41,46 +47,57 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  if(Spanish1.checked == true)
  {
   classes.push(Spanish1.value)
+  language += 1
  }
    if (EnglishD1.checked == true)
  {
   classes.push(EnglishD1.value)
+  english += 1
  }
   if (EScience1.checked == true)
  {
   classes.push(EScience1.value)
+  science += 1
  }
   if (Math81.checked == true)
  {
   classes.push(Math81.value)
+  math += 1
  }
  if (PScience3.checked == true)
  {
   classes.push(PScience3.value)
+  science += 1
  }
  if (EScience3.checked == true)
  {
   classes.push(EScience3.value)
+  science += 1
  }
  if (SocialSL3.checked == true)
  {
   classes.push(SocialSL3.value)
+  socialstudies += 1
  }
  if (EnglishT3.checked == true)
  {
   classes.push(EnglishT3.value)
+  english += 1
  }
  if (AlgebraC4.checked == true)
  {
   classes.push(AlgebraC4.value)
+  math ++
  }
  if (EnglishD4.checked == true)
  {
   classes.push(EnglishD4.value)
+  english ++
  }
  if (Spanish4.checked == true)
  {
   classes.push(Spanish4.value)
+  language ++
  }
  if (SocialSB4.checked == true)
  {
@@ -89,35 +106,45 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  if (EScience6.checked == true)
  {
   classes.push(EScience6.value)
+  science ++
  }
  if (Spanish6.checked == true)
  {
   classes.push(Spanish6.value)
+  language ++
  }
  if (EnglishT6.checked == true)
  {
   classes.push(EnglishT6.value)
+  english ++
  }
  if (AlgebraT6.checked == true)
  {
   classes.push(AlgebraT6.value)
+  math ++
  }
  if (EnglishT9.checked == true)
  {
   classes.push(EnglishT9.value)
+  english ++
  }
  if (PScience9.checked == true)
  {
   classes.push(PScience9.value)
+  science ++
  }
  if (SocialSB9.checked == true)
  {
   classes.push(SocialSB9.value)
+  socialstudies ++
  }
  if (AlgebraC9.checked == true)
  {
   classes.push(AlgebraC9.value)
+  math ++
  }
+ if(language < 2 && english < 2 && math < 2 && science < 2 && socialstudies < 2)
+ {
 classes.push("Specials")
  classers.update({
      name: window.names,
@@ -131,6 +158,7 @@ for(i=0;i<classes.length;i++)
      homework: "No homework"
 });
 }
+
  
 
      var bob = firebase.database().ref("Completion/")
@@ -141,7 +169,14 @@ for(i=0;i<classes.length;i++)
    location.href = "index.html";
   }
 }); 
- 
+ }
+ else
+ {
+if(language >= 2)
+{
+alert("You selected more than one foreign language class, please make sure you only select one foreign language class")
+}
+ }
 }
 function UnCheck(obj) {
     var first = document.getElementsByClassName("first");
