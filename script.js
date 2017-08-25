@@ -335,11 +335,13 @@ while(i < window.lengthj)
   }
  i ++
   }
-    alert(window.texter)
-    if(window.lengthj > 0)
-    {
+    
+   if(window.texter == "")
+   {
+   window.texter = "No homework"
+   }
   updateSave()
-    }
+    
  })
   note.card.find(".mdl-card__actions.mdl-card--border").on("keydown", function (e) {
     if(e.keyCode === 13)
