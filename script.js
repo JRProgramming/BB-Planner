@@ -331,9 +331,9 @@ joey = []
         }
         else
         {
-         alert(note.card.find(".mdl-card__menu").html())
          if(document.getElementById("Algebrabuttonx").innerHTML == "Undo" || document.getElementById("Social_Studiesbuttonx").innerHTML == "Undo" || document.getElementById("Spanishbuttonx").innerHTML == "Undo" || document.getElementById("Italianbuttonx").innerHTML == "Undo" || document.getElementById("Sciencebuttonx").innerHTML == "Undo" || document.getElementById("Englishbuttonx").innerHTML == "Undo" || document.getElementById("Specialsbuttonx").innerHTML == "Undo" || document.getElementById("Mathbuttonx").innerHTML == "Undo")
          {
+          alert(document.getElementById("Algebrabuttonx").innerHTML
           $("#" + classes + "buttonx").remove()
          }
         }
