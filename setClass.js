@@ -243,14 +243,52 @@ location.reload()
 }
 function UnCheck(obj) {
     var first = document.getElementsByClassName("first");
-    var third = document.getElementsByClassName("third")
-    var fourth = document.getElementsByClassName("fourth")
-    var sixth = document.getElementsByClassName("sixth")
-    var ninth = document.getElementsByClassName("ninth")
     
-    for (var i = 0; i < eng.length; i++) {
-        eng[i].checked = false;
+    for (var i = 0; i < first.length; i++) {
+        first[i].checked = false;
     }
     obj.checked = true;
 }
 
+function thirdCheck(obj)
+{
+    var third = document.getElementsByClassName("third")
+    
+    for (var i = 0; i < third.length; i ++)
+    {
+        third[i].checked = false
+    }
+    obj.checked = true;
+}
+function fourthCheck(obj)
+{
+    var fourth = document.getElementsByClassName("fourth")
+    
+    for (var i = 0; i < fourth.length; i ++)
+    {
+        fourth[i].checked = false
+    }
+    obj.checked = true;
+}
+
+function sixthCheck(obj)
+{
+    var sixth = document.getElementsByClassName("sixth")
+    
+    for (var i = 0; i < sixth.length; i ++)
+    {
+        sixth[i].checked = false
+    }
+    obj.checked = true;
+}
+
+function ninthCheck(obj)
+{
+    var ninth = document.getElementsByClassName("ninth")
+    
+    for (var i = 0; i < ninth.length; i ++)
+    {
+        ninth[i].checked = false
+    }
+    obj.checked = true;
+}
