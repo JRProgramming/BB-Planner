@@ -175,6 +175,27 @@ for(i=0;i<classes.length;i++)
 if(language >= 2)
 {
 alert("You selected more than one foreign language class, please make sure you only select one foreign language class")
+ location.reload()
+}
+if(english >= 2)
+{
+alert("You selected more than one English class, please make sure you only select one foreign language class")
+ location.reload()
+}
+if(math >= 2)
+{
+alert("You selected more than one Math class, please make sure you only select one math class")
+ location.reload()
+}
+if(science >= 2)
+{
+alert("You selected more than one Science class, please make sure you only select one math class")
+ location.reload()
+}
+if(socialstudies >= 2)
+{
+ alert("You selected more than one Social Studies class, please make sure you only select one Social Studies class")
+location.reload()
 }
  }
 }
