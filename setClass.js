@@ -36,14 +36,17 @@ var AlgebraC4 = document.getElementById("Algebra4")
 var EnglishD4 = document.getElementById("EnglishD4")
 var Spanish4 = document.getElementById("Spanish4")
 var SocialSB4 = document.getElementById("SSB4")
+var Italian4 = document.getElementById("Italian4")
 var EScience6 = document.getElementById("Science6")
 var Spanish6 = document.getElementById("Spanish6")
 var EnglishT6 = document.getElementById("EnglishT6")
 var AlgebraT6 = document.getElementById("AlgebraT6")
+var SocialSL6 = document.getElementById("SSL6")
 var EnglishT9 = document.getElementById("EnglishT9")
 var PScience9 = document.getElementById("PS9")
 var SocialSB9 = document.getElementById("SSB9")
 var AlgebraC9 = document.getElementById("AlgebraC9")
+var math9 = document.getElementById("Math9")
  if(Spanish1.checked == true)
  {
   classes.push(Spanish1.value)
@@ -103,6 +106,11 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  {
   classes.push(SocialSB4.value)
  }
+ if (Italian4.checked == true)
+ {
+  classes.push(Italian4.value)
+  language ++
+ }
  if (EScience6.checked == true)
  {
   classes.push(EScience6.value)
@@ -123,6 +131,11 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
   classes.push(AlgebraT6.value)
   math ++
  }
+ if (SocialSL6.checked == true)
+ {
+  classes.push(SocialSL6.value)
+  socialstudies ++
+ }
  if (EnglishT9.checked == true)
  {
   classes.push(EnglishT9.value)
@@ -141,6 +154,11 @@ var AlgebraC9 = document.getElementById("AlgebraC9")
  if (AlgebraC9.checked == true)
  {
   classes.push(AlgebraC9.value)
+  math ++
+ }
+ if(math9.checked == true)
+ {
+  classes.push(math9.value)
   math ++
  }
  if(language < 2 && english < 2 && math < 2 && science < 2 && socialstudies < 2)
