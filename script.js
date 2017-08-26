@@ -331,9 +331,8 @@ joey = []
         }
         else
         {
-         if(document.getElementById(classes + "buttonx").innerHTML == "Undo")
+         if(document.getElementById(classes + "buttonx").innerHTML != "Undo")
          {
-          alert(classes)
           $("#" + classes + "buttonx").remove()
          }
         }
