@@ -332,7 +332,7 @@ joey = []
         else
         {
          alert(note.card.find(".mdl-card__menu").html())
-         if(note.card.find(".mdl-card__menu").html() != "<span id=\"Algebrabuttonx\" style=\"text-decoration: underline; cursor:pointer; color: white;\">Undo</span>")
+         if(document.getElementById("Algebrabuttonx").innerHTML = "Undo" || document.getElementById("Social_Studiesbuttonx").innerHTML = "Undo" || document.getElementById("Spanishbuttonx").innerHTML = "Undo" || document.getElementById("Italianbuttonx").innerHTML = "Undo" || document.getElementById("Sciencebuttonx").innerHTML = "Undo" || document.getElementById("Englishbuttonx").innerHTML = "Undo" || document.getElementById("Specialsbuttonx").innerHTML = "Undo" || document.getElementById("Mathbuttonx").innerHTML = "Undo")
          {
           $("#" + classes + "buttonx").remove()
          }
