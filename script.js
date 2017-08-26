@@ -100,7 +100,7 @@ function homework()
 {
 for(i=0;i<window.lengths;i++)
 {
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[i]);
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.green[i]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
  if(joey != "None")
