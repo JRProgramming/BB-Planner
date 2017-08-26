@@ -50,46 +50,55 @@ var math9 = document.getElementById("Math9")
  if(Spanish1.checked == true)
  {
   classes.push(Spanish1.value)
+  hw.push("Spanish")
   language += 1
  }
    if (EnglishD1.checked == true)
  {
   classes.push(EnglishD1.value)
+  hw.push("English")
   english += 1
  }
   if (EScience1.checked == true)
  {
   classes.push(EScience1.value)
+  hw.push("Science")
   science += 1
  }
   if (Math81.checked == true)
  {
   classes.push(Math81.value)
+  hw.push("Math")
   math += 1
  }
  if (PScience3.checked == true)
  {
   classes.push(PScience3.value)
+  hw.push("Science")
   science += 1
  }
  if (EScience3.checked == true)
  {
   classes.push(EScience3.value)
+  hw.push("Science")
   science += 1
  }
  if (SocialSL3.checked == true)
  {
   classes.push(SocialSL3.value)
+  hw.push("Social Studies")
   socialstudies += 1
  }
  if (EnglishT3.checked == true)
  {
   classes.push(EnglishT3.value)
+  hw.push("English")
   english += 1
  }
  if (AlgebraC4.checked == true)
  {
   classes.push(AlgebraC4.value)
+  hw.push("Algebra")
   math ++
  }
  if (EnglishD4.checked == true)
@@ -100,70 +109,85 @@ var math9 = document.getElementById("Math9")
  if (Spanish4.checked == true)
  {
   classes.push(Spanish4.value)
+  hw.push("Spanish")
   language ++
  }
  if (SocialSB4.checked == true)
  {
   classes.push(SocialSB4.value)
+  hw.push("Social Studies")
+  socialstudies ++
  }
  if (Italian4.checked == true)
  {
   classes.push(Italian4.value)
+  hw.push("Italian")
   language ++
  }
  if (EScience6.checked == true)
  {
   classes.push(EScience6.value)
+  hw.push("Science")
   science ++
  }
  if (Spanish6.checked == true)
  {
   classes.push(Spanish6.value)
+  hw.push("Spanish")
   language ++
  }
  if (EnglishT6.checked == true)
  {
   classes.push(EnglishT6.value)
+  hw.push("English")
   english ++
  }
  if (AlgebraT6.checked == true)
  {
   classes.push(AlgebraT6.value)
+  hw.push("Algebra")
   math ++
  }
  if (SocialSL6.checked == true)
  {
   classes.push(SocialSL6.value)
+  hw.push("Social Studies")
   socialstudies ++
  }
  if (EnglishT9.checked == true)
  {
   classes.push(EnglishT9.value)
+  hw.push("English")
   english ++
  }
  if (PScience9.checked == true)
  {
   classes.push(PScience9.value)
+  hw.push("Science")
   science ++
  }
  if (SocialSB9.checked == true)
  {
   classes.push(SocialSB9.value)
+  hw.push("Social Studies")
   socialstudies ++
  }
  if (AlgebraC9.checked == true)
  {
   classes.push(AlgebraC9.value)
+  hw.push("Algebra")
   math ++
  }
  if(math9.checked == true)
  {
   classes.push(math9.value)
+  hw.push("Math")
   math ++
  }
  if(language < 2 && english < 2 && math < 2 && science < 2 && socialstudies < 2)
  {
 classes.push("Specials")
+  hw.push("Specials")
  classers.update({
      name: window.names,
      classes: classes
@@ -171,7 +195,7 @@ classes.push("Specials")
 
 for(i=0;i<classes.length;i++)
 {
-  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + classes[i]);
+  var classers = firebase.database().ref("Classes/" + window.identification + "/Homework/" + hw[i]);
  classers.update({
      homework: "No homework"
 });
