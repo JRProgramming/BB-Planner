@@ -45,7 +45,7 @@ else if(window.johnny[i] == "ES1" || window.johnny[i] == "PS3" || window.johnny[
 {
 window.green.push("Science")
 }
-else if(window.johnny[i] == "M8t")
+else if(window.johnny[i] == "M8t" || window.johnny[i] == "Math9")
 {
 window.green.push("Math")
 }
@@ -53,11 +53,11 @@ else if(window.johnny[i] == "AlgebraC4" || window.johnny[i] == "AlgebraT6" || wi
 {
 window.green.push("Algebra")
 }
-else if(window.johnny[i] == "Italian3")
+else if(window.johnny[i] == "Italian3" || window.johnny[i] == "Italian4")
 {
 window.green.push("Italian")
 }
-else if(window.johnny[i] == "SSL3" || window.johnny[i] == "SSB4" || window.johnny[i] == "SSB9")
+else if(window.johnny[i] == "SSL3" || window.johnny[i] == "SSL6" || window.johnny[i] == "SSB4" || window.johnny[i] == "SSB9")
 {
 window.green.push("Social Studies")
 }
