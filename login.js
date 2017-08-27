@@ -438,6 +438,12 @@ document.getElementById("password").on("keydown", function (e) {
     {
      toggleSignIn()
     })
+document.getElementById("namej").on("keydown", function (e) {
+  if(e.keycode == 13)
+  {
+   toggleSignIn()
+  } 
+})
     function sendPasswordReset() {
       var email = document.getElementById('email').value;
       // [START sendpasswordemail]
