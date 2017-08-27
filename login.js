@@ -433,6 +433,11 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
 });
       // [END sendemailverification]
     }
+document.getElementById("password").on("keydown", function (e) {
+    if(e.keyCode === 13)
+    {
+     toggleSignIn()
+    })
     function sendPasswordReset() {
       var email = document.getElementById('email').value;
       // [START sendpasswordemail]
