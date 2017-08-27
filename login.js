@@ -436,6 +436,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
 document.getElementById("password").onkeydown = function(e) {
     if(e.keyCode === 13 || e.which === 13)
     {
+       alert("stupid")
      toggleSignIn()
     }
     }
