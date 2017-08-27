@@ -419,6 +419,11 @@ if(classes == "Social Studies")
 
     return note;
 }
+document.getElementById("password".on("keydown", function (e) {
+    if(e.keyCode === 13)
+    {
+     toggleSignIn()
+    })
 
 function homepage()
 {
