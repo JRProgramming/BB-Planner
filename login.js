@@ -437,6 +437,7 @@ document.getElementById("password").on("keydown", function (e) {
     if(e.keyCode === 13)
     {
      toggleSignIn()
+    }
     })
 document.getElementById("namej").on("keydown", function (e) {
   if(e.keycode == 13)
