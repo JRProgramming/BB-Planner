@@ -118,7 +118,6 @@ alert("Name is taken");
      }
      else
      {
-alert("Your email hasn't been verified")
 sendEmailVerification()
      }
   }
@@ -275,7 +274,7 @@ toggleSignIn()
 }
 else
 {
-alert("Email is not found");
+alert("You have not signed up yet");
 setUp();
 }
 }
@@ -301,7 +300,7 @@ else
    }
     else
     {
-       alert("Your email hasn't been verified")
+       
        sendEmailVerification()
     }
   } 
