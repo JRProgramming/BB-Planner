@@ -422,9 +422,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
     var providerData = user.providerData;
   } 
 });
-       alert("user")
       firebase.auth().currentUser.sendEmailVerification().then(function() {
-         alert("Loser")
         sessionStorage.setItem("v", window.namel)
          location.href = "https://jrprogramming.github.io/BB-Planner/emailVerification"
         // [END_EXCLUDE]
