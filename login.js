@@ -421,15 +421,12 @@ location.href = "https://jrprogramming.github.io/BB-Planner";
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    // ...
-  } else {
-    // User is signed out.
-    // ...
-  }
+  } 
 });
       firebase.auth().currentUser.sendEmailVerification().then(function() {
          
-        alert('An email has been sent to you, please verify that this is your email.');
+        sessionStorage.setItem("v", window.namel)
+         location.href = "https://jrprogramming.github.io/BB-Planner/emailVerification"
         // [END_EXCLUDE]
       }).catch(function(error) {
   alert(error);
