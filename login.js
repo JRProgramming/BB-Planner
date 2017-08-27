@@ -438,13 +438,13 @@ document.getElementById("password").onkeydown = function(e) {
     {
      toggleSignIn()
     }
-    })
+    }
 document.getElementById("namej").onkeydown = function(e) {
     if(e.keyCode === 13 || e.which === 13)
     {
    toggleSignIn()
   } 
-})
+}
     function sendPasswordReset() {
       var email = document.getElementById('email').value;
       // [START sendpasswordemail]
