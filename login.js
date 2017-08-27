@@ -202,6 +202,11 @@ function setUp()
         window.password = document.getElementById('password').value;
         if(document.getElementById("namej").innerHTML != "")
         {
+           if(document.getElementById("cpassword").value != window.password)
+           {
+             alert("Your passwords don't match.")
+              location.reload()
+           }
         var namel = document.getElementById("nameText").value;
         window.namel = document.getElementById("nameText").value;
            if(namel == "" || namel == " ")
