@@ -179,6 +179,7 @@ function setUp()
    document.getElementById("signuplogin").innerHTML = "Log In";
    document.getElementById("namer").innerHTML = "Full Name";
    document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" required>"
+   document.getElementById("cpassword").innerHTML = "<input type=\"password\" placeholder=\"Confirm your password\" name=\"cpsw\" id=\"cpassword\" required>"
    document.getElementById("namej").value = window.fname;
    document.getElementById("enter").innerHTML = "Sign Up"
    
