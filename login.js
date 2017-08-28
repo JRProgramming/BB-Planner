@@ -232,7 +232,7 @@ j = joey + j
 }
 if (j == "blindbrook.org")
 {
-alert("Not allowed here")
+alert("We are sorry to say that we can't accept email address from the school, please use your personal email.")
 return;
 }
          
