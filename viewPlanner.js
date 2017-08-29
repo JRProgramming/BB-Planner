@@ -43,8 +43,10 @@ function match()
 {
 if(window.boy != undefined && window.bo != undefined)
 {
+  console.log("Window.boy")
   if(window.kh == 0)
   {
+    console.log("Window.kh")
   for(i=0;i<window.johnny.length;i++)
  {
 if(window.johnny[i] == window.lclass[i])
