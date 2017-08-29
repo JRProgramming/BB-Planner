@@ -41,6 +41,7 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 function match()
 {
+  console.log("match")
 if(window.boy != undefined && window.bo != undefined)
 {
   console.log("Window.boy")
@@ -49,8 +50,11 @@ if(window.boy != undefined && window.bo != undefined)
     console.log("Window.kh")
   for(i=0;i<window.johnny.length;i++)
  {
+   console.log("For")
 if(window.johnny[i] == window.lclass[i])
 {
+  console.log(window.johnny[i])
+  console.log(window.lclass[i])
 if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
  window.green.push("Spanish");
