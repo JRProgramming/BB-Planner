@@ -41,19 +41,15 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 function match()
 {
-  alert("do")
 if(window.boy != undefined && window.bo != undefined)
 {
-  alert("wo")
   if(window.kh == 0)
   {
-    alert("bo")
   for(i=0;i<window.johnny.length;i++)
  {
-   alert("do")
 if(window.johnny[window.numb] == window.lclass[window.numb])
 {
-   alert("so")
+   alert(window.johnny)
 if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
  window.green.push("Spanish");
@@ -88,7 +84,6 @@ window.green.push("Specials")
  }
 window.array.push(window.green[window.numb])
 window.yu.push(window.numb)
-  alert(window.array)
 }
 window.numb += 1
 }
