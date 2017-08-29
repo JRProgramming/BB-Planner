@@ -49,7 +49,7 @@ if(window.boy != undefined && window.bo != undefined)
  {
 if(window.johnny[window.numb] == window.lclass[window.numb])
 {
-   alert(window.johnny)
+   alert(window.johnny[window.numb])
 if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
  window.green.push("Spanish");
