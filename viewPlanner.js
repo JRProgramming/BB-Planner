@@ -22,7 +22,7 @@ window.lclass = joey.classes
    }
    if(joey.name == nameS)
    {
-window.johnny = joey.classes
+window.fclass = joey.classes
      window.identification = joey.ID
    }
   match()
@@ -45,10 +45,12 @@ if(window.boy != undefined && window.bo != undefined)
 {
   if(window.kh == 0)
   {
-window.green.push("YO")
-window.array.push(window.green[window.numb])
+  for(i=0;i<window.fclass.length;i++)
+ {
+if(window.fclass[window.numb] == window.lclass[window.numb])
+{
+window.array.push(window.fclass[window.numb])
 window.yu.push(window.numb)
-  alert(window.array)
 }
 window.numb += 1
 }
@@ -130,4 +132,3 @@ function loadNotes() {
             };
        }
 }
-
