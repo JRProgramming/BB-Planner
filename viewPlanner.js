@@ -32,8 +32,7 @@ function homework()
 {
 for(i=0;i<window.array.length;i++)
 {
-
-var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.fclass[window.yu[i]]);
+var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.johnny[window.yu[i]]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
   window.hw.push(joey);
@@ -53,7 +52,6 @@ if(window.johnny[i] == window.lclass[i])
 if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
  window.green.push("Spanish");
-  alert(window.green)
 }
 else if(window.johnny[i] == "EnglishD1" || window.johnny[i] == "EnglishT3" || window.johnny[i] == "EnglishD4" || window.johnny[i] == "EnglishT6" || window.johnny[i] == "EnglishT9")
 {
