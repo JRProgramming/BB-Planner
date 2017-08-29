@@ -52,8 +52,8 @@ if(window.johnny[window.numb] == window.lclass[window.numb])
   alert(window.johnny[i])
 if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
+  alert("Yookle")
  window.green.push("Spanish");
-  alert(window.green)
 }
 else if(window.johnny[i] == "EnglishD1" || window.johnny[i] == "EnglishT3" || window.johnny[i] == "EnglishD4" || window.johnny[i] == "EnglishT6" || window.johnny[i] == "EnglishT9")
 {
