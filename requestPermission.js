@@ -59,7 +59,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner"
         }
         if (window.names.length == 0)
         {
-            document.getElementById("h3").innerHTML = "No one has requested access to your planner. You are cleared so far."
+            document.getElementById("h3").innerHTML = "There are no more friends to request access to their planner. If you want to be friend with someone that you aren't friend with, please encourage them to sign up to this site."
         }
         else
         {
