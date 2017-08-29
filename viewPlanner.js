@@ -41,20 +41,14 @@ playersRef.on("child_added", function(data, prevChildKey) {
 }
 function match()
 {
-  console.log("match")
 if(window.boy != undefined && window.bo != undefined)
 {
-  console.log("Window.boy")
   if(window.kh == 0)
   {
-    console.log("Window.kh")
   for(i=0;i<window.johnny.length;i++)
  {
-   console.log("For")
 if(window.johnny[i] == window.lclass[i])
 {
-  console.log(window.johnny[i])
-  console.log(window.lclass[i])
 if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
  window.green.push("Spanish");
@@ -62,6 +56,7 @@ if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.j
 else if(window.johnny[i] == "EnglishD1" || window.johnny[i] == "EnglishT3" || window.johnny[i] == "EnglishD4" || window.johnny[i] == "EnglishT6" || window.johnny[i] == "EnglishT9")
 {
 window.green.push("English")
+  console.log(window.green)
 }
 else if(window.johnny[i] == "ES1" || window.johnny[i] == "PS3" || window.johnny[i] == "ES3" || window.johnny[i] == "ES6" || window.johnny[i] == "ES9")
 {
@@ -87,6 +82,7 @@ window.green.push("Social Studies")
  {
 window.green.push("Specials")
  }
+  console.log(window.green)
 window.array.push(window.green[window.numb])
 window.yu.push(window.numb)
 }
