@@ -24,8 +24,9 @@ window.lclass = joey.classes
    {
 window.johnny = joey.classes
      window.identification = joey.ID
+     alert(window.johnny)
    }
-  match()
+
   });
 function homework()
 {
