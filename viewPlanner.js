@@ -35,6 +35,7 @@ for(i=0;i<window.array.length;i++)
 var playersRef = firebase.database().ref("Classes/" + window.identification + "/Homework/"+ window.green[window.yu[i]]);
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey =  data.val()
+  alert(joey)
   window.hw.push(joey);
 })
 }
@@ -82,7 +83,6 @@ window.green.push("Social Studies")
 window.green.push("Specials")
  }
 window.array = window.green
-  alert(window.yu)
 window.yu.push(window.numb)
 }
 window.numb += 1
