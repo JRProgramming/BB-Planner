@@ -81,7 +81,7 @@ window.green.push("Social Studies")
  {
 window.green.push("Specials")
  }
-window.array.push(window.green)
+window.array = window.green
 window.yu.push(window.numb)
 }
 window.numb += 1
