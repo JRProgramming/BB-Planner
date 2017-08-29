@@ -56,7 +56,6 @@ if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.j
 else if(window.johnny[i] == "EnglishD1" || window.johnny[i] == "EnglishT3" || window.johnny[i] == "EnglishD4" || window.johnny[i] == "EnglishT6" || window.johnny[i] == "EnglishT9")
 {
 window.green.push("English")
-  console.log(window.green)
 }
 else if(window.johnny[i] == "ES1" || window.johnny[i] == "PS3" || window.johnny[i] == "ES3" || window.johnny[i] == "ES6" || window.johnny[i] == "ES9")
 {
@@ -82,8 +81,7 @@ window.green.push("Social Studies")
  {
 window.green.push("Specials")
  }
-  console.log(window.green)
-window.array.push(window.green[window.numb])
+window.array.push(window.green)
 window.yu.push(window.numb)
 }
 window.numb += 1
