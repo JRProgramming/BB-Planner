@@ -6,6 +6,7 @@ window.hw = [];
 window.yu = [];
 window.bo = [];
 window.boy = [];
+window.green = [];
 window.j = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -47,9 +48,8 @@ if(window.boy != undefined && window.bo != undefined)
   {
   for(i=0;i<window.johnny.length;i++)
  {
-if(window.johnny[window.numb] == window.lclass[window.numb])
+if(window.johnny[i] == window.lclass[i])
 {
-  alert(window.johnny[i])
 if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
 {
  window.green.push("Spanish");
