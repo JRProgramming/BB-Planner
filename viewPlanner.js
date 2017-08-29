@@ -22,7 +22,7 @@ window.lclass = joey.classes
    }
    if(joey.name == nameS)
    {
-window.fclass = joey.classes
+window.johnny = joey.classes
      window.identification = joey.ID
    }
   match()
@@ -45,12 +45,46 @@ if(window.boy != undefined && window.bo != undefined)
 {
   if(window.kh == 0)
   {
-  for(i=0;i<window.fclass.length;i++)
+  for(i=0;i<window.johnny.length;i++)
  {
-if(window.fclass[window.numb] == window.lclass[window.numb])
+if(window.johnny[window.numb] == window.lclass[window.numb])
 {
-window.array.push(window.fclass[window.numb])
+
+if(window.johnny[i] == "Spanish1" || window.johnny[i] == "SpanishH4" || window.johnny[i] == "Spanish6")
+{
+ window.green.push("Spanish");
+}
+else if(window.johnny[i] == "EnglishD1" || window.johnny[i] == "EnglishT3" || window.johnny[i] == "EnglishD4" || window.johnny[i] == "EnglishT6" || window.johnny[i] == "EnglishT9")
+{
+window.green.push("English")
+}
+else if(window.johnny[i] == "ES1" || window.johnny[i] == "PS3" || window.johnny[i] == "ES3" || window.johnny[i] == "ES6" || window.johnny[i] == "ES9")
+{
+window.green.push("Science")
+}
+else if(window.johnny[i] == "M8t" || window.johnny[i] == "Math9")
+{
+window.green.push("Math")
+}
+else if(window.johnny[i] == "AlgebraC4" || window.johnny[i] == "AlgebraT6" || window.johnny[i] == "AlgebraC9")
+{
+window.green.push("Algebra")
+}
+else if(window.johnny[i] == "Italian3" || window.johnny[i] == "Italian4")
+{
+window.green.push("Italian")
+}
+else if(window.johnny[i] == "SSL3" || window.johnny[i] == "SSL6" || window.johnny[i] == "SSB4" || window.johnny[i] == "SSB9")
+{
+window.green.push("Social Studies")
+}
+ else
+ {
+window.green.push("Specials")
+ }
+window.array.push(window.green[window.numb])
 window.yu.push(window.numb)
+  alert(window.array)
 }
 window.numb += 1
 }
