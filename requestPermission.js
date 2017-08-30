@@ -63,7 +63,7 @@ location.href = "https://jrprogramming.github.io/BB-Planner"
         }
         else
         {
-            document.getElementById("h3").innerHTML = "Request anybody who you would like to have access to their planner."
+            document.getElementById("h3").innerHTML = "Click on the box below the person's name to select the person. When you are done, click the button in the bottom right corner."
             document.getElementById("button").innerHTML = "<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" style=\"position:fixed;bottom:16px;right:16px;z-index:8;\" onclick=\"loadData()\">Done</button>"
         }
     }
