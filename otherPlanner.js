@@ -20,6 +20,7 @@ window.names.push(joey.name)
 }
   }
     }
+    alert(window.names.length)
   if(window.names.length == 0)
   {
 document.getElementById("h1").innerHTML = "Seems like no one is sharing their planner with you."
