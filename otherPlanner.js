@@ -20,7 +20,6 @@ window.names.push(joey.name)
 }
   }
     }
-    alert(window.names.length)
   if(window.names.length == 0)
   {
 document.getElementById("h1").innerHTML = "Seems like no one is sharing their planner with you."
@@ -29,8 +28,10 @@ document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" cl
   }
   else
   {
+    alert("ko"0
 document.getElementById("h1").innerHTML = "Welcome to the class selection"
 document.getElementById("h3").innerHTML = "Here are all the kids in your grade."
+document.getElementById("button1").innerHTML = ""
   }
   }
   loadNotes()
