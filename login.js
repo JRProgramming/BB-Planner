@@ -181,19 +181,15 @@ function setUp()
    document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" required>"
    document.getElementById("bo").innerHTML = "Confirm your password"
    document.getElementById("c").innerHTML = "<input type=\"password\" placeholder=\"Confirm your password\" name=\"cpsw\" id=\"cpassword\" required>"
-   document.getElementById("namej").value = window.fname;
    document.getElementById("enter").innerHTML = "Sign Up"
    
    }
     else
     {
-       alert('sore loser')
-      window.fname = document.getElementById("namej").value;
       document.getElementById("signuplogin").innerHTML = "Sign Up"
       document.getElementById("namer").innerHTML = "";
       document.getElementById("namej").innerHTML = ""
       document.getElementById("enter").innerHTML = "Login"
-
     }
   }
   
