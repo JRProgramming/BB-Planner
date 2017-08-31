@@ -187,6 +187,7 @@ function setUp()
    }
     else
     {
+       alert('sore loser')
       window.fname = document.getElementById("namej").value;
       document.getElementById("signuplogin").innerHTML = "Sign Up"
       document.getElementById("namer").innerHTML = "";
