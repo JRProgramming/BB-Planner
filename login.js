@@ -175,14 +175,14 @@ localStorage.setItem("name", window.nme);
 function setUp()
   {
    if(document.getElementById("signuplogin").innerHTML == "Sign Up"){
-     
+     alert(document.getElementById("enter").innerHTML)
    document.getElementById("signuplogin").innerHTML = "Log In";
    document.getElementById("namer").innerHTML = "Full Name";
    document.getElementById("namej").innerHTML = "<input type=\"text\" placeholder=\"Enter your full name\" name=\"nme\" id=\"nameText\" required>"
    document.getElementById("bo").innerHTML = "Confirm your password"
    document.getElementById("c").innerHTML = "<input type=\"password\" placeholder=\"Confirm your password\" name=\"cpsw\" id=\"cpassword\" required>"
    document.getElementById("enter").innerHTML = "Sign Up"
-   
+   alert(document.getElementById("enter").innerHTML)
    }
     else
     {
