@@ -23,7 +23,7 @@ window.names.push(joey.name)
     }
   if(window.names.length == 0)
   {
-    if(b != 0)
+    if(b != 1)
     {    
 document.getElementById("h1").innerHTML = "Seems like no one is sharing their planner with you."
 document.getElementById("h3").innerHTML = "Would you like to request access to your friend's planner?"
