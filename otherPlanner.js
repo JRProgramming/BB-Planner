@@ -1,5 +1,6 @@
 window.names = []
 window.number = 0;
+var b = 0
 var playersRef = firebase.database().ref("Classes/");
 playersRef.on("child_added", function(data, prevChildKey) {
   var joey = data.val()
@@ -22,12 +23,16 @@ window.names.push(joey.name)
     }
   if(window.names.length == 0)
   {
+    if(b != 0)
+    {    
 document.getElementById("h1").innerHTML = "Seems like no one is sharing their planner with you."
 document.getElementById("h3").innerHTML = "Would you like to request access to your friend's planner?"
 document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" onclick = \"noFriend()\">Let's look for some friends</button><span><button class = \"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" style=\"margin: 8px\" onclick=\"home()\">Go back to my planner</button></span>"
+    }
   }
   else
   {
+    b =  1
 document.getElementById("h1").innerHTML = "Welcome to the class selection"
 document.getElementById("h3").innerHTML = "Here are all the kids in your grade."
 document.getElementById("button1").innerHTML = ""
