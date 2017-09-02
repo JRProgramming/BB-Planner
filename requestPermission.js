@@ -6,7 +6,7 @@ window.ds = [];
 window.ih = [];
 window.hat = "";
 window.number = 0;
-
+var jy = 0
 window.numj = 0;
 window.gf = 0;
 window.b = 0;
@@ -59,10 +59,14 @@ location.href = "https://jrprogramming.github.io/BB-Planner"
         }
         if (window.names.length == 0)
         {
+            if(jy != 1)
+            {
             document.getElementById("h3").innerHTML = "There are no more friends to request access to their planner. If you want to be friend with someone that you aren't friend with, please encourage them to sign up to this site."
+            }
         }
         else
         {
+            jy = 1
             document.getElementById("h3").innerHTML = "Click on the box below the person's name to select the person. When you are done, click the button in the bottom right corner."
             document.getElementById("button").innerHTML = "<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" style=\"position:fixed;bottom:16px;right:16px;z-index:8;\" onclick=\"loadData()\">Done</button>"
         }
