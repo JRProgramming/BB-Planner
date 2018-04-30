@@ -33,8 +33,7 @@ document.getElementById("button1").innerHTML = "<button style=\"margin: 8px\" cl
   else
   {
     b =  1
-document.getElementById("h1").innerHTML = "Welcome to the class selection"
-document.getElementById("h3").innerHTML = "Here are all the kids in your grade."
+document.getElementById("h1").innerHTML = "Here are all the kids in your grade."
 document.getElementById("button1").innerHTML = ""
   }
   }
