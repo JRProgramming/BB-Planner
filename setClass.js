@@ -104,6 +104,7 @@ var math9 = document.getElementById("Math9")
  if (EnglishD4.checked == true)
  {
   classes.push(EnglishD4.value)
+  hw.push("English")
   english ++
  }
  if (Spanish4.checked == true)
